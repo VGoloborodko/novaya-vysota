@@ -1,0 +1,17 @@
+// Максимальная ширина контейнера
+$container-max-width: 100% !default;
+
+// Колличество колонок
+// $grid-columns: 12 !default;
+
+// Расстояние между элементами
+$grid-gap: 20px !default;
+$grid-gap-side: $grid-gap / 2;
+
+// Контрольные точки
+$grid-breakpoints: (
+    xl: 1599px,
+    lg: 1279px,
+    md: 1024px,
+    sm: 767px,
+    xs: 450px) !default;

@@ -1,0 +1,71 @@
+// Контейнер
+@mixin container {
+    margin: 0 auto;
+    max-width: $container-max-width;
+    // padding-left: 70px;
+    // padding-right: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    @include bp(lg) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @include bp(md) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+// Ряд сетки
+@mixin row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// Колонка
+@mixin col($size) {
+    flex: 0 0 auto;
+    padding-left: $grid-gap-side;
+    padding-right: $grid-gap-side;
+    width: (#{percentage($size / 12)});
+}
+
+// Доработка, реализован блок team-responds, страница о компании
+@mixin col-lg($size) {
+    flex: 0 0 auto;
+    padding-left: $grid-gap-side;
+    padding-right: $grid-gap-side;
+    width: (#{percentage($size / 12)});
+}
+
+@mixin col-md($size) {
+    flex: 0 0 auto;
+    padding-left: $grid-gap-side;
+    padding-right: $grid-gap-side;
+    width: (#{percentage($size / 6)});
+}
+
+@mixin col-sm($size) {
+    flex: 0 0 auto;
+    padding-left: $grid-gap-side;
+    padding-right: $grid-gap-side;
+    width: (#{percentage($size / 3)});
+}
+
+// Медиа выражения
+@mixin media($width) {
+    @media(max-width: $width) {
+        @content;
+    }
+}
+
+// Контрольная точка
+@mixin bp($name) {
+    $width: map-get($grid-breakpoints, $name);
+
+    @include media($width) {
+        @content;
+    }
+}

@@ -1,0 +1,58 @@
+// Контейнер
+.container {
+    @include container;
+}
+
+// Ряд
+.row {
+    @include row;
+}
+
+// Генерация колонок - гибкая колонка
+.col {
+    flex: 1 0 0%;
+    padding-left: $grid-gap-side;
+    padding-right: $grid-gap-side;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        @include col($i)
+    }
+}
+
+// Доработка, реализован блок team-responds, страница о компании
+@include bp(lg) {
+    @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+            @include col-lg($i)
+        }
+    }
+}
+
+@include bp(md) {
+    @for $i from 1 through 6 {
+        .col-md-#{$i} {
+            @include col-md($i)
+        }
+    }
+}
+
+@include bp(sm) {
+    @for $i from 1 through 3 {
+        .col-sm-#{$i} {
+            @include col-sm($i)
+        }
+    }
+}
+
+// Генерация колонок
+// @each $bp, $width in $grid-breakpoints {
+//     @include media($width) {
+//         @for $i from 1 through $grid-columns {
+//             .col-#{$bp}-#{$i} {
+//                 @include col($i)
+//             }
+//         }
+//     }
+// }
