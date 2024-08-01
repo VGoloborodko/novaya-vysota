@@ -119,8 +119,8 @@ input[type=tel] {
 .container {
   margin: 0 auto;
   max-width: 100%;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 @media (max-width: 1279px) {
   .container {
@@ -142,223 +142,223 @@ input[type=tel] {
 
 .col {
   flex: 1 0 0%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .col-1 {
   flex: 0 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 8.3333333333%;
 }
 
 .col-2 {
   flex: 0 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 16.6666666667%;
 }
 
 .col-3 {
   flex: 0 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 25%;
 }
 
 .col-4 {
   flex: 0 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 33.3333333333%;
 }
 
 .col-5 {
   flex: 0 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 41.6666666667%;
 }
 
 .col-6 {
   flex: 0 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 50%;
 }
 
 .col-7 {
   flex: 0 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 58.3333333333%;
 }
 
 .col-8 {
   flex: 0 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 66.6666666667%;
 }
 
 .col-9 {
   flex: 0 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 75%;
 }
 
 .col-10 {
   flex: 0 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 83.3333333333%;
 }
 
 .col-11 {
   flex: 0 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 91.6666666667%;
 }
 
 .col-12 {
   flex: 0 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   width: 100%;
 }
 
 @media (max-width: 1279px) {
   .col-lg-1 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 8.3333333333%;
   }
   .col-lg-2 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 16.6666666667%;
   }
   .col-lg-3 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 25%;
   }
   .col-lg-4 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 33.3333333333%;
   }
   .col-lg-5 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 41.6666666667%;
   }
   .col-lg-6 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 50%;
   }
   .col-lg-7 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 58.3333333333%;
   }
   .col-lg-8 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 66.6666666667%;
   }
   .col-lg-9 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 75%;
   }
   .col-lg-10 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 83.3333333333%;
   }
   .col-lg-11 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 91.6666666667%;
   }
   .col-lg-12 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 100%;
   }
 }
 @media (max-width: 1024px) {
   .col-md-1 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 16.6666666667%;
   }
   .col-md-2 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 33.3333333333%;
   }
   .col-md-3 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 50%;
   }
   .col-md-4 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 66.6666666667%;
   }
   .col-md-5 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 83.3333333333%;
   }
   .col-md-6 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 100%;
   }
 }
 @media (max-width: 767px) {
   .col-sm-1 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 33.3333333333%;
   }
   .col-sm-2 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 66.6666666667%;
   }
   .col-sm-3 {
     flex: 0 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 100%;
   }
 }
@@ -1890,6 +1890,15 @@ html {
   text-align: right;
 }
 
+.products__head {
+  display: flex;
+  align-items: end;
+  gap: 24px;
+}
+.products__button {
+  display: flex;
+  padding-bottom: 10px;
+}
 .products__block {
   display: flex;
   gap: 10px;
@@ -1971,6 +1980,11 @@ html {
   background: unset;
   transition: 1s;
 }
+@media (max-width: 1024px) {
+  .products__blackout {
+    display: none;
+  }
+}
 .products__card-link {
   z-index: 5;
   position: absolute;
@@ -1996,19 +2010,86 @@ html {
     padding-right: 60px;
   }
 }
+@media (max-width: 1024px) {
+  .products__card-link h4 {
+    color: #FFFFFF;
+  }
+}
 .products__icon {
   width: 100%;
   max-width: 48px;
   height: 48px;
-  opacity: 0; /* начальная прозрачность - элемент невидимый */
-  position: absolute; /* абсолютное позиционирование, чтобы разместить иконку над изображением */
-  top: 50%; /* позиция по вертикали в центре относительно родительского элемента */
-  right: 0; /* позиция по горизонтали в центре относительно родительского элемента */
-  transform: translate(-50%, -50%); /* центрирование иконки */
-  transition: 0.5s ease; /* анимация прозрачности */
+  opacity: 0;
+  /* начальная прозрачность - элемент невидимый */
+  position: absolute;
+  /* абсолютное позиционирование, чтобы разместить иконку над изображением */
+  top: 50%;
+  /* позиция по вертикали в центре относительно родительского элемента */
+  right: 0;
+  /* позиция по горизонтали в центре относительно родительского элемента */
+  transform: translate(-50%, -50%);
+  /* центрирование иконки */
+  transition: 0.5s ease;
+  /* анимация прозрачности */
 }
 @media (max-width: 1279px) {
   .products__icon {
     opacity: 1;
+  }
+}
+
+.confidence {
+  position: relative;
+  overflow: hidden;
+  height: 946px;
+  background: #022873;
+}
+@media (max-width: 1024px) {
+  .confidence {
+    height: 700px;
+  }
+}
+.confidence__wrapper {
+  display: flex;
+}
+.confidence h2,
+.confidence p {
+  color: #FFFFFF;
+}
+.confidence__image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+}
+@media (max-width: 1279px) {
+  .confidence__image {
+    right: -200px;
+  }
+}
+@media (max-width: 767px) {
+  .confidence__image {
+    display: flex;
+    align-items: end;
+    right: -70px;
+  }
+}
+.confidence__image img {
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .confidence__image img {
+    height: 425px;
+  }
+}
+
+.confidence__wrapper {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .confidence__wrapper {
+    flex-direction: column;
+    gap: 80px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -10,6 +10,17 @@
 .products {
     &__wrapper {}
 
+    &__head {
+        display: flex;
+        align-items: end;
+        gap: 24px;
+    }
+
+    &__button {
+        display: flex;
+        padding-bottom: 10px;
+    }
+
     &__block {
         display: flex;
         gap: 10px;
@@ -92,6 +103,10 @@
             background: unset;
             transition: 1s;
         }
+
+        @include bp(md) {
+            display: none;
+        }
     }
 
     &__card-link {
@@ -118,6 +133,10 @@
             @include bp(lg) {
                 padding-right: 60px;
             }
+
+            @include bp(md) {
+                color: #FFFFFF;
+            }
         }
     }
 
@@ -125,15 +144,80 @@
         width: 100%;
         max-width: 48px;
         height: 48px;
-        opacity: 0; /* начальная прозрачность - элемент невидимый */
-        position: absolute; /* абсолютное позиционирование, чтобы разместить иконку над изображением */
-        top: 50%; /* позиция по вертикали в центре относительно родительского элемента */
-        right: 0; /* позиция по горизонтали в центре относительно родительского элемента */
-        transform: translate(-50%, -50%); /* центрирование иконки */
-        transition: 0.5s ease; /* анимация прозрачности */
+        opacity: 0;
+        /* начальная прозрачность - элемент невидимый */
+        position: absolute;
+        /* абсолютное позиционирование, чтобы разместить иконку над изображением */
+        top: 50%;
+        /* позиция по вертикали в центре относительно родительского элемента */
+        right: 0;
+        /* позиция по горизонтали в центре относительно родительского элемента */
+        transform: translate(-50%, -50%);
+        /* центрирование иконки */
+        transition: 0.5s ease;
+        /* анимация прозрачности */
 
         @include bp(lg) {
             opacity: 1;
         }
     }
+}
+
+.confidence {
+    position: relative;
+    overflow: hidden;
+    height: 946px;
+    background: #022873;
+
+    @include bp(md) {
+        height: 700px;
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+    h2,
+    p {
+        color: #FFFFFF;
+    }
+
+    &__image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+
+        @include bp(lg) {
+            right: -200px;
+        }
+
+        @include bp(sm) {
+            display: flex;
+            align-items: end;
+            right: -70px;
+        }
+
+        img {
+            height: 100%;
+
+            @include bp(sm) {
+                height: 425px;
+            }
+        }
+    }
+}
+
+.confidence {
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+
+        @include bp(md) {
+            flex-direction: column;
+            gap: 80px;
+        }
+    }
+
 }
