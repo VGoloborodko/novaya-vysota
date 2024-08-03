@@ -31,3 +31,41 @@ if (document.querySelector(".stylekit")) {
         console.error(error);
     }
 }
+
+//---------------- Файл index.html
+//------- Секция projects - плавное сворачивание
+if (document.querySelector(".projects")) {
+
+    const dropdownItem = document.querySelectorAll('.projects__item');
+    dropdownItem.forEach(elem => {
+        const btn = elem.querySelector('.toggleButton');
+        const content = elem.querySelector('.content');
+        const image = elem.querySelector('.projects__image');
+
+        btn.addEventListener('click', () => {
+            if (content.style.height && content.style.height !== '0px') {
+                content.style.height = '0px';
+            } else {
+                content.style.height = content.scrollHeight + 'px';
+            }
+
+            if (image.style.height && image.style.height !== '0px') {
+                image.style.height = '0px';
+            } else {
+                image.style.height = image.scrollHeight + 'px';
+            }
+
+        })
+
+        // btn.addEventListener('click', () => {
+        //     console.log(content);
+        //     if (content.style.height && content.style.height !== '0px') {
+        //         content.style.height = '0px';
+        //     } else {
+        //         content.style.height = content.scrollHeight + 'px';
+        //     }
+
+        // })
+    })
+
+}

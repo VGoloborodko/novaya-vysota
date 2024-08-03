@@ -177,11 +177,6 @@
         display: flex;
     }
 
-    h2,
-    p {
-        color: #FFFFFF;
-    }
-
     &__image {
         position: absolute;
         bottom: 0;
@@ -219,5 +214,18 @@
             gap: 80px;
         }
     }
+}
 
+.projects {}
+
+.content {
+    height: 0;
+    overflow: hidden;
+    transition: height .5s ease;
+}
+
+.projects__image {
+    height: 0;
+    overflow: hidden;
+    transition: height .5s ease;
 }
