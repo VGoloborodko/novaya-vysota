@@ -85,30 +85,30 @@ var swiper = new Swiper(".mySwiper", {
     loop: true, // Разрешить зацикливание слайдов
 });
 
-window.addEventListener('scroll', function () {
-    var mainGeneral = document.querySelector('.main-general');
-    var newsArticles = document.querySelector('.news-articles');
-    var writeSection = document.querySelector('.write');
-    var scrolled = (window.scrollY - mainGeneral.offsetTop) - writeSection.offsetHeight;
-    // console.log(scrolled);
-    
-    var speed = 0.4; // Увеличенная скорость движения блока
-
-    newsArticles.style.transform = 'translateY(' + (scrolled * speed) + 'px)'; // Изменяем вертикальный отступ блока news-articles в зависимости от скролла относительно блока "main-general"
-});
-
 // window.addEventListener('scroll', function () {
 //     var mainGeneral = document.querySelector('.main-general');
 //     var newsArticles = document.querySelector('.news-articles');
-//     var writeSection = document.querySelector('.write');
-
+//     // var writeSection = document.querySelector('.write');
 //     var scrolled = window.scrollY - mainGeneral.offsetTop;
-//     var speed = 0.5; // Скорость движения блока
+//     // console.log(window.scrollY);
+//     // console.log(mainGeneral.offsetTop);
+    
+    
+//     var speed = 0.4; // Увеличенная скорость движения блока
 
-//     var newsArticlesHeight = newsArticles.offsetHeight;
-//     var writeSectionTop = writeSection.offsetTop;
-
-//     if (scrolled * speed + newsArticlesHeight < writeSectionTop) {
-//         newsArticles.style.transform = 'translateY(' + (scrolled * speed) + 'px)';
-//     }
+//     newsArticles.style.transform = 'translateY(' + (scrolled * speed) + 'px)'; // Изменяем вертикальный отступ блока news-articles в зависимости от скролла относительно блока "main-general"
 // });
+
+window.addEventListener('scroll', function() {
+    var mainGeneral = document.querySelector('.main-general');
+    var newsArticles = document.querySelector('.news-articles');
+    var scrolled = window.scrollY - mainGeneral.offsetTop;
+    console.log(scrolled);
+    
+    var speed = 0.5; // Увеличенная скорость движения блока
+    var stopHeight = -105; // Высота, на которой блок должен остановиться
+  
+    if (scrolled < stopHeight) {
+      newsArticles.style.transform = 'translateY(' + (scrolled * speed) + 'px)';
+    }
+  });
