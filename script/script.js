@@ -36,36 +36,79 @@ if (document.querySelector(".stylekit")) {
 //------- Секция projects - плавное сворачивание
 if (document.querySelector(".projects")) {
 
-    const dropdownItem = document.querySelectorAll('.projects__item');
-    dropdownItem.forEach(elem => {
-        const btn = elem.querySelector('.toggleButton');
-        const content = elem.querySelector('.content');
-        const image = elem.querySelector('.projects__image');
+    function projectsCheckBtn() {
+        const dropdownItem = document.querySelectorAll('.projects__item');
+        dropdownItem.forEach(elem => {
+            const btn = elem.querySelector('.projects__ctoggleButton');
+            const toggle = elem.querySelector('.projects__toggle');
+            const content = elem.querySelector('.projects__content');
+            const image = elem.querySelector('.projects__image');
 
-        btn.addEventListener('click', () => {
-            if (content.style.height && content.style.height !== '0px') {
-                content.style.height = '0px';
-            } else {
-                content.style.height = content.scrollHeight + 'px';
-            }
+            btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg)';
 
-            if (image.style.height && image.style.height !== '0px') {
-                image.style.height = '0px';
-            } else {
-                image.style.height = image.scrollHeight + 'px';
-            }
+            btn.addEventListener('click', () => {
+                if (toggle.checked) {
+                    content.style.height = content.scrollHeight + 'px';
+                    // content.classList.add('sp-t-yellow');
+                    image.style.height = image.scrollHeight + 'px';
+                    // image.style.height = '100%';
+                    btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg)';
 
+                } else {
+                    content.style.height = '0px';
+                    // content.classList.remove('sp-t-yellow');
+                    image.style.height = '0px';
+                    btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg)';
+                }
+            })
         })
+    }
 
-        // btn.addEventListener('click', () => {
-        //     console.log(content);
-        //     if (content.style.height && content.style.height !== '0px') {
-        //         content.style.height = '0px';
-        //     } else {
-        //         content.style.height = content.scrollHeight + 'px';
-        //     }
-
-        // })
-    })
+    try {
+        projectsCheckBtn();
+    } catch (error) {
+        console.error(error);
+    }
 
 }
+
+
+
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 'auto', // Устанавливаем количество видимых слайдов
+    spaceBetween: 24, // Расстояние между слайдами
+    autoplay: {
+        delay: 2000, // Задержка между переключением слайдов в миллисекундах
+    },
+    speed: 800, // Скорость анимации в миллисекундах
+    loop: true, // Разрешить зацикливание слайдов
+});
+
+window.addEventListener('scroll', function () {
+    var mainGeneral = document.querySelector('.main-general');
+    var newsArticles = document.querySelector('.news-articles');
+    var writeSection = document.querySelector('.write');
+    var scrolled = (window.scrollY - mainGeneral.offsetTop) - writeSection.offsetHeight;
+    // console.log(scrolled);
+    
+    var speed = 0.4; // Увеличенная скорость движения блока
+
+    newsArticles.style.transform = 'translateY(' + (scrolled * speed) + 'px)'; // Изменяем вертикальный отступ блока news-articles в зависимости от скролла относительно блока "main-general"
+});
+
+// window.addEventListener('scroll', function () {
+//     var mainGeneral = document.querySelector('.main-general');
+//     var newsArticles = document.querySelector('.news-articles');
+//     var writeSection = document.querySelector('.write');
+
+//     var scrolled = window.scrollY - mainGeneral.offsetTop;
+//     var speed = 0.5; // Скорость движения блока
+
+//     var newsArticlesHeight = newsArticles.offsetHeight;
+//     var writeSectionTop = writeSection.offsetTop;
+
+//     if (scrolled * speed + newsArticlesHeight < writeSectionTop) {
+//         newsArticles.style.transform = 'translateY(' + (scrolled * speed) + 'px)';
+//     }
+// });

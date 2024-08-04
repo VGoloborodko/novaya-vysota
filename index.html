@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Главная</title>
 </head>
 
 <body>
 
-    <div class="page">
+    <div class="page color-block--primary">
 
         <section class="products">
             <div class="products__wrapper sp-t-green sp-b-orange">
@@ -178,8 +179,8 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-5"></div>
-                    <div class="col-7">
+                    <div class="col-5 d-none-md"></div>
+                    <div class="col-7 col-md-6 col-sm-3">
                         <h2 class="font-h2">Реализованные проекты</h2>
                     </div>
                 </div>
@@ -190,8 +191,7 @@
             </div>
 
             <div class="container">
-
-                <div class="projects__item sp-b-purple">
+                <div class="projects__item">
                     <div class="row">
                         <div class="col-4 col-md-6 col-sm-3">
                             <div class="projects__image">
@@ -200,23 +200,43 @@
                         </div>
                         <div class="col-1 d-none-md"></div>
                         <div class="col-7 col-md-6 col-sm-3">
-                            <div class="projects__desk">
-                                <div class="toggleButton" style="width: 16px; height: 16px; background: red;"></div>
-                                <h3 class="font-h3 sp-b-yellow">Вышка стремянка алюминиевая для авиадвигателя</h3>
-                                <p class="content font-t1 color--secondary expanded">Проект выполнен в рамках заказа компании аэрофлот на поставку вышки стремянки
-                                    алюминиевой, реализайия проетка осуществлялась в строгом соответствии с актуальными
-                                    тебованиями к проектировке современных, качественных и универсальных высотных
-                                    конструкций. Проект выполнен в рамках заказа компании аэрофлот на поставку вышки
-                                    стремянки алюминиевой, реализайия проетка осуществлялась в строгом соответствии с
-                                    актуальными тебованиями к проектировке современных, качественных и универсальных
-                                    высотных конструкций.
-                                </p>
+                            <div class="projects__desk-block">
+                                <div class="projects__deskcription">
+                                    <div class="projects__ctoggleButton">
+                                        <input class="projects__toggle" type="checkbox" />
+                                    </div>
+                                    <h3 class="font-h3 sp-b-yellow">Вышка стремянка алюминиевая для авиадвигателя</h3>
+                                    <p class="projects__content font-t1 color--secondary expanded">Проект выполнен в
+                                        рамках заказа компании аэрофлот на поставку вышки стремянки
+                                        алюминиевой, реализайия проетка осуществлялась в строгом соответствии с
+                                        актуальными
+                                        тебованиями к проектировке современных, качественных и универсальных высотных
+                                        конструкций. Проект выполнен в рамках заказа компании аэрофлот на поставку вышки
+                                        стремянки алюминиевой, реализайия проетка осуществлялась в строгом соответствии
+                                        с
+                                        актуальными тебованиями к проектировке современных, качественных и универсальных
+                                        высотных конструкций.
+                                    </p>
+                                </div>
+                                <div class="projects__bottom-block sp-t-purple">
+                                    <div>Кнопка</div>
+                                    <div class="projects__tag">
+                                        <img src="/assets/icon/tag.svg" alt="">
+                                        <p class="font-cap color--secondary">Авиатранспорт</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="projects__item sp-b-purple">
+            <div class="sp-v-dark-blue">
+                <div class="line"></div>
+            </div>
+
+            <div class="container">
+                <div class="projects__item">
                     <div class="row">
                         <div class="col-4 col-md-6 col-sm-3">
                             <div class="projects__image">
@@ -225,23 +245,43 @@
                         </div>
                         <div class="col-1 d-none-md"></div>
                         <div class="col-7 col-md-6 col-sm-3">
-                            <div class="projects__desk">
-                                <div class="toggleButton" style="width: 16px; height: 16px; background: red;"></div>
-                                <h3 class="font-h3 sp-b-yellow">Вышка стремянка алюминиевая для авиадвигателя</h3>
-                                <p class="content font-t1 color--secondary expanded">Проект выполнен в рамках заказа компании аэрофлот на поставку вышки стремянки
-                                    алюминиевой, реализайия проетка осуществлялась в строгом соответствии с актуальными
-                                    тебованиями к проектировке современных, качественных и универсальных высотных
-                                    конструкций. Проект выполнен в рамках заказа компании аэрофлот на поставку вышки
-                                    стремянки алюминиевой, реализайия проетка осуществлялась в строгом соответствии с
-                                    актуальными тебованиями к проектировке современных, качественных и универсальных
-                                    высотных конструкций.
-                                </p>
+                            <div class="projects__desk-block">
+                                <div class="projects__deskcription">
+                                    <div class="projects__ctoggleButton">
+                                        <input class="projects__toggle" type="checkbox" />
+                                    </div>
+                                    <h3 class="font-h3 sp-b-yellow">Вышка стремянка алюминиевая для авиадвигателя</h3>
+                                    <p class="projects__content font-t1 color--secondary expanded">Проект выполнен в
+                                        рамках заказа компании аэрофлот на поставку вышки стремянки
+                                        алюминиевой, реализайия проетка осуществлялась в строгом соответствии с
+                                        актуальными
+                                        тебованиями к проектировке современных, качественных и универсальных высотных
+                                        конструкций. Проект выполнен в рамках заказа компании аэрофлот на поставку вышки
+                                        стремянки алюминиевой, реализайия проетка осуществлялась в строгом соответствии
+                                        с
+                                        актуальными тебованиями к проектировке современных, качественных и универсальных
+                                        высотных конструкций.
+                                    </p>
+                                </div>
+                                <div class="projects__bottom-block sp-t-purple">
+                                    <div>Кнопка</div>
+                                    <div class="projects__tag">
+                                        <img src="/assets/icon/tag.svg" alt="">
+                                        <p class="font-cap color--secondary">Авиатранспорт</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="projects__item sp-b-purple">
+            <div class="sp-v-dark-blue">
+                <div class="line"></div>
+            </div>
+
+            <div class="container">
+                <div class="projects__item">
                     <div class="row">
                         <div class="col-4 col-md-6 col-sm-3">
                             <div class="projects__image">
@@ -250,28 +290,220 @@
                         </div>
                         <div class="col-1 d-none-md"></div>
                         <div class="col-7 col-md-6 col-sm-3">
-                            <div class="projects__desk">
-                                <div class="toggleButton" style="width: 16px; height: 16px; background: red;"></div>
-                                <h3 class="font-h3 sp-b-yellow">Вышка стремянка алюминиевая для авиадвигателя</h3>
-                                <p class="content font-t1 color--secondary expanded">Проект выполнен в рамках заказа компании аэрофлот на поставку вышки стремянки
-                                    алюминиевой, реализайия проетка осуществлялась в строгом соответствии с актуальными
-                                    тебованиями к проектировке современных, качественных и универсальных высотных
-                                    конструкций. Проект выполнен в рамках заказа компании аэрофлот на поставку вышки
-                                    стремянки алюминиевой, реализайия проетка осуществлялась в строгом соответствии с
-                                    актуальными тебованиями к проектировке современных, качественных и универсальных
-                                    высотных конструкций.
-                                </p>
+                            <div class="projects__desk-block">
+                                <div class="projects__deskcription">
+                                    <div class="projects__ctoggleButton">
+                                        <input class="projects__toggle" type="checkbox" />
+                                    </div>
+                                    <h3 class="font-h3 sp-b-yellow">Вышка стремянка алюминиевая для авиадвигателя</h3>
+                                    <p class="projects__content font-t1 color--secondary expanded">Проект выполнен в
+                                        рамках заказа компании аэрофлот на поставку вышки стремянки
+                                        алюминиевой, реализайия проетка осуществлялась в строгом соответствии с
+                                        актуальными
+                                        тебованиями к проектировке современных, качественных и универсальных высотных
+                                        конструкций. Проект выполнен в рамках заказа компании аэрофлот на поставку вышки
+                                        стремянки алюминиевой, реализайия проетка осуществлялась в строгом соответствии
+                                        с
+                                        актуальными тебованиями к проектировке современных, качественных и универсальных
+                                        высотных конструкций.
+                                    </p>
+                                </div>
+                                <div class="projects__bottom-block sp-t-purple">
+                                    <div>Кнопка</div>
+                                    <div class="projects__tag">
+                                        <img src="/assets/icon/tag.svg" alt="">
+                                        <p class="font-cap color--secondary">Авиатранспорт</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <div class="sp-v-dark-blue">
+                <div class="line"></div>
             </div>
 
         </section>
 
-    </div>
+        <div class="main-general">
 
+            <section class="partners sp-v-pink">
+
+                <div class="container sp-b-green">
+                    <div class="col">
+                        <div class="partners__header">
+                            <h2 class="font-h2 color--white">Партнёры</h2>
+                            <p class="color--white" style="padding-bottom: 10px;">Кнопка</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="partners__image">
+                                <img src="/assets/image/partners_image.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="partners__image">
+                                <img src="/assets/image/partners_image.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="partners__image">
+                                <img src="/assets/image/partners_image.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="partners__image">
+                                <img src="/assets/image/partners_image.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="partners__image">
+                                <img src="/assets/image/partners_image.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="partners__image">
+                                <img src="/assets/image/partners_image.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="partners__image">
+                                <img src="/assets/image/partners_image.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="news-articles">
+                <div class="news-articles__wrapper color-block--primary sp-v-green">
+
+                    <div class="container">
+                        <div class="col">
+                            <div class="partners__header">
+                                <h2 class="font-h2">Новости и статьи</h2>
+                                <p style="padding-bottom: 10px;">Кнопка</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sp-v-dark-blue">
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="container">
+                        <div class="news-articles__block">
+
+                            <div class="col-6 col-md-6 col-sm-3">
+                                <a href="#">
+
+                                    <div class="news-articles__image">
+                                        <img src="/assets/image/news_articles_image_1.jpg" alt="">
+                                    </div>
+
+                                    <div class="news-articles__position-tag sp-t-light-blue">
+                                        <div class="projects__tag">
+                                            <img src="/assets/icon/tag.svg" alt="">
+                                            <p class="font-cap color--secondary">Авиатранспорт,</p>
+                                        </div>
+
+                                        <div class="projects__tag">
+                                            <img src="/assets/icon/tag.svg" alt="">
+                                            <p class="font-cap color--secondary">Технологии</p>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="font-h4 sp-t-dark-purple">Название статьи или новости</h4>
+                                </a>
+                            </div>
+
+                            <div class="col-3 col-md-6 col-sm-3">
+                                <a href="#">
+
+                                    <div class="news-articles__image">
+                                        <img src="/assets/image/news_articles_image_2.jpg" alt="">
+                                    </div>
+
+                                    <div class="news-articles__position-tag sp-t-light-blue">
+                                        <div class="projects__tag">
+                                            <img src="/assets/icon/tag.svg" alt="">
+                                            <p class="font-cap color--secondary">Авиатранспорт,</p>
+                                        </div>
+
+                                        <div class="projects__tag">
+                                            <img src="/assets/icon/tag.svg" alt="">
+                                            <p class="font-cap color--secondary">Технологии</p>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="font-h4 sp-t-dark-purple">Название статьи или новости</h4>
+                                </a>
+                            </div>
+
+                            <div class="col-3 col-md-6 col-sm-3">
+                                <a href="#">
+
+                                    <div class="news-articles__image">
+                                        <img src="/assets/image/news_articles_image_3.jpg" alt="">
+                                    </div>
+
+                                    <div class="news-articles__position-tag sp-t-light-blue">
+                                        <div class="projects__tag">
+                                            <img src="/assets/icon/tag.svg" alt="">
+                                            <p class="font-cap color--secondary">Авиатранспорт,</p>
+                                        </div>
+
+                                        <div class="projects__tag">
+                                            <img src="/assets/icon/tag.svg" alt="">
+                                            <p class="font-cap color--secondary">Технологии</p>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="font-h4 sp-t-dark-purple">Название статьи или новости</h4>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="write">
+                <div class="write__wrapper sp-v-fuchsia">
+                    <div class="container">
+                        <div class="col-4 col-md-6 col-sm-3">
+                            <h2 class="font-h2 color--white sp-b-mint">Напишите нам</h2>
+                            <p class="font-t1 color--white sp-b-light-blue">Мы открыты для общения и новых идей.</p>
+                            <p class="font-t1 color--white sp-b-light-blue">Если у вас возник вопрос или замечание, оставьте сообщение в форме обратной связи. Наш менеджер свяжется с вами в течение рабочего дня.</p>
+                            <p class="font-t1 color--white">Благодарим вас за доверие к нашей продукции.</p>
+                        </div>
+                        <div class="col-2 d-none-md"></div>
+                        <div class="col-4 col-md-6 col-sm-3"></div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/parallax-js"></script> -->
     <script src="/script/script.js"></script>
 </body>
 
