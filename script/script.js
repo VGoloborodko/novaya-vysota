@@ -1,3 +1,32 @@
+// Плавный скрол для страницы
+SmoothScroll({
+    // Время скролла 400 = 0.4 секунды
+    animationTime: 800,
+    // Размер шага в пикселях 
+    stepSize: 75,
+
+    // Дополнительные настройки:
+
+    // Ускорение 
+    accelerationDelta: 30,
+    // Максимальное ускорение
+    accelerationMax: 2,
+
+    // Поддержка клавиатуры
+    keyboardSupport: true,
+    // Шаг скролла стрелками на клавиатуре в пикселях
+    arrowScroll: 50,
+
+    // Pulse (less tweakable)
+    // ratio of "tail" to "acceleration"
+    pulseAlgorithm: true,
+    pulseScale: 4,
+    pulseNormalize: 1,
+
+    // Поддержка тачпада
+    touchpadSupport: true,
+})
+
 //---------------- Файл stylekit.html
 //------- Копирование стиля в буфер обмен
 if (document.querySelector(".stylekit")) {
@@ -72,43 +101,31 @@ if (document.querySelector(".projects")) {
 
 }
 
+//---------------- Файл index.html
+//------- Секция partners - бегущая строка
+if (document.querySelector(".partners")) {
+    function mainTicker() {
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 'auto', // Устанавливаем количество видимых слайдов
+            spaceBetween: 24, // Расстояние между слайдами
+            autoplay: {
+                delay: 2000, // Задержка между переключением слайдов в миллисекундах
+            },
+            speed: 800, // Скорость анимации в миллисекундах
+            loop: true, // Разрешить зацикливание слайдов
+        });
+    }
 
+    try {
+        mainTicker();
+    } catch (error) {
+        console.error(error);
+    }
+}
 
-
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 'auto', // Устанавливаем количество видимых слайдов
-    spaceBetween: 24, // Расстояние между слайдами
-    autoplay: {
-        delay: 2000, // Задержка между переключением слайдов в миллисекундах
-    },
-    speed: 800, // Скорость анимации в миллисекундах
-    loop: true, // Разрешить зацикливание слайдов
-});
+// const parallax = document.querySelector('.partners__image');
 
 // window.addEventListener('scroll', function () {
-//     var mainGeneral = document.querySelector('.main-general');
-//     var newsArticles = document.querySelector('.news-articles');
-//     // var writeSection = document.querySelector('.write');
-//     var scrolled = window.scrollY - mainGeneral.offsetTop;
-//     // console.log(window.scrollY);
-//     // console.log(mainGeneral.offsetTop);
-    
-    
-//     var speed = 0.4; // Увеличенная скорость движения блока
-
-//     newsArticles.style.transform = 'translateY(' + (scrolled * speed) + 'px)'; // Изменяем вертикальный отступ блока news-articles в зависимости от скролла относительно блока "main-general"
+//     let offset = window.pageYOffset;
+//     parallax.style.transform = 'translateY(' + offset * 0.3 + 'px)';
 // });
-
-window.addEventListener('scroll', function() {
-    var mainGeneral = document.querySelector('.main-general');
-    var newsArticles = document.querySelector('.news-articles');
-    var scrolled = window.scrollY - mainGeneral.offsetTop;
-    console.log(scrolled);
-    
-    var speed = 0.5; // Увеличенная скорость движения блока
-    var stopHeight = -105; // Высота, на которой блок должен остановиться
-  
-    if (scrolled < stopHeight) {
-      newsArticles.style.transform = 'translateY(' + (scrolled * speed) + 'px)';
-    }
-  });

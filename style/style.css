@@ -1768,6 +1768,14 @@ html {
   margin: 6px 0;
 }
 
+.html {
+  scroll-behavior: smooth;
+}
+
+.page {
+  overflow: hidden;
+}
+
 .products__head {
   display: flex;
   align-items: end;
@@ -2026,11 +2034,23 @@ html {
   height: 16px;
 }
 
-.main-general {
-  background: url("/assets/image/main_general.jpg") no-repeat center;
-  background-size: cover;
+.partners {
+  position: relative;
 }
-
+.partners__image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("/assets/image/main_general.jpg") no-repeat top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.partners__wrapper {
+  position: relative;
+  z-index: 5;
+}
 .partners__header {
   display: flex;
   align-items: flex-end;
@@ -2090,4 +2110,54 @@ html {
 .news-articles__position-tag {
   display: flex;
   gap: 8px;
+}
+
+.write {
+  background: url("/assets/image/main_general.jpg") no-repeat bottom;
+  background-size: cover;
+}
+.write__wrapper {
+  display: flex;
+}
+@media (max-width: 1024px) {
+  .write__wrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+}
+@media (max-width: 767px) {
+  .form {
+    padding: 28px 16px;
+  }
+}
+.form__group input {
+  width: 100%;
+  height: 48px;
+  padding: 12px 0;
+  background: unset;
+  border-bottom: 1px solid #333333;
+}
+.form__group textarea {
+  overflow: hidden;
+  width: 100%;
+  height: 48px;
+  padding: 12px 0;
+  background: unset;
+  border-bottom: 1px solid #333333;
+  resize: none;
+}
+.form__group button {
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
