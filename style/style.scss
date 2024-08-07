@@ -15,6 +15,113 @@
     overflow: hidden;
 }
 
+.main-cover {
+    position: relative;
+    height: 100vh;
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__desk {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        height: 300px;
+
+        .row {
+            @include bp(md) {
+                gap: 24px;
+            }
+        }
+    }
+
+    .swiper {
+        height: 100%;
+    }
+
+    .swiper-slide {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+        bottom: 300px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #BDBDBD;
+    }
+
+    .swiper-scrollbar-drag {
+        height: 6px;
+        background: #FFFFFF;
+        border-radius: 0;
+    }
+
+    // .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    //     display: flex;
+    //     bottom: 292px;
+    //     border-top: 1px solid #BDBDBD;
+    // }
+
+    // .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    //     flex: 1;
+    //     height: 6px;
+    //     margin: 0;
+    //     border-radius: 0;
+    // }
+
+    // .swiper-pagination-bullet {
+    //     background: unset;
+    //     transition: transform 1s ease-out;
+    // }
+
+    // .swiper-pagination-bullet-active {
+    //     background: #FFFFFF;
+    // }
+
+    .swiper-button-next {
+        top: unset;
+        bottom: 200px;
+        right: 50px;
+        width: 48px;
+        height: 48px;
+        background: url('/assets/icon/main_cover_btn_icon.svg') no-repeat center;
+
+        @include bp(sm) {
+            bottom: 8px;
+        }
+    }
+
+    .swiper-button-prev {
+        top: unset;
+        bottom: 200px;
+        left: unset;
+        right: 110px;
+        width: 48px;
+        height: 48px;
+        background: url('/assets/icon/main_cover_btn_icon.svg') no-repeat center;
+        transform: rotate(180deg);
+
+        @include bp(sm) {
+            bottom: 8px;
+        }
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after {
+        display: none;
+    }
+}
+
 .products {
     &__wrapper {}
 
@@ -300,11 +407,6 @@
     }
 }
 
-// .main-general {
-//     background: url('/assets/image/main_general.jpg') no-repeat center;
-//     background-size: cover;
-// }
-
 .partners {
     position: relative;
     // overflow: hidden;
@@ -412,7 +514,7 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    // gap: 24px;
     padding: 32px;
 
     @include bp(sm) {
@@ -426,7 +528,7 @@
         background: unset;
         border-bottom: 1px solid #333333;
     }
-    
+
     &__group textarea {
         overflow: hidden;
         width: 100%;
@@ -436,12 +538,49 @@
         border-bottom: 1px solid #333333;
         resize: none;
     }
-    &__group button {
-        padding: 8px 15px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
+}
+
+.footer {
+
+    &__menu {
+        width: 100%;
+        max-width: 1260px;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            &:hover {
+                color: var(--text-hover);
+            }
+        }
+    }
+
+    &__main {
+        display: flex;
+
+        @include bp(md) {
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+
+    &__ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__social {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+
+        @include bp(md) {
+            flex-direction: column;
+            gap: 16px;
+        }
     }
 }

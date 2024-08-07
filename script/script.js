@@ -123,9 +123,43 @@ if (document.querySelector(".partners")) {
     }
 }
 
-// const parallax = document.querySelector('.partners__image');
+var swiper = new Swiper(".mySwiper-main-cover", {
+    effect: 'creative',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    creativeEffect: {
+        prev: {
+            shadow: true,
+            translate: ["-20%", 0, -1],
+        },
+        next: {
+            translate: ["100%", 0, 0],
+        },
+    },
+    // coverflowEffect: {
+    //     rotate: 50, // Угол поворота слайдов
+    //     stretch: 0, // Растяжение слайдов
+    //     depth: 100, // Глубина перекрытия
+    //     modifier: 1, // Модификатор
+    //     slideShadows: true // Тень слайдов
+    // },
+    speed: 1000,
 
-// window.addEventListener('scroll', function () {
-//     let offset = window.pageYOffset;
-//     parallax.style.transform = 'translateY(' + offset * 0.3 + 'px)';
-// });
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    // },
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: false, // Показывать скроллбар всегда
+        draggable: true, // Позволяет перетаскивать скроллбар
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
