@@ -62,6 +62,53 @@ if (document.querySelector(".stylekit")) {
 }
 
 //---------------- Файл index.html
+//------- Секция main-cover - главный слайдер
+if (document.querySelector(".main-cover")) {
+    function mainSlaider() {
+        var swiper = new Swiper(".mySwiper-main-cover", {
+            640: {
+                delay: 5000,
+            },
+            effect: 'creative',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            speed: 1000,
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 3000, // Задержка между переключением слайдов в миллисекундах (например, 5000 = 5 секунд)
+                disableOnInteraction: false, // Отключение автопрокрутки при взаимодействии пользователя с слайдером
+            },
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: ["-20%", 0, -1],
+                },
+                next: {
+                    translate: ["100%", 0, 0],
+                },
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: false, // Показывать скроллбар всегда
+                draggable: true, // Позволяет перетаскивать скроллбар
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    }
+
+    try {
+        mainSlaider();
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+//---------------- Файл index.html
 //------- Секция projects - плавное сворачивание
 if (document.querySelector(".projects")) {
 
@@ -122,44 +169,3 @@ if (document.querySelector(".partners")) {
         console.error(error);
     }
 }
-
-var swiper = new Swiper(".mySwiper-main-cover", {
-    effect: 'creative',
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    creativeEffect: {
-        prev: {
-            shadow: true,
-            translate: ["-20%", 0, -1],
-        },
-        next: {
-            translate: ["100%", 0, 0],
-        },
-    },
-    // coverflowEffect: {
-    //     rotate: 50, // Угол поворота слайдов
-    //     stretch: 0, // Растяжение слайдов
-    //     depth: 100, // Глубина перекрытия
-    //     modifier: 1, // Модификатор
-    //     slideShadows: true // Тень слайдов
-    // },
-    speed: 1000,
-
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    // pagination: {
-    //     el: ".swiper-pagination",
-    //     clickable: true,
-    // },
-    scrollbar: {
-        el: '.swiper-scrollbar',
-        hide: false, // Показывать скроллбар всегда
-        draggable: true, // Позволяет перетаскивать скроллбар
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});

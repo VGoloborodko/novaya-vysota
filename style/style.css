@@ -1830,6 +1830,7 @@ html {
 }
 @media (max-width: 767px) {
   .main-cover .swiper-button-next {
+    display: none;
     bottom: 8px;
   }
 }
@@ -1845,6 +1846,7 @@ html {
 }
 @media (max-width: 767px) {
   .main-cover .swiper-button-prev {
+    display: none;
     bottom: 8px;
   }
 }
