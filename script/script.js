@@ -67,12 +67,22 @@ if (document.querySelector(".main-cover")) {
     animateBlock()
     function mainSlaider() {
         var swiper = new Swiper(".mySwiper-main-cover", {
-            640: {
-                autoplay: {
-                    delay: false,
+            breakpoints: {
+                768: {
+                    autoplay: false,
+                    effect: 'creative',
+                    creativeEffect: {
+                        prev: {
+                            shadow: true,
+                            translate: ["-20%", 0, -1],
+                        },
+                        next: {
+                            translate: ["100%", 0, 0],
+                        },
+                    },
                 },
             },
-            effect: 'creative',
+            effect: 'fade',
             grabCursor: true,
             centeredSlides: true,
             slidesPerView: 'auto',
@@ -82,15 +92,6 @@ if (document.querySelector(".main-cover")) {
             autoplay: {
                 delay: 3000, // Задержка между переключением слайдов в миллисекундах (например, 5000 = 5 секунд)
                 disableOnInteraction: false, // Отключение автопрокрутки при взаимодействии пользователя с слайдером
-            },
-            creativeEffect: {
-                prev: {
-                    shadow: true,
-                    translate: ["-20%", 0, -1],
-                },
-                next: {
-                    translate: ["100%", 0, 0],
-                },
             },
             on: {
                 slideChangeTransitionStart: function () {
@@ -117,30 +118,6 @@ if (document.querySelector(".main-cover")) {
                 prevEl: ".swiper-button-prev",
             },
         });
-
-        // const navigationButtons = document.querySelectorAll('.swiper-button-next, .swiper-button-prev');
-        // const navigationTimeout = 3000; // Установите желаемую задержку в миллисекундах
-
-        // navigationButtons.forEach(button => {
-        //     button.addEventListener('click', () => {
-
-        //         navigationButtons.forEach(btn => {
-        //             console.log('Блок');
-        //             console.log(btn);
-
-        //             btn.disabled = true; // Блокируем кнопки навигации при клике
-        //         });
-
-        //         setTimeout(() => {
-        //             navigationButtons.forEach(btn => {
-        //                 console.log('Открыто');
-        //                 console.log(btn);
-
-        //                 btn.disabled = false; // Разблокируем кнопки после задержки
-        //             });
-        //         }, navigationTimeout);
-        //     });
-        // });
 
         const navigationButtons = document.querySelectorAll('.swiper-button-next, .swiper-button-prev');
         const navigationWrapper = document.querySelector('.swiper-button-wrapper');
