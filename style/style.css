@@ -1808,7 +1808,8 @@ html {
   display: flex;
   align-items: flex-end;
 }
-.main-cover .swiper-horizontal > .swiper-scrollbar, .main-cover .swiper-scrollbar.swiper-scrollbar-horizontal {
+.main-cover .swiper-horizontal > .swiper-scrollbar,
+.main-cover .swiper-scrollbar.swiper-scrollbar-horizontal {
   bottom: 300px;
   left: 0;
   width: 100%;
@@ -1850,7 +1851,8 @@ html {
     bottom: 8px;
   }
 }
-.main-cover .swiper-button-next:after, .main-cover .swiper-button-prev:after {
+.main-cover .swiper-button-next:after,
+.main-cover .swiper-button-prev:after {
   display: none;
 }
 
@@ -2266,4 +2268,10 @@ html {
     flex-direction: column;
     gap: 16px;
   }
+}
+
+.animation {
+  opacity: 0;
+  transform-origin: 0% 100%;
+  transform: scaleY(0.1);
 }/*# sourceMappingURL=style.css.map */

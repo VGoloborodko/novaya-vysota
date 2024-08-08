@@ -64,10 +64,13 @@ if (document.querySelector(".stylekit")) {
 //---------------- Файл index.html
 //------- Секция main-cover - главный слайдер
 if (document.querySelector(".main-cover")) {
+    animateBlock()
     function mainSlaider() {
         var swiper = new Swiper(".mySwiper-main-cover", {
             640: {
-                delay: 5000,
+                autoplay: {
+                    delay: false,
+                },
             },
             effect: 'creative',
             grabCursor: true,
@@ -89,6 +92,21 @@ if (document.querySelector(".main-cover")) {
                     translate: ["100%", 0, 0],
                 },
             },
+            on: {
+                slideChangeTransitionStart: function () {
+                    gsap.to('.animation', {
+                        opacity: 0,
+                        scaleY: 0,
+                        transformOrigin: "0% 100%",
+                        // x: -300,
+                        duration: .1,
+                    });
+                },
+                slideChangeTransitionEnd: function () {
+                    const currentSlide = this.slides[this.activeIndex];
+                    animateBlock(currentSlide);
+                }
+            },
             scrollbar: {
                 el: '.swiper-scrollbar',
                 hide: false, // Показывать скроллбар всегда
@@ -98,6 +116,48 @@ if (document.querySelector(".main-cover")) {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+        });
+
+        // const navigationButtons = document.querySelectorAll('.swiper-button-next, .swiper-button-prev');
+        // const navigationTimeout = 3000; // Установите желаемую задержку в миллисекундах
+
+        // navigationButtons.forEach(button => {
+        //     button.addEventListener('click', () => {
+
+        //         navigationButtons.forEach(btn => {
+        //             console.log('Блок');
+        //             console.log(btn);
+
+        //             btn.disabled = true; // Блокируем кнопки навигации при клике
+        //         });
+
+        //         setTimeout(() => {
+        //             navigationButtons.forEach(btn => {
+        //                 console.log('Открыто');
+        //                 console.log(btn);
+
+        //                 btn.disabled = false; // Разблокируем кнопки после задержки
+        //             });
+        //         }, navigationTimeout);
+        //     });
+        // });
+
+        const navigationButtons = document.querySelectorAll('.swiper-button-next, .swiper-button-prev');
+        const navigationWrapper = document.querySelector('.swiper-button-wrapper');
+        const navigationTimeout = 1500; // Установите желаемую задержку в миллисекундах
+
+        navigationWrapper.addEventListener('click', (event) => {
+            if (event.target.classList.contains('swiper-button-next') || event.target.classList.contains('swiper-button-prev')) {
+                navigationButtons.forEach(btn => {
+                    btn.style.pointerEvents = 'none'; // Блокируем кнопки навигации при клике
+                });
+
+                setTimeout(() => {
+                    navigationButtons.forEach(btn => {
+                        btn.style.pointerEvents = 'auto'; // Разблокируем кнопки после задержки
+                    });
+                }, navigationTimeout);
+            }
         });
     }
 
@@ -168,4 +228,22 @@ if (document.querySelector(".partners")) {
     } catch (error) {
         console.error(error);
     }
+}
+
+//---------------- Файл -
+//------- Анимация текста, появление снизу
+function animateBlock() {
+    gsap.set('.animation', {
+        opacity: 0,
+        scaleY: 0,
+        transformOrigin: "0% 100%",
+        transform: "scaleY(0.1)"
+    });
+    gsap.to('.animation', {
+        duration: .7,
+        scaleY: 1,
+        opacity: 1,
+        transformOrigin: "0% 100%",
+        ease: "cubic-bezier(0.390, 0.575, 0.565, 1.000)"
+    });
 }
