@@ -67,10 +67,38 @@ if (document.querySelector(".main-cover")) {
     animateBlock()
     function mainSlaider() {
         var swiper = new Swiper(".mySwiper-main-cover", {
+            effect: 'fade', // Определяет эффект перехода слайдов
+            simulateTouch: false,
+            // grabCursor: true, // Устанавливает курсор в виде "grab" при наведении на слайдер
+            speed: 1000, // Устанавливает скорость перехода между слайдами в миллисекундах
+            loop: true, // Включает бесконечную прокрутку слайдов
+            autoplay: {
+                delay: 2000, // Задержка между переключением слайдов в миллисекундах
+                disableOnInteraction: false, // Отключение автопрокрутки при взаимодействии пользователя с слайдером
+            },
+            scrollbar: {
+                el: '.swiper-scrollbar', // Указание на элемент, который будет использоваться в качестве скроллбара
+                hide: false, // Показывать скроллбар всегда
+                draggable: true, // Позволяет перетаскивать скроллбар
+            },
+            navigation: {
+                nextEl: ".swiper-button-next", // Указание на элемент управления для переключения к следующему слайду
+                prevEl: ".swiper-button-prev", // Указание на элемент управления для переключения к предыдущему слайду
+            },
+            creativeEffect: {
+                prev: {
+                    shadow: true, // Добавляет тень при переключении к предыдущему слайду
+                    translate: ["-20%", 0, -1], // Настройки анимации для переключения к предыдущему слайду
+                },
+                next: {
+                    translate: ["100%", 0, 0], // Настройки анимации для переключения к следующему слайду
+                },
+            },
             breakpoints: {
                 768: {
-                    autoplay: false,
-                    effect: 'creative',
+                    autoplay: false, // Отключение автопрокрутки при ширине экрана 768px и больше
+                    // simulateTouch: false,
+                    grabCursor: false,
                     creativeEffect: {
                         prev: {
                             shadow: true,
@@ -82,40 +110,19 @@ if (document.querySelector(".main-cover")) {
                     },
                 },
             },
-            effect: 'fade',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            speed: 1000,
-            slidesPerView: 1,
-            loop: true,
-            autoplay: {
-                delay: 3000, // Задержка между переключением слайдов в миллисекундах (например, 5000 = 5 секунд)
-                disableOnInteraction: false, // Отключение автопрокрутки при взаимодействии пользователя с слайдером
-            },
             on: {
                 slideChangeTransitionStart: function () {
                     gsap.to('.animation', {
                         opacity: 0,
                         scaleY: 0,
                         transformOrigin: "0% 100%",
-                        // x: -300,
                         duration: .1,
                     });
                 },
                 slideChangeTransitionEnd: function () {
                     const currentSlide = this.slides[this.activeIndex];
                     animateBlock(currentSlide);
-                }
-            },
-            scrollbar: {
-                el: '.swiper-scrollbar',
-                hide: false, // Показывать скроллбар всегда
-                draggable: true, // Позволяет перетаскивать скроллбар
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                },
             },
         });
 
