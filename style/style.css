@@ -2268,10 +2268,4 @@ html {
     flex-direction: column;
     gap: 16px;
   }
-}
-
-.animation {
-  opacity: 0;
-  transform-origin: 0% 100%;
-  transform: scaleY(0.1);
 }/*# sourceMappingURL=style.css.map */

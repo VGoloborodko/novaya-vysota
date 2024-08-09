@@ -64,10 +64,11 @@ if (document.querySelector(".stylekit")) {
 //---------------- Файл index.html
 //------- Секция main-cover - главный слайдер
 if (document.querySelector(".main-cover")) {
-    animateBlock()
+    animateText()
+    animateOpacity()
     function mainSlaider() {
         var swiper = new Swiper(".mySwiper-main-cover", {
-            effect: 'fade', // Определяет эффект перехода слайдов
+            effect: 'creative', // Определяет эффект перехода слайдов
             simulateTouch: false,
             // grabCursor: true, // Устанавливает курсор в виде "grab" при наведении на слайдер
             speed: 1000, // Устанавливает скорость перехода между слайдами в миллисекундах
@@ -88,7 +89,7 @@ if (document.querySelector(".main-cover")) {
             creativeEffect: {
                 prev: {
                     shadow: true, // Добавляет тень при переключении к предыдущему слайду
-                    translate: ["-20%", 0, -1], // Настройки анимации для переключения к предыдущему слайду
+                    translate: ["-40%", 0, -1], // Настройки анимации для переключения к предыдущему слайду
                 },
                 next: {
                     translate: ["100%", 0, 0], // Настройки анимации для переключения к следующему слайду
@@ -98,30 +99,39 @@ if (document.querySelector(".main-cover")) {
                 768: {
                     autoplay: false, // Отключение автопрокрутки при ширине экрана 768px и больше
                     // simulateTouch: false,
-                    grabCursor: false,
-                    creativeEffect: {
-                        prev: {
-                            shadow: true,
-                            translate: ["-20%", 0, -1],
-                        },
-                        next: {
-                            translate: ["100%", 0, 0],
-                        },
-                    },
+                    // grabCursor: false,
                 },
             },
             on: {
                 slideChangeTransitionStart: function () {
-                    gsap.to('.animation', {
-                        opacity: 0,
-                        scaleY: 0,
-                        transformOrigin: "0% 100%",
-                        duration: .1,
+                    this.slides.forEach((slide, index) => {
+
+                        const animationElements = slide.querySelectorAll('.animation-text');
+                        if (index === this.activeIndex) {
+                            animationElements.forEach((element) => {
+                                gsap.to(element, {
+                                    y: '150%',
+                                    duration: 0,
+                                });
+                            });
+                        }
+
+                        const animationElementsOpacity = slide.querySelectorAll('.animation-opacity');
+                        if (index === this.activeIndex) {
+                            animationElementsOpacity.forEach((element) => {
+                                gsap.to(element, {
+                                    opacity: 0,
+                                    duration: 0,
+                                });
+                            });
+                        }
+
                     });
                 },
                 slideChangeTransitionEnd: function () {
                     const currentSlide = this.slides[this.activeIndex];
-                    animateBlock(currentSlide);
+                    animateText(currentSlide);
+                    animateOpacity(currentSlide);
                 },
             },
         });
@@ -148,7 +158,7 @@ if (document.querySelector(".main-cover")) {
     try {
         mainSlaider();
     } catch (error) {
-        console.error(error);
+        // console.error(error);
     }
 }
 
@@ -216,18 +226,40 @@ if (document.querySelector(".partners")) {
 
 //---------------- Файл -
 //------- Анимация текста, появление снизу
-function animateBlock() {
-    gsap.set('.animation', {
-        opacity: 0,
-        scaleY: 0,
-        transformOrigin: "0% 100%",
-        transform: "scaleY(0.1)"
+function animateText() {
+    gsap.set('.animation-text', {
+        // opacity: 0,
+        // scaleY: 0,
+        // transformOrigin: "0% 100%",
+        // transform: "scaleY(0.1)"
+        y: '150%',
     });
-    gsap.to('.animation', {
+    gsap.to('.animation-text', {
         duration: .7,
-        scaleY: 1,
+        // scaleY: 1,
+        // opacity: 1,
+        // transformOrigin: "0% 100%",
+        // ease: "cubic-bezier(0.390, 0.575, 0.565, 1.000)"
+        y: 0,
+    });
+}
+
+//---------------- Файл -
+//------- Анимация, появление из прозрачности
+function animateOpacity() {
+    gsap.set('.animation-opacity', {
+        opacity: 0,
+        // scaleY: 0,
+        // transformOrigin: "0% 100%",
+        // transform: "scaleY(0.1)"
+        // y: '150%',
+    });
+    gsap.to('.animation-opacity', {
+        duration: .7,
+        // scaleY: 1,
         opacity: 1,
-        transformOrigin: "0% 100%",
-        ease: "cubic-bezier(0.390, 0.575, 0.565, 1.000)"
+        // transformOrigin: "0% 100%",
+        // ease: "cubic-bezier(0.390, 0.575, 0.565, 1.000)"
+        // y: 0,
     });
 }
