@@ -179,14 +179,11 @@ if (document.querySelector(".projects")) {
             btn.addEventListener('click', () => {
                 if (toggle.checked) {
                     content.style.height = content.scrollHeight + 'px';
-                    // content.classList.add('sp-t-yellow');
                     image.style.height = image.scrollHeight + 'px';
-                    // image.style.height = '100%';
                     btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg)';
 
                 } else {
                     content.style.height = '0px';
-                    // content.classList.remove('sp-t-yellow');
                     image.style.height = '0px';
                     btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg)';
                 }
@@ -224,7 +221,6 @@ if (document.querySelector(".partners")) {
     }
 }
 
-//---------------- Файл -
 //------- Анимация текста, появление снизу
 function animateText() {
     gsap.set('.animation-text', {
@@ -244,7 +240,6 @@ function animateText() {
     });
 }
 
-//---------------- Файл -
 //------- Анимация, появление из прозрачности
 function animateOpacity() {
     gsap.set('.animation-opacity', {
@@ -262,4 +257,62 @@ function animateOpacity() {
         // ease: "cubic-bezier(0.390, 0.575, 0.565, 1.000)"
         // y: 0,
     });
+}
+
+//---------------- Файл index.html
+//------- Секция projects - плавное сворачивание
+if (document.querySelector(".header__desktop")) {
+
+    function toggleIcon(input) {
+        const HeaderIcon = document.querySelector('.header__search-icon');
+        if (input.value) {
+            HeaderIcon.classList.add('active');
+        } else {
+            HeaderIcon.classList.remove('active');
+        }
+    }
+    
+    function clearInput() {
+        const input = document.querySelector('.header__search-input');
+        input.value = '';
+        toggleIcon(input);
+        input.focus();
+    }
+
+    function headerDesktop() {
+        const headerDesktop = document.querySelector('.header__desktop');
+        const headerInput = document.querySelector('.header__desktop .header__toggle');
+        const headerBtn = document.querySelector('.header__desktop .button-block__small-list');
+        const catalog = document.querySelector('.header__catalog');
+
+        const HeaderIcon = document.querySelector('.header__search-icon');
+        
+        headerInput.addEventListener('click', () => {
+            
+            if (headerInput.checked) {
+                headerDesktop.classList.remove('transparent')
+                HeaderIcon.style.transition = 'all 0s';
+                headerBtn.classList.add('header-click')
+                catalog.classList.remove('close-catalog');
+                catalog.classList.add('open-catalog');
+            } else {
+                if (headerDesktop.getAttribute('data-id') === 'transparent') {
+                    headerDesktop.classList.add('transparent')
+                    HeaderIcon.style.transition = 'all 1.5s';
+                    // console.log(HeaderIcon);
+                    
+                }
+                headerBtn.classList.remove('header-click')
+                catalog.classList.remove('open-catalog');
+                catalog.classList.add('close-catalog');
+            }
+        })
+    }
+
+    try {
+        headerDesktop();
+    } catch (error) {
+        // console.error(error);
+    }
+
 }

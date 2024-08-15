@@ -168,7 +168,7 @@ html {
     --bg-disabled: #DBDBDB;
     --bg-dark: #000000;
     --bg-dark-blue-opasity20: #03041d33;
-    
+
 
     // --brend-orange: #FF4614;
     // --brend-calat: #CDDE00;
@@ -305,24 +305,14 @@ html {
         // text-align: center;
     }
 
-    // a {
-    //     @include bp(md) {
-    //         display: flex;
-    //         justify-content: center;
-    //     }
-    // }
-
-    // Белая большая кнопка
+    // Белая big
     &__white-large {
         display: flex;
-        // column-gap: 4px;
 
         width: max-content;
         height: fit-content;
         padding: 12px 114px;
-        color: var(--text-primary);
         background: var(--text-white);
-        // border: 1px solid var(--text-white);
         border-radius: 32px;
         transition: all 0.5s;
 
@@ -342,13 +332,109 @@ html {
         }
     }
 
+    // Крассная big
     &__red-large {
+        display: flex;
+
+        width: max-content;
+        height: fit-content;
+        padding: 12px 114px;
+        background: #D7192D;
+        border-radius: 32px;
+        transition: all 0.5s;
+
+        @include bp(sm) {
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 767px;
+        }
+
+        &:hover {
+            background: #B10D1E;
+        }
+    }
+
+    // Прозрачная с обводкой small
+    &__transparent-small {
         display: flex;
         // column-gap: 4px;
 
         width: max-content;
         height: fit-content;
-        padding: 12px 114px;
+        padding: 12px 24px;
+        outline: 1px solid var(--text-primary);
+        border-radius: 32px;
+        transition: all 0.5s;
+
+        // @include bp(sm) {
+        //     justify-content: center;
+        //     align-items: center;
+        //     width: 100%;
+        //     max-width: 767px;
+        // }
+
+        &:hover {
+            background: #FFFFFF;
+
+            // p {
+            //     color: var(--text-white);
+            // }
+        }
+    }
+
+    // Catalog dark small
+    &__small-list {
+        display: flex;
+        column-gap: 4px;
+
+        width: max-content;
+        height: fit-content;
+        padding: 12px 24px;
+        background: #4F4F4F;
+        border-radius: 32px;
+        transition: all 0.5s;
+
+        // @include bp(md) {
+        //     justify-content: center;
+        //     align-items: center;
+        //     width: 100%;
+        //     max-width: 767px;
+        // }
+
+        .button-block__icon {
+            width: 24px;
+            height: 24px;
+            background: url('/assets/icon/small_list_icon_white.svg') no-repeat center;
+            // transition: all 0.5s;
+        }
+
+        p {
+            transition: all 0.5s;
+        }
+
+        &:hover {
+            background: #FFFFFF;
+
+            .button-block__icon {
+                background: url('/assets/icon/small_list_icon_black.svg') no-repeat center;
+                transition: all 0.5s;
+            }
+
+            p {
+                color: #4F4F4F;
+                transition: all 0.5s;
+            }
+        }
+    }
+
+    // Крассная small
+    &__red-small {
+        display: flex;
+
+        width: max-content;
+        height: fit-content;
+        padding: 12px 24px;
         background: #D7192D;
         border-radius: 32px;
         transition: all 0.5s;
@@ -424,6 +510,13 @@ html {
 
     //     @include bp(md) {
     //         display: unset;
+    //     }
+    // }
+
+    // a {
+    //     @include bp(md) {
+    //         display: flex;
+    //         justify-content: center;
     //     }
     // }
 }
@@ -1583,4 +1676,8 @@ html {
 .line {
     border: 1px solid #BDBDBD;
     margin: 6px 0;
+}
+
+.f-w-medium {
+    font-weight: 500;
 }

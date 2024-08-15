@@ -6,12 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+        integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>Главная</title>
 </head>
 
 <body>
 
     <div class="page color-block--primary">
+
+        <header class="header">
+
+            <div class="header__desktop transparent" data-id="transparent">
+                <div class="header__wrapper sp-t-dark-purple sp-b-burgundy">
+                    <div class="container">
+                        <div class="col">
+
+                            <div class="header__top">
+
+                                <div class="header__contact">
+                                    <p class="font-t1 f-w-medium color--primary">Отдел продаж: <a class="color--primary"
+                                            href="mailto: zapros@zavodnv.ru">zapros@zavodnv.ru</a></p>
+                                    <div class="header__v-line"></div>
+                                    <a class="font-t1 f-w-medium color--primary" href="tel: 8 800 333 7989">8 800 333
+                                        7989</a>
+                                </div>
+
+                                <ul>
+                                    <li><a class="font-t1 f-w-medium color--primary" href="">О компании</a></li>
+                                    <li><a class="font-t1 f-w-medium color--primary" href="">Клиентам</a></li>
+                                    <li><a class="font-t1 f-w-medium color--primary" href="">Медиацентр</a></li>
+                                    <li><a class="font-t1 f-w-medium color--primary" href="">Закупки</a></li>
+                                    <li><a class="font-t1 f-w-medium color--primary" href="">Контакты</a></li>
+                                </ul>
+
+                            </div>
+
+                            <div class="header__main sp-t-mint">
+
+                                <div class="header__logo-desk"></div>
+
+                                <div class="header__average">
+
+                                    <div class="button-block">
+                                        <a href="/">
+                                            <div class="button-block__transparent-small">
+                                                <p class="font-t1">Специальные решения</p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="header__ctoggleButton">
+                                        <div class="button-block">
+                                            <a href="/">
+                                                <div class="button-block__small-list">
+                                                    <div class="button-block__icon"></div>
+    
+                                                    <p class="font-t1 color--white">Продукция</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <input class="header__toggle" type="checkbox" />
+                                    </div>
+
+                                    <div class="header__search-container">
+                                        <input type="text" class="header__search-input font-t1"
+                                            placeholder="Поиск по сайту" oninput="toggleIcon(this)">
+                                        <div class="header__search-icon" onclick="clearInput()"></div>
+                                    </div>
+                                </div>
+
+                                <div class="header__right">
+
+                                    <div class="header__icons">
+                                        <div class="header__comparison"></div>
+                                        <div class="header__basket"></div>
+                                    </div>
+
+                                    <div class="button-block">
+                                        <a href="/">
+                                            <div class="button-block__red-small">
+                                                <p class="font-t1 color--white">Задать вопрос</p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="header__catalog">
+                        <div style="padding-top: 137px;">
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
 
         <section class="main-cover">
             <div class="swiper mySwiper-main-cover">
@@ -30,7 +127,9 @@
                                     <div class="col-5 col-md-6 col-sm-3">
                                         <div class="sp-b-mint">
                                             <div style="overflow: hidden;">
-                                                <h4 class="animation-text font-h4 color--white">Стремянка <br/>алюминиевая NV2110</h4>
+                                                <h4 class="animation-text font-h4 color--white">Стремянка
+                                                    <br />алюминиевая NV2110
+                                                </h4>
                                             </div>
                                         </div>
                                         <div class="animation-opacity button-block">
@@ -59,7 +158,8 @@
                                     <div class="col-5 col-md-6 col-sm-3">
                                         <div class="sp-b-mint">
                                             <div style="overflow: hidden;">
-                                                <h4 class="animation-text font-h4 color--white">Успей <br/>уплыть на остров</h4>
+                                                <h4 class="animation-text font-h4 color--white">Успей <br />уплыть на
+                                                    остров</h4>
                                             </div>
                                         </div>
                                         <div class="animation-opacity button-block">
@@ -88,7 +188,8 @@
                                     <div class="col-5 col-md-6 col-sm-3">
                                         <div class="sp-b-mint">
                                             <div style="overflow: hidden;">
-                                                <h4 class="animation-text font-h4 color--white">Ошибки <br/>быть не может</h4>
+                                                <h4 class="animation-text font-h4 color--white">Ошибки <br />быть не
+                                                    может</h4>
                                             </div>
                                         </div>
                                         <div class="animation-opacity button-block">
@@ -117,7 +218,8 @@
                                     <div class="col-5 col-md-6 col-sm-3">
                                         <div class="sp-b-mint">
                                             <div style="overflow: hidden;">
-                                                <h4 class="animation-text font-h4 color--white">Успей <br/>на ковчег</h4>
+                                                <h4 class="animation-text font-h4 color--white">Успей <br />на ковчег
+                                                </h4>
                                             </div>
                                         </div>
                                         <div class="animation-opacity button-block">
@@ -139,7 +241,6 @@
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-scrollbar"></div>
                 </div>
-                <!-- <div class="swiper-pagination"></div> -->
             </div>
         </section>
 
@@ -765,11 +866,6 @@
 
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
-        integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/script/script.js"></script>
 </body>
 
