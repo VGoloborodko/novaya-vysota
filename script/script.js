@@ -1,3 +1,5 @@
+const body = document.querySelector('body');
+
 // Плавный скрол для страницы
 SmoothScroll({
     // Время скролла 400 = 0.4 секунды
@@ -260,9 +262,10 @@ function animateOpacity() {
 }
 
 //---------------- Файл index.html
-//------- Секция projects - плавное сворачивание
+//------- Секция header - функционал
 if (document.querySelector(".header__desktop")) {
 
+    // Замена иконки при вводе в поиске
     function toggleIcon(input) {
         const HeaderIcon = document.querySelector('.header__search-icon');
         if (input.value) {
@@ -271,7 +274,7 @@ if (document.querySelector(".header__desktop")) {
             HeaderIcon.classList.remove('active');
         }
     }
-    
+
     function clearInput() {
         const input = document.querySelector('.header__search-input');
         input.value = '';
@@ -280,33 +283,68 @@ if (document.querySelector(".header__desktop")) {
     }
 
     function headerDesktop() {
+
+        // Появление и скрытие каталога
         const headerDesktop = document.querySelector('.header__desktop');
         const headerInput = document.querySelector('.header__desktop .header__toggle');
         const headerBtn = document.querySelector('.header__desktop .button-block__small-list');
         const catalog = document.querySelector('.header__catalog');
 
         const HeaderIcon = document.querySelector('.header__search-icon');
-        
+
         headerInput.addEventListener('click', () => {
-            
+
             if (headerInput.checked) {
-                headerDesktop.classList.remove('transparent')
                 HeaderIcon.style.transition = 'all 0s';
-                headerBtn.classList.add('header-click')
+                headerDesktop.classList.remove('transparent')
                 catalog.classList.remove('close-catalog');
+                headerBtn.classList.add('header-click')
                 catalog.classList.add('open-catalog');
+                body.classList.add('no-scroll');
             } else {
                 if (headerDesktop.getAttribute('data-id') === 'transparent') {
                     headerDesktop.classList.add('transparent')
                     HeaderIcon.style.transition = 'all 1.5s';
-                    // console.log(HeaderIcon);
-                    
+
                 }
                 headerBtn.classList.remove('header-click')
                 catalog.classList.remove('open-catalog');
+                body.classList.remove('no-scroll');
                 catalog.classList.add('close-catalog');
             }
         })
+
+        // Скрытие части меню при скроле
+        let lastScrollTop = 0;
+        const headerMain = document.querySelector('.header__main');
+        const headerCover = document.querySelector('.header__desktop-cover');
+        const headerCoverScroll = document.querySelector('.header__desktop-cover-scroll');
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Скроллим вниз
+                headerMain.classList.remove('open-catalog');
+                headerCover.classList.remove('header-scroll-two');
+                headerCoverScroll.classList.remove('header-scroll-four');
+                headerMain.classList.add('close-catalog');
+                headerCover.classList.add('header-scroll');
+                headerCoverScroll.classList.add('header-scroll-three');
+            } else {
+                // Скроллим вверх
+                if (scrollTop === 0) {
+                    headerCover.classList.remove('header-scroll');
+                    headerMain.classList.remove('close-catalog');
+                    headerCoverScroll.classList.remove('header-scroll-three');
+                    headerCoverScroll.classList.add('header-scroll-four');
+                    headerCover.classList.add('header-scroll-two');
+                    headerMain.classList.add('open-catalog');
+                }
+            }
+
+            // lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
     }
 
     try {
