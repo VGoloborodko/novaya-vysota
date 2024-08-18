@@ -310,9 +310,33 @@
             transform: scaleY(0);
         }
 
+        .header__catalog .container {
+            overflow-y: scroll;
+            // max-height: 500px;
+        }
+
+        /* Цвет фона полосы прокрутки */
+        .container::-webkit-scrollbar {
+            width: 10px;
+            /* Ширина полосы прокрутки */
+        }
+
+        .container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            /* Цвет фона полосы прокрутки */
+        }
+
+        /* Цвет самой полосы прокрутки */
+        .container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 8px;
+            /* Цвет самой полосы прокрутки */
+        }
+
         .header__catalog-block {
             display: flex;
             padding-left: 20%;
+            height: 50vh;
 
             @include bp(lg) {
                 padding-left: unset;
@@ -345,9 +369,10 @@
             overflow: hidden;
             transition: max-height 2s ease;
         }
-        
+
         .header__category-item:hover .header__subcategory-list {
-            max-height: 300px; /* Максимальная высота для раскрытия списка */
+            max-height: 400px;
+            /* Максимальная высота для раскрытия списка */
         }
 
         .header__category-item li {

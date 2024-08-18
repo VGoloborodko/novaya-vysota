@@ -1854,6 +1854,8 @@ html {
 }
 .header__desktop {
   position: relative;
+  /* Цвет фона полосы прокрутки */
+  /* Цвет самой полосы прокрутки */
 }
 .header__desktop .header__desktop-cover {
   position: absolute;
@@ -2068,9 +2070,26 @@ html {
   z-index: 5;
   transform: scaleY(0);
 }
+.header__desktop .header__catalog .container {
+  overflow-y: scroll;
+}
+.header__desktop .container::-webkit-scrollbar {
+  width: 10px;
+  /* Ширина полосы прокрутки */
+}
+.header__desktop .container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Цвет фона полосы прокрутки */
+}
+.header__desktop .container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+  /* Цвет самой полосы прокрутки */
+}
 .header__desktop .header__catalog-block {
   display: flex;
   padding-left: 20%;
+  height: 50vh;
 }
 @media (max-width: 1279px) {
   .header__desktop .header__catalog-block {
@@ -2099,7 +2118,8 @@ html {
   transition: max-height 2s ease;
 }
 .header__desktop .header__category-item:hover .header__subcategory-list {
-  max-height: 300px; /* Максимальная высота для раскрытия списка */
+  max-height: 400px;
+  /* Максимальная высота для раскрытия списка */
 }
 .header__desktop .header__category-item li {
   transition: 0.5s ease;
