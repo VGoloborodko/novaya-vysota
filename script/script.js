@@ -354,3 +354,25 @@ if (document.querySelector(".header__desktop")) {
     }
 
 }
+
+const categoryHeaders = document.querySelectorAll('.header__category-item h4');
+const liElements = document.querySelectorAll('li[data-id]');
+const mainMenuItems = document.querySelectorAll('.header__main-menu-item');
+
+categoryHeaders.forEach(header => {
+    header.addEventListener('mouseover', () => {
+        mainMenuItems.forEach(item => item.style.display = 'none');
+    });
+});
+
+liElements.forEach(li => {
+    li.addEventListener('click', () => {
+        const dataId = li.getAttribute('data-id');
+        mainMenuItems.forEach(item => item.style.display = 'none');
+        // Показываем только блок с соответствующим data-id
+        const correspondingBlock = document.querySelector(`.header__main-menu-item[data-id="${dataId}"]`);
+        if (correspondingBlock) {
+            correspondingBlock.style.display = 'flex';
+        }
+    });
+});

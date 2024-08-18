@@ -2023,16 +2023,6 @@ html {
   opacity: 0;
   cursor: pointer;
 }
-.header__desktop .header__catalog {
-  height: 100vh;
-  background: #FFFCF5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 5;
-  transform: scaleY(0);
-}
 .header__desktop .open-catalog {
   animation: scale-up-ver-top 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) alternate both;
 }
@@ -2067,6 +2057,71 @@ html {
 }
 .header__desktop .header-click p {
   color: #4F4F4F;
+}
+.header__desktop .header__catalog {
+  height: 100vh;
+  background: #FFFCF5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  transform: scaleY(0);
+}
+.header__desktop .header__catalog-block {
+  display: flex;
+  padding-left: 20%;
+}
+@media (max-width: 1279px) {
+  .header__desktop .header__catalog-block {
+    padding-left: unset;
+  }
+}
+.header__desktop .header__menu-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 140px;
+}
+.header__desktop .header__category-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.header__desktop .header__category-item h4,
+.header__desktop li {
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+.header__desktop .header__category-item .header__subcategory-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 2s ease;
+}
+.header__desktop .header__category-item:hover .header__subcategory-list {
+  max-height: 300px; /* Максимальная высота для раскрытия списка */
+}
+.header__desktop .header__category-item li {
+  transition: 0.5s ease;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 1s ease;
+}
+.header__desktop .header__category-item li:hover {
+  color: #303030;
+  border-bottom: 1px solid #303030;
+}
+.header__desktop .header__category-item li:hover a {
+  color: #303030;
+  transition: 0.5s ease;
+}
+.header__desktop .header__main-menu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  display: none;
+}
+.header__desktop .header__main-menu-item a {
+  display: block;
 }
 .header .transparent .button-block__transparent-small {
   background: var(--bg-white-opasity20);
