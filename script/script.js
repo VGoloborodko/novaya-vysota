@@ -289,12 +289,18 @@ if (document.querySelector(".header__desktop")) {
         const headerInput = document.querySelector('.header__desktop .header__toggle');
         const headerBtn = document.querySelector('.header__desktop .button-block__small-list');
         const catalog = document.querySelector('.header__catalog');
+        const catalogBlock = document.querySelector('.header__catalog-block');
 
         const HeaderIcon = document.querySelector('.header__search-icon');
 
         headerInput.addEventListener('click', () => {
 
             if (headerInput.checked) {
+                setTimeout(() => {
+                    catalogBlock.style.transition = 'all .5s';
+                    catalogBlock.style.opacity = '1';
+                }, 500);
+                
                 HeaderIcon.style.transition = 'all 0s';
                 headerDesktop.classList.remove('transparent')
                 catalog.classList.remove('close-catalog');
@@ -305,14 +311,20 @@ if (document.querySelector(".header__desktop")) {
                 if (headerDesktop.getAttribute('data-id') === 'transparent') {
                     headerDesktop.classList.add('transparent')
                     HeaderIcon.style.transition = 'all 1.5s';
+                    setTimeout(() => {
+                        HeaderIcon.style.transition = 'all 0s';
+                    }, 1500);
 
                 }
+                catalogBlock.style.transition = 'all 0s';
+                catalogBlock.style.opacity = '0';
                 headerBtn.classList.remove('header-click')
                 catalog.classList.remove('open-catalog');
                 body.classList.remove('no-scroll');
                 catalog.classList.add('close-catalog');
             }
         })
+
 
         // Скрытие части меню при скроле
         let lastScrollTop = 0;
@@ -345,6 +357,30 @@ if (document.querySelector(".header__desktop")) {
 
             // lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
+
+
+        // Фильтрация меню в каталоге
+        // const categoryHeaders = document.querySelectorAll('.header__category-item h4');
+        const liElements = document.querySelectorAll('li[data-id]');
+        const mainMenuItems = document.querySelectorAll('.header__main-menu-item');
+
+        // categoryHeaders.forEach(header => {
+        //     header.addEventListener('mouseover', () => {
+        //         mainMenuItems.forEach(item => item.style.display = 'none');
+        //     });
+        // });
+
+        liElements.forEach(li => {
+            li.addEventListener('click', () => {
+                const dataId = li.getAttribute('data-id');
+                mainMenuItems.forEach(item => item.style.display = 'none');
+                // Показываем только блок с соответствующим data-id
+                const correspondingBlock = document.querySelector(`.header__main-menu-item[data-id="${dataId}"]`);
+                if (correspondingBlock) {
+                    correspondingBlock.style.display = 'flex';
+                }
+            });
+        });
     }
 
     try {
@@ -354,25 +390,3 @@ if (document.querySelector(".header__desktop")) {
     }
 
 }
-
-// const categoryHeaders = document.querySelectorAll('.header__category-item h4');
-const liElements = document.querySelectorAll('li[data-id]');
-const mainMenuItems = document.querySelectorAll('.header__main-menu-item');
-
-// categoryHeaders.forEach(header => {
-//     header.addEventListener('mouseover', () => {
-//         mainMenuItems.forEach(item => item.style.display = 'none');
-//     });
-// });
-
-liElements.forEach(li => {
-    li.addEventListener('click', () => {
-        const dataId = li.getAttribute('data-id');
-        mainMenuItems.forEach(item => item.style.display = 'none');
-        // Показываем только блок с соответствующим data-id
-        const correspondingBlock = document.querySelector(`.header__main-menu-item[data-id="${dataId}"]`);
-        if (correspondingBlock) {
-            correspondingBlock.style.display = 'flex';
-        }
-    });
-});
