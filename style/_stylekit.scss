@@ -451,6 +451,27 @@ html {
         }
     }
 
+    // Button link
+    &__btn-link {
+        display: flex;
+        width: max-content;
+        height: fit-content;
+        transition: all 0.5s;
+
+        border-bottom: 1px solid transparent;
+        transition: border-bottom .5s ease;
+
+        &:hover {
+            border-bottom: 1px solid #303030;
+        }
+
+        .button-block__icon {
+            width: 24px;
+            height: 24px;
+            background: url('/assets/icon/btn_link_icon_black.svg') no-repeat center;
+        }
+    }
+
     // Белая кнопка
     // &__white {
     //     display: flex;
