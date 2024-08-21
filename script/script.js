@@ -467,6 +467,6 @@ const inputSearch = document.querySelector('.header__search-input');
 inputSearch.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
         // Переход на другую страницу
-        window.location.href = 'https://example.com'; // Укажите нужный URL
+        window.location.href = '/search.html'; // Укажите нужный URL
     }
 });

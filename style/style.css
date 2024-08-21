@@ -2652,7 +2652,7 @@ html {
   position: relative;
   z-index: 5;
 }
-.news-articles a:hover img {
+.news-articles a:hover .news-articles__image img {
   scale: 1.1;
 }
 .news-articles .button-block {
@@ -2744,6 +2744,19 @@ html {
   background: unset;
   border-bottom: 1px solid #333333;
   resize: none;
+}
+
+.search-results__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+}
+.search-results__icon {
+  width: 100%;
+  max-width: 32px;
+  height: 32px;
+  background: url("/assets/icon/search_results_icon.svg") no-repeat center;
 }
 
 .footer__menu {

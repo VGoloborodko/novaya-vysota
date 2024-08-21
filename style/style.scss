@@ -951,9 +951,11 @@
 
     a {
         &:hover {
-           img {
-            scale: 1.1;
-           } 
+            .news-articles__image {
+                img {
+                    scale: 1.1;
+                }
+            }
         }
     }
 
@@ -988,6 +990,7 @@
 
     &__image {
         overflow: hidden;
+
         img {
             transition: all 1s;
 
@@ -1047,6 +1050,23 @@
         background: unset;
         border-bottom: 1px solid #333333;
         resize: none;
+    }
+}
+
+.search-results {
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        cursor: pointer;
+    }
+
+    &__icon {
+        width: 100%;
+        max-width: 32px;
+        height: 32px;
+        background: url('/assets/icon/search_results_icon.svg') no-repeat center;
     }
 }
 
