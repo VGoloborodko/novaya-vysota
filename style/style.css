@@ -2500,6 +2500,139 @@ html {
   }
 }
 
+.products-page__head {
+  display: flex;
+  align-items: end;
+  gap: 24px;
+}
+@media (max-width: 767px) {
+  .products-page__head {
+    flex-direction: column;
+    align-items: unset;
+    gap: 6px;
+  }
+}
+.products-page .button-block {
+  padding-bottom: 10px;
+}
+@media (max-width: 1024px) {
+  .products-page .button-block {
+    padding-bottom: unset;
+  }
+}
+.products-page__block {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.products-page__item {
+  position: relative;
+  display: block;
+  height: 580px;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .products-page__item {
+    height: 220px;
+  }
+}
+.products-page__item:hover .products__icon {
+  opacity: 1;
+  transition: 1s ease;
+}
+.products-page__item:hover h4 {
+  padding-right: 60px;
+  color: #FFFFFF;
+  transition: 0.5s ease;
+}
+@media (max-width: 1279px) {
+  .products-page__item:hover {
+    flex: unset;
+    transition: unset;
+  }
+}
+.products-page__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.products-page__image img {
+  height: 100%;
+}
+.products-page__blackout {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(32, 56, 90, 0.4);
+  transition: 1s;
+}
+.products-page__blackout:hover {
+  background: unset;
+  transition: 1s;
+}
+@media (max-width: 1024px) {
+  .products-page__blackout {
+    display: none;
+  }
+}
+.products-page__card-link {
+  z-index: 5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 68px;
+  padding: 24px;
+  background: rgba(3, 4, 29, 0.2);
+}
+.products-page__card-link h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(255, 255, 255, 0.5019607843);
+  transition: 1s ease;
+}
+@media (max-width: 1279px) {
+  .products-page__card-link h4 {
+    padding-right: 60px;
+  }
+}
+@media (max-width: 1024px) {
+  .products-page__card-link h4 {
+    color: #FFFFFF;
+  }
+}
+.products-page__icon {
+  width: 100%;
+  max-width: 48px;
+  height: 48px;
+  opacity: 0;
+  /* начальная прозрачность - элемент невидимый */
+  position: absolute;
+  /* абсолютное позиционирование, чтобы разместить иконку над изображением */
+  top: 50%;
+  /* позиция по вертикали в центре относительно родительского элемента */
+  right: 0;
+  /* позиция по горизонтали в центре относительно родительского элемента */
+  transform: translate(-50%, -50%);
+  /* центрирование иконки */
+  transition: 0.5s ease;
+  /* анимация прозрачности */
+}
+@media (max-width: 1279px) {
+  .products-page__icon {
+    opacity: 1;
+  }
+}
+
 .confidence {
   position: relative;
   overflow: hidden;
