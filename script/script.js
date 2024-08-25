@@ -470,3 +470,8 @@ inputSearch.addEventListener('keydown', function (event) {
         window.location.href = '/search.html'; // Укажите нужный URL
     }
 });
+
+var swiper = new Swiper(".mySwiper-chips", {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+});

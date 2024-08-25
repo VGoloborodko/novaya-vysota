@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+        integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>Продукция по направлениям</title>
+</head>
+
+<body>
+
+    <div class="page color-block--primary">
+
+        <header class="header">
+
+            <div class="header__desktop">
+                <div class="header__desktop-cover"></div>
+                <div class="header__desktop-cover-scroll"></div>
+                <div class="header__wrapper sp-b-burgundy">
+                    <div class="container">
+                        <div class="col">
+
+                            <div class="header__top sp-v-dark-purple">
+
+                                <div class="header__contact">
+                                    <p class="font-t1 f-w-medium color--primary">Отдел продаж: <a class="color--primary"
+                                            href="mailto: zapros@zavodnv.ru"
+                                            style="border-bottom: 1px solid #303030;">zapros@zavodnv.ru</a></p>
+                                    <div class="header__v-line"></div>
+                                    <a class="font-t1 f-w-medium color--primary" href="tel: +78003337989">8 800 333
+                                        7989</a>
+                                </div>
+
+                                <ul>
+                                    <li><a class="font-t1 f-w-medium color--primary" href="">О компании</a></li>
+                                    <li><a class="font-t1 f-w-medium color--primary" href="">Клиентам</a></li>
+                                    <li><a class="font-t1 f-w-medium color--primary" href="">Медиацентр</a></li>
+                                    <li><a class="font-t1 f-w-medium color--primary" href="">Закупки</a></li>
+                                    <li><a class="font-t1 f-w-medium color--primary" href="">Контакты</a></li>
+                                </ul>
+
+                            </div>
+
+                            <div class="header__main sp-t-light-blue">
+
+                                <div class="header__logo-desk"></div>
+
+                                <div class="header__average">
+
+                                    <div class="button-block">
+                                        <a href="/">
+                                            <div class="button-block__transparent-small">
+                                                <p class="font-t1">Специальные решения</p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="header__ctoggleButton">
+                                        <div class="button-block">
+                                            <a href="/">
+                                                <div class="button-block__small-list">
+                                                    <div class="button-block__icon"></div>
+
+                                                    <p class="font-t1 color--white">Продукция</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <input class="header__toggle" type="checkbox" />
+                                    </div>
+
+                                    <div class="header__search-container">
+                                        <input type="text" class="header__search-input font-t1"
+                                            placeholder="Поиск по сайту" oninput="toggleIcon(this)">
+                                        <div class="header__search-icon" onclick="clearInput()"></div>
+                                    </div>
+                                </div>
+
+                                <div class="header__right">
+
+                                    <div class="header__icons">
+                                        <div class="header__comparison"></div>
+                                        <div class="header__basket"></div>
+                                    </div>
+
+                                    <div class="button-block">
+                                        <a href="#form">
+                                            <div class="button-block__red-small">
+                                                <p class="font-t1 color--white">Задать вопрос</p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="header__catalog">
+
+                        <div style="padding-top: 128px;">
+                            <div class="line"></div>
+                        </div>
+
+                        <div class="container">
+                            <div class="col">
+                                <div class="header__catalog-block sp-t-purple">
+                                    <div class="header__menu-bottom">
+
+                                        <div class="header__category-block">
+
+                                            <div class="header__category-item">
+                                                <h4 class="font-h4">Серийная продукция</h4>
+                                                <ul class="header__subcategory-list">
+                                                    <li class="sp-t-yellow"></li>
+                                                    <li class="font-s color--secondary sp-t-blue" data-id="1">Стремянки
+                                                    </li>
+                                                    <li class="font-s color--secondary sp-t-blue" data-id="2">Лестницы
+                                                        приставные</li>
+                                                    <li class="font-s color--secondary sp-t-blue" data-id="3">
+                                                        Лестницы-трансформеры</li>
+                                                    <li class="font-s color--secondary sp-t-blue" data-id="4">Площадки,
+                                                        платформы, помосты</li>
+                                                    <li class="font-s color--secondary sp-t-blue" data-id="5">Вышки-туры
+                                                    </li>
+                                                    <li class="font-s color--secondary sp-t-blue" data-id="6">Лестницы
+                                                        специальные</li>
+                                                    <li class="font-s color--secondary sp-t-blue" data-id="7">Лестницы с
+                                                        площадкой</li>
+                                                    <li class="font-s color--secondary sp-t-blue" data-id="8">Трапы и
+                                                        переходы</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="header__category-item">
+                                                <h4 class="font-h4">Продукция по направлениям</h4>
+                                                <ul class="header__subcategory-list">
+                                                    <li class="sp-t-yellow"></li>
+                                                    <li class="sp-t-blue"><a class="font-s color--secondary" href="">Ж/д
+                                                            транспорт</a></li>
+                                                    <li class="sp-t-blue"><a class="font-s color--secondary"
+                                                            href="">Авиатранспорт</a></li>
+                                                    <li class="sp-t-blue"><a class="font-s color--secondary"
+                                                            href="">Нефтегазовая отрасль</a></li>
+                                                    <li class="sp-t-blue"><a class="font-s color--secondary"
+                                                            href="">Строительное оборудование</a></li>
+                                                    <li class="sp-t-blue"><a class="font-s color--secondary"
+                                                            href="">Склады</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="header__category-item">
+                                                <h4><a class="font-h4" href="">Специальные решения</a></h4>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="header__main-menu-block">
+
+                                            <div class="header__main-menu-item" data-id="1">
+                                                <a class="font-s color--secondary" href="">Бытовые односторонние</a>
+                                                <a class="font-s color--secondary" href="">Бытовые двухсторонние</a>
+                                                <a class="font-s color--secondary" href="">Профессиональные
+                                                    односторонние</a>
+                                                <a class="font-s color--secondary" href="">Профессиональные
+                                                    двухсторонние</a>
+                                                <a class="font-s color--secondary" href="">Индустриальные</a>
+                                            </div>
+
+                                            <div class="header__main-menu-item" data-id="2">
+                                                <a class="font-s color--secondary" href="">Бытовые</a>
+                                                <a class="font-s color--secondary" href="">Профессиональные</a>
+                                                <a class="font-s color--secondary" href="">Индустриальные</a>
+                                            </div>
+
+                                            <div class="header__main-menu-item" data-id="3">
+                                                <a class="font-s color--secondary" href="">Бытовые</a>
+                                                <a class="font-s color--secondary" href="">Профессиональные</a>
+                                                <a class="font-s color--secondary" href="">Индустриальные</a>
+                                            </div>
+
+                                            <div class="header__main-menu-item" data-id="4">
+                                                <a class="font-s color--secondary" href="">Бытовые</a>
+                                                <a class="font-s color--secondary" href="">Профессиональные</a>
+                                                <a class="font-s color--secondary" href="">Индустриальные</a>
+                                            </div>
+
+                                            <div class="header__main-menu-item" data-id="5">
+                                                <a class="font-s color--secondary" href="">Бытовые</a>
+                                                <a class="font-s color--secondary" href="">Профессиональные</a>
+                                                <a class="font-s color--secondary" href="">Индустриальные</a>
+                                            </div>
+
+                                            <div class="header__main-menu-item" data-id="6">
+                                                <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                <a class="font-s color--secondary" href="">Неизвестно</a>
+                                            </div>
+
+                                            <div class="header__main-menu-item" data-id="7">
+                                                <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                <a class="font-s color--secondary" href="">Неизвестно</a>
+                                            </div>
+
+                                            <div class="header__main-menu-item" data-id="8">
+                                                <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                <a class="font-s color--secondary" href="">Неизвестно</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="header__catalog-promo">
+                                        <div class="header__image">
+                                            <img src="/assets/image/header_catalog_promo.jpg" alt="">
+                                        </div>
+                                        <div class="button-block">
+                                            <a href="/">
+                                                <div class="button-block__white-large">
+                                                    <p class="font-t1">Подробнее</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="line"></div>
+                        </div>
+
+                        <div class="header__catalog-bottom">
+                            <div class="header__image">
+                                <img src="/assets/image/header_catalog_bottom.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="header-padding"></div>
+
+        <section class="products-page">
+            <div class="products-page__wrapper">
+                <div class="container">
+
+                    <div class="col">
+                        <!-- <div class="products-page__head sp-b-green"> -->
+                            <div style="overflow: hidden;">
+                                <h1 class="animation-text font-h1 sp-b-green">Продукция по направлениям</h1>
+                            </div>
+                            <div class="chips">
+                                <div class="swiper mySwiper-chips">
+                                    <div class="swiper-wrapper">
+
+                                      <div class="swiper-slide">
+                                        <div class="button-block">
+                                            <a href="serial-production.html">
+                                                <div class="button-block__chip">
+                                                    <!-- <div class="button-block__icon"></div> -->
+                
+                                                    <p class="font-s color--primary">Серийная продукция</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                      </div>
+
+                                      <div class="swiper-slide">
+                                        <div class="button-block">
+                                            <a href="/products-direction.html">
+                                                <div class="button-block__chip selected">
+                                                    <!-- <div class="button-block__icon"></div> -->
+                
+                                                    <p class="font-s color--primary">Продукция по направлениям</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                      </div>
+                                      
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="sp-v-mint">
+                                <div class="line"></div>
+                            </div>
+                        <!-- </div> -->
+                    </div>
+
+                    <div class="products-page__block">
+
+                        <div class="col-3 col-lg-4 col-md-3 col-sm-3">
+                            <a class="products-page__item" href="#">
+                                <div class="products-page__blackout"></div>
+                                <div class="products-page__image">
+                                    <img src="/assets/image/product_main_img_7.jpg" alt="">
+                                </div>
+                                <div class="products-page__card-link">
+                                    <h4 class="font-h4">Ж/д транспорт</h4>
+                                    <div class="products-page__icon">
+                                        <img src="/assets/icon/products_icon.svg" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-3 col-lg-4 col-md-3 col-sm-3">
+                            <a class="products-page__item" href="#">
+                                <div class="products-page__blackout"></div>
+                                <div class="products-page__image">
+                                    <img src="/assets/image/product_main_img_8.jpg" alt="">
+                                </div>
+                                <div class="products-page__card-link">
+                                    <h4 class="font-h4">Авиатранспорт</h4>
+                                    <div class="products-page__icon">
+                                        <img src="/assets/icon/products_icon.svg" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-3 col-lg-4 col-md-3 col-sm-3">
+                            <a class="products-page__item" href="#">
+                                <div class="products-page__blackout"></div>
+                                <div class="products-page__image">
+                                    <img src="/assets/image/product_main_img_9.jpg" alt="">
+                                </div>
+                                <div class="products-page__card-link">
+                                    <h4 class="font-h4">Автотранспорт</h4>
+                                    <div class="products-page__icon">
+                                        <img src="/assets/icon/products_icon.svg" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-3 col-lg-4 col-md-3 col-sm-3">
+                            <a class="products-page__item" href="#">
+                                <div class="products-page__blackout"></div>
+                                <div class="products-page__image">
+                                    <img src="/assets/image/product_main_img_10.jpg" alt="">
+                                </div>
+                                <div class="products-page__card-link">
+                                    <h4 class="font-h4">Нефтегазовая отрасль</h4>
+                                    <div class="products-page__icon">
+                                        <img src="/assets/icon/products_icon.svg" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-3 col-lg-4 col-md-3 col-sm-3">
+                            <a class="products-page__item" href="#">
+                                <div class="products-page__blackout"></div>
+                                <div class="products-page__image">
+                                    <img src="/assets/image/product_main_img_11.jpg" alt="">
+                                </div>
+                                <div class="products-page__card-link">
+                                    <h4 class="font-h4">Строительное оборудование</h4>
+                                    <div class="products-page__icon">
+                                        <img src="/assets/icon/products_icon.svg" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-3 col-lg-4 col-md-3 col-sm-3">
+                            <a class="products-page__item" href="#">
+                                <div class="products-page__blackout"></div>
+                                <div class="products-page__image">
+                                    <img src="/assets/image/product_main_img_12.jpg" alt="">
+                                </div>
+                                <div class="products-page__card-link">
+                                    <h4 class="font-h4">Склады</h4>
+                                    <div class="products-page__icon">
+                                        <img src="/assets/icon/products_icon.svg" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer sp-t-green sp-b-purple">
+
+            <!-- Меню -->
+            <div class="container d-none-md">
+                <div class="col">
+                    <div class="footer__menu">
+                        <a class="font-t1" href="/about.html">О компании</a>
+                        <a class="font-t1" href="/catalog.html">Специальные решения</a>
+                        <a class="font-t1" href="/clients.html">Клиентам</a>
+                        <a class="font-t1" href="/media.html">Медиацентр</a>
+                        <a class="font-t1" href="/info.html">Инфоцентр</a>
+                        <a class="font-t1" href="/projects.html">Выполненные проекты</a>
+                        <a class="font-t1" href="/purhases.html">Закупки</a>
+                        <a class="font-t1" href="/contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Линия -->
+            <div class="sp-t-burgundy sp-b-mint d-none-md">
+                <div class="line"></div>
+            </div>
+
+            <!-- Основная информайция -->
+            <div class="container">
+                <div class="footer__main">
+
+                    <div class="col-4 col-md-6 col-sm-3">
+                        <div class="footer__ul">
+                            <a href="/catalog.html#directions">
+                                <h4 class="font-h4 sp-b-mint">Продукция по направлениям</h4>
+                            </a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Ж/д
+                                транспорт</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Авиатранспорт
+                            </a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Нефтегазовая
+                                отрасль</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Строительное
+                                оборудование</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Склады</a>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-md-6 col-sm-3">
+                        <div class="footer__ul">
+                            <a href="/catalog.html#serial">
+                                <h4 class="font-h4 sp-b-mint">Серийная продукция</h4>
+                            </a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Стремянки</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы
+                                приставные</a>
+                            <a class="font-s color--secondary sp-b-blue"
+                                href="/catalog.html#serial">Лестницы-трансформеры </a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Площадки,
+                                платформы, помосты</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Вышки-туры</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы
+                                специальные</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы с
+                                площадкой</a>
+                            <a class="font-s color--secondary" href="/catalog.html#serial">Трапы и переходы</a>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-md-6 col-sm-3">
+                        <a class="font-h4" href="tel:+78003337989">8 (800) 333−79–89</a>
+                        <p class="font-s sp-v-burgundy">188301, Ленинградская область, Гатчинский район, промышленная
+                            зона Корпиково, дом 2, помещение 108.</p>
+                        <div class="button-block">
+                            <a href="#form">
+                                <div class="button-block__red-large">
+                                    <p class="font-t1 color--white">Заказать звонок</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="footer__social sp-t-burgundy">
+                            <a href="https://zen.yandex.ru/id/60b890f6164d471f382fbbb4" target="_blank">
+                                <div class="footer__icon">
+                                    <img src="/assets/icon/icon_yandex_dzen.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCQADYyEXOntL2FnQH9lt_3g/" target="_blank">
+                                <div class="footer__icon">
+                                    <img src="/assets/icon/icon_youtube.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="https://vk.com/zavodnv" target="_blank">
+                                <div class="footer__icon">
+                                    <img src="/assets/icon/icon_vk.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="#" target="_blank">
+                                <div class="footer__icon">
+                                    <img src="/assets/icon/icon_premiere_rush.svg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Линия -->
+            <div class="sp-t-green sp-b-burgundy">
+                <div class="line"></div>
+            </div>
+
+            <div class="container">
+                <div class="col">
+                    <div class="footer__bottom">
+                        <a class="font-t2 color--secondary" href="#">Политика кофиденциальности</a>
+                        <a class="font-t2 color--secondary" href="https://svsv.agency/" target="_blank">Разработка сайта
+                            Sivachёv & Sivachёv</a>
+                        <p class="font-t2 color--secondary">© 2024 Общество с ограниченной ответственностью</p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script src="/script/script.js"></script>
+</body>
+
+</html>

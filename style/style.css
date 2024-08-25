@@ -704,6 +704,37 @@ html {
   color: #4F4F4F;
   transition: all 0.5s;
 }
+.button-block__chip {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 6px 24px;
+  background: #FFFFFF;
+  outline: 1px solid #303030;
+  border-radius: 32px;
+  transition: all 0.5s;
+}
+.button-block__chip p {
+  transition: all 0.5s;
+}
+.button-block__chip:hover {
+  background: var(--bg-gray-opasity20);
+  outline: unset;
+}
+.button-block__chip:hover p {
+  color: #303030;
+  transition: all 0.5s;
+}
+.button-block .selected {
+  background: #4F4F4F;
+  outline: unset;
+  cursor: default;
+}
+.button-block .selected p {
+  color: #FFFFFF;
+}
 .button-block__red-small {
   display: flex;
   width: -moz-max-content;
@@ -2512,14 +2543,6 @@ html {
     gap: 6px;
   }
 }
-.products-page .button-block {
-  padding-bottom: 10px;
-}
-@media (max-width: 1024px) {
-  .products-page .button-block {
-    padding-bottom: unset;
-  }
-}
 .products-page__block {
   display: flex;
   flex-wrap: wrap;
@@ -3171,6 +3194,13 @@ html {
     flex-direction: column;
     gap: 16px;
   }
+}
+
+.chips .swiper-wrapper {
+  padding: 1px;
+}
+.chips .swiper-slide {
+  width: auto;
 }
 
 .no-scroll {

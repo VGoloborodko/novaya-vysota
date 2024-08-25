@@ -783,14 +783,6 @@
         }
     }
 
-    .button-block {
-        padding-bottom: 10px;
-
-        @include bp(md) {
-            padding-bottom: unset;
-        }
-    }
-
     &__block {
         display: flex;
         flex-wrap: wrap;
@@ -1546,6 +1538,17 @@
             flex-direction: column;
             gap: 16px;
         }
+    }
+}
+
+.chips {
+    .swiper-wrapper {
+        padding: 1px;
+        // padding-top: 1px;
+        // padding-bottom: 1px;
+    }
+    .swiper-slide {
+        width: auto;
     }
 }
 
