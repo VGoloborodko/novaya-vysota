@@ -224,6 +224,45 @@ window.addEventListener('load', (event) => {
 
     }
 
+    //---------------- Файл catalog.html
+    //------- Секция catalog - плавное сворачивание
+    if (document.querySelector(".catalog")) {
+
+        function catalogCheckBtn() {
+            const dropdownItem = document.querySelectorAll('.catalog__filters-item');
+            dropdownItem.forEach(elem => {
+                const btn = elem.querySelector('.catalog__ctoggleButton');
+                const toggle = elem.querySelector('.catalog__toggle');
+                const content = elem.querySelector('.catalog__filters-block');
+                // const image = elem.querySelector('.projects__image');
+
+                btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg) center center/contain no-repeat';
+
+                btn.addEventListener('click', () => {
+                    if (toggle.checked) {
+                        content.style.display = 'block';
+                        // content.style.height = content.scrollHeight + 'px';
+                        // image.style.height = image.scrollHeight + 'px';
+                        btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg) center center/contain no-repeat';
+
+                    } else {
+                        content.style.display = 'none';
+                        // content.style.height = '0px';
+                        // image.style.height = '0px';
+                        btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg) center center/contain no-repeat';
+                    }
+                })
+            })
+        }
+
+        try {
+            catalogCheckBtn();
+        } catch (error) {
+            console.error(error);
+        }
+
+    }
+
     //---------------- Файл index.html
     //------- Секция partners - бегущая строка
     if (document.querySelector(".partners")) {
@@ -439,7 +478,6 @@ window.addEventListener('load', (event) => {
         });
     });
 
-
 });
 
 // Вызов просходит в html
@@ -475,3 +513,37 @@ var swiper = new Swiper(".mySwiper-chips", {
     slidesPerView: 'auto',
     spaceBetween: 10,
 });
+
+
+// Добавить в структуру
+if (document.getElementById("range-slider")) {
+    document.addEventListener("DOMContentLoaded", function() {
+        var rangeSlider = document.getElementById('range-slider');
+        var rangeFrom = document.getElementById('range-from');
+        var rangeTo = document.getElementById('range-to');
+    
+        noUiSlider.create(rangeSlider, {
+            start: [20, 180], // начальное значение from и to
+            connect: true, // соединение между позициями
+            range: {
+                'min': 0,
+                'max': 200 // минимальное и максимальное значение
+            }
+        });
+    
+        rangeSlider.noUiSlider.on('update', function(values, handle) {
+            var value = values[handle];
+            if (handle == 0) {
+                rangeFrom.value = Math.round(value);
+                resizeInput(rangeFrom);
+            } else {
+                rangeTo.value = Math.round(value);
+                resizeInput(rangeTo);
+            }
+        });
+    });
+    
+    function resizeInput(input) {
+        input.style.width = input.value.length + "ch";
+    }
+}

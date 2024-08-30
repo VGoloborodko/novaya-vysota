@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
         integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <title>Серийная продукция</title>
+    <script src="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.js"></script>
+    <title>Карточка товара</title>
 </head>
 
 <body>
@@ -253,283 +255,131 @@
 
         <div class="header-padding"></div>
 
-        <section class="products-page">
-            <div class="products-page__wrapper">
-                <div class="container">
+        <section class="product-card"></section>
 
-                    <div class="col">
-                        <!-- <div class="products-page__head sp-b-green"> -->
-                            <div style="overflow: hidden;">
-                                <h1 class="font-h1 sp-b-green">Серийная продукция</h1>
+    </div>
+
+    </section>
+
+    <footer class="footer sp-t-green sp-b-purple">
+
+        <!-- Меню -->
+        <div class="container d-none-md">
+            <div class="col">
+                <div class="footer__menu">
+                    <a class="font-t1" href="/about.html">О компании</a>
+                    <a class="font-t1" href="/catalog.html">Специальные решения</a>
+                    <a class="font-t1" href="/clients.html">Клиентам</a>
+                    <a class="font-t1" href="/media.html">Медиацентр</a>
+                    <a class="font-t1" href="/info.html">Инфоцентр</a>
+                    <a class="font-t1" href="/projects.html">Выполненные проекты</a>
+                    <a class="font-t1" href="/purhases.html">Закупки</a>
+                    <a class="font-t1" href="/contacts.html">Контакты</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Линия -->
+        <div class="sp-t-burgundy sp-b-mint d-none-md">
+            <div class="line"></div>
+        </div>
+
+        <!-- Основная информайция -->
+        <div class="container">
+            <div class="footer__main">
+
+                <div class="col-4 col-md-6 col-sm-3">
+                    <div class="footer__ul">
+                        <a href="/catalog.html#directions">
+                            <h4 class="font-h4 sp-b-mint">Продукция по направлениям</h4>
+                        </a>
+                        <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Ж/д
+                            транспорт</a>
+                        <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Авиатранспорт
+                        </a>
+                        <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Нефтегазовая
+                            отрасль</a>
+                        <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Строительное
+                            оборудование</a>
+                        <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Склады</a>
+                    </div>
+                </div>
+
+                <div class="col-4 col-md-6 col-sm-3">
+                    <div class="footer__ul">
+                        <a href="/catalog.html#serial">
+                            <h4 class="font-h4 sp-b-mint">Серийная продукция</h4>
+                        </a>
+                        <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Стремянки</a>
+                        <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы
+                            приставные</a>
+                        <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы-трансформеры
+                        </a>
+                        <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Площадки,
+                            платформы, помосты</a>
+                        <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Вышки-туры</a>
+                        <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы
+                            специальные</a>
+                        <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы с
+                            площадкой</a>
+                        <a class="font-s color--secondary" href="/catalog.html#serial">Трапы и переходы</a>
+                    </div>
+                </div>
+
+                <div class="col-4 col-md-6 col-sm-3">
+                    <a class="font-h4" href="tel:+78003337989">8 (800) 333−79–89</a>
+                    <p class="font-s sp-v-burgundy">188301, Ленинградская область, Гатчинский район, промышленная
+                        зона Корпиково, дом 2, помещение 108.</p>
+                    <div class="button-block">
+                        <a href="#form">
+                            <div class="button-block__red-large">
+                                <p class="font-t1 color--white">Заказать звонок</p>
                             </div>
-                            <div class="chips">
-                                <div class="swiper mySwiper-chips">
-                                    <div class="swiper-wrapper">
-
-                                      <div class="swiper-slide">
-                                        <div class="button-block">
-                                            <a href="serial-production.html">
-                                                <div class="button-block__chip selected">
-                                                    <!-- <div class="button-block__icon"></div> -->
-                
-                                                    <p class="font-s color--primary">Серийная продукция</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                      </div>
-
-                                      <div class="swiper-slide">
-                                        <div class="button-block">
-                                            <a href="/products-direction.html">
-                                                <div class="button-block__chip">
-                                                    <!-- <div class="button-block__icon"></div> -->
-                
-                                                    <p class="font-s color--primary">Продукция по направлениям</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                      </div>
-                                      
-                                    </div>
-                                  </div>
+                        </a>
+                    </div>
+                    <div class="footer__social sp-t-burgundy">
+                        <a href="https://zen.yandex.ru/id/60b890f6164d471f382fbbb4" target="_blank">
+                            <div class="footer__icon">
+                                <img src="/assets/icon/icon_yandex_dzen.svg" alt="">
                             </div>
-                            <div class="sp-v-mint">
-                                <div class="line"></div>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCQADYyEXOntL2FnQH9lt_3g/" target="_blank">
+                            <div class="footer__icon">
+                                <img src="/assets/icon/icon_youtube.svg" alt="">
                             </div>
-                        <!-- </div> -->
-                    </div>
-
-                    <div class="products-page__block">
-
-                        <div class="col-3 col-lg-4 col-md-3 col-sm-3">
-                            <a class="products-page__item" href="#">
-                                <div class="products-page__blackout"></div>
-                                <div class="products-page__image">
-                                    <img src="/assets/image/product_main_img_1.jpg" alt="">
-                                </div>
-                                <div class="products-page__card-link">
-                                    <h4 class="font-h4">Стремянки</h4>
-                                    <div class="products-page__icon">
-                                        <img src="/assets/icon/products_icon.svg" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-3 col-lg-4 col-md-3 col-sm-3">
-                            <a class="products-page__item" href="/catalog.html">
-                                <div class="products-page__blackout"></div>
-                                <div class="products-page__image">
-                                    <img src="/assets/image/product_main_img_2.jpg" alt="">
-                                </div>
-                                <div class="products-page__card-link">
-                                    <h4 class="font-h4">Лестницы</h4>
-                                    <div class="products-page__icon">
-                                        <img src="/assets/icon/products_icon.svg" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-3 col-lg-4 col-md-3 col-sm-3">
-                            <a class="products-page__item" href="#">
-                                <div class="products-page__blackout"></div>
-                                <div class="products-page__image">
-                                    <img src="/assets/image/product_main_img_3.jpg" alt="">
-                                </div>
-                                <div class="products-page__card-link">
-                                    <h4 class="font-h4">Трансформеры</h4>
-                                    <div class="products-page__icon">
-                                        <img src="/assets/icon/products_icon.svg" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-3 col-lg-4 col-md-3 col-sm-3">
-                            <a class="products-page__item" href="#">
-                                <div class="products-page__blackout"></div>
-                                <div class="products-page__image">
-                                    <img src="/assets/image/product_main_img_4.jpg" alt="">
-                                </div>
-                                <div class="products-page__card-link">
-                                    <h4 class="font-h4">Вышкы-туры</h4>
-                                    <div class="products-page__icon">
-                                        <img src="/assets/icon/products_icon.svg" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-3 col-lg-4 col-md-3 col-sm-3">
-                            <a class="products-page__item" href="#">
-                                <div class="products-page__blackout"></div>
-                                <div class="products-page__image">
-                                    <img src="/assets/image/product_main_img_5.jpg" alt="">
-                                </div>
-                                <div class="products-page__card-link">
-                                    <h4 class="font-h4">Помосты, малярные столы</h4>
-                                    <div class="products-page__icon">
-                                        <img src="/assets/icon/products_icon.svg" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-3 col-lg-4 col-md-3 col-sm-3">
-                            <a class="products-page__item" href="#">
-                                <div class="products-page__blackout"></div>
-                                <div class="products-page__image">
-                                    <img src="/assets/image/product_main_img_6.jpg" alt="">
-                                </div>
-                                <div class="products-page__card-link">
-                                    <h4 class="font-h4">Помосты, малярные столы</h4>
-                                    <div class="products-page__icon">
-                                        <img src="/assets/icon/products_icon.svg" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-3 col-lg-4 col-md-3 col-sm-3">
-                            <a class="products-page__item" href="#">
-                                <div class="products-page__blackout"></div>
-                                <div class="products-page__image">
-                                    <img src="/assets/image/product_main_img_6.jpg" alt="">
-                                </div>
-                                <div class="products-page__card-link">
-                                    <h4 class="font-h4">Помосты, малярные столы</h4>
-                                    <div class="products-page__icon">
-                                        <img src="/assets/icon/products_icon.svg" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
+                        </a>
+                        <a href="https://vk.com/zavodnv" target="_blank">
+                            <div class="footer__icon">
+                                <img src="/assets/icon/icon_vk.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#" target="_blank">
+                            <div class="footer__icon">
+                                <img src="/assets/icon/icon_premiere_rush.svg" alt="">
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <footer class="footer sp-t-green sp-b-purple">
+        <!-- Линия -->
+        <div class="sp-t-green sp-b-burgundy">
+            <div class="line"></div>
+        </div>
 
-            <!-- Меню -->
-            <div class="container d-none-md">
-                <div class="col">
-                    <div class="footer__menu">
-                        <a class="font-t1" href="/about.html">О компании</a>
-                        <a class="font-t1" href="/catalog.html">Специальные решения</a>
-                        <a class="font-t1" href="/clients.html">Клиентам</a>
-                        <a class="font-t1" href="/media.html">Медиацентр</a>
-                        <a class="font-t1" href="/info.html">Инфоцентр</a>
-                        <a class="font-t1" href="/projects.html">Выполненные проекты</a>
-                        <a class="font-t1" href="/purhases.html">Закупки</a>
-                        <a class="font-t1" href="/contacts.html">Контакты</a>
-                    </div>
+        <div class="container">
+            <div class="col">
+                <div class="footer__bottom">
+                    <a class="font-t2 color--secondary" href="#">Политика кофиденциальности</a>
+                    <a class="font-t2 color--secondary" href="https://svsv.agency/" target="_blank">Разработка сайта
+                        Sivachёv & Sivachёv</a>
+                    <p class="font-t2 color--secondary">© 2024 Общество с ограниченной ответственностью</p>
                 </div>
             </div>
+        </div>
 
-            <!-- Линия -->
-            <div class="sp-t-burgundy sp-b-mint d-none-md">
-                <div class="line"></div>
-            </div>
-
-            <!-- Основная информайция -->
-            <div class="container">
-                <div class="footer__main">
-
-                    <div class="col-4 col-md-6 col-sm-3">
-                        <div class="footer__ul">
-                            <a href="/catalog.html#directions">
-                                <h4 class="font-h4 sp-b-mint">Продукция по направлениям</h4>
-                            </a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Ж/д
-                                транспорт</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Авиатранспорт
-                            </a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Нефтегазовая
-                                отрасль</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Строительное
-                                оборудование</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Склады</a>
-                        </div>
-                    </div>
-
-                    <div class="col-4 col-md-6 col-sm-3">
-                        <div class="footer__ul">
-                            <a href="/catalog.html#serial">
-                                <h4 class="font-h4 sp-b-mint">Серийная продукция</h4>
-                            </a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Стремянки</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы
-                                приставные</a>
-                            <a class="font-s color--secondary sp-b-blue"
-                                href="/catalog.html#serial">Лестницы-трансформеры </a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Площадки,
-                                платформы, помосты</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Вышки-туры</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы
-                                специальные</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы с
-                                площадкой</a>
-                            <a class="font-s color--secondary" href="/catalog.html#serial">Трапы и переходы</a>
-                        </div>
-                    </div>
-
-                    <div class="col-4 col-md-6 col-sm-3">
-                        <a class="font-h4" href="tel:+78003337989">8 (800) 333−79–89</a>
-                        <p class="font-s sp-v-burgundy">188301, Ленинградская область, Гатчинский район, промышленная
-                            зона Корпиково, дом 2, помещение 108.</p>
-                        <div class="button-block">
-                            <a href="#form">
-                                <div class="button-block__red-large">
-                                    <p class="font-t1 color--white">Заказать звонок</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="footer__social sp-t-burgundy">
-                            <a href="https://zen.yandex.ru/id/60b890f6164d471f382fbbb4" target="_blank">
-                                <div class="footer__icon">
-                                    <img src="/assets/icon/icon_yandex_dzen.svg" alt="">
-                                </div>
-                            </a>
-                            <a href="https://www.youtube.com/channel/UCQADYyEXOntL2FnQH9lt_3g/" target="_blank">
-                                <div class="footer__icon">
-                                    <img src="/assets/icon/icon_youtube.svg" alt="">
-                                </div>
-                            </a>
-                            <a href="https://vk.com/zavodnv" target="_blank">
-                                <div class="footer__icon">
-                                    <img src="/assets/icon/icon_vk.svg" alt="">
-                                </div>
-                            </a>
-                            <a href="#" target="_blank">
-                                <div class="footer__icon">
-                                    <img src="/assets/icon/icon_premiere_rush.svg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Линия -->
-            <div class="sp-t-green sp-b-burgundy">
-                <div class="line"></div>
-            </div>
-
-            <div class="container">
-                <div class="col">
-                    <div class="footer__bottom">
-                        <a class="font-t2 color--secondary" href="#">Политика кофиденциальности</a>
-                        <a class="font-t2 color--secondary" href="https://svsv.agency/" target="_blank">Разработка сайта
-                            Sivachёv & Sivachёv</a>
-                        <p class="font-t2 color--secondary">© 2024 Общество с ограниченной ответственностью</p>
-                    </div>
-                </div>
-            </div>
-
-        </footer>
+    </footer>
 
     </div>
 

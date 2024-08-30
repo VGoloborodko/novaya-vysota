@@ -105,7 +105,7 @@
 
 // Подзаголовок
 .font-s {
-    width: 100%;
+    // width: 100%;
     font-family: TT Neoris Trial;
     font-size: 18px;
     font-style: normal;
@@ -437,7 +437,7 @@ html {
         height: fit-content;
         padding: 6px 24px;
         background: #FFFFFF;
-        outline: 1px solid #303030;
+        border: 1px solid #303030;
         border-radius: 32px;
         transition: all 0.5s;
 
@@ -466,7 +466,7 @@ html {
     // Chip unselected
     .selected {
         background: #4F4F4F;
-        outline: unset;
+        border: unset;
         cursor: default;
 
         p {

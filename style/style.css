@@ -455,7 +455,6 @@ input[type=tel] {
 }
 
 .font-s {
-  width: 100%;
   font-family: TT Neoris Trial;
   font-size: 18px;
   font-style: normal;
@@ -712,7 +711,7 @@ html {
   height: fit-content;
   padding: 6px 24px;
   background: #FFFFFF;
-  outline: 1px solid #303030;
+  border: 1px solid #303030;
   border-radius: 32px;
   transition: all 0.5s;
 }
@@ -729,7 +728,7 @@ html {
 }
 .button-block .selected {
   background: #4F4F4F;
-  outline: unset;
+  border: unset;
   cursor: default;
 }
 .button-block .selected p {
@@ -3159,6 +3158,168 @@ html {
   width: fit-content;
 }
 
+.catalog__block {
+  display: flex;
+}
+.catalog__filters-name {
+  display: flex;
+  justify-content: space-between;
+}
+.catalog__ctoggleButton {
+  width: 100%;
+  max-width: 26px;
+  height: 26px;
+  background-size: contain;
+}
+.catalog__toggle {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+.catalog__filters {
+  padding-right: 55px;
+}
+.catalog__filters-check {
+  display: flex;
+  justify-content: space-between;
+}
+.catalog__filters-check input {
+  width: 100%;
+  max-width: 26px;
+  height: 26px;
+}
+.catalog__block-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.catalog__card-item {
+  position: relative;
+  flex: 1 0 32%;
+  max-width: 33%;
+  height: 447px;
+  background: gray;
+  cursor: pointer;
+}
+@media (max-width: 1279px) {
+  .catalog__card-item {
+    flex: 1 0 49%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .catalog__card-item {
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+}
+.catalog__card-item:hover .catalog__card-hover {
+  opacity: 1;
+  transition: all 0.3s;
+}
+.catalog__card-item:hover .catalog__bottom-icon {
+  background: url("/assets/icon/header_basket_icon_primary_hover.svg") no-repeat center;
+  transition: all 0.3s;
+}
+.catalog__image-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.catalog__image-item img {
+  height: 100%;
+}
+.catalog__card-info {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: 100%;
+}
+.catalog__card-hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px 24px 0 24px;
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 4, 29, 0.2);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.catalog__card-item-h {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.catalog .catalog__card-bottom {
+  display: flex;
+  gap: 16px;
+  padding: 16px 24px;
+  background: rgba(3, 4, 29, 0.2);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.catalog__bottom-icon {
+  width: 100%;
+  max-width: 48px;
+  height: 48px;
+  background: url("/assets/icon/header_basket_icon_primary.svg") no-repeat center;
+  transition: all 0.3s;
+}
+
+.toddler {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.toddler .input-block {
+  display: flex;
+}
+.toddler input {
+  width: 28px;
+  background: unset;
+}
+.toddler .noUi-horizontal .noUi-handle {
+  right: -6px;
+  top: -5px;
+  width: 12px;
+  height: 12px;
+  background: #4F4F4F;
+  box-shadow: unset;
+  border-radius: 50%;
+}
+.toddler .noUi-handle:after,
+.toddler .noUi-handle:before {
+  content: unset;
+}
+.toddler .noUi-horizontal {
+  width: 100%;
+  height: 2px;
+  border: unset;
+}
+.toddler .noUi-connect {
+  background: #4F4F4F;
+}
+.toddler .noUi-connects {
+  background: #A6A6A6;
+}
+
+.catalog-desk ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 30px;
+}
+.catalog-desk li {
+  list-style: disc;
+}
+
 .footer__menu {
   width: 100%;
   max-width: 1260px;
@@ -3201,6 +3362,26 @@ html {
 }
 .chips .swiper-slide {
   width: auto;
+}
+.chips__item {
+  display: flex;
+  cursor: pointer;
+}
+.chips__border {
+  height: 36px;
+  border-left: 1px solid #BDBDBD;
+}
+.chips__ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 24px;
+}
+.chips__li {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #4F4F4F;
 }
 
 .no-scroll {
