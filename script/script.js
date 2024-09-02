@@ -263,6 +263,80 @@ window.addEventListener('load', (event) => {
 
     }
 
+    //---------------- Файл catalog.html
+    //------- Секция catalog - плавное сворачивание
+    if (document.querySelector(".info-center")) {
+
+        // function infoCenterCheckBtn() {
+        //     const dropdownItem = document.querySelectorAll('.info-center__filters-item');
+        //     dropdownItem.forEach(elem => {
+        //         const btn = elem.querySelector('.info-center__ctoggleButton');
+        //         const toggle = elem.querySelector('.info-center__toggle');
+        //         const content = elem.querySelector('.info-center__filters-block');
+        //         // const image = elem.querySelector('.projects__image');
+
+        //         btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg) center center/contain no-repeat';
+
+        //         btn.addEventListener('click', () => {
+        //             if (toggle.checked) {
+        //                 content.style.display = 'flex';
+        //                 // content.style.height = content.scrollHeight + 'px';
+        //                 // image.style.height = image.scrollHeight + 'px';
+        //                 btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg) center center/contain no-repeat';
+
+        //             } else {
+        //                 content.style.display = 'none';
+        //                 // content.style.height = '0px';
+        //                 // image.style.height = '0px';
+        //                 btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg) center center/contain no-repeat';
+        //             }
+        //         })
+        //     })
+        // }
+
+        function infoCenterCheckBtn() {
+            const dropdownItem = document.querySelectorAll('.info-center__filters-item');
+            
+            dropdownItem.forEach((elem, index) => {
+                const btn = elem.querySelector('.info-center__ctoggleButton');
+                // const toggle = elem.querySelector('.info-center__toggle');   
+                const content = elem.querySelector('.info-center__filters-block');
+                let isOpen = false;
+        
+                btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg) center center/contain no-repeat';
+        
+                if (index === 0) {
+                    content.style.display = 'flex';
+                    btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg) center center/contain no-repeat';
+                    isOpen = true;
+                } else {
+                    content.style.display = 'none';
+                    btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg) center center/contain no-repeat';
+                }
+        
+                btn.addEventListener('click', () => {
+                    if (isOpen) {
+                        content.style.display = 'none';
+                        btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg) center center/contain no-repeat';
+                        isOpen = false;
+                    } else {
+                        content.style.display = 'flex';
+                        btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg) center center/contain no-repeat';
+                        isOpen = true;
+                    }
+                });
+            });
+        }
+        
+
+        try {
+            infoCenterCheckBtn();
+        } catch (error) {
+            console.error(error);
+        }
+
+    }
+
     //---------------- Файл index.html
     //------- Секция partners - бегущая строка
     if (document.querySelector(".partners")) {
@@ -514,14 +588,13 @@ var swiper = new Swiper(".mySwiper-chips", {
     spaceBetween: 10,
 });
 
-
-// Добавить в структуру
+// Добавить в структуру - ползунок
 if (document.getElementById("range-slider")) {
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         var rangeSlider = document.getElementById('range-slider');
         var rangeFrom = document.getElementById('range-from');
         var rangeTo = document.getElementById('range-to');
-    
+
         noUiSlider.create(rangeSlider, {
             start: [20, 180], // начальное значение from и to
             connect: true, // соединение между позициями
@@ -530,8 +603,8 @@ if (document.getElementById("range-slider")) {
                 'max': 200 // минимальное и максимальное значение
             }
         });
-    
-        rangeSlider.noUiSlider.on('update', function(values, handle) {
+
+        rangeSlider.noUiSlider.on('update', function (values, handle) {
             var value = values[handle];
             if (handle == 0) {
                 rangeFrom.value = Math.round(value);
@@ -542,8 +615,52 @@ if (document.getElementById("range-slider")) {
             }
         });
     });
-    
+
     function resizeInput(input) {
         input.style.width = input.value.length + "ch";
     }
 }
+
+if (document.querySelector(".main-card__star-rating")) {
+    // document.addEventListener('DOMContentLoaded', function () {
+    const stars = document.querySelectorAll('.main-card__star');
+    const starRating = document.querySelector('.main-card__star-rating');
+
+    let currentRating = 0;
+
+    stars.forEach((star, index) => {
+        star.addEventListener('mouseenter', function () {
+            if (currentRating === 0) {
+                star.classList.add('fill');
+                for (let i = 0; i < index; i++) {
+                    stars[i].classList.add('fill');
+                }
+            }
+        });
+
+        star.addEventListener('mouseleave', function () {
+            if (currentRating === 0) {
+                starRating.querySelectorAll('.main-card__star').forEach(s => s.classList.remove('fill'));
+            }
+        });
+
+        star.addEventListener('click', function () {
+            const rating = parseInt(star.dataset.rating);
+            currentRating = rating;
+            starRating.querySelectorAll('.main-card__star').forEach((s, i) => {
+                s.classList.toggle('fill', i < rating);
+            });
+            stars.forEach(s => {
+                s.removeEventListener('mouseenter', null);
+                s.removeEventListener('mouseleave', null);
+                s.style.cursor = 'default';
+            });
+        });
+    });
+    // });
+}
+
+var swiper = new Swiper(".mySwiper-product-card", {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+});

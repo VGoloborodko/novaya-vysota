@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
         integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.js"></script>
-    <title>Лестницы</title>
+    <title>Инфоцентр</title>
 </head>
 
 <body>
@@ -22,7 +20,7 @@
 
         <header class="header">
 
-            <div class="header__desktop">
+            <div class="header__desktop" data-id="">
                 <div class="header__desktop-cover"></div>
                 <div class="header__desktop-cover-scroll"></div>
                 <div class="header__wrapper sp-b-burgundy">
@@ -255,421 +253,289 @@
 
         <div class="header-padding"></div>
 
-        <section class="catalog sp-b-fuchsia">
+        <section class="info-center">
 
             <div class="container">
                 <div class="col">
-                    <h1 class="font-h1 sp-b-green">Лестницы</h1>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="catalog__block">
-
-                    <div class="col-3 d-none-md">
-                        <div class="catalog__filters">
-
-                            <div class="catalog__filters-item">
-                                <div class="catalog__filters-name">
-                                    <p class="font-s">Торговая марка</p>
-                                    <div class="catalog__ctoggleButton">
-                                        <input class="catalog__toggle" type="checkbox" checked=false />
-                                    </div>
-                                </div>
-                                <div class="catalog__filters-block">
-                                    <label class="catalog__filters-check sp-t-yellow" for="">
-                                        <p class="font-t1 color--secondary">Новая высота</p>
-                                        <input type="checkbox">
-                                    </label>
-                                </div>
-                                <div class="sp-t-yellow">
-                                    <div class="line"></div>
-                                </div>
-                            </div>
-
-                            <div class="catalog__filters-item sp-t-mint">
-                                <div class="catalog__filters-name">
-                                    <p class="font-s">Сфера применения</p>
-                                    <div class="catalog__ctoggleButton">
-                                        <input class="catalog__toggle" type="checkbox" checked=false />
-                                    </div>
-                                </div>
-                                <div class="catalog__filters-block">
-
-                                    <label class="catalog__filters-check sp-t-yellow" for="">
-                                        <p class="font-t1 color--secondary">Бытовые</p>
-                                        <input type="checkbox">
-                                    </label>
-
-                                    <label class="catalog__filters-check sp-t-yellow" for="">
-                                        <p class="font-t1 color--secondary">Бытовые усиленные</p>
-                                        <input type="checkbox">
-                                    </label>
-
-                                    <label class="catalog__filters-check sp-t-yellow" for="">
-                                        <p class="font-t1 color--secondary">Профессионаьные</p>
-                                        <input type="checkbox">
-                                    </label>
-
-                                    <label class="catalog__filters-check sp-t-yellow" for="">
-                                        <p class="font-t1 color--secondary">Индустриальные</p>
-                                        <input type="checkbox">
-                                    </label>
-
-                                </div>
-                                <div class="sp-t-yellow">
-                                    <div class="line"></div>
-                                </div>
-                            </div>
-
-                            <div class="catalog__filters-item sp-t-mint">
-                                <div class="catalog__filters-name">
-                                    <p class="font-s">Серия</p>
-                                    <div class="catalog__ctoggleButton">
-                                        <input class="catalog__toggle" type="checkbox" checked=false />
-                                    </div>
-                                </div>
-                                <div class="catalog__filters-block">
-
-                                    <label class="catalog__filters-check sp-t-yellow" for="">
-                                        <p class="font-t1 color--secondary">100</p>
-                                        <input type="checkbox">
-                                    </label>
-
-                                    <label class="catalog__filters-check sp-t-yellow" for="">
-                                        <p class="font-t1 color--secondary">200</p>
-                                        <input type="checkbox">
-                                    </label>
-
-                                    <label class="catalog__filters-check sp-t-yellow" for="">
-                                        <p class="font-t1 color--secondary">300</p>
-                                        <input type="checkbox">
-                                    </label>
-
-                                    <label class="catalog__filters-check sp-t-yellow" for="">
-                                        <p class="font-t1 color--secondary">400</p>
-                                        <input type="checkbox">
-                                    </label>
-
-                                    <label class="catalog__filters-check sp-t-yellow" for="">
-                                        <p class="font-t1 color--secondary">500</p>
-                                        <input type="checkbox">
-                                    </label>
-
-                                </div>
-                                <div class="sp-t-yellow">
-                                    <div class="line"></div>
-                                </div>
-                            </div>
-
-                            <div class="catalog__filters-item sp-t-mint">
-                                <div class="catalog__filters-name">
-                                    <p class="font-s">Максимальная нагрузка</p>
-                                    <div class="catalog__ctoggleButton">
-                                        <input class="catalog__toggle" type="checkbox" checked=false />
-                                    </div>
-                                </div>
-                                <div class="catalog__filters-block">
-
-                                    <label class="catalog__filters-check sp-t-yellow" for="">
-                                        <p class="font-t1 color--secondary">150</p>
-                                        <input type="checkbox">
-                                    </label>
-
-                                    <label class="catalog__filters-check sp-t-yellow" for="">
-                                        <p class="font-t1 color--secondary">180</p>
-                                        <input type="checkbox">
-                                    </label>
-
-                                    <label class="catalog__filters-check sp-t-yellow" for="">
-                                        <p class="font-t1 color--secondary">225</p>
-                                        <input type="checkbox">
-                                    </label>
-
-                                </div>
-                                <div class="sp-t-yellow">
-                                    <div class="line"></div>
-                                </div>
-                            </div>
-
-                            <div class="catalog__filters-item sp-t-mint">
-                                <div class="catalog__filters-name">
-                                    <p class="font-s">Рабочая высота</p>
-                                    <div class="catalog__ctoggleButton">
-                                        <input class="catalog__toggle" type="checkbox" checked=false />
-                                    </div>
-                                </div>
-                                <div class="catalog__filters-block sp-t-yellow">
-
-                                    <div class="toddler">
-                                        <div class="input-block">
-                                            <input class="font-t1" type="text" id="range-from" disabled>
-                                            <p class="font-t1">см</p>
-                                        </div>
-                                        <div id="range-slider"></div>
-                                        <div class="input-block">
-                                            <input class="font-t1" type="text" id="range-to" disabled>
-                                            <p class="font-t1">см</p>
+                    <div class="chips">
+                        <div class="swiper mySwiper-chips">
+                            <div class="swiper-wrapper">
+    
+                                <div class="swiper-slide">
+                                    <div class="chips__item">
+                                        <!-- <div class="chips__border"></div> -->
+                                        <div class="chips__ul">
+                                            <!-- <div class="chips__li"></div> -->
+                                            <p class="font-h4 color--disabled">Сервисный центр</p>
                                         </div>
                                     </div>
-
                                 </div>
-
-                            </div>
-                            <div class="sp-t-yellow">
-                                <div class="line"></div>
+    
+                                <div class="swiper-slide">
+                                    <div class="chips__item">
+                                        <div class="chips__border"></div>
+                                        <div class="chips__ul">
+                                            <!-- <div class="chips__li"></div> -->
+                                            <p class="font-h4 color--disabled">Оплата и доставка</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="swiper-slide">
+                                    <div class="chips__item">
+                                        <div class="chips__border"></div>
+                                        <div class="chips__ul">
+                                            <div class="chips__li"></div>
+                                            <p class="font-h4">Инфоцентр</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="swiper-slide">
+                                    <div class="chips__item">
+                                        <div class="chips__border"></div>
+                                        <div class="chips__ul">
+                                            <!-- <div class="chips__li"></div> -->
+                                            <p class="font-h4 color--disabled">Учебный центр</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="col-9 col-md-6 col-sm-3">
+            <div class="sp-t-mint">
+                <div class="line"></div>
+            </div>
 
-                        <div class="chips">
-                            <div class="swiper mySwiper-chips">
-                                <div class="swiper-wrapper">
-
-                                    <div class="swiper-slide">
-                                        <div class="chips__item">
-                                            <!-- <div class="chips__border"></div> -->
-                                            <div class="chips__ul">
-                                                <!-- <div class="chips__li"></div> -->
-                                                <p class="font-h4 color--disabled">Все</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="chips__item">
-                                            <div class="chips__border"></div>
-                                            <div class="chips__ul">
-                                                <div class="chips__li"></div>
-                                                <p class="font-h4">Двухсекционные</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="chips__item">
-                                            <div class="chips__border"></div>
-                                            <div class="chips__ul">
-                                                <!-- <div class="chips__li"></div> -->
-                                                <p class="font-h4 color--disabled">Трёхсекционные</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="chips__item">
-                                            <div class="chips__border"></div>
-                                            <div class="chips__ul">
-                                                <!-- <div class="chips__li"></div> -->
-                                                <p class="font-h4 color--disabled">Для полувагонов</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="chips__item">
-                                            <div class="chips__border"></div>
-                                            <div class="chips__ul">
-                                                <!-- <div class="chips__li"></div> -->
-                                                <p class="font-h4 color--disabled">Приставные</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
+            <div class="container">
+                <div class="info-center__filters sp-t-green">
+    
+                    <div class="info-center__filters-item">
+                        <div class="info-center__filters-name">
+                            <p class="font-h3">Каталоги</p>
+                            <div class="info-center__ctoggleButton">
+                                <input class="info-center__toggle" type="checkbox" checked />
                             </div>
                         </div>
-
-                        <div class="sp-v-dark-blue">
+                        <div class="info-center__filters-block sp-t-dark-blue">
+                            <!-- <div class="documentation-card__block"> -->
+    
+                            <div class="col-4 col-md-3 col-sm-3">
+                                <div class="documentation-card__item color-block--gray-opasity20">
+                                    <div class="documentation-card__image">
+                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
+                                            alt="">
+                                    </div>
+                                    <div class="documentation-card__info">
+                                        <h3 class="font-s">Название документа</h3>
+                                        <div class="documentation-card__bottom">
+                                            <p class="font-t2 color--secondary">233 Kb</p>
+                                            <a href="#">
+                                                <div class="documentation-card__icon"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-4 col-md-3 col-sm-3">
+                                <div class="documentation-card__item color-block--gray-opasity20">
+                                    <div class="documentation-card__image">
+                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
+                                            alt="">
+                                    </div>
+                                    <div class="documentation-card__info">
+                                        <h3 class="font-s">Название документа</h3>
+                                        <div class="documentation-card__bottom">
+                                            <p class="font-t2 color--secondary">233 Kb</p>
+                                            <a href="#">
+                                                <div class="documentation-card__icon"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-4 col-md-3 col-sm-3">
+                                <div class="documentation-card__item color-block--gray-opasity20">
+                                    <div class="documentation-card__image">
+                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
+                                            alt="">
+                                    </div>
+                                    <div class="documentation-card__info">
+                                        <h3 class="font-s">Название документа</h3>
+                                        <div class="documentation-card__bottom">
+                                            <p class="font-t2 color--secondary">233 Kb</p>
+                                            <a href="#">
+                                                <div class="documentation-card__icon"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- </div> -->
+                        </div>
+                        <div class="sp-t-dark-blue">
                             <div class="line"></div>
                         </div>
-
-                        <div class="catalog__block-card">
-                            
-                            <a href="/product-card.html" class="catalog__card-item">
-                                <div class="catalog__image-item">
-                                    <img src="/assets/image/catalog_image_item.jpg" alt="">
-                                </div>
-                                <div class="catalog__card-info">
-                                    <div class="catalog__card-hover">
-                                        <div class="catalog__card-item-h sp-b-light-blue">
-                                            <p class="font-s color--white">Грузоподъёмность</p>
-                                            <p class="font-s color--white">150 кг</p>
-                                        </div>
-                                        <div class="catalog__card-item-h sp-b-light-blue">
-                                            <p class="font-s color--white">Глубина ступеней</p>
-                                            <p class="font-s color--white">160 мм</p>
-                                        </div>
-                                        <div class="catalog__card-item-h sp-b-light-blue">
-                                            <p class="font-s color--white">Угол наклона лестницы</p>
-                                            <p class="font-s color--white">60°</p>
-                                        </div>
-                                        <div class="line"></div>
+                    </div>
+    
+                    <div class="info-center__filters-item">
+                        <div class="info-center__filters-name sp-t-dark-blue">
+                            <p class="font-h3">Листовки</p>
+                            <div class="info-center__ctoggleButton">
+                                <input class="info-center__toggle" type="checkbox" checked />
+                            </div>
+                        </div>
+                        <div class="info-center__filters-block sp-t-dark-blue">
+                            <!-- <div class="documentation-card__block"> -->
+    
+                            <div class="col-4 col-md-3 col-sm-3">
+                                <div class="documentation-card__item color-block--gray-opasity20">
+                                    <div class="documentation-card__image">
+                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
+                                            alt="">
                                     </div>
-                                    <div class="catalog__card-bottom">
-                                        <p class="font-s color--white">Длинное название лестницы возможно в две строчки
-                                        </p>
-                                        <div class="catalog__bottom-icon"></div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="" class="catalog__card-item">
-                                <div class="catalog__image-item">
-                                    <img src="/assets/image/catalog_image_item.jpg" alt="">
-                                </div>
-                                <div class="catalog__card-info">
-                                    <div class="catalog__card-hover">
-                                        <div class="catalog__card-item-h sp-b-light-blue">
-                                            <p class="font-s color--white">Грузоподъёмность</p>
-                                            <p class="font-s color--white">150 кг</p>
+                                    <div class="documentation-card__info">
+                                        <h3 class="font-s">Название документа</h3>
+                                        <div class="documentation-card__bottom">
+                                            <p class="font-t2 color--secondary">233 Kb</p>
+                                            <a href="#">
+                                                <div class="documentation-card__icon"></div>
+                                            </a>
                                         </div>
-                                        <div class="catalog__card-item-h sp-b-light-blue">
-                                            <p class="font-s color--white">Глубина ступеней</p>
-                                            <p class="font-s color--white">160 мм</p>
-                                        </div>
-                                        <div class="catalog__card-item-h sp-b-light-blue">
-                                            <p class="font-s color--white">Угол наклона лестницы</p>
-                                            <p class="font-s color--white">60°</p>
-                                        </div>
-                                        <div class="line"></div>
-                                    </div>
-                                    <div class="catalog__card-bottom">
-                                        <p class="font-s color--white">Длинное название лестницы возможно в две строчки
-                                        </p>
-                                        <div class="catalog__bottom-icon"></div>
                                     </div>
                                 </div>
-                            </a>
-
-                            <a href="" class="catalog__card-item">
-                                <div class="catalog__image-item">
-                                    <img src="/assets/image/catalog_image_item.jpg" alt="">
-                                </div>
-                                <div class="catalog__card-info">
-                                    <div class="catalog__card-hover">
-                                        <div class="catalog__card-item-h sp-b-light-blue">
-                                            <p class="font-s color--white">Грузоподъёмность</p>
-                                            <p class="font-s color--white">150 кг</p>
-                                        </div>
-                                        <div class="catalog__card-item-h sp-b-light-blue">
-                                            <p class="font-s color--white">Глубина ступеней</p>
-                                            <p class="font-s color--white">160 мм</p>
-                                        </div>
-                                        <div class="catalog__card-item-h sp-b-light-blue">
-                                            <p class="font-s color--white">Угол наклона лестницы</p>
-                                            <p class="font-s color--white">60°</p>
-                                        </div>
-                                        <div class="line"></div>
+                            </div>
+    
+                            <div class="col-4 col-md-3 col-sm-3">
+                                <div class="documentation-card__item color-block--gray-opasity20">
+                                    <div class="documentation-card__image">
+                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
+                                            alt="">
                                     </div>
-                                    <div class="catalog__card-bottom">
-                                        <p class="font-s color--white">Длинное название лестницы возможно в две строчки
-                                        </p>
-                                        <div class="catalog__bottom-icon"></div>
+                                    <div class="documentation-card__info">
+                                        <h3 class="font-s">Название документа</h3>
+                                        <div class="documentation-card__bottom">
+                                            <p class="font-t2 color--secondary">233 Kb</p>
+                                            <a href="#">
+                                                <div class="documentation-card__icon"></div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
-
-                            <a href="" class="catalog__card-item">
-                                <div class="catalog__image-item">
-                                    <img src="/assets/image/catalog_image_item.jpg" alt="">
-                                </div>
-                                <div class="catalog__card-info">
-                                    <div class="catalog__card-hover">
-                                        <div class="catalog__card-item-h sp-b-light-blue">
-                                            <p class="font-s color--white">Грузоподъёмность</p>
-                                            <p class="font-s color--white">150 кг</p>
-                                        </div>
-                                        <div class="catalog__card-item-h sp-b-light-blue">
-                                            <p class="font-s color--white">Глубина ступеней</p>
-                                            <p class="font-s color--white">160 мм</p>
-                                        </div>
-                                        <div class="catalog__card-item-h sp-b-light-blue">
-                                            <p class="font-s color--white">Угол наклона лестницы</p>
-                                            <p class="font-s color--white">60°</p>
-                                        </div>
-                                        <div class="line"></div>
+                            </div>
+    
+                            <div class="col-4 col-md-3 col-sm-3">
+                                <div class="documentation-card__item color-block--gray-opasity20">
+                                    <div class="documentation-card__image">
+                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
+                                            alt="">
                                     </div>
-                                    <div class="catalog__card-bottom">
-                                        <p class="font-s color--white">Длинное название лестницы возможно в две строчки
-                                        </p>
-                                        <div class="catalog__bottom-icon"></div>
+                                    <div class="documentation-card__info">
+                                        <h3 class="font-s">Название документа</h3>
+                                        <div class="documentation-card__bottom">
+                                            <p class="font-t2 color--secondary">233 Kb</p>
+                                            <a href="#">
+                                                <div class="documentation-card__icon"></div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
-
-                            <a href="" class="catalog__card-item">
-                                <div class="catalog__image-item">
-                                    <img src="/assets/image/catalog_image_item.jpg" alt="">
-                                </div>
-                                <div class="catalog__card-info">
-                                    <div class="catalog__card-hover">
-                                        <div class="catalog__card-item-h sp-b-light-blue">
-                                            <p class="font-s color--white">Грузоподъёмность</p>
-                                            <p class="font-s color--white">150 кг</p>
-                                        </div>
-                                        <div class="catalog__card-item-h sp-b-light-blue">
-                                            <p class="font-s color--white">Глубина ступеней</p>
-                                            <p class="font-s color--white">160 мм</p>
-                                        </div>
-                                        <div class="catalog__card-item-h sp-b-light-blue">
-                                            <p class="font-s color--white">Угол наклона лестницы</p>
-                                            <p class="font-s color--white">60°</p>
-                                        </div>
-                                        <div class="line"></div>
-                                    </div>
-                                    <div class="catalog__card-bottom">
-                                        <p class="font-s color--white">Длинное название лестницы возможно в две строчки
-                                        </p>
-                                        <div class="catalog__bottom-icon"></div>
-                                    </div>
-                                </div>
-                            </a>
-
+                            </div>
+    
+                            <!-- </div> -->
+                        </div>
+                        <div class="sp-t-dark-blue">
+                            <div class="line"></div>
                         </div>
                     </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <section class="catalog-desk sp-b-fuchsia">
-            <div class="container">
-                <div class="col">
-                    <div class="catalog-desk__wrapper">
-                        <h2 class="font-h2 sp-b-yellow">Стремянки</h2>
-                        <div class="catalog-desk__image">
-                            <img src="/assets/image/catalog_desk_image.jpg" alt="">
+    
+                    <div class="info-center__filters-item">
+                        <div class="info-center__filters-name sp-t-dark-blue">
+                            <p class="font-h3">Плакаты</p>
+                            <div class="info-center__ctoggleButton">
+                                <input class="info-center__toggle" type="checkbox" checked />
+                            </div>
                         </div>
-                        <div class="sp-t-yellow">
-                            <h3 class="font-h3">NV 100</h3>
-                            <ul class="sp-t-yellow">
-                                <li class="font-t1">Стремянки серии 100 предназначены для применения в быту</li>
-                                <li class="font-t1">Отличаются лёгким весом и компактными размерами для хранения и
-                                    транспортировки</li>
-                                <li class="font-t1">Доступны в трёх вариантах полностью алюминиевые, комбинированные и
-                                    полностью стальные</li>
-                                <li class="font-t1">Рабочая площадка из оцинкованной стали и высокая дуга безопасности
-                                    стоек способствует удобству и безопасности при выполнении работ</li>
-                                <li class="font-t1">Удобные ступени глубиной 80 мм</li>
-                                <li class="font-t1">Соединение ступеней со стойками шестью заклёпками</li>
-                                <li class="font-t1">Допустимая нагрузка 150 кг</li>
-                                <li class="font-t1">Стремянки с двухсторонним подъёмом отличает дополнительная
-                                    функциональность: они быстро и легко устанавливаются и позволяют подниматься и
-                                    спускаться с двух сторон</li>
-                                <li class="font-t1">Гарантийный срок использования 1 год</li>
-                            </ul>
+                        <div class="info-center__filters-block sp-t-dark-blue">
+                            <!-- <div class="documentation-card__block"> -->
+    
+                            <div class="col-4 col-md-3 col-sm-3">
+                                <div class="documentation-card__item color-block--gray-opasity20">
+                                    <div class="documentation-card__image">
+                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
+                                            alt="">
+                                    </div>
+                                    <div class="documentation-card__info">
+                                        <h3 class="font-s">Название документа</h3>
+                                        <div class="documentation-card__bottom">
+                                            <p class="font-t2 color--secondary">233 Kb</p>
+                                            <a href="#">
+                                                <div class="documentation-card__icon"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-4 col-md-3 col-sm-3">
+                                <div class="documentation-card__item color-block--gray-opasity20">
+                                    <div class="documentation-card__image">
+                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
+                                            alt="">
+                                    </div>
+                                    <div class="documentation-card__info">
+                                        <h3 class="font-s">Название документа</h3>
+                                        <div class="documentation-card__bottom">
+                                            <p class="font-t2 color--secondary">233 Kb</p>
+                                            <a href="#">
+                                                <div class="documentation-card__icon"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-4 col-md-3 col-sm-3">
+                                <div class="documentation-card__item color-block--gray-opasity20">
+                                    <div class="documentation-card__image">
+                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
+                                            alt="">
+                                    </div>
+                                    <div class="documentation-card__info">
+                                        <h3 class="font-s">Название документа</h3>
+                                        <div class="documentation-card__bottom">
+                                            <p class="font-t2 color--secondary">233 Kb</p>
+                                            <a href="#">
+                                                <div class="documentation-card__icon"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- </div> -->
+                        </div>
+                        <div class="sp-t-dark-blue">
+                            <div class="line"></div>
                         </div>
                     </div>
+    
                 </div>
             </div>
+
+
+            <!-- </div> -->
         </section>
 
         <footer class="footer sp-t-green sp-b-purple">
-    
+
             <!-- Меню -->
             <div class="container d-none-md">
                 <div class="col">
@@ -685,16 +551,16 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Линия -->
             <div class="sp-t-burgundy sp-b-mint d-none-md">
                 <div class="line"></div>
             </div>
-    
+
             <!-- Основная информайция -->
             <div class="container">
                 <div class="footer__main">
-    
+
                     <div class="col-4 col-md-6 col-sm-3">
                         <div class="footer__ul">
                             <a href="/catalog.html#directions">
@@ -711,7 +577,7 @@
                             <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Склады</a>
                         </div>
                     </div>
-    
+
                     <div class="col-4 col-md-6 col-sm-3">
                         <div class="footer__ul">
                             <a href="/catalog.html#serial">
@@ -720,7 +586,8 @@
                             <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Стремянки</a>
                             <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы
                                 приставные</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы-трансформеры
+                            <a class="font-s color--secondary sp-b-blue"
+                                href="/catalog.html#serial">Лестницы-трансформеры
                             </a>
                             <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Площадки,
                                 платформы, помосты</a>
@@ -732,7 +599,7 @@
                             <a class="font-s color--secondary" href="/catalog.html#serial">Трапы и переходы</a>
                         </div>
                     </div>
-    
+
                     <div class="col-4 col-md-6 col-sm-3">
                         <a class="font-h4" href="tel:+78003337989">8 (800) 333−79–89</a>
                         <p class="font-s sp-v-burgundy">188301, Ленинградская область, Гатчинский район, промышленная
@@ -769,12 +636,12 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Линия -->
             <div class="sp-t-green sp-b-burgundy">
                 <div class="line"></div>
             </div>
-    
+
             <div class="container">
                 <div class="col">
                     <div class="footer__bottom">
@@ -785,10 +652,8 @@
                     </div>
                 </div>
             </div>
-    
-        </footer>
-    </div>
 
+        </footer>
 
     </div>
 
