@@ -3400,21 +3400,6 @@ html {
   top: 38px;
   display: block;
 }
-.sticky-link--2 {
-  top: 76px;
-}
-.sticky-link--3 {
-  top: 114px;
-}
-.sticky-link--4 {
-  top: 152px;
-}
-.sticky-link--5 {
-  top: 190px;
-}
-.sticky-link--6 {
-  top: 228px;
-}
 .sticky-link__block {
   display: flex;
   align-items: center;
