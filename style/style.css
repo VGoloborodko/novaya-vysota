@@ -657,6 +657,35 @@ html {
 .button-block__red-large:hover {
   background: #B10D1E;
 }
+.button-block__black-large {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 12px 114px;
+  background: #4F4F4F;
+  border-radius: 32px;
+  transition: all 0.5s;
+}
+@media (max-width: 767px) {
+  .button-block__black-large {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 767px;
+  }
+}
+.button-block__black-large p {
+  transition: all 0.5s;
+}
+.button-block__black-large:hover {
+  background: #FFFFFF;
+}
+.button-block__black-large:hover p {
+  color: #4F4F4F;
+  transition: all 0.5s;
+}
 .button-block__transparent-small {
   display: flex;
   width: -moz-max-content;
@@ -726,9 +755,39 @@ html {
   color: #303030;
   transition: all 0.5s;
 }
+.button-block__mini-small {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 6px 24px;
+  background: #4F4F4F;
+  border-radius: 32px;
+  transition: all 0.5s;
+}
+.button-block__mini-small path {
+  transition: all 0.5s;
+}
+.button-block__mini-small p {
+  transition: all 0.5s;
+}
+.button-block__mini-small:hover {
+  background: #FFFFFF;
+}
+.button-block__mini-small:hover path {
+  fill: #4F4F4F;
+  transition: all 0.5s;
+}
+.button-block__mini-small:hover p {
+  color: #4F4F4F;
+  transition: all 0.5s;
+}
 .button-block .selected {
   background: #4F4F4F;
-  border: unset;
   cursor: default;
 }
 .button-block .selected p {
@@ -1885,6 +1944,35 @@ html {
 
 .f-w-medium {
   font-weight: 500;
+}
+
+.icon-comparison {
+  cursor: pointer;
+}
+.icon-comparison rect {
+  transition: all 0.5s;
+}
+.icon-comparison path {
+  transition: all 0.5s;
+}
+.icon-comparison:hover rect {
+  fill: #4F4F4F;
+  transition: all 0.5s;
+}
+.icon-comparison:hover path {
+  fill: #FFF;
+  transition: all 0.5s;
+}
+
+.icon-delete {
+  cursor: pointer;
+}
+.icon-delete path {
+  transition: all 0.5s;
+}
+.icon-delete:hover path {
+  fill: #B6B6B6;
+  transition: all 0.5s;
 }
 
 .html {
@@ -3567,6 +3655,91 @@ html {
   row-gap: 10px;
 }
 
+.basket__block {
+  display: flex;
+}
+@media (max-width: 1279px) {
+  .basket__block {
+    flex-direction: column;
+  }
+}
+.basket__btn-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.basket__cards {
+  display: flex;
+  flex-direction: column;
+}
+.basket__item-card {
+  display: flex;
+  gap: 54px;
+}
+@media (max-width: 767px) {
+  .basket__item-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+.basket__image {
+  width: 100%;
+  max-width: 270px;
+}
+@media (max-width: 767px) {
+  .basket__image {
+    max-width: 400px;
+  }
+}
+.basket__txt-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.basket__card-icons {
+  display: flex;
+  gap: 24px;
+}
+.basket__price-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.basket__card-counter {
+  display: flex;
+  gap: 16px;
+}
+.basket__card-plus, .basket__card-minus {
+  cursor: pointer;
+}
+.basket__result {
+  padding: 32px;
+}
+@media (max-width: 1024px) {
+  .basket__result {
+    padding: 16px;
+  }
+}
+.basket__result-beetwen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.basket__result .button-block {
+  width: 100%;
+}
+.basket__result .button-block .button-block__white-large {
+  width: 100%;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.comparison__block {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .footer__menu {
   width: 100%;
   max-width: 1260px;
@@ -3604,6 +3777,53 @@ html {
   }
 }
 
+.form-popup {
+  transform: translateX(100%);
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  overflow-y: scroll;
+  width: 100%;
+  max-width: 795px;
+  height: 100vh;
+  padding: 64px;
+  background: #FFFCF5;
+  /* Цвет фона полосы прокрутки */
+  /* Цвет самой полосы прокрутки */
+}
+@media (max-width: 1024px) {
+  .form-popup {
+    padding: 16px;
+  }
+}
+.form-popup .form {
+  padding: 0;
+  background: unset;
+}
+.form-popup .form__top {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.form-popup__close {
+  text-align: right;
+  cursor: pointer;
+}
+.form-popup::-webkit-scrollbar {
+  width: 10px;
+  /* Ширина полосы прокрутки */
+}
+.form-popup::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Цвет фона полосы прокрутки */
+}
+.form-popup::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+  /* Цвет самой полосы прокрутки */
+}
+
 .chips .swiper-wrapper {
   padding: 1px;
 }
@@ -3629,6 +3849,16 @@ html {
   height: 16px;
   border-radius: 50%;
   background: #4F4F4F;
+}
+
+.popup-shadow {
+  display: none;
+  position: fixed;
+  z-index: 19;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .no-scroll {

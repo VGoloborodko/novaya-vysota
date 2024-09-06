@@ -2048,6 +2048,108 @@
     }
 }
 
+.basket {
+
+    &__block {
+        display: flex;
+
+        @include bp(lg) {
+            flex-direction: column;
+            // gap: 46px;
+        }
+    }
+
+    &__btn-counter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item-card {
+        display: flex;
+        gap: 54px;
+
+        @include bp(sm) {
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        max-width: 270px;
+
+        @include bp(sm) {
+            max-width: 400px;
+        }
+    }
+
+    &__txt-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__card-icons {
+        display: flex;
+        gap: 24px;
+    }
+
+    &__price-counter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__card-counter {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__card-plus,
+    &__card-minus {
+        cursor: pointer;
+    }
+
+    &__result {
+        padding: 32px;
+
+        @include bp(md) {
+            padding: 16px;
+        }
+    }
+
+    &__result-beetwen {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__result .button-block {
+        width: 100%;
+
+        .button-block__white-large {
+            width: 100%;
+            justify-content: center;
+            padding: 12px 0;
+        }
+    }
+}
+
+.comparison {
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
 .footer {
 
     &__menu {
@@ -2093,6 +2195,58 @@
     }
 }
 
+.form-popup {
+    transform: translateX(100%);
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    right: 0;
+    overflow-y: scroll;
+    width: 100%;
+    max-width: 795px;
+    height: 100vh;
+    padding: 64px;
+    background: #FFFCF5;
+
+    @include bp(md) {
+        padding: 16px;
+    }
+
+    .form {
+        padding: 0;
+        background: unset;
+    }
+
+    .form__top {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__close {
+        text-align: right;
+        cursor: pointer;
+    }
+
+    /* Цвет фона полосы прокрутки */
+    &::-webkit-scrollbar {
+        width: 10px;
+        /* Ширина полосы прокрутки */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        /* Цвет фона полосы прокрутки */
+    }
+
+    /* Цвет самой полосы прокрутки */
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 8px;
+        /* Цвет самой полосы прокрутки */
+    }
+}
+
 .chips {
     .swiper-wrapper {
         padding: 1px;
@@ -2133,6 +2287,16 @@
         border-radius: 50%;
         background: #4F4F4F;
     }
+}
+
+.popup-shadow {
+    display: none;
+    position: fixed;
+    z-index: 19;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 // Дополнительные стили
