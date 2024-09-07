@@ -693,11 +693,11 @@ if (document.querySelector(".comparison")) {
             chip.classList.add('selected');
 
             const targetId = chip.parentElement.dataset.id;
-            const comparisonItems = document.querySelectorAll('.comparison__item');
+            const comparisonItems = document.querySelectorAll('.comparison__filter');
 
             comparisonItems.forEach(item => {
                 if (item.dataset.id === targetId) {
-                    item.style.display = 'block';
+                    item.style.display = 'flex';
                 } else {
                     item.style.display = 'none';
                 }
@@ -708,11 +708,11 @@ if (document.querySelector(".comparison")) {
     const selectedButton = document.querySelector('.button-block__chip.selected');
     if (selectedButton) {
         const targetId = selectedButton.parentElement.dataset.id;
-        const comparisonItems = document.querySelectorAll('.comparison__item');
+        const comparisonItems = document.querySelectorAll('.comparison__filter');
 
         comparisonItems.forEach(item => {
             if (item.dataset.id === targetId) {
-                item.style.display = 'block';
+                item.style.display = 'flex';
             } else {
                 item.style.display = 'none';
             }
@@ -726,11 +726,11 @@ if (document.querySelector(".comparison")) {
             e.preventDefault();
 
             const targetId = link.dataset.id;
-            const comparisonItems = document.querySelectorAll('.comparison__item');
+            const comparisonItems = document.querySelectorAll('.comparison__filter');
 
             comparisonItems.forEach(item => {
                 if (item.dataset.id === targetId) {
-                    item.style.display = 'block';
+                    item.style.display = 'flex';
                 } else {
                     item.style.display = 'none';
                 }
