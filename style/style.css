@@ -3606,6 +3606,9 @@ html {
   color: white;
   cursor: pointer;
 }
+.main-card .popup-slider .swiper-button-next, .main-card .swiper-button-prev {
+  color: #FFF;
+}
 
 .sticky-link {
   position: sticky;
