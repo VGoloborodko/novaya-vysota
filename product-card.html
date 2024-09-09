@@ -259,13 +259,66 @@
             <div class="container">
                 <div class="main-card__wrapper">
 
-                    <div class="col-5 col-lg-6 col-md-6 col-sm-3">
-                        <div class="main-card__image"></div>
+                    <div class="col-5 col-lg-12 col-md-6 col-sm-3">
+                        <div class="main-card__slider-block">
+                            <div class="swiper mySwiper-main-card2 d-none-sm">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_1.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_2.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_3.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_4.jpg" />
+                                    </div>
+                                </div>
+                                <!-- <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div> -->
+                            </div>
+
+                            <div thumbsSlider="" class="swiper mySwiper-main-card">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_1.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_2.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_3.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/assets/image/main_card_green_4.jpg" />
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popup для слайдера -->
+                    <div id="imagePopup" class="popup-slider" style="display:none;">
+                        <div class="swiper mySwiper-popup">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="/assets/image/main_card_green_1.jpg" /></div>
+                                <div class="swiper-slide"><img src="/assets/image/main_card_green_2.jpg" /></div>
+                                <div class="swiper-slide"><img src="/assets/image/main_card_green_3.jpg" /></div>
+                                <div class="swiper-slide"><img src="/assets/image/main_card_green_4.jpg" /></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <span class="close-popup" onclick="closePopup()">&times;</span>
                     </div>
 
                     <div class="col-1 d-none-lg"></div>
 
-                    <div class="col-6 col-md-6 col-sm-3">
+                    <div class="col-6 col-lg-8 col-md-6 col-sm-3">
                         <div class="main-card__rating-block">
                             <div class="main-card__star-rating">
                                 <span class="main-card__star" data-rating="1">&#9733;</span>
@@ -274,15 +327,14 @@
                                 <span class="main-card__star" data-rating="4">&#9733;</span>
                                 <span class="main-card__star" data-rating="5">&#9733;</span>
                             </div>
-                            <a href="#">
-                                <div class="main-card__icon-print"></div>
-                            </a>
                         </div>
                         <p class="font-h5 color--secondary sp-t-blue">Артикул: <span>2948d821eh</span></p>
                         <h1 class="font-h4 sp-t-burgundy f-w-medium">Профессиональная анодированная стремянка со
                             ступенями 130 мм и органайзером NV 3118А</h1>
-                        <p class="font-s sp-t-burgundy">Стоимость</p>
-                        <p class="font-h3">от 12 000 ₽</p>
+                        <div class="d-none-md">
+                            <p class="font-s sp-t-burgundy">Цена</p>
+                            <p class="font-h3">от 12 000 ₽</p>
+                        </div>
                         <p class="font-t2 color--secondary sp-t-burgundy sp-b-grey">Рабочая высота</p>
                         <select class="main-card__select font-t1 color-block--primary" name="">
                             <option class="main-card__option font-t1" value="">1075 см</option>
@@ -302,14 +354,46 @@
                         <p class="font-s color--secondary sp-t-dark-purple">Краткое продающее описание товара (УТП) в
                             несколько строчек раскрывающее приемущества товара</p>
                         <div class="main-card__bottom sp-t-burgundy">
-                            <div class="button-block">
-                                <a href="/">
-                                    <div class="button-block__red-large">
-                                        <p class="font-t1 color--white">Заказать</p>
-                                    </div>
+                            <div class="main-card__price-mobile">
+                                <p class="font-s">Цена</p>
+                                <p class="font-h3">от 12 000 ₽</p>
+                            </div>
+                            <div class="main-card__bottom-links">
+                                <div class="button-block">
+                                    <a href="/">
+                                        <div class="button-block__red-large">
+                                            <p class="font-t1 color--white">Заказать</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="main-card__icon-comparison"></div>
+                                <a href="#" class="d-none-sm">
+                                    <!-- <div class="main-card__icon-print"></div> -->
+                                    <svg width="48" height="48" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="32" height="32" rx="16" fill="#4F4F4F" />
+                                        <g clip-path="url(#clip0_1591_6483)">
+                                            <path
+                                                d="M21.7937 11.8H21.1404V10.2367C21.1404 9.56 20.5804 9 19.9037 9H12.1104C11.4337 9 10.8737 9.56 10.8737 10.2367V11.8H10.2204C9.54375 11.8 9.00708 12.3367 9.00708 13.0133V18.7767C9.00708 19.43 9.54375 19.9667 10.2204 19.9667H10.8737V21.67C10.8737 22.3933 11.4571 23 12.2037 23H19.8337C20.5571 23 21.1637 22.4167 21.1637 21.67V19.9667H21.8171C22.4704 19.9667 23.0304 19.43 23.0304 18.7533V13.0133C23.0071 12.3367 22.4704 11.8 21.7937 11.8ZM11.8071 10.2367C11.8071 10.0733 11.9471 9.93333 12.1104 9.93333H19.8804C20.0671 9.93333 20.2071 10.0733 20.2071 10.2367V11.8H11.8071V10.2367ZM20.2071 21.67C20.2071 21.88 20.0437 22.0667 19.8104 22.0667H12.2037C11.9937 22.0667 11.8071 21.9033 11.8071 21.67V15.3H20.2071V21.67Z"
+                                                fill="white" />
+                                            <path
+                                                d="M13.4403 17.3999H18.5736C18.8303 17.3999 19.0403 17.1899 19.0403 16.9332C19.0403 16.6766 18.8303 16.4666 18.5736 16.4666H13.4403C13.1836 16.4666 12.9736 16.6766 12.9736 16.9332C12.9736 17.1899 13.1836 17.3999 13.4403 17.3999Z"
+                                                fill="white" />
+                                            <path
+                                                d="M13.4403 20.8999H16.007C16.2636 20.8999 16.4736 20.6899 16.4736 20.4332C16.4736 20.1766 16.2636 19.9666 16.007 19.9666H13.4403C13.1836 19.9666 12.9736 20.1766 12.9736 20.4332C12.9736 20.6899 13.1836 20.8999 13.4403 20.8999Z"
+                                                fill="white" />
+                                            <path
+                                                d="M13.4403 19.1499H18.5736C18.8303 19.1499 19.0403 18.9399 19.0403 18.6832C19.0403 18.4266 18.8303 18.2166 18.5736 18.2166H13.4403C13.1836 18.2166 12.9736 18.4266 12.9736 18.6832C12.9736 18.9399 13.1836 19.1499 13.4403 19.1499Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1591_6483">
+                                                <rect width="24" height="24" fill="white" transform="translate(4 4)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
                                 </a>
                             </div>
-                            <div class="main-card__icon-comparison"></div>
                         </div>
                     </div>
 
@@ -351,7 +435,8 @@
                             <div class="specification-card__table-item font-t1 color--secondary">H</div>
                             <div class="specification-card__table-item font-t1 color--secondary">Вес</div>
                             <div class="specification-card__table-item font-t1 color--secondary">Цена</div>
-                            <div class="specification-card__table-item font-t1 color--secondary d-flex-center">Купить</div>
+                            <div class="specification-card__table-item font-t1 color--secondary d-flex-center">Купить
+                            </div>
                             <div class="specification-card__table-item font-t1 color--secondary">Сравнить</div>
                         </div>
                         <div class="specification-card__table-row">

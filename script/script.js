@@ -1,35 +1,6 @@
 window.addEventListener('load', (event) => {
     const body = document.querySelector('body');
 
-    // Плавный скрол для страницы
-    SmoothScroll({
-        // Время скролла 400 = 0.4 секунды
-        animationTime: 800,
-        // Размер шага в пикселях 
-        stepSize: 75,
-
-        // Дополнительные настройки:
-
-        // Ускорение 
-        accelerationDelta: 30,
-        // Максимальное ускорение
-        accelerationMax: 2,
-
-        // Поддержка клавиатуры
-        keyboardSupport: true,
-        // Шаг скролла стрелками на клавиатуре в пикселях
-        arrowScroll: 50,
-
-        // Pulse (less tweakable)
-        // ratio of "tail" to "acceleration"
-        pulseAlgorithm: true,
-        pulseScale: 4,
-        pulseNormalize: 1,
-
-        // Поддержка тачпада
-        touchpadSupport: true,
-    })
-
     //---------------- Файл stylekit.html
     //------- Копирование стиля в буфер обмен
     if (document.querySelector(".stylekit")) {
@@ -421,6 +392,7 @@ window.addEventListener('load', (event) => {
                 headerMain.classList.add('close-catalog');
                 headerCover.classList.add('header-scroll');
                 headerCoverScroll.classList.add('header-scroll-three');
+                // headerDesktop.style.height = '40px';
             }
 
 
@@ -435,6 +407,7 @@ window.addEventListener('load', (event) => {
                     headerMain.classList.add('close-catalog');
                     headerCover.classList.add('header-scroll');
                     headerCoverScroll.classList.add('header-scroll-three');
+                    // headerDesktop.style.height = '40px';
                 } else {
                     // Скроллим вверх
                     if (scrollTop === 0) {
@@ -479,6 +452,294 @@ window.addEventListener('load', (event) => {
             headerDesktop();
         } catch (error) {
             // console.error(error);
+        }
+
+    }
+
+    //---------------- Файл comparison.html
+    //------- Фильтрация по чипам
+    if (document.querySelector(".comparison")) {
+
+        function comparisonFilter() {
+            const chips = document.querySelectorAll('.button-block__chip');
+
+            chips.forEach(chip => {
+                chip.addEventListener('click', function () {
+                    chips.forEach(c => c.classList.remove('selected'));
+                    chip.classList.add('selected');
+
+                    const targetId = chip.parentElement.dataset.id;
+                    const comparisonItems = document.querySelectorAll('.comparison__filter');
+
+                    comparisonItems.forEach(item => {
+                        if (item.dataset.id === targetId) {
+                            item.style.display = 'flex';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            const selectedButton = document.querySelector('.button-block__chip.selected');
+            if (selectedButton) {
+                const targetId = selectedButton.parentElement.dataset.id;
+                const comparisonItems = document.querySelectorAll('.comparison__filter');
+
+                comparisonItems.forEach(item => {
+                    if (item.dataset.id === targetId) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+
+            const links = document.querySelectorAll('.chips a');
+
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = link.dataset.id;
+                    const comparisonItems = document.querySelectorAll('.comparison__filter');
+
+                    comparisonItems.forEach(item => {
+                        if (item.dataset.id === targetId) {
+                            item.style.display = 'flex';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+
+        try {
+            comparisonFilter()
+        } catch (error) {
+            console.error(error);
+
+        }
+
+    }
+
+    // Слайдер для чипов
+    if (document.querySelector(".mySwiper-chips")) {
+
+        function swiperChips() {
+            var swiper = new Swiper(".mySwiper-chips", {
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+            });
+        }
+
+        try {
+            swiperChips()
+        } catch (error) {
+            console.error(error);
+
+        }
+
+    }
+
+    //---------------- Файл catalog.html
+    //------- Ползунок в фильтрах
+    if (document.getElementById("range-slider")) {
+
+        function rangeSlider() {
+            var rangeSlider = document.getElementById('range-slider');
+            var rangeFrom = document.getElementById('range-from');
+            var rangeTo = document.getElementById('range-to');
+
+            noUiSlider.create(rangeSlider, {
+                start: [20, 180], // начальное значение from и to
+                connect: true, // соединение между позициями
+                range: {
+                    'min': 0,
+                    'max': 200 // минимальное и максимальное значение
+                }
+            });
+
+            rangeSlider.noUiSlider.on('update', function (values, handle) {
+                var value = values[handle];
+                if (handle == 0) {
+                    rangeFrom.value = Math.round(value);
+                    resizeInput(rangeFrom);
+                } else {
+                    rangeTo.value = Math.round(value);
+                    resizeInput(rangeTo);
+                }
+            });
+
+
+            function resizeInput(input) {
+                input.style.width = input.value.length + "ch";
+            }
+        }
+
+        try {
+            rangeSlider()
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    //---------------- Файл product-card.html
+    //------- Рейтинг товара
+    if (document.querySelector(".main-card__star-rating")) {
+
+        function starRating() {
+            const stars = document.querySelectorAll('.main-card__star');
+            const starRating = document.querySelector('.main-card__star-rating');
+
+            let currentRating = 0;
+
+            stars.forEach((star, index) => {
+                star.addEventListener('mouseenter', function () {
+                    if (currentRating === 0) {
+                        star.classList.add('fill');
+                        for (let i = 0; i < index; i++) {
+                            stars[i].classList.add('fill');
+                        }
+                    }
+                });
+
+                star.addEventListener('mouseleave', function () {
+                    if (currentRating === 0) {
+                        starRating.querySelectorAll('.main-card__star').forEach(s => s.classList.remove('fill'));
+                    }
+                });
+
+                star.addEventListener('click', function () {
+                    const rating = parseInt(star.dataset.rating);
+                    currentRating = rating;
+                    starRating.querySelectorAll('.main-card__star').forEach((s, i) => {
+                        s.classList.toggle('fill', i < rating);
+                    });
+                    stars.forEach(s => {
+                        s.removeEventListener('mouseenter', null);
+                        s.removeEventListener('mouseleave', null);
+                        s.style.cursor = 'default';
+                    });
+                });
+            });
+        }
+
+        try {
+            starRating()
+        } catch (error) {
+            console.error(error);
+
+        }
+    }
+
+    //---------------- Файл product-card.html
+    //------- Слайдер
+    if (document.querySelector(".mySwiper-product-card")) {
+
+        function swiperProductCard() {
+            var swiper = new Swiper(".mySwiper-product-card", {
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+            });
+        }
+
+        try {
+            swiperProductCard()
+        } catch (error) {
+            console.error(error);
+
+        }
+    }
+
+    //---------------- product-card.html
+    //------- Несколько функций
+    if (document.querySelector(".main-card")) {
+
+        // Изображения в карточке товара
+        function mainCardSwiper() {
+            var swiper = new Swiper(".mySwiper-main-card", {
+                loop: true,
+                spaceBetween: 10,
+                slidesPerView: 1,
+                freeMode: true,
+                watchSlidesProgress: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    // Когда ширина экрана ≥ 640px
+                    // 640: {},
+
+                    // Когда ширина экрана ≥ 768px
+                    768: {
+                        direction: 'vertical',
+                        slidesPerView: 4,
+                        mousewheel: {
+                            invert: false,
+                        },
+                    },
+
+                    // Когда ширина экрана ≥ 1024px
+                    // 1024: {},
+                },
+            });
+            var swiper2 = new Swiper(".mySwiper-main-card2", {
+                loop: true,
+                spaceBetween: 10,
+                effect: 'fade', // Устанавливаем эффект fade
+                fadeEffect: {
+                    crossFade: true, // Включаем переключение кросс-фейда
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                thumbs: {
+                    swiper: swiper,
+                },
+            });
+        }
+
+        try {
+            mainCardSwiper()
+        } catch (error) {
+            console.error(error);
+        }
+
+        // Увелечение блока с цветом при клике
+        function cardColorSize() {
+            const cardColor = document.querySelectorAll('.main-card__item-color');
+
+            cardColor.forEach(item => {
+                item.style.width = '32px';
+                item.style.height = '32px';
+            });
+
+            if (cardColor.length > 0) {
+                cardColor[2].style.width = '48px';
+                cardColor[2].style.height = '48px';
+            }
+
+            cardColor.forEach(item => {
+                item.addEventListener('click', function () {
+                    cardColor.forEach(innerItem => {
+                        innerItem.style.width = '32px';
+                        innerItem.style.height = '32px';
+                    });
+
+                    this.style.width = '48px';
+                    this.style.height = '48px';
+                });
+            });
+        }
+
+        try {
+            cardColorSize()
+        } catch (error) {
+            console.error(error);
         }
 
     }
@@ -531,141 +792,51 @@ window.addEventListener('load', (event) => {
         // console.error(error);
     }
 
-    // Плавный сколл для id
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                const scrollOptions = {
-                    behavior: 'smooth',
-                    block: 'center', // Элемент будет выравниваться по центру
-                    inline: 'center' // Элемент будет выравниваться по центру
-                };
-                targetElement.scrollIntoView(scrollOptions);
-            } else {
-                console.error(`Элемент с ID '${targetId}' не найден.`);
-            }
-        });
-    });
-
 });
 
-// Вызов просходит в html
-// Замена иконки при вводе в поиске
-function toggleIcon(input) {
-    const HeaderIcon = document.querySelector('.header__search-icon');
-    if (input.value) {
-        HeaderIcon.classList.add('active');
-    } else {
-        HeaderIcon.classList.remove('active');
+//---------------- Header
+//------- Взаимодействие с поиском
+if (document.querySelector(".header__search-input")) {
+
+    function inputSearch() {
+        const inputSearch = document.querySelector('.header__search-input');
+        inputSearch.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                window.location.href = '/search.html';
+            }
+        });
+    }
+
+    try {
+        inputSearch()
+    } catch (error) {
+        console.error(error);
+
+    }
+
+    // Вызов просходит в html - замена иконки при вводе в поиске
+    function toggleIcon(input) {
+        const HeaderIcon = document.querySelector('.header__search-icon');
+        if (input.value) {
+            HeaderIcon.classList.add('active');
+        } else {
+            HeaderIcon.classList.remove('active');
+        }
+    }
+
+    // Вызов просходит в html - очистка поиска
+    function clearInput() {
+        const input = document.querySelector('.header__search-input');
+        input.value = '';
+        toggleIcon(input);
+        input.focus();
     }
 }
 
-// Вызов просходит в html
-// Очистка поиска
-function clearInput() {
-    const input = document.querySelector('.header__search-input');
-    input.value = '';
-    toggleIcon(input);
-    input.focus();
-}
-
-// Переход на страницу поиска
-const inputSearch = document.querySelector('.header__search-input');
-inputSearch.addEventListener('keydown', function (event) {
-    if (event.key === 'Enter') {
-        // Переход на другую страницу
-        window.location.href = '/search.html'; // Укажите нужный URL
-    }
-});
-
-var swiper = new Swiper(".mySwiper-chips", {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-});
-
-// Добавить в структуру - ползунок
-if (document.getElementById("range-slider")) {
-    document.addEventListener("DOMContentLoaded", function () {
-        var rangeSlider = document.getElementById('range-slider');
-        var rangeFrom = document.getElementById('range-from');
-        var rangeTo = document.getElementById('range-to');
-
-        noUiSlider.create(rangeSlider, {
-            start: [20, 180], // начальное значение from и to
-            connect: true, // соединение между позициями
-            range: {
-                'min': 0,
-                'max': 200 // минимальное и максимальное значение
-            }
-        });
-
-        rangeSlider.noUiSlider.on('update', function (values, handle) {
-            var value = values[handle];
-            if (handle == 0) {
-                rangeFrom.value = Math.round(value);
-                resizeInput(rangeFrom);
-            } else {
-                rangeTo.value = Math.round(value);
-                resizeInput(rangeTo);
-            }
-        });
-    });
-
-    function resizeInput(input) {
-        input.style.width = input.value.length + "ch";
-    }
-}
-
-if (document.querySelector(".main-card__star-rating")) {
-    // document.addEventListener('DOMContentLoaded', function () {
-    const stars = document.querySelectorAll('.main-card__star');
-    const starRating = document.querySelector('.main-card__star-rating');
-
-    let currentRating = 0;
-
-    stars.forEach((star, index) => {
-        star.addEventListener('mouseenter', function () {
-            if (currentRating === 0) {
-                star.classList.add('fill');
-                for (let i = 0; i < index; i++) {
-                    stars[i].classList.add('fill');
-                }
-            }
-        });
-
-        star.addEventListener('mouseleave', function () {
-            if (currentRating === 0) {
-                starRating.querySelectorAll('.main-card__star').forEach(s => s.classList.remove('fill'));
-            }
-        });
-
-        star.addEventListener('click', function () {
-            const rating = parseInt(star.dataset.rating);
-            currentRating = rating;
-            starRating.querySelectorAll('.main-card__star').forEach((s, i) => {
-                s.classList.toggle('fill', i < rating);
-            });
-            stars.forEach(s => {
-                s.removeEventListener('mouseenter', null);
-                s.removeEventListener('mouseleave', null);
-                s.style.cursor = 'default';
-            });
-        });
-    });
-    // });
-}
-
-var swiper = new Swiper(".mySwiper-product-card", {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-});
-
+//---------------- Форма popup
+//------- Кнопки открытия и закрытия
 if (document.querySelector(".form-popup")) {
+
     const btnPopup = document.querySelector('.form-popup');
     const popupShadow = document.querySelector('.popup-shadow');
 
@@ -684,57 +855,82 @@ if (document.querySelector(".form-popup")) {
     }
 }
 
-if (document.querySelector(".comparison")) {
-    const chips = document.querySelectorAll('.button-block__chip');
+// Плавный скрол на странице
+SmoothScroll({
+    // Время скролла 400 = 0.4 секунды
+    animationTime: 800,
+    // Размер шага в пикселях 
+    stepSize: 75,
 
-    chips.forEach(chip => {
-        chip.addEventListener('click', function () {
-            chips.forEach(c => c.classList.remove('selected'));
-            chip.classList.add('selected');
+    // Дополнительные настройки:
 
-            const targetId = chip.parentElement.dataset.id;
-            const comparisonItems = document.querySelectorAll('.comparison__filter');
+    // Ускорение 
+    accelerationDelta: 30,
+    // Максимальное ускорение
+    accelerationMax: 2,
 
-            comparisonItems.forEach(item => {
-                if (item.dataset.id === targetId) {
-                    item.style.display = 'flex';
-                } else {
-                    item.style.display = 'none';
-                }
+    // Поддержка клавиатуры
+    keyboardSupport: true,
+    // Шаг скролла стрелками на клавиатуре в пикселях
+    arrowScroll: 50,
+
+    // Pulse (less tweakable)
+    // ratio of "tail" to "acceleration"
+    pulseAlgorithm: true,
+    pulseScale: 4,
+    pulseNormalize: 1,
+
+    // Поддержка тачпада
+    touchpadSupport: true,
+})
+
+// Плавный скролл к id
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            const offset = 150; // Задайте желаемое смещение в пикселях
+            const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
             });
-        });
+        } else {
+            console.error(`Элемент с ID '${targetId}' не найден.`);
+        }
     });
+});
 
-    const selectedButton = document.querySelector('.button-block__chip.selected');
-    if (selectedButton) {
-        const targetId = selectedButton.parentElement.dataset.id;
-        const comparisonItems = document.querySelectorAll('.comparison__filter');
 
-        comparisonItems.forEach(item => {
-            if (item.dataset.id === targetId) {
-                item.style.display = 'flex';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    }
 
-    const links = document.querySelectorAll('.chips a');
 
-    links.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
+document.querySelectorAll('.mySwiper-main-card2 .swiper-slide').forEach((slide, index) => {
+    slide.addEventListener('click', () => openPopup(index));
+});
 
-            const targetId = link.dataset.id;
-            const comparisonItems = document.querySelectorAll('.comparison__filter');
+function openPopup(startIndex) {
+    document.getElementById('imagePopup').style.display = 'flex';
 
-            comparisonItems.forEach(item => {
-                if (item.dataset.id === targetId) {
-                    item.style.display = 'flex';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
+    const popupSwiper = new Swiper('.mySwiper-popup', {
+        initialSlide: startIndex,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
     });
+}
+
+function closePopup() {
+    document.getElementById('imagePopup').style.display = 'none';
 }

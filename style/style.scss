@@ -513,6 +513,10 @@
     padding-top: 192px;
 }
 
+.header-padding-404 {
+    padding-top: 130px;
+}
+
 .main-cover {
     background: #FFFCF5;
     position: relative;
@@ -1713,16 +1717,82 @@
     &__wrapper {
         display: flex;
 
+        @include bp(lg) {
+            flex-direction: column;
+            gap: 32px;
+        }
+
         @include bp(md) {
             flex-direction: column;
             gap: 32px;
         }
     }
 
-    &__image {
-        width: 100%;
+    &__slider-block {
+        display: flex;
+        gap: 10px;
         height: 614px;
-        background: #6980ae;
+
+        @include bp(lg) {
+            height: 100%;
+            max-height: 500px;
+        }
+
+        @include bp(sm) {
+            max-height: 330px;
+        }
+    }
+
+    .mySwiper-main-card {
+        width: 100%;
+        max-width: 143px;
+
+        @include bp(sm) {
+            max-width: unset;
+            padding-bottom: 20px;
+        }
+
+        img {
+            height: 146px;
+
+            @include bp(sm) {
+                height: 100%;
+            }
+        }
+
+        .swiper-slide {
+            // width: 100% !important;
+            height: auto !important;
+            cursor: pointer;
+        }
+    }
+
+    .mySwiper-main-card2 {
+        width: 100%;
+        cursor: pointer;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .swiper-pagination {
+        display: none;
+
+        @include bp(sm) {
+            display: block;
+        }
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: var(--swiper-pagination-bottom, 0px);
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #333333;
     }
 
     &__rating-block {
@@ -1744,12 +1814,12 @@
         color: #D7192D;
     }
 
-    &__icon-print {
-        width: 100%;
-        min-width: 32px;
-        height: 32px;
-        background: url('/assets/icon/print_black_32.svg') no-repeat center;
-    }
+    // &__icon-print {
+    //     width: 100%;
+    //     min-width: 48px;
+    //     height: 48px;
+    //     background: url('/assets/icon/print_black_32.svg') no-repeat center;
+    // }
 
     &__select {
         width: 100%;
@@ -1766,6 +1836,7 @@
 
     &__block-colors {
         display: flex;
+        align-items: center;
         gap: 16px;
     }
 
@@ -1778,6 +1849,23 @@
 
     &__bottom {
         display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include bp(md) {
+            position: fixed;
+            z-index: 25;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: #FFFCF5;
+            box-shadow: 0px -4px 20px 0px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__bottom-links {
+        display: flex;
         gap: 32px;
     }
 
@@ -1789,11 +1877,59 @@
         cursor: pointer;
     }
 
+    &__price-mobile {
+        display: none;
+
+        @include bp(md) {
+            display: block;
+        }
+    }
+
+    .main-card__bottom-links .button-block {
+        width: fit-content;
+
+        @include bp(sm) {
+            width: 100%;
+        }
+    }
+
     .button-block__red-large {
         @include bp(sm) {
             padding-right: unset;
             padding-left: unset;
         }
+    }
+
+    .mySwiper-popup img {
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .popup-slider {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .popup-slider .swiper {
+        width: 80%;
+        height: 80%;
+    }
+
+    .close-popup {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
     }
 }
 
@@ -2133,7 +2269,7 @@
     &__result .button-block {
         width: 100%;
 
-        .button-block__white-large {
+        .button-block__red-large {
             width: 100%;
             justify-content: center;
             padding: 12px 0;

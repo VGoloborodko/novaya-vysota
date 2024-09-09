@@ -1919,7 +1919,7 @@ html {
 
 @media (max-width: 767px) {
   .d-none-sm {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -2376,6 +2376,10 @@ html {
 
 .header-padding {
   padding-top: 192px;
+}
+
+.header-padding-404 {
+  padding-top: 130px;
 }
 
 .main-cover {
@@ -3411,16 +3415,79 @@ html {
 .main-card__wrapper {
   display: flex;
 }
+@media (max-width: 1279px) {
+  .main-card__wrapper {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
 @media (max-width: 1024px) {
   .main-card__wrapper {
     flex-direction: column;
     gap: 32px;
   }
 }
-.main-card__image {
-  width: 100%;
+.main-card__slider-block {
+  display: flex;
+  gap: 10px;
   height: 614px;
-  background: #6980ae;
+}
+@media (max-width: 1279px) {
+  .main-card__slider-block {
+    height: 100%;
+    max-height: 500px;
+  }
+}
+@media (max-width: 767px) {
+  .main-card__slider-block {
+    max-height: 330px;
+  }
+}
+.main-card .mySwiper-main-card {
+  width: 100%;
+  max-width: 143px;
+}
+@media (max-width: 767px) {
+  .main-card .mySwiper-main-card {
+    max-width: unset;
+    padding-bottom: 20px;
+  }
+}
+.main-card .mySwiper-main-card img {
+  height: 146px;
+}
+@media (max-width: 767px) {
+  .main-card .mySwiper-main-card img {
+    height: 100%;
+  }
+}
+.main-card .mySwiper-main-card .swiper-slide {
+  height: auto !important;
+  cursor: pointer;
+}
+.main-card .mySwiper-main-card2 {
+  width: 100%;
+  cursor: pointer;
+}
+.main-card .mySwiper-main-card2 img {
+  height: 100%;
+}
+.main-card .swiper-pagination {
+  display: none;
+}
+@media (max-width: 767px) {
+  .main-card .swiper-pagination {
+    display: block;
+  }
+}
+.main-card .swiper-horizontal > .swiper-pagination-bullets,
+.main-card .swiper-pagination-bullets.swiper-pagination-horizontal,
+.main-card .swiper-pagination-custom,
+.main-card .swiper-pagination-fraction {
+  bottom: var(--swiper-pagination-bottom, 0px);
+}
+.main-card .swiper-pagination-bullet-active {
+  background: #333333;
 }
 .main-card__rating-block {
   display: flex;
@@ -3437,12 +3504,6 @@ html {
 .main-card__star.fill {
   color: #D7192D;
 }
-.main-card__icon-print {
-  width: 100%;
-  min-width: 32px;
-  height: 32px;
-  background: url("/assets/icon/print_black_32.svg") no-repeat center;
-}
 .main-card__select {
   width: 100%;
   max-width: 315px;
@@ -3456,6 +3517,7 @@ html {
 }
 .main-card__block-colors {
   display: flex;
+  align-items: center;
   gap: 16px;
 }
 .main-card__item-color {
@@ -3466,6 +3528,23 @@ html {
 }
 .main-card__bottom {
   display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (max-width: 1024px) {
+  .main-card__bottom {
+    position: fixed;
+    z-index: 25;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: #FFFCF5;
+    box-shadow: 0px -4px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+.main-card__bottom-links {
+  display: flex;
   gap: 32px;
 }
 .main-card__icon-comparison {
@@ -3475,11 +3554,57 @@ html {
   background: url("/assets/icon/header_comparison_icon_primary_hover.svg") no-repeat center;
   cursor: pointer;
 }
+.main-card__price-mobile {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .main-card__price-mobile {
+    display: block;
+  }
+}
+.main-card .main-card__bottom-links .button-block {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 767px) {
+  .main-card .main-card__bottom-links .button-block {
+    width: 100%;
+  }
+}
 @media (max-width: 767px) {
   .main-card .button-block__red-large {
     padding-right: unset;
     padding-left: unset;
   }
+}
+.main-card .mySwiper-popup img {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.main-card .popup-slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.main-card .popup-slider .swiper {
+  width: 80%;
+  height: 80%;
+}
+.main-card .close-popup {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
 }
 
 .sticky-link {
@@ -3728,7 +3853,7 @@ html {
 .basket__result .button-block {
   width: 100%;
 }
-.basket__result .button-block .button-block__white-large {
+.basket__result .button-block .button-block__red-large {
   width: 100%;
   justify-content: center;
   padding: 12px 0;

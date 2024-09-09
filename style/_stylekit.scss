@@ -1814,7 +1814,7 @@ html {
 
 .d-none-sm {
     @include bp(sm) {
-        display: none;
+        display: none !important;
     }
 }
 
