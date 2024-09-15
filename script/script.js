@@ -426,7 +426,8 @@ window.addEventListener('load', (event) => {
 
             // Фильтрация меню в каталоге
             // const categoryHeaders = document.querySelectorAll('.header__category-item h4');
-            const liElements = document.querySelectorAll('li[data-id]');
+            // const liElements = document.querySelectorAll('li[data-id]');
+            const liElements = document.querySelectorAll('.header__category-item[data-id]');
             const mainMenuItems = document.querySelectorAll('.header__main-menu-item');
 
             // categoryHeaders.forEach(header => {
@@ -436,7 +437,8 @@ window.addEventListener('load', (event) => {
             // });
 
             liElements.forEach(li => {
-                li.addEventListener('click', () => {
+                // li.addEventListener('click', () => {
+                li.addEventListener('mouseover', () => {
                     const dataId = li.getAttribute('data-id');
                     mainMenuItems.forEach(item => item.style.display = 'none');
                     // Показываем только блок с соответствующим data-id
@@ -907,30 +909,53 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-
-
-
-document.querySelectorAll('.mySwiper-main-card2 .swiper-slide').forEach((slide, index) => {
-    slide.addEventListener('click', () => openPopup(index));
-});
-
-function openPopup(startIndex) {
-    document.getElementById('imagePopup').style.display = 'flex';
-
-    const popupSwiper = new Swiper('.mySwiper-popup', {
-        initialSlide: startIndex,
-        loop: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+//---------------- Файл product-card.html
+//------- Popup при клике на изображение
+if (document.querySelector(".popup-slider")) {
+    document.querySelectorAll('.mySwiper-main-card2 .swiper-slide').forEach((slide, index) => {
+        slide.addEventListener('click', () => openPopup(index));
     });
+
+    function openPopup(startIndex) {
+        document.getElementById('imagePopup').style.display = 'flex';
+
+        const popupSwiper = new Swiper('.mySwiper-popup', {
+            initialSlide: startIndex,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    }
+
+    function closePopup() {
+        document.getElementById('imagePopup').style.display = 'none';
+    }
 }
 
-function closePopup() {
-    document.getElementById('imagePopup').style.display = 'none';
-}
+
+
+
+const topBtn = document.querySelector('.header-mobile__top-btn');
+const catalog = document.querySelector('.header-mobile__catalog');
+
+let isCatalogVisible = false;
+
+topBtn.addEventListener('click', function() {
+    isCatalogVisible = !isCatalogVisible;
+
+    if (isCatalogVisible) {
+        topBtn.style.backgroundImage = 'url("/assets/icon/header_search_icon_close.svg")';
+        catalog.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    } else {
+        topBtn.style.backgroundImage = 'url("/assets/icon/small_list_icon_black.svg")';
+        catalog.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+});

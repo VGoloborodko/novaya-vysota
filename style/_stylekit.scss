@@ -300,7 +300,7 @@ html {
 .button-block {
     width: fit-content;
 
-    @include bp(md) {
+    @include bp(sm) {
         width: 100%;
         // text-align: center;
     }
