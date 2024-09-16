@@ -162,29 +162,65 @@ window.addEventListener('load', (event) => {
     //------- Секция projects - плавное сворачивание
     if (document.querySelector(".projects")) {
 
-        function projectsCheckBtn() {
-            const dropdownItem = document.querySelectorAll('.projects__item');
-            dropdownItem.forEach(elem => {
-                const btn = elem.querySelector('.projects__ctoggleButton');
-                const toggle = elem.querySelector('.projects__toggle');
-                const content = elem.querySelector('.projects__content');
-                const image = elem.querySelector('.projects__image');
+        // function projectsCheckBtn() {
+        //     const dropdownItem = document.querySelectorAll('.projects__item');
+        //     dropdownItem.forEach(elem => {
+        //         const btn = elem.querySelector('.projects__ctoggleButton');
+        //         const toggle = elem.querySelector('.projects__toggle');
+        //         const content = elem.querySelector('.projects__content');
+        //         const image = elem.querySelector('.projects__image');
 
-                btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg)';
+        //         btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg)';
+
+        //         btn.addEventListener('click', () => {
+        //             if (toggle.checked) {
+        //                 content.style.height = content.scrollHeight + 'px';
+        //                 image.style.height = image.scrollHeight + 'px';
+        //                 btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg)';
+
+        //             } else {
+        //                 content.style.height = '0px';
+        //                 image.style.height = '0px';
+        //                 btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg)';
+        //             }
+        //         })
+        //     })
+        // }
+        function projectsCheckBtn() {
+            const dropdownItems = document.querySelectorAll('.projects__item');
+            dropdownItems.forEach((item, index) => {
+                const btn = item.querySelector('.projects__ctoggleButton');
+                const toggle = item.querySelector('.projects__toggle');
+                const content = item.querySelector('.projects__content');
+                const image = item.querySelector('.projects__image');
+
+                if (index === 0) {
+                    // Раскрыть первый элемент
+                    toggle.checked = true;
+                    content.style.height = content.scrollHeight + 'px';
+                    image.style.height = image.scrollHeight + 'px';
+                    btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg)';
+                }
+
+                // btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg)';
 
                 btn.addEventListener('click', () => {
                     if (toggle.checked) {
                         content.style.height = content.scrollHeight + 'px';
                         image.style.height = image.scrollHeight + 'px';
                         btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg)';
-
                     } else {
                         content.style.height = '0px';
                         image.style.height = '0px';
                         btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg)';
                     }
                 })
-            })
+
+                // Дополнительная проверка для восстановления иконки
+                if (!toggle.checked) {
+                    btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg)';
+                }
+            });
         }
 
         try {
@@ -842,6 +878,14 @@ if (document.querySelector(".form-popup")) {
     const btnPopup = document.querySelector('.form-popup');
     const popupShadow = document.querySelector('.popup-shadow');
 
+    const phoneInput = document.getElementById('phone');
+
+    phoneInput.addEventListener("click", function () {
+        if (!phoneInput.value.startsWith('+7')) {
+            phoneInput.value = '+7';
+        }
+    });
+
     function btnPopupOpen() {
         popupShadow.style.display = 'block';
 
@@ -941,21 +985,21 @@ if (document.querySelector(".popup-slider")) {
 
 
 
-const topBtn = document.querySelector('.header-mobile__top-btn');
-const catalog = document.querySelector('.header-mobile__catalog');
+// const topBtn = document.querySelector('.header-mobile__top-btn');
+// const catalog = document.querySelector('.header-mobile__catalog');
 
-let isCatalogVisible = false;
+// let isCatalogVisible = false;
 
-topBtn.addEventListener('click', function() {
-    isCatalogVisible = !isCatalogVisible;
+// topBtn.addEventListener('click', function () {
+//     isCatalogVisible = !isCatalogVisible;
 
-    if (isCatalogVisible) {
-        topBtn.style.backgroundImage = 'url("/assets/icon/header_search_icon_close.svg")';
-        catalog.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    } else {
-        topBtn.style.backgroundImage = 'url("/assets/icon/small_list_icon_black.svg")';
-        catalog.style.display = 'none';
-        document.body.style.overflow = '';
-    }
-});
+//     if (isCatalogVisible) {
+//         topBtn.style.backgroundImage = 'url("/assets/icon/header_search_icon_close.svg")';
+//         catalog.style.display = 'block';
+//         document.body.style.overflow = 'hidden';
+//     } else {
+//         topBtn.style.backgroundImage = 'url("/assets/icon/small_list_icon_black.svg")';
+//         catalog.style.display = 'none';
+//         document.body.style.overflow = '';
+//     }
+// });

@@ -137,7 +137,7 @@
 
         .header__contact {
             display: flex;
-            gap: 16px;
+            gap: 8px;
         }
 
         .header__v-line {
@@ -580,6 +580,14 @@
         .header__search-icon.active {
             background: url('/assets/icon/header_search_icon_close_white.svg');
             // transition: all 1.5s;
+        }
+
+        .header__logo-desk {
+            max-width: 238px;
+            height: 53px;
+            margin-left: -55px;
+            background: url('/assets/icon/header_logo_desk_transparent.svg') no-repeat center;
+            background-size: contain;
         }
     }
 
@@ -1438,11 +1446,16 @@
     &__image {
         position: absolute;
         left: -60px;
+        width: 100%;
 
         @include bp(md) {
             position: unset;
             padding-bottom: 32px;
             transform: translateX(-20px);
+        }
+
+        img {
+            width: unset;
         }
     }
 
