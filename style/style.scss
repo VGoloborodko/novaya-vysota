@@ -487,7 +487,7 @@
 
         &__overflow {
             overflow-y: auto;
-            height: calc(100vh - (43px + 56px + 64px + 23px + 40px));
+            height: calc(100vh - (43px + 56px + 64px + 23px + 80px));
             // height: calc(80vh - (43px + 56px));
             // padding-bottom: calc(76px + 64px);
         }
@@ -497,6 +497,10 @@
             height: calc(100vh - (43px + 56px));
             padding: 0 15px;
             padding-top: 32px;
+        }
+
+        &__overflow {
+            position: relative;
         }
 
         &__menu {
@@ -525,6 +529,72 @@
                 }
             }
         }
+
+        &__menu-one {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+        }
+
+        &__link-icon {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 450px;
+        }
+
+        &__menu-one .header-mobile__image {
+            display: block;
+            height: 100%;
+            max-height: 318px;
+            padding-top: 32px;
+            padding-bottom: 32px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .button-block__red-large {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        &__menu-two {
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // width: 100%;
+            // height: 100%;
+            // background: var(--bg-primary);
+        }
+
+        &__menu-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            height: 100%;
+        }
+
+            &__menu-close {
+                margin-bottom: 40px;
+                // position: absolute;
+                // top: 0;
+                // left: 0;
+            }
     }
 
     // Стили для десктопа, для прозрачного фона
@@ -600,21 +670,56 @@
         display: block;
         position: fixed;
         z-index: 30;
-        bottom: 56px;
+        // bottom: 56px;
+        bottom: 20px;
         left: 0;
         width: 100%;
     }
 
     &__wrapper {
+        display: flex;
+        justify-content: space-between;
         padding: 8px 16px;
         background: #FFFCF5;
         border: 1px solid #BDBDBD;
         border-radius: 16px;
     }
+
+    &__wrapper a {
+        display: block;
+        width: 100%;
+        max-width: 48px;
+        height: 48px;
+    }
+
+    &__catalog {
+        background: url('/assets/icon/header_bottom_catalog.svg') no-repeat center;
+    }
+    &__search {
+        background: url('/assets/icon/header_bottom_search.svg') no-repeat center;
+    }
+    &__comparison {
+        background: url('/assets/icon/header_comparison_icon_primary_hover.svg') no-repeat center;
+    }
+    &__basket {
+        background: url('/assets/icon/header_bottom_basket.svg') no-repeat center;
+    }
 }
 
 .header-padding {
     padding-top: 192px;
+
+    @include bp(md) {
+        padding-top: 99px;
+    }
+
+    &--transparent {
+        padding-top: unset;
+
+        @include bp(md) {
+            padding-top: 99px;
+        }
+    }
 }
 
 .header-padding-404 {
@@ -625,6 +730,10 @@
     background: #FFFCF5;
     position: relative;
     height: 100vh;
+
+    @include bp(md) {
+        height: calc(100vh - 99px);
+    }
 
     &__image {
         position: absolute;
@@ -644,6 +753,10 @@
         width: 100%;
         height: 300px;
 
+        @include bp(md) {
+            height: 340px;
+        }
+
         .row {
             @include bp(md) {
                 gap: 24px;
@@ -662,7 +775,8 @@
 
     .swiper-horizontal>.swiper-scrollbar,
     .swiper-scrollbar.swiper-scrollbar-horizontal {
-        bottom: 300px;
+        // bottom: 300px;
+        bottom: 340px;
         left: 0;
         width: 100%;
         height: 1px;
