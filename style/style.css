@@ -68,10 +68,6 @@ a:hover {
   text-decoration: none;
 }
 
-ul li {
-  list-style: none;
-}
-
 img {
   vertical-align: top;
 }
@@ -2441,9 +2437,6 @@ html {
   gap: 8px;
   height: 100%;
 }
-.header .header-mobile__menu-close {
-  margin-bottom: 40px;
-}
 .header .transparent .button-block__transparent-small {
   background: var(--bg-white-opasity20);
   outline: 1px solid var(--bg-white);
@@ -2535,11 +2528,11 @@ html {
 }
 
 .header-padding {
-  padding-top: 192px;
+  padding-top: 129px;
 }
 @media (max-width: 1024px) {
   .header-padding {
-    padding-top: 99px;
+    padding-top: 107px;
   }
 }
 .header-padding--transparent {
@@ -2551,7 +2544,7 @@ html {
   }
 }
 
-.header-padding-404 {
+.header-padding-top {
   padding-top: 130px;
 }
 
@@ -2600,11 +2593,17 @@ html {
 }
 .main-cover .swiper-horizontal > .swiper-scrollbar,
 .main-cover .swiper-scrollbar.swiper-scrollbar-horizontal {
-  bottom: 340px;
+  bottom: 300px;
   left: 0;
   width: 100%;
   height: 1px;
   background: #BDBDBD;
+}
+@media (max-width: 1024px) {
+  .main-cover .swiper-horizontal > .swiper-scrollbar,
+  .main-cover .swiper-scrollbar.swiper-scrollbar-horizontal {
+    bottom: 340px;
+  }
 }
 .main-cover .swiper-scrollbar-drag {
   height: 6px;
@@ -2934,7 +2933,7 @@ html {
   position: relative;
   overflow: hidden;
   height: 946px;
-  background: #022873;
+  background: #002978;
 }
 @media (max-width: 1024px) {
   .confidence {
@@ -3188,6 +3187,13 @@ html {
   background: unset;
   border-bottom: 1px solid #333333;
   resize: none;
+}
+.form__group-btn {
+  display: flex;
+  gap: 32px;
+}
+.form__file {
+  cursor: pointer;
 }
 
 .search-results__item {
@@ -4056,6 +4062,20 @@ html {
   gap: 32px;
 }
 
+.service-center__wrapper {
+  display: flex;
+}
+.service-center__block-link {
+  border-right: 1px solid #BDBDBD;
+}
+.service-center__block-link a {
+  display: block;
+  padding-left: 16px;
+}
+.service-center__content ul {
+  padding-left: 16px;
+}
+
 .footer__menu {
   width: 100%;
   max-width: 1260px;
@@ -4141,6 +4161,8 @@ html {
 }
 
 .chips .swiper-wrapper {
+  display: flex;
+  justify-content: center;
   padding: 1px;
 }
 .chips .swiper-slide {

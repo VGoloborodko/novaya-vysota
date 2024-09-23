@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+        integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <title>Спасибо за заказ</title>
+    <title>Сервисный центр</title>
 </head>
 
 <body>
@@ -254,25 +255,117 @@
             <div class="header-padding"></div>
         </div>
 
-        <section class="thank-you">
+        <section class="service-center">
+
             <div class="container">
                 <div class="col">
-                    <div class="thank-you__wrapper">
-                        <h2 class="font-h2 sp-b-burgundy">Благодарим за заказ</h2>
-                        <p class="font-s sp-b-burgundy text-align-center">Наши менеджеры свяжутся с вами в ближайшее время!</p>
-                        <div class="button-block">
-                            <a href="/">
-                                <div class="button-block__red-large">
-                                    <p class="font-t1 color--white">В каталог</p>
+                    <div class="chips">
+                        <div class="swiper mySwiper-chips">
+                            <div class="swiper-wrapper">
+    
+                                <div class="swiper-slide">
+                                    <div class="chips__item">
+                                        <!-- <div class="chips__border"></div> -->
+                                        <a href="/service-center.html" class="chips__ul">
+                                            <div class="chips__li"></div>
+                                            <p class="font-h4">Сервисный центр</p>
+                                        </a>
+                                    </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="thank-you__image sp-t-fuchsia">
-                            <img src="/assets/image/thank_you_picture.jpg" alt="">
+    
+                                <div class="swiper-slide">
+                                    <div class="chips__item">
+                                        <div class="chips__border"></div>
+                                        <a href="" class="chips__ul">
+                                            <!-- <div class="chips__li"></div> -->
+                                            <p class="font-h4 color--disabled">Оплата и доставка</p>
+                                        </a>
+                                    </div>
+                                </div>
+    
+                                <div class="swiper-slide">
+                                    <div class="chips__item">
+                                        <div class="chips__border"></div>
+                                        <a href="/infocenter.html" class="chips__ul">
+                                            <!-- <div class="chips__li"></div> -->
+                                            <p class="font-h4 color--disabled">Инфоцентр</p>
+                                        </a>
+                                    </div>
+                                </div>
+    
+                                <div class="swiper-slide">
+                                    <div class="chips__item">
+                                        <div class="chips__border"></div>
+                                        <a href="/training-center.html" class="chips__ul">
+                                            <!-- <div class="chips__li"></div> -->
+                                            <p class="font-h4 color--disabled">Учебный центр</p>
+                                        </a>
+                                    </div>
+                                </div>
+    
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="sp-t-mint">
+                <div class="line"></div>
+            </div>
+
+            <div class="container">
+                <div class="service-center__wrapper sp-t-dark-blue">
+
+                    <div class="col-3 col-md-6 col-sm-3">
+                        <div class="service-center__block-link">
+                            <div class="sp-b-mint">
+                                <p class="font-s sp-b-yellow">Гарантия и сервис</p>
+                                <a class="font-t1 color--secondary sp-b-yellow" href="#">Гарантийные обязательства</a>
+                                <a class="font-t1 color--secondary" href="#">Не являются гарантийными обязательствами</a>
+                            </div>
+                            <div class="sp-b-mint">
+                                <p class="font-s sp-b-yellow">Правила эксплуатации</p>
+                                <a class="font-t1 color--secondary sp-b-yellow" href="#">Разрешающие пиктограммы</a>
+                                <a class="font-t1 color--secondary" href="#">Запрещающие пиктограммы</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1 d-none-md"></div>
+
+                    <div class="col-8 col-md-6 col-sm-3">
+                        <div class="service-center__content">
+
+                            <div>
+                                <h2 class="font-h2 sp-b-purple">Гарантия и сервис</h2>
+                                <p class="font-s sp-b-purple">В соответствии с законодательством лестницы, стремянки и другие средства подмащивания не подлежат обязательной сертификации, тем не менее вся продукция под брендом «Новая Высота» прошла добровольную сертификацию Ростеста на соответствие продукции требованиям ГОСТ.</p>
+                                
+                                <h3 class="font-h3 sp-b-burgundy">Гарантийные обязательства</h3>
+                                <p class="font-t1 sp-b-burgundy">На каждую серию изделий «Новая высота» установлен свой гарантийный срок эксплуатацииНа эти сроки действуют следующие гарантийные обязательства:</p>
+                                <ul class="sp-b-purple">
+                                    <li class="font-t1">Гарантийный срок исчисляется со дня приобретения изделия конечным потребителем. Подтверждающим документом является счёт-фактура или кассовый чек</li>
+                                    <li class="font-t1">Гарантийные обязательства ограничиваются лишь браком, связанным с нарушением технологических процессов или с некачественным материалом.</li>
+                                </ul>
+
+                                <h3 class="font-h3 sp-b-burgundy">Не являются гарантийными обязательствами</h3>
+                                <ul class="sp-b-burgundy">
+                                    <li class="font-t1">Части, которые в ходе использования изделия подвержены естественному износу. А также повреждения, которые являются следствием естественного износа в процессе использования изделия.</li>
+                                    <li class="font-t1">Повреждения продукции, которые возникли вследствие несоблюдения правил эксплуатации или использования не по назначению. А также те, которые возникли в результате использования в нетипичных природных условиях, превышении нагрузок или недостаточного технического обслуживания.</li>
+                                    <li class="font-t1">Повреждения продукции, которые возникли вследствие применения запасных частей или других принадлежностей сторонних производителей.</li>
+                                    <li class="font-t1">Изделия, которые подвергались техническим изменениям, дополнениям или ремонту не со стороны производителя или уполномоченного им для этого представителя.</li>
+                                    <li class="font-t1">Незначительные отклонения от норм, которые не влияют на качество и целенаправленное использование изделия.</li>
+                                </ul>
+                                <p class="font-t1 sp-b-burgundy">В случае гарантийных обязательств производитель на своё усмотрение ремонтирует или производит замену бракованного изделия. Заменённое изделие переходит в собственность производителя.</p>
+                                <p class="font-t1 sp-b-burgundy">В случае использования гарантийных обязательств гарантийный истец за свой счёт и на свой риск, в целях проведения технической экспертизы, ремонта или замены, обеспечивает отправку бракованного изделия на завод изготовителя. </p>
+                                <p class="font-t1 sp-b-purple">В случае подтверждения гарантийных обязательств, производитель возмещает гарантийному истцу расходы по пересылке изделия по расчёту минимальных транспортных тарифов. Исполнение гарантийных обязательств не отражаются на первоначальном гарантийном сроке.Другие требования, кроме как право на восстановление бракованного изделия, данным гарантийным обязательством не предусмотрены.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </section>
 
         <footer class="footer sp-t-green sp-b-purple">
@@ -304,25 +397,39 @@
 
                     <div class="col-4 col-md-6 col-sm-3">
                         <div class="footer__ul">
-                            <a href="/catalog.html#directions"><h4 class="font-h4 sp-b-mint">Продукция по направлениям</h4></a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Ж/д транспорт</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Авиатранспорт </a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Нефтегазовая отрасль</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Строительное оборудование</a>
+                            <a href="/catalog.html#directions">
+                                <h4 class="font-h4 sp-b-mint">Продукция по направлениям</h4>
+                            </a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Ж/д
+                                транспорт</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Авиатранспорт
+                            </a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Нефтегазовая
+                                отрасль</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Строительное
+                                оборудование</a>
                             <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Склады</a>
                         </div>
                     </div>
 
                     <div class="col-4 col-md-6 col-sm-3">
                         <div class="footer__ul">
-                            <a href="/catalog.html#serial"><h4 class="font-h4 sp-b-mint">Серийная продукция</h4></a>
+                            <a href="/catalog.html#serial">
+                                <h4 class="font-h4 sp-b-mint">Серийная продукция</h4>
+                            </a>
                             <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Стремянки</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы приставные</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы-трансформеры </a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Площадки, платформы, помосты</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы
+                                приставные</a>
+                            <a class="font-s color--secondary sp-b-blue"
+                                href="/catalog.html#serial">Лестницы-трансформеры
+                            </a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Площадки,
+                                платформы, помосты</a>
                             <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Вышки-туры</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы специальные</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы с площадкой</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы
+                                специальные</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы с
+                                площадкой</a>
                             <a class="font-s color--secondary" href="/catalog.html#serial">Трапы и переходы</a>
                         </div>
                     </div>
@@ -373,7 +480,8 @@
                 <div class="col">
                     <div class="footer__bottom">
                         <a class="font-t2 color--secondary" href="#">Политика кофиденциальности</a>
-                        <a class="font-t2 color--secondary" href="https://svsv.agency/" target="_blank">Разработка сайта Sivachёv & Sivachёv</a>
+                        <a class="font-t2 color--secondary" href="https://svsv.agency/" target="_blank">Разработка сайта
+                            Sivachёv & Sivachёv</a>
                         <p class="font-t2 color--secondary">© 2024 Общество с ограниченной ответственностью</p>
                     </div>
                 </div>

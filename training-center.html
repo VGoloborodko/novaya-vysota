@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+        integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <title>Спасибо за заказ</title>
+    <title>Учебный центр</title>
 </head>
 
 <body>
@@ -254,25 +255,64 @@
             <div class="header-padding"></div>
         </div>
 
-        <section class="thank-you">
+        <section class="training-center">
+
             <div class="container">
                 <div class="col">
-                    <div class="thank-you__wrapper">
-                        <h2 class="font-h2 sp-b-burgundy">Благодарим за заказ</h2>
-                        <p class="font-s sp-b-burgundy text-align-center">Наши менеджеры свяжутся с вами в ближайшее время!</p>
-                        <div class="button-block">
-                            <a href="/">
-                                <div class="button-block__red-large">
-                                    <p class="font-t1 color--white">В каталог</p>
+                    <div class="chips">
+                        <div class="swiper mySwiper-chips">
+                            <div class="swiper-wrapper">
+    
+                                <div class="swiper-slide">
+                                    <div class="chips__item">
+                                        <!-- <div class="chips__border"></div> -->
+                                        <a href="/service-center.html" class="chips__ul">
+                                            <!-- <div class="chips__li"></div> -->
+                                            <p class="font-h4 color--disabled">Сервисный центр</p>
+                                        </a>
+                                    </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="thank-you__image sp-t-fuchsia">
-                            <img src="/assets/image/thank_you_picture.jpg" alt="">
+    
+                                <div class="swiper-slide">
+                                    <div class="chips__item">
+                                        <div class="chips__border"></div>
+                                        <a href="" class="chips__ul">
+                                            <!-- <div class="chips__li"></div> -->
+                                            <p class="font-h4 color--disabled">Оплата и доставка</p>
+                                        </a>
+                                    </div>
+                                </div>
+    
+                                <div class="swiper-slide">
+                                    <div class="chips__item">
+                                        <div class="chips__border"></div>
+                                        <a href="/infocenter.html" class="chips__ul">
+                                            <!-- <div class="chips__li"></div> -->
+                                            <p class="font-h4 color--disabled">Инфоцентр</p>
+                                        </a>
+                                    </div>
+                                </div>
+    
+                                <div class="swiper-slide">
+                                    <div class="chips__item">
+                                        <div class="chips__border"></div>
+                                        <a href="/training-center.html" class="chips__ul">
+                                            <div class="chips__li"></div>
+                                            <p class="font-h4">Учебный центр</p>
+                                        </a>
+                                    </div>
+                                </div>
+    
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="sp-t-mint">
+                <div class="line"></div>
+            </div>
+
         </section>
 
         <footer class="footer sp-t-green sp-b-purple">
@@ -304,25 +344,39 @@
 
                     <div class="col-4 col-md-6 col-sm-3">
                         <div class="footer__ul">
-                            <a href="/catalog.html#directions"><h4 class="font-h4 sp-b-mint">Продукция по направлениям</h4></a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Ж/д транспорт</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Авиатранспорт </a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Нефтегазовая отрасль</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Строительное оборудование</a>
+                            <a href="/catalog.html#directions">
+                                <h4 class="font-h4 sp-b-mint">Продукция по направлениям</h4>
+                            </a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Ж/д
+                                транспорт</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Авиатранспорт
+                            </a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Нефтегазовая
+                                отрасль</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Строительное
+                                оборудование</a>
                             <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Склады</a>
                         </div>
                     </div>
 
                     <div class="col-4 col-md-6 col-sm-3">
                         <div class="footer__ul">
-                            <a href="/catalog.html#serial"><h4 class="font-h4 sp-b-mint">Серийная продукция</h4></a>
+                            <a href="/catalog.html#serial">
+                                <h4 class="font-h4 sp-b-mint">Серийная продукция</h4>
+                            </a>
                             <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Стремянки</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы приставные</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы-трансформеры </a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Площадки, платформы, помосты</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы
+                                приставные</a>
+                            <a class="font-s color--secondary sp-b-blue"
+                                href="/catalog.html#serial">Лестницы-трансформеры
+                            </a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Площадки,
+                                платформы, помосты</a>
                             <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Вышки-туры</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы специальные</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы с площадкой</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы
+                                специальные</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы с
+                                площадкой</a>
                             <a class="font-s color--secondary" href="/catalog.html#serial">Трапы и переходы</a>
                         </div>
                     </div>
@@ -373,7 +427,8 @@
                 <div class="col">
                     <div class="footer__bottom">
                         <a class="font-t2 color--secondary" href="#">Политика кофиденциальности</a>
-                        <a class="font-t2 color--secondary" href="https://svsv.agency/" target="_blank">Разработка сайта Sivachёv & Sivachёv</a>
+                        <a class="font-t2 color--secondary" href="https://svsv.agency/" target="_blank">Разработка сайта
+                            Sivachёv & Sivachёv</a>
                         <p class="font-t2 color--secondary">© 2024 Общество с ограниченной ответственностью</p>
                     </div>
                 </div>
