@@ -2073,6 +2073,7 @@ html {
 .header__desktop .header__top ul {
   display: flex;
   gap: 32px;
+  list-style-type: none;
 }
 .header__desktop .header__contact {
   display: flex;
@@ -2941,9 +2942,19 @@ html {
   }
 }
 .confidence__wrapper {
+  z-index: 8;
+  position: relative;
   display: flex;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .confidence__wrapper {
+    flex-direction: column;
+    gap: 80px;
+  }
 }
 .confidence__image {
+  z-index: -1;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -2958,26 +2969,13 @@ html {
   .confidence__image {
     display: flex;
     align-items: end;
+    top: 250px;
     right: -70px;
   }
 }
-.confidence__image img {
-  height: 100%;
-}
 @media (max-width: 767px) {
-  .confidence__image img {
-    height: 425px;
-  }
-}
-
-.confidence__wrapper {
-  display: flex;
-  align-items: center;
-}
-@media (max-width: 1024px) {
-  .confidence__wrapper {
-    flex-direction: column;
-    gap: 80px;
+  .confidence__image video {
+    height: 100%;
   }
 }
 
