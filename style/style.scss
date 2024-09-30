@@ -2552,10 +2552,19 @@
 .service-center {
     &__wrapper {
         display: flex;
+
+        @include bp(md) {
+            flex-direction: column;
+            gap: 48px;
+        }
     }
 
     &__block-link {
         border-right: 1px solid #BDBDBD ;
+
+        @include bp(md) {
+            border-right: unset;
+        }
     }
 
     &__block-link a {
@@ -2565,6 +2574,14 @@
 
     &__content ul {
         padding-left: 16px;
+    }
+
+    .mySwiper-product-standart {
+
+        .swiper-slide {
+            width: 122px;
+            height: 122px;
+        }
     }
 }
 

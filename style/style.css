@@ -4063,8 +4063,19 @@ html {
 .service-center__wrapper {
   display: flex;
 }
+@media (max-width: 1024px) {
+  .service-center__wrapper {
+    flex-direction: column;
+    gap: 48px;
+  }
+}
 .service-center__block-link {
   border-right: 1px solid #BDBDBD;
+}
+@media (max-width: 1024px) {
+  .service-center__block-link {
+    border-right: unset;
+  }
 }
 .service-center__block-link a {
   display: block;
@@ -4072,6 +4083,10 @@ html {
 }
 .service-center__content ul {
   padding-left: 16px;
+}
+.service-center .mySwiper-product-standart .swiper-slide {
+  width: 122px;
+  height: 122px;
 }
 
 .footer__menu {

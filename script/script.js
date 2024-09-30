@@ -691,6 +691,25 @@ window.addEventListener('load', (event) => {
         }
     }
 
+    //---------------- Файл service-center.html
+    //------- Слайдер
+    if (document.querySelector(".mySwiper-product-standart")) {
+
+        function swiperProductCardS() {
+            var swiper = new Swiper(".mySwiper-product-standart", {
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+            });
+        }
+
+        try {
+            swiperProductCardS()
+        } catch (error) {
+            console.error(error);
+
+        }
+    }
+
     //---------------- product-card.html
     //------- Несколько функций
     if (document.querySelector(".main-card")) {
