@@ -1001,7 +1001,7 @@ if (document.querySelector(".popup-slider")) {
     }
 }
 
-
+// Описать
 if (document.querySelector(".header-mobile") || document.querySelector(".header-bottom")) {
 
     if (window.screen.width <= 1024) {
@@ -1054,7 +1054,7 @@ if (document.querySelector(".header-mobile") || document.querySelector(".header-
             // li.addEventListener('click', () => {
             li.addEventListener('click', () => {
                 menuOne.style.display = 'none';
-                
+
                 const dataId = li.getAttribute('data-id');
                 menuChild.forEach(item => item.style.display = 'none');
                 // Показываем только блок с соответствующим data-id
@@ -1075,4 +1075,17 @@ if (document.querySelector(".header-mobile") || document.querySelector(".header-
         })
 
     }
+}
+
+// SVG анимация дестницы на главной
+if (document.querySelector(".confidence")) {
+    gsap.to('.confidence path', {
+        css: { animation: 'draw 8s forwards' }, // Добавляем свойство animation
+        scrollTrigger: {
+            trigger: ".confidence",
+            start: "top center",
+            end: "bottom center",
+            toggleActions: "play none none reverse",
+        },
+    });
 }
