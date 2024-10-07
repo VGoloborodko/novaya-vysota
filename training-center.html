@@ -20,25 +20,26 @@
 
         <div>
             <header class="header">
-    
+
                 <div class="header__desktop">
                     <div class="header__desktop-cover"></div>
                     <div class="header__desktop-cover-scroll"></div>
                     <div class="header__wrapper sp-b-burgundy">
                         <div class="container">
                             <div class="col">
-    
+
                                 <div class="header__top sp-v-dark-purple">
-    
+
                                     <div class="header__contact">
-                                        <p class="font-t1 f-w-medium color--primary">Отдел продаж: <a class="color--primary"
-                                                href="mailto: zapros@zavodnv.ru"
+                                        <p class="font-t1 f-w-medium color--primary">Отдел продаж <a
+                                                style="padding-left: 16px;" class="color--primary"
+                                                href="mailto:zapros@zavodnv.ru"
                                                 style="border-bottom: 1px solid #303030;">zapros@zavodnv.ru</a></p>
                                         <div class="header__v-line"></div>
-                                        <a class="font-t1 f-w-medium color--primary" href="tel: +78003337989">8 800 333
+                                        <a class="font-t1 f-w-medium color--primary" href="tel:+78003337989">8 800 333
                                             7989</a>
                                     </div>
-    
+
                                     <ul>
                                         <li><a class="font-t1 f-w-medium color--primary" href="">О компании</a></li>
                                         <li><a class="font-t1 f-w-medium color--primary" href="">Клиентам</a></li>
@@ -46,15 +47,17 @@
                                         <li><a class="font-t1 f-w-medium color--primary" href="">Закупки</a></li>
                                         <li><a class="font-t1 f-w-medium color--primary" href="">Контакты</a></li>
                                     </ul>
-    
+
                                 </div>
-    
+
                                 <div class="header__main sp-t-light-blue">
-    
-                                    <div class="header__logo-desk"></div>
-    
+
+                                    <a href="/" class="header__logo-desk">
+                                        <!-- <div class="header__logo-desk"></div> -->
+                                    </a>
+
                                     <div class="header__average">
-    
+
                                         <div class="button-block">
                                             <a href="/">
                                                 <div class="button-block__transparent-small">
@@ -62,34 +65,34 @@
                                                 </div>
                                             </a>
                                         </div>
-    
+
                                         <div class="header__ctoggleButton">
                                             <div class="button-block">
                                                 <a href="/">
                                                     <div class="button-block__small-list">
                                                         <div class="button-block__icon"></div>
-    
+
                                                         <p class="font-t1 color--white">Продукция</p>
                                                     </div>
                                                 </a>
                                             </div>
                                             <input class="header__toggle" type="checkbox" />
                                         </div>
-    
+
                                         <div class="header__search-container">
                                             <input type="text" class="header__search-input font-t1"
                                                 placeholder="Поиск по сайту" oninput="toggleIcon(this)">
                                             <div class="header__search-icon" onclick="clearInput()"></div>
                                         </div>
                                     </div>
-    
+
                                     <div class="header__right">
-    
+
                                         <div class="header__icons">
                                             <div class="header__comparison"></div>
                                             <div class="header__basket"></div>
                                         </div>
-    
+
                                         <div class="button-block">
                                             <a href="#form">
                                                 <div class="button-block__red-small">
@@ -97,91 +100,86 @@
                                                 </div>
                                             </a>
                                         </div>
-    
+
                                     </div>
-    
+
                                 </div>
-    
+
                             </div>
                         </div>
                         <div class="header__catalog">
-    
+
                             <div style="padding-top: 128px;">
                                 <div class="line"></div>
                             </div>
-    
+
                             <div class="container">
                                 <div class="col">
                                     <div class="header__catalog-block sp-t-purple">
                                         <div class="header__menu-bottom">
-    
+
                                             <div class="header__category-block">
-    
-                                                <div class="header__category-item">
-                                                    <h4 class="font-h4">Серийная продукция</h4>
-                                                    <ul class="header__subcategory-list">
+
+                                                <div class="header__category-item" data-id="1">
+                                                    <a href="/serial-production.html">
+                                                        <h4 class="font-h4">Серийная продукция</h4>
+                                                    </a>
+                                                    <!-- <h4 class="font-h4">Серийная продукция</h4> -->
+                                                    <!-- <ul class="header__subcategory-list">
                                                         <li class="sp-t-yellow"></li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="1">Стремянки
-                                                        </li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="2">Лестницы
-                                                            приставные</li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="3">
-                                                            Лестницы-трансформеры</li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="4">Площадки,
-                                                            платформы, помосты</li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="5">Вышки-туры
-                                                        </li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="6">Лестницы
-                                                            специальные</li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="7">Лестницы с
-                                                            площадкой</li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="8">Трапы и
-                                                            переходы</li>
-                                                    </ul>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="1">Стремянки</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="2">Лестницы</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="4">Трансформеры</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="5">Вышки-туры</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="5">Помосты, малярные столы</li>
+                                                    </ul> -->
                                                 </div>
-    
-                                                <div class="header__category-item">
-                                                    <h4 class="font-h4">Продукция по направлениям</h4>
-                                                    <ul class="header__subcategory-list">
+
+                                                <div class="header__category-item" data-id="2">
+                                                    <a href="#">
+                                                        <h4 class="font-h4">Продукция по направлениям</h4>
+                                                    </a>
+                                                    <!-- <ul class="header__subcategory-list">
                                                         <li class="sp-t-yellow"></li>
-                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Ж/д
-                                                                транспорт</a></li>
-                                                        <li class="sp-t-blue"><a class="font-s color--secondary"
-                                                                href="">Авиатранспорт</a></li>
-                                                        <li class="sp-t-blue"><a class="font-s color--secondary"
-                                                                href="">Нефтегазовая отрасль</a></li>
-                                                        <li class="sp-t-blue"><a class="font-s color--secondary"
-                                                                href="">Строительное оборудование</a></li>
-                                                        <li class="sp-t-blue"><a class="font-s color--secondary"
-                                                                href="">Склады</a></li>
-                                                    </ul>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Ж/д транспорт</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Авиатранспорт</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Автотранспорт</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Нефтегазовая отрасль</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Строительное оборудование</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Склады</a></li>
+                                                    </ul> -->
                                                 </div>
-    
+
                                                 <div class="header__category-item">
-                                                    <h4><a class="font-h4" href="">Специальные решения</a></h4>
+                                                    <a href="#">
+                                                        <h4 class="font-h4">Специальные решения</h4>
+                                                    </a>
                                                 </div>
-    
+
                                             </div>
-    
+
                                             <div class="header__main-menu-block">
-    
+
                                                 <div class="header__main-menu-item" data-id="1">
-                                                    <a class="font-s color--secondary" href="">Бытовые односторонние</a>
-                                                    <a class="font-s color--secondary" href="">Бытовые двухсторонние</a>
-                                                    <a class="font-s color--secondary" href="">Профессиональные
-                                                        односторонние</a>
-                                                    <a class="font-s color--secondary" href="">Профессиональные
-                                                        двухсторонние</a>
-                                                    <a class="font-s color--secondary" href="">Индустриальные</a>
+                                                    <a class="font-s color--secondary" href="#">Стремянки</a>
+                                                    <a class="font-s color--secondary" href="/catalog.html">Лестницы</a>
+                                                    <a class="font-s color--secondary" href="#">Трансформеры</a>
+                                                    <a class="font-s color--secondary" href="#">Вышки-туры</a>
+                                                    <a class="font-s color--secondary" href="#">Помосты, малярные
+                                                        столы</a>
                                                 </div>
-    
+
                                                 <div class="header__main-menu-item" data-id="2">
-                                                    <a class="font-s color--secondary" href="">Бытовые</a>
-                                                    <a class="font-s color--secondary" href="">Профессиональные</a>
-                                                    <a class="font-s color--secondary" href="">Индустриальные</a>
+                                                    <a class="font-s color--secondary" href="#">Ж/д транспорт</a>
+                                                    <a class="font-s color--secondary" href="#">Авиатранспорт</a>
+                                                    <a class="font-s color--secondary" href="#">Автотранспорт</a>
+                                                    <a class="font-s color--secondary" href="#">Нефтегазовая отрасль</a>
+                                                    <a class="font-s color--secondary" href="#">Строительное
+                                                        оборудование</a>
+                                                    <a class="font-s color--secondary" href="#">Склады</a>
                                                 </div>
-    
-                                                <div class="header__main-menu-item" data-id="3">
+
+                                                <!-- <div class="header__main-menu-item" data-id="3">
                                                     <a class="font-s color--secondary" href="">Бытовые</a>
                                                     <a class="font-s color--secondary" href="">Профессиональные</a>
                                                     <a class="font-s color--secondary" href="">Индустриальные</a>
@@ -215,10 +213,10 @@
                                                     <a class="font-s color--secondary" href="">Неизвестно</a>
                                                     <a class="font-s color--secondary" href="">Неизвестно</a>
                                                     <a class="font-s color--secondary" href="">Неизвестно</a>
-                                                </div>
-    
+                                                </div> -->
+
                                             </div>
-    
+
                                         </div>
                                         <div class="header__catalog-promo">
                                             <div class="header__image">
@@ -235,23 +233,165 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div>
                                 <div class="line"></div>
                             </div>
-    
+
                             <div class="header__catalog-bottom">
                                 <div class="header__image">
                                     <img src="/assets/image/header_catalog_bottom.png" alt="">
                                 </div>
                             </div>
-    
+
                         </div>
                     </div>
                 </div>
-    
+
+                <div class="header-mobile color-block--primary">
+                    <div class="header-mobile__wrapper">
+
+                        <div class="container">
+                            <div class="col">
+                                <div class="header-mobile__top sp-v-blue">
+                                    <div class="header-mobile__image">
+                                        <a href="/">
+                                            <img src="/assets/icon/header_logo_mobile.svg" width="145" height="40"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                    <div class="header-mobile__top-btn"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header-mobile__catalog">
+                            <div class="header-mobile__overflow">
+
+                                <div class="header-mobile__menu">
+                                    <div class="header-mobile__menu-ul">
+                                        <a href="#">
+                                            <p class="font-t1">О компании</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Клиентам</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Медиацентр</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Закупки</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Контакты</p>
+                                        </a>
+                                    </div>
+                                    <div class="header-mobile__contact">
+                                        <a class="font-t1" href="mailto:zapros@zavodnv.ru;">zapros@zavodnv.ru</a>
+                                        <a class="font-t1" href="tel:+78003337989;">8 800 333 7989</a>
+                                    </div>
+                                </div>
+
+                                <div class="header-mobile__menu-one">
+
+                                    <div class="header-mobile__link-icon sp-b-yellow" data-id="1">
+                                        <p class="font-h4">Специальные решения</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.54545 11.3333H16.1377L14.3416 9.13804C14.1286 8.87772 14.1286 8.45559 14.3416 8.19523C14.5546 7.93492 14.9 7.93492 15.113 8.19523L17.8402 11.5286C18.0533 11.7889 18.0533 12.211 17.8402 12.4714L15.113 15.8047C15.0064 15.9349 14.8669 16 14.7273 16C14.5877 16 14.4481 15.9349 14.3416 15.8047C14.1286 15.5444 14.1286 15.1223 14.3416 14.8619L16.1377 12.6667H6.54545C6.24422 12.6667 6 12.3682 6 12C6 11.6318 6.24422 11.3333 6.54545 11.3333Z"
+                                                fill="#303030" />
+                                        </svg>
+                                    </div>
+                                    <div class="line"></div>
+
+                                    <div class="header-mobile__link-icon sp-v-yellow" data-id="2">
+                                        <p class="font-h4">Продукция по направлениям</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.54545 11.3333H16.1377L14.3416 9.13804C14.1286 8.87772 14.1286 8.45559 14.3416 8.19523C14.5546 7.93492 14.9 7.93492 15.113 8.19523L17.8402 11.5286C18.0533 11.7889 18.0533 12.211 17.8402 12.4714L15.113 15.8047C15.0064 15.9349 14.8669 16 14.7273 16C14.5877 16 14.4481 15.9349 14.3416 15.8047C14.1286 15.5444 14.1286 15.1223 14.3416 14.8619L16.1377 12.6667H6.54545C6.24422 12.6667 6 12.3682 6 12C6 11.6318 6.24422 11.3333 6.54545 11.3333Z"
+                                                fill="#303030" />
+                                        </svg>
+                                    </div>
+                                    <div class="line"></div>
+
+                                    <a href="#" class="header-mobile__link-icon sp-v-yellow">
+                                        <p class="font-h4">Серийная продукция</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.54545 11.3333H16.1377L14.3416 9.13804C14.1286 8.87772 14.1286 8.45559 14.3416 8.19523C14.5546 7.93492 14.9 7.93492 15.113 8.19523L17.8402 11.5286C18.0533 11.7889 18.0533 12.211 17.8402 12.4714L15.113 15.8047C15.0064 15.9349 14.8669 16 14.7273 16C14.5877 16 14.4481 15.9349 14.3416 15.8047C14.1286 15.5444 14.1286 15.1223 14.3416 14.8619L16.1377 12.6667H6.54545C6.24422 12.6667 6 12.3682 6 12C6 11.6318 6.24422 11.3333 6.54545 11.3333Z"
+                                                fill="#303030" />
+                                        </svg>
+                                    </a>
+                                    <div class="line"></div>
+
+                                    <a href="#" class="header-mobile__image">
+                                        <img src="/assets/image/header_catalog_promo.jpg" alt="">
+                                    </a>
+
+                                    <div class="button-block">
+                                        <a href="#">
+                                            <div class="button-block__red-large">
+                                                <p class="font-t1 color--white">Задать вопрос</p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div class="header-mobile__menu-two">
+                                    <div class="header-mobile__menu-child" data-id="1">
+                                        <div class="sp-b-purple">
+                                            <svg class="header-mobile__menu-close" width="24" height="16"
+                                                viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M22.9091 9.33335L3.72461 9.33335L7.31683 13.7239C7.74286 14.2446 7.74286 15.0888 7.31683 15.6095C6.89086 16.1302 6.2001 16.1302 5.77406 15.6095L0.319528 8.94285C-0.106508 8.42223 -0.106507 7.57796 0.319528 7.05725L5.77407 0.390575C5.98716 0.13022 6.26628 -2.71907e-06 6.54548 -2.67025e-06C6.82468 -2.62143e-06 7.10388 0.13022 7.31683 0.390576C7.74286 0.911199 7.74286 1.75547 7.31683 2.27618L3.72461 6.66667L22.9091 6.66668C23.5116 6.66668 24 7.26366 24 8.00001C24 8.73637 23.5116 9.33335 22.9091 9.33335Z"
+                                                    fill="#303030" />
+                                            </svg>
+                                        </div>
+                                        <a class="font-s" href="#">Стремянки</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="/catalog.html">Лестницы</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Трансформеры</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Вышки-туры</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Помосты, малярные столы</a>
+                                    </div>
+                                    <div class="header-mobile__menu-child" data-id="2">
+                                        <div class="sp-b-purple">
+                                            <svg class="header-mobile__menu-close" width="24" height="16"
+                                                viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M22.9091 9.33335L3.72461 9.33335L7.31683 13.7239C7.74286 14.2446 7.74286 15.0888 7.31683 15.6095C6.89086 16.1302 6.2001 16.1302 5.77406 15.6095L0.319528 8.94285C-0.106508 8.42223 -0.106507 7.57796 0.319528 7.05725L5.77407 0.390575C5.98716 0.13022 6.26628 -2.71907e-06 6.54548 -2.67025e-06C6.82468 -2.62143e-06 7.10388 0.13022 7.31683 0.390576C7.74286 0.911199 7.74286 1.75547 7.31683 2.27618L3.72461 6.66667L22.9091 6.66668C23.5116 6.66668 24 7.26366 24 8.00001C24 8.73637 23.5116 9.33335 22.9091 9.33335Z"
+                                                    fill="#303030" />
+                                            </svg>
+                                        </div>
+                                        <a class="font-s" href="#">Ж/д транспорт</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Авиатранспорт</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Автотранспорт</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Нефтегазовая отрасль</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Строительное оборудование</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Склады</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
             </header>
-    
+
             <div class="header-padding"></div>
         </div>
 
@@ -259,10 +399,16 @@
 
             <div class="container">
                 <div class="col">
+                    <h1 class="font-h1 sp-v-green text-align-center">Клиентам</h1>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="col">
                     <div class="chips">
                         <div class="swiper mySwiper-chips">
-                            <div class="swiper-wrapper">
-    
+                            <div class="swiper-wrapper d-flex-center">
+
                                 <div class="swiper-slide">
                                     <div class="chips__item">
                                         <!-- <div class="chips__border"></div> -->
@@ -272,7 +418,7 @@
                                         </a>
                                     </div>
                                 </div>
-    
+
                                 <div class="swiper-slide">
                                     <div class="chips__item">
                                         <div class="chips__border"></div>
@@ -282,7 +428,7 @@
                                         </a>
                                     </div>
                                 </div>
-    
+
                                 <div class="swiper-slide">
                                     <div class="chips__item">
                                         <div class="chips__border"></div>
@@ -292,7 +438,7 @@
                                         </a>
                                     </div>
                                 </div>
-    
+
                                 <div class="swiper-slide">
                                     <div class="chips__item">
                                         <div class="chips__border"></div>
@@ -302,7 +448,7 @@
                                         </a>
                                     </div>
                                 </div>
-    
+
                             </div>
                         </div>
                     </div>
@@ -315,7 +461,218 @@
 
         </section>
 
-        <footer class="footer sp-t-green sp-b-purple">
+        <section class="projects sp-t-green sp-b-pink">
+
+            <div class="container">
+                <div class="projects__item">
+                    <div class="row">
+                        <div class="col-4 col-md-6 col-sm-3">
+                            <div class="projects__image">
+                                <img src="/assets/image/projects_image_1_1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-1 d-none-md"></div>
+                        <div class="col-7 col-md-6 col-sm-3">
+                            <div class="projects__desk-block">
+                                <div class="projects__deskcription">
+                                    <div class="projects__ctoggleButton">
+                                        <input class="projects__toggle" type="checkbox" />
+                                    </div>
+                                    <h3 class="animation-opacity font-h4 sp-b-yellow">Практический вебинар по обучению
+                                        правильному и безопасному использованию наших изделий, лестниц, подставок и
+                                        вышек-тур</h3>
+                                    <p class="projects__content font-t1 color--secondary expanded">
+                                        Лицо, уполномоченное на проведение обучения методам безопасной работы на высоте,
+                                        в соответствии с регламентом по безопасности на предприятии (BetrSichV) и
+                                        Правилам  по охране труда при работе на высоте(Утверждены приказом Минтруда
+                                        России от 28.03.2014 г №155н)  является лицом, обладающим профессиональной
+                                        подготовкой, опытом работы, необходимыми знаниями для проверки средств труда.
+                                        Лица, имеющие право на проведение проверок,  должны соответствовать требованиям,
+                                        указанным в регламентах:  профильное  образование, опыт работы и настоящая
+                                        профессиональная деятельность, знание оборудования.
+                                    </p>
+                                </div>
+                                <div class="projects__bottom-block projects__bottom-block--collapse sp-t-purple">
+                                    <div class="d-flex-center" style="justify-content: unset;">
+                                        <div class="button-block" style="flex: unset;">
+                                            <a href="#zakaz">
+                                                <div class="button-block__black-large">
+                                                    <p class="font-t1 color--white">Заказать</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <a href="#" style="padding-left: 12px;">
+                                            <svg width="48" height="48" viewBox="0 0 48 49" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.5" y="1.38892" width="47" height="47" rx="23.5" fill="white"
+                                                    fill-opacity="0.2" />
+                                                <rect x="0.5" y="1.38892" width="47" height="47" rx="23.5"
+                                                    stroke="#333333" />
+                                                <g clip-path="url(#clip0_1591_6600)">
+                                                    <path
+                                                        d="M23.1745 14.9818L23.1745 34.1663L18.7839 30.574C18.2633 30.148 17.419 30.148 16.8983 30.574C16.3777 31 16.3777 31.6908 16.8983 32.1168L23.565 37.5713C24.0856 37.9974 24.9298 37.9974 25.4506 37.5713L32.1172 32.1168C32.3776 31.9037 32.5078 31.6246 32.5078 31.3454C32.5078 31.0662 32.3776 30.787 32.1172 30.574C31.5966 30.148 30.7523 30.148 30.2316 30.574L25.8411 34.1663L25.8411 14.9818C25.8411 14.3793 25.2442 13.8909 24.5078 13.8909C23.7714 13.8909 23.1745 14.3793 23.1745 14.9818Z"
+                                                        fill="#4F4F4F" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1591_6600">
+                                                        <rect width="32" height="32" fill="white"
+                                                            transform="translate(8 8.88892)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="projects__tag">
+                                        <img src="/assets/icon/tag.svg" alt="">
+                                        <p class="font-cap color--secondary">Обучение</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sp-v-dark-blue">
+                <div class="line"></div>
+            </div>
+
+            <div class="container">
+                <div class="projects__item">
+                    <div class="row">
+                        <div class="col-4 col-md-6 col-sm-3">
+                            <div class="projects__image">
+                                <img src="/assets/image/projects_image_1_1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-1 d-none-md"></div>
+                        <div class="col-7 col-md-6 col-sm-3">
+                            <div class="projects__desk-block">
+                                <div class="projects__deskcription">
+                                    <div class="projects__ctoggleButton">
+                                        <input class="projects__toggle" type="checkbox" />
+                                    </div>
+                                    <h3 class="animation-opacity font-h4 sp-b-yellow">Практический вебинар по обучению
+                                        правильному и безопасному использованию наших изделий.</h3>
+                                    <p class="projects__content font-t1 color--secondary expanded">
+                                        Лицо, уполномоченное на проведение обучения методам безопасной работы на высоте,
+                                        в соответствии с регламентом по безопасности на предприятии (BetrSichV) и
+                                        Правилам  по охране труда при работе на высоте(Утверждены приказом Минтруда
+                                        России от 28.03.2014 г №155н)  является лицом, обладающим профессиональной
+                                        подготовкой, опытом работы, необходимыми знаниями для проверки средств труда.
+                                        Лица, имеющие право на проведение проверок,  должны соответствовать требованиям,
+                                        указанным в регламентах:  профильное  образование, опыт работы и настоящая
+                                        профессиональная деятельность, знание оборудования.
+                                    </p>
+                                </div>
+                                <div class="projects__bottom-block projects__bottom-block--collapse sp-t-purple">
+                                    <div class="d-flex-center" style="justify-content: unset;">
+                                        <div class="button-block" style="flex: unset;">
+                                            <a href="#zakaz">
+                                                <div class="button-block__black-large">
+                                                    <p class="font-t1 color--white">Заказать</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <a href="#" style="padding-left: 12px;">
+                                            <svg width="48" height="48" viewBox="0 0 48 49" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.5" y="1.38892" width="47" height="47" rx="23.5" fill="white"
+                                                    fill-opacity="0.2" />
+                                                <rect x="0.5" y="1.38892" width="47" height="47" rx="23.5"
+                                                    stroke="#333333" />
+                                                <g clip-path="url(#clip0_1591_6600)">
+                                                    <path
+                                                        d="M23.1745 14.9818L23.1745 34.1663L18.7839 30.574C18.2633 30.148 17.419 30.148 16.8983 30.574C16.3777 31 16.3777 31.6908 16.8983 32.1168L23.565 37.5713C24.0856 37.9974 24.9298 37.9974 25.4506 37.5713L32.1172 32.1168C32.3776 31.9037 32.5078 31.6246 32.5078 31.3454C32.5078 31.0662 32.3776 30.787 32.1172 30.574C31.5966 30.148 30.7523 30.148 30.2316 30.574L25.8411 34.1663L25.8411 14.9818C25.8411 14.3793 25.2442 13.8909 24.5078 13.8909C23.7714 13.8909 23.1745 14.3793 23.1745 14.9818Z"
+                                                        fill="#4F4F4F" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1591_6600">
+                                                        <rect width="32" height="32" fill="white"
+                                                            transform="translate(8 8.88892)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="projects__tag">
+                                        <img src="/assets/icon/tag.svg" alt="">
+                                        <p class="font-cap color--secondary">Обучение</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sp-t-dark-blue">
+                <div class="line"></div>
+            </div>
+
+        </section>
+
+        <section id="zakaz" class="training-form">
+            <div class="training-form__wrapper color-block--brend2 sp-v-green">
+                <div class="container">
+
+                    <div class="col">
+                        <h2 class="font-h2 color--white sp-b-green">Заказать обучение</h2>
+                        <div class="line"></div>
+                    </div>
+
+
+                    <div class="training-form__block sp-t-green">
+                        <div class="col-5 col-md-6 col-sm-3">
+                            <div class="training-form__image">
+                                <img src="/assets/image/training-form_image.jpg" alt="">
+                                <div class="position">
+                                    <img src="/assets/image/training-form_image_2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1 d-none-lg"></div>
+                        <div class="col-6 col-md-6 col-sm-3">
+                            <h3 class="font-h3 color--white sp-b-mint">Вы работодатель или руководитель предприятия?
+                            </h3>
+                            <p class="font-t1 color--white sp-b-mint">Тогда наши тренинги идеально подходят для Вас или
+                                любого из Ваших сотрудников.
+                                Использование средств подмащивания на Вашем предприятии обязывает руководителей
+                                регулярно проверять лестницы, подставки и вышки для выполнения всех требований по
+                                безопасности. Уже сотни представителей компаний, ответственных за технику безопасности
+                                на предприятии,  успешно прослушали наши семинары.</p>
+                            <form class="form">
+                                <div class="form__top">
+                                    <div class="form__group">
+                                        <input class="font-t1 color--white" type="text" id="name" name="name"
+                                            placeholder="Ваше имя" required>
+                                    </div>
+                                    <div class="form__group">
+                                        <input class="font-t1 color--white" type="tel" id="phone" name="phone"
+                                            placeholder="Ваш номер телефона" required>
+                                    </div>
+                                    <div class="form__group">
+                                        <textarea class="font-t1 color--white" id="message" name="message"
+                                            placeholder="Комментарий" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="form__group-btn sp-t-mint">
+                                    <div class="button-block">
+                                        <a href="/">
+                                            <div class="button-block__white-large">
+                                                <p class="font-t1">Оставить заявку</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer sp-t-orange sp-b-purple">
 
             <!-- Меню -->
             <div class="container d-none-md">
@@ -349,8 +706,10 @@
                             </a>
                             <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Ж/д
                                 транспорт</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Авиатранспорт
-                            </a>
+                            <a class="font-s color--secondary sp-b-blue"
+                                href="/catalog.html#directions">Авиатранспорт</a>
+                            <a class="font-s color--secondary sp-b-blue"
+                                href="/catalog.html#directions">Автотранспорт</a>
                             <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Нефтегазовая
                                 отрасль</a>
                             <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Строительное
@@ -365,19 +724,11 @@
                                 <h4 class="font-h4 sp-b-mint">Серийная продукция</h4>
                             </a>
                             <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Стремянки</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы
-                                приставные</a>
-                            <a class="font-s color--secondary sp-b-blue"
-                                href="/catalog.html#serial">Лестницы-трансформеры
-                            </a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Площадки,
-                                платформы, помосты</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Трансформеры</a>
                             <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Вышки-туры</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы
-                                специальные</a>
-                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы с
-                                площадкой</a>
-                            <a class="font-s color--secondary" href="/catalog.html#serial">Трапы и переходы</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Помосты, малярные
+                                столы</a>
                         </div>
                     </div>
 
@@ -426,10 +777,10 @@
             <div class="container">
                 <div class="col">
                     <div class="footer__bottom">
-                        <a class="font-t2 color--secondary" href="#">Политика кофиденциальности</a>
+                        <a class="font-t2 color--secondary" href="#">Политика конфиденциальности</a>
                         <a class="font-t2 color--secondary" href="https://svsv.agency/" target="_blank">Разработка сайта
                             Sivachёv & Sivachёv</a>
-                        <p class="font-t2 color--secondary">© 2024 Общество с ограниченной ответственностью</p>
+                        <p class="font-t2 color--secondary">© 2024 Завод «Новая Высота»</p>
                     </div>
                 </div>
             </div>

@@ -194,6 +194,8 @@ window.addEventListener('load', (event) => {
                 const content = item.querySelector('.projects__content');
                 const image = item.querySelector('.projects__image');
 
+                
+
                 if (index === 0) {
                     // Раскрыть первый элемент
                     toggle.checked = true;
