@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <title>Инфоцентр</title>
+    <title>Статьи</title>
 </head>
 
 <body>
@@ -395,11 +395,11 @@
             <div class="header-padding"></div>
         </div>
 
-        <section class="info-center">
-
+        <!-- Чипы -->
+        <div>
             <div class="container">
                 <div class="col">
-                    <h1 class="font-h1 sp-v-green text-align-center">Клиентам</h1>
+                    <h1 class="font-h1 sp-v-green text-align-center">Медиацентр</h1>
                 </div>
             </div>
 
@@ -412,9 +412,9 @@
                                 <div class="swiper-slide">
                                     <div class="chips__item">
                                         <!-- <div class="chips__border"></div> -->
-                                        <a href="/service-center.html" class="chips__ul">
+                                        <a href="/news.html" class="chips__ul">
                                             <!-- <div class="chips__li"></div> -->
-                                            <p class="font-h4 color--disabled">Сервисный центр</p>
+                                            <p class="font-h4 color--disabled">Новости</p>
                                         </a>
                                     </div>
                                 </div>
@@ -422,19 +422,9 @@
                                 <div class="swiper-slide">
                                     <div class="chips__item">
                                         <div class="chips__border"></div>
-                                        <a href="/delivery.html" class="chips__ul">
-                                            <!-- <div class="chips__li"></div> -->
-                                            <p class="font-h4 color--disabled">Оплата и доставка</p>
-                                        </a>
-                                    </div>
-                                </div>
-    
-                                <div class="swiper-slide">
-                                    <div class="chips__item">
-                                        <div class="chips__border"></div>
-                                        <a href="/infocenter.html" class="chips__ul">
+                                        <a href="/articles.html" class="chips__ul">
                                             <div class="chips__li"></div>
-                                            <p class="font-h4">Инфоцентр</p>
+                                            <p class="font-h4">Статьи</p>
                                         </a>
                                     </div>
                                 </div>
@@ -442,9 +432,19 @@
                                 <div class="swiper-slide">
                                     <div class="chips__item">
                                         <div class="chips__border"></div>
-                                        <a href="/training-center.html" class="chips__ul">
+                                        <a href="/video-reviews.html" class="chips__ul">
                                             <!-- <div class="chips__li"></div> -->
-                                            <p class="font-h4 color--disabled">Учебный центр</p>
+                                            <p class="font-h4 color--disabled">Видеобзоры</p>
+                                        </a>
+                                    </div>
+                                </div>
+    
+                                <div class="swiper-slide">
+                                    <div class="chips__item">
+                                        <div class="chips__border"></div>
+                                        <a href="/media-doc.html" class="chips__ul">
+                                            <!-- <div class="chips__li"></div> -->
+                                            <p class="font-h4 color--disabled">Документы</p>
                                         </a>
                                     </div>
                                 </div>
@@ -458,227 +458,150 @@
             <div class="sp-t-mint">
                 <div class="line"></div>
             </div>
+        </div>
 
-            <div class="container">
-                <div class="info-center__filters sp-t-green">
-    
-                    <div class="info-center__filters-item">
-                        <div class="info-center__filters-name">
-                            <p class="font-h3">Каталоги</p>
-                            <div class="info-center__ctoggleButton">
-                                <input class="info-center__toggle" type="checkbox" checked />
+        <!-- Табы -->
+         <div class="container sp-t-mint">
+            <div class="col">
+                <div class="chips">
+                    <div class="swiper mySwiper-chips">
+                        <div class="swiper-wrapper">
+
+                          <div class="swiper-slide">
+                            <div class="button-block">
+                                <!-- <a href="serial-production.html"> -->
+                                    <div class="button-block__chip selected" data-filter="all">
+                                        <p class="font-s color--primary">Показать все</p>
+                                    </div>
+                                <!-- </a> -->
                             </div>
+                          </div>
+
+                          <div class="swiper-slide">
+                            <div class="button-block">
+                                <!-- <a href="/products-direction.html"> -->
+                                    <div class="button-block__chip" data-filter="1">
+                                        <p class="font-s color--primary">Фильтр 1</p>
+                                    </div>
+                                <!-- </a> -->
+                            </div>
+                          </div>
+
+                          <div class="swiper-slide">
+                            <div class="button-block">
+                                <!-- <a href="#"> -->
+                                    <div class="button-block__chip" data-filter="2">
+                                        <p class="font-s color--primary">Фильтр 2</p>
+                                    </div>
+                                <!-- </a> -->
+                            </div>
+                          </div>
+                          
                         </div>
-                        <div class="info-center__filters-block sp-t-dark-blue">
-                            <!-- <div class="documentation-card__block"> -->
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="/doc/catalog_300-500_4_3_sait_compressed.pdf" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="/doc/catalog_300-500_4_3_sait_compressed.pdf" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="/doc/catalog_300-500_4_3_sait_compressed.pdf" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <!-- </div> -->
-                        </div>
-                        <div class="sp-t-dark-blue">
-                            <div class="line"></div>
-                        </div>
-                    </div>
-    
-                    <div class="info-center__filters-item">
-                        <div class="info-center__filters-name sp-t-dark-blue">
-                            <p class="font-h3">Листовки</p>
-                            <div class="info-center__ctoggleButton">
-                                <input class="info-center__toggle" type="checkbox" checked />
-                            </div>
-                        </div>
-                        <div class="info-center__filters-block sp-t-dark-blue">
-                            <!-- <div class="documentation-card__block"> -->
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="#" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="#" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="#" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <!-- </div> -->
-                        </div>
-                        <div class="sp-t-dark-blue">
-                            <div class="line"></div>
-                        </div>
-                    </div>
-    
-                    <div class="info-center__filters-item">
-                        <div class="info-center__filters-name sp-t-dark-blue">
-                            <p class="font-h3">Плакаты</p>
-                            <div class="info-center__ctoggleButton">
-                                <input class="info-center__toggle" type="checkbox" checked />
-                            </div>
-                        </div>
-                        <div class="info-center__filters-block sp-t-dark-blue">
-                            <!-- <div class="documentation-card__block"> -->
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="#" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="#" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="#" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <!-- </div> -->
-                        </div>
-                        <div class="sp-t-dark-blue">
-                            <div class="line"></div>
-                        </div>
-                    </div>
-    
+                      </div>
                 </div>
             </div>
+         </div>
 
-        </section>
+         <section class="event-card">
+            <div class="container">
+                <div class="event-card__wrapper sp-t-dark-blue">
+
+                    <div class="event-card-filter col-3 col-lg-4 col-md-3 col-sm-3" data-filter="1">
+                        <a href="#">
+
+                            <div class="event-card__image">
+                                <img src="/assets/image/news_articles_image_2.jpg" alt="">
+                            </div>
+
+                            <div class="event-card__position-tag sp-t-light-blue">
+                                <div class="projects__tag">
+                                    <img src="/assets/icon/tag.svg" alt="">
+                                    <p class="font-cap color--secondary">Авиатранспорт,</p>
+                                </div>
+
+                                <div class="projects__tag">
+                                    <img src="/assets/icon/tag.svg" alt="">
+                                    <p class="font-cap color--secondary">Технологии</p>
+                                </div>
+                            </div>
+
+                            <h4 class="font-h4 sp-t-dark-purple">Название статьи или новости</h4>
+                        </a>
+                    </div>
+
+                    <div class="event-card-filter col-3 col-lg-4 col-md-3 col-sm-3" data-filter="2">
+                        <a href="#">
+
+                            <div class="event-card__image">
+                                <img src="/assets/image/news_articles_image_0.jpg" alt="">
+                            </div>
+
+                            <div class="event-card__position-tag sp-t-light-blue">
+                                <div class="projects__tag">
+                                    <img src="/assets/icon/tag.svg" alt="">
+                                    <p class="font-cap color--secondary">Авиатранспорт,</p>
+                                </div>
+
+                                <div class="projects__tag">
+                                    <img src="/assets/icon/tag.svg" alt="">
+                                    <p class="font-cap color--secondary">Технологии</p>
+                                </div>
+                            </div>
+
+                            <h4 class="font-h4 sp-t-dark-purple">Название статьи или новости</h4>
+                        </a>
+                    </div>
+
+                    <div class="event-card-filter col-3 col-lg-4 col-md-3 col-sm-3" data-filter="1">
+                        <a href="#">
+
+                            <div class="event-card__image">
+                                <img src="/assets/image/news_articles_image_3.jpg" alt="">
+                            </div>
+
+                            <div class="event-card__position-tag sp-t-light-blue">
+                                <div class="projects__tag">
+                                    <img src="/assets/icon/tag.svg" alt="">
+                                    <p class="font-cap color--secondary">Авиатранспорт,</p>
+                                </div>
+
+                                <div class="projects__tag">
+                                    <img src="/assets/icon/tag.svg" alt="">
+                                    <p class="font-cap color--secondary">Технологии</p>
+                                </div>
+                            </div>
+
+                            <h4 class="font-h4 sp-t-dark-purple">Название статьи или новости</h4>
+                        </a>
+                    </div>
+
+                    <div class="event-card-filter col-3 col-lg-4 col-md-3 col-sm-3" data-filter="2">
+                        <a href="#">
+
+                            <div class="event-card__image">
+                                <img src="/assets/image/news_articles_image_2.jpg" alt="">
+                            </div>
+
+                            <div class="event-card__position-tag sp-t-light-blue">
+                                <div class="projects__tag">
+                                    <img src="/assets/icon/tag.svg" alt="">
+                                    <p class="font-cap color--secondary">Авиатранспорт,</p>
+                                </div>
+
+                                <div class="projects__tag">
+                                    <img src="/assets/icon/tag.svg" alt="">
+                                    <p class="font-cap color--secondary">Технологии</p>
+                                </div>
+                            </div>
+
+                            <h4 class="font-h4 sp-t-dark-purple">Название статьи или новости</h4>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+         </section>
 
         <footer class="footer sp-t-orange sp-b-purple">
 

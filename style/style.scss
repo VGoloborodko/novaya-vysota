@@ -1447,6 +1447,45 @@
     }
 }
 
+.event-card {
+
+    a {
+        &:hover {
+            .event-card__image {
+                img {
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__image {
+        overflow: hidden;
+
+        img {
+            transition: all 1s;
+
+            @include bp(md) {
+                height: 500px;
+            }
+
+            @include bp(sm) {
+                height: 222px;
+            }
+        }
+    }
+
+    &__position-tag {
+        display: flex;
+        gap: 8px;
+    }
+}
+
 .write {
     background: url('/assets/image/main_general.jpg') no-repeat bottom;
     background-size: cover;
@@ -2700,6 +2739,100 @@
             height: 125px;
             padding-right: 100px;
         }
+    }
+}
+
+.video-reviews {
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 24px;
+    }
+
+    &__item {
+        cursor: pointer;
+    }
+
+    .video-reviews__search-container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .video-reviews__search-input {
+        padding: 12px 24px;
+        outline: none;
+        width: 100%;
+        background: unset;
+        border-bottom: 1px solid #333333;
+    }
+
+    .video-reviews__search-icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background: url('/assets/icon/header_search_icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+}
+
+.video-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    .video-popup__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1; /* изменение значения z-index */
+        pointer-events: none; /* эта строка позволит событиям проникать сквозь оверлей */
+    }
+    
+
+    .video-popup__content {
+        position: relative;
+        text-align: center;
+        width: 50%;
+        height: 50%;
+        // padding: 40px;
+        z-index: 2;
+        background-color: white;
+
+        @include bp(md) {
+            width: 90%;
+        }
+    }
+
+    #videoPlayer {
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-popup__close-button {
+        position: absolute;
+        // z-index: 2;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        color: #fff;
     }
 }
 

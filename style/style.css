@@ -739,6 +739,7 @@ html {
   border: 1px solid #303030;
   border-radius: 32px;
   transition: all 0.5s;
+  cursor: pointer;
 }
 .button-block__chip p {
   transition: all 0.5s;
@@ -3160,6 +3161,34 @@ html {
   gap: 8px;
 }
 
+.event-card a:hover .event-card__image img {
+  scale: 1.1;
+}
+.event-card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.event-card__image {
+  overflow: hidden;
+}
+.event-card__image img {
+  transition: all 1s;
+}
+@media (max-width: 1024px) {
+  .event-card__image img {
+    height: 500px;
+  }
+}
+@media (max-width: 767px) {
+  .event-card__image img {
+    height: 222px;
+  }
+}
+.event-card__position-tag {
+  display: flex;
+  gap: 8px;
+}
+
 .write {
   background: url("/assets/image/main_general.jpg") no-repeat bottom;
   background-size: cover;
@@ -4181,6 +4210,87 @@ html {
   width: 400px;
   height: 125px;
   padding-right: 100px;
+}
+
+.video-reviews__block {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+}
+.video-reviews__item {
+  cursor: pointer;
+}
+.video-reviews .video-reviews__search-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+}
+.video-reviews .video-reviews__search-input {
+  padding: 12px 24px;
+  outline: none;
+  width: 100%;
+  background: unset;
+  border-bottom: 1px solid #333333;
+}
+.video-reviews .video-reviews__search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url("/assets/icon/header_search_icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.video-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.video-popup .video-popup__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1; /* изменение значения z-index */
+  pointer-events: none; /* эта строка позволит событиям проникать сквозь оверлей */
+}
+.video-popup .video-popup__content {
+  position: relative;
+  text-align: center;
+  width: 50%;
+  height: 50%;
+  z-index: 2;
+  background-color: white;
+}
+@media (max-width: 1024px) {
+  .video-popup .video-popup__content {
+    width: 90%;
+  }
+}
+.video-popup #videoPlayer {
+  width: 100%;
+  height: 100%;
+}
+.video-popup .video-popup__close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: #fff;
 }
 
 .footer__menu {

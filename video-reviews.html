@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <title>Инфоцентр</title>
+    <title>Видеобзоры</title>
 </head>
 
 <body>
@@ -395,11 +395,11 @@
             <div class="header-padding"></div>
         </div>
 
-        <section class="info-center">
-
+        <!-- Чипы -->
+        <div>
             <div class="container">
                 <div class="col">
-                    <h1 class="font-h1 sp-v-green text-align-center">Клиентам</h1>
+                    <h1 class="font-h1 sp-v-green text-align-center">Медиацентр</h1>
                 </div>
             </div>
 
@@ -412,9 +412,9 @@
                                 <div class="swiper-slide">
                                     <div class="chips__item">
                                         <!-- <div class="chips__border"></div> -->
-                                        <a href="/service-center.html" class="chips__ul">
+                                        <a href="/news.html" class="chips__ul">
                                             <!-- <div class="chips__li"></div> -->
-                                            <p class="font-h4 color--disabled">Сервисный центр</p>
+                                            <p class="font-h4 color--disabled">Новости</p>
                                         </a>
                                     </div>
                                 </div>
@@ -422,9 +422,9 @@
                                 <div class="swiper-slide">
                                     <div class="chips__item">
                                         <div class="chips__border"></div>
-                                        <a href="/delivery.html" class="chips__ul">
+                                        <a href="/articles.html" class="chips__ul">
                                             <!-- <div class="chips__li"></div> -->
-                                            <p class="font-h4 color--disabled">Оплата и доставка</p>
+                                            <p class="font-h4 color--disabled">Статьи</p>
                                         </a>
                                     </div>
                                 </div>
@@ -432,9 +432,9 @@
                                 <div class="swiper-slide">
                                     <div class="chips__item">
                                         <div class="chips__border"></div>
-                                        <a href="/infocenter.html" class="chips__ul">
+                                        <a href="/video-reviews.html" class="chips__ul">
                                             <div class="chips__li"></div>
-                                            <p class="font-h4">Инфоцентр</p>
+                                            <p class="font-h4">Видеобзоры</p>
                                         </a>
                                     </div>
                                 </div>
@@ -442,9 +442,9 @@
                                 <div class="swiper-slide">
                                     <div class="chips__item">
                                         <div class="chips__border"></div>
-                                        <a href="/training-center.html" class="chips__ul">
+                                        <a href="/media-doc.html" class="chips__ul">
                                             <!-- <div class="chips__li"></div> -->
-                                            <p class="font-h4 color--disabled">Учебный центр</p>
+                                            <p class="font-h4 color--disabled">Документы</p>
                                         </a>
                                     </div>
                                 </div>
@@ -458,227 +458,112 @@
             <div class="sp-t-mint">
                 <div class="line"></div>
             </div>
+        </div>
 
+        <section class="video-reviews">
             <div class="container">
-                <div class="info-center__filters sp-t-green">
-    
-                    <div class="info-center__filters-item">
-                        <div class="info-center__filters-name">
-                            <p class="font-h3">Каталоги</p>
-                            <div class="info-center__ctoggleButton">
-                                <input class="info-center__toggle" type="checkbox" checked />
+
+                <div class="col sp-t-mint">
+                    <div class="video-reviews__search-container">
+                        <input type="text" class="video-reviews__search-input font-t1"
+                            placeholder="Поиск">
+                        <div class="video-reviews__search-icon"></div>
+                    </div>
+                </div>
+
+                <div class="video-reviews__block sp-t-dark-blue">
+
+                    <div class="col-3 col-lg-4 col-md-3 col-sm-3">
+                        <div class="video-reviews__item" data-video-url="/assets/video/test.mp4">
+                            <div class="video-reviews__image">
+                                <img src="/assets/image/video_reviews_image_1.jpg" alt="">
                             </div>
-                        </div>
-                        <div class="info-center__filters-block sp-t-dark-blue">
-                            <!-- <div class="documentation-card__block"> -->
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="/doc/catalog_300-500_4_3_sait_compressed.pdf" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="/doc/catalog_300-500_4_3_sait_compressed.pdf" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="/doc/catalog_300-500_4_3_sait_compressed.pdf" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <!-- </div> -->
-                        </div>
-                        <div class="sp-t-dark-blue">
-                            <div class="line"></div>
+                            <h3 class="font-s sp-t-light-blue">Заголовок</h3>
+                            <p class="font-t1">Короткое описание темы видео</p>
                         </div>
                     </div>
-    
-                    <div class="info-center__filters-item">
-                        <div class="info-center__filters-name sp-t-dark-blue">
-                            <p class="font-h3">Листовки</p>
-                            <div class="info-center__ctoggleButton">
-                                <input class="info-center__toggle" type="checkbox" checked />
+
+                    <div class="col-3 col-lg-4 col-md-3 col-sm-3">
+                        <div class="video-reviews__item" data-video-url="/assets/video/test.mp4">
+                            <div class="video-reviews__image">
+                                <img src="/assets/image/video_reviews_image_2.jpg" alt="">
                             </div>
-                        </div>
-                        <div class="info-center__filters-block sp-t-dark-blue">
-                            <!-- <div class="documentation-card__block"> -->
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="#" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="#" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="#" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <!-- </div> -->
-                        </div>
-                        <div class="sp-t-dark-blue">
-                            <div class="line"></div>
+                            <h3 class="font-s sp-t-light-blue">Заголовок</h3>
+                            <p class="font-t1">Короткое описание темы видео</p>
                         </div>
                     </div>
-    
-                    <div class="info-center__filters-item">
-                        <div class="info-center__filters-name sp-t-dark-blue">
-                            <p class="font-h3">Плакаты</p>
-                            <div class="info-center__ctoggleButton">
-                                <input class="info-center__toggle" type="checkbox" checked />
+
+                    <div class="col-3 col-lg-4 col-md-3 col-sm-3">
+                        <div class="video-reviews__item" data-video-url="/assets/video/test.mp4">
+                            <div class="video-reviews__image">
+                                <img src="/assets/image/video_reviews_image_3.jpg" alt="">
                             </div>
-                        </div>
-                        <div class="info-center__filters-block sp-t-dark-blue">
-                            <!-- <div class="documentation-card__block"> -->
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="#" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="#" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-4 col-md-3 col-sm-3">
-                                <div class="documentation-card__item color-block--gray-opasity20">
-                                    <div class="documentation-card__image">
-                                        <img src="/assets/image/documentation_card_image.jpg" width="116" height="163"
-                                            alt="">
-                                    </div>
-                                    <div class="documentation-card__info">
-                                        <h3 class="font-s">Название документа</h3>
-                                        <div class="documentation-card__bottom">
-                                            <p class="font-t2 color--secondary">233 Kb</p>
-                                            <a href="#" target="_blank">
-                                                <div class="documentation-card__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <!-- </div> -->
-                        </div>
-                        <div class="sp-t-dark-blue">
-                            <div class="line"></div>
+                            <h3 class="font-s sp-t-light-blue">Заголовок</h3>
+                            <p class="font-t1">Короткое описание темы видео</p>
                         </div>
                     </div>
-    
+
+                    <div class="col-3 col-lg-4 col-md-3 col-sm-3">
+                        <div class="video-reviews__item" data-video-url="/assets/video/test.mp4">
+                            <div class="video-reviews__image">
+                                <img src="/assets/image/video_reviews_image_4.jpg" alt="">
+                            </div>
+                            <h3 class="font-s sp-t-light-blue">Заголовок</h3>
+                            <p class="font-t1">Короткое описание темы видео</p>
+                        </div>
+                    </div>
+
+                    <div class="col-3 col-lg-4 col-md-3 col-sm-3">
+                        <div class="video-reviews__item" data-video-url="/assets/video/test.mp4">
+                            <div class="video-reviews__image">
+                                <img src="/assets/image/video_reviews_image_5.jpg" alt="">
+                            </div>
+                            <h3 class="font-s sp-t-light-blue">Заголовок</h3>
+                            <p class="font-t1">Короткое описание темы видео</p>
+                        </div>
+                    </div>
+
+                    <div class="col-3 col-lg-4 col-md-3 col-sm-3">
+                        <div class="video-reviews__item" data-video-url="/assets/video/test.mp4">
+                            <div class="video-reviews__image">
+                                <img src="/assets/image/video_reviews_image_6.jpg" alt="">
+                            </div>
+                            <h3 class="font-s sp-t-light-blue">Заголовок</h3>
+                            <p class="font-t1">Короткое описание темы видео</p>
+                        </div>
+                    </div>
+
+                    <div class="col-3 col-lg-4 col-md-3 col-sm-3">
+                        <div class="video-reviews__item" data-video-url="/assets/video/test.mp4">
+                            <div class="video-reviews__image">
+                                <img src="/assets/image/video_reviews_image_1.jpg" alt="">
+                            </div>
+                            <h3 class="font-s sp-t-light-blue">Заголовок</h3>
+                            <p class="font-t1">Короткое описание темы видео</p>
+                        </div>
+                    </div>
+
+                    <div class="col-3 col-lg-4 col-md-3 col-sm-3">
+                        <div class="video-reviews__item" data-video-url="/assets/video/test.mp4">
+                            <div class="video-reviews__image">
+                                <img src="/assets/image/video_reviews_image_3.jpg" alt="">
+                            </div>
+                            <h3 class="font-s sp-t-light-blue">Заголовок</h3>
+                            <p class="font-t1">Короткое описание темы видео</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
         </section>
+
+        <div id="videoPopup" class="video-popup" style="display: none;">
+            <div class="video-popup__overlay"></div>
+            <span id="closePopup" class="video-popup__close-button font-h4">x</span>
+            <div class="video-popup__content">
+                <iframe id="videoPlayer" width="" height="" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
 
         <footer class="footer sp-t-orange sp-b-purple">
 

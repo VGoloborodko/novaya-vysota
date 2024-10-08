@@ -194,7 +194,7 @@ window.addEventListener('load', (event) => {
                 const content = item.querySelector('.projects__content');
                 const image = item.querySelector('.projects__image');
 
-                
+
 
                 if (index === 0) {
                     // Раскрыть первый элемент
@@ -803,6 +803,52 @@ window.addEventListener('load', (event) => {
 
     }
 
+    //---------------- Файл video-reviews.html
+    //------- Popup
+    if (document.querySelector(".video-popup")) {
+        function videoPopup() {
+            var videoItems = document.querySelectorAll('.video-reviews__item');
+
+            videoItems.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    var videoUrl = this.getAttribute('data-video-url');
+                    var videoPlayer = document.getElementById('videoPlayer');
+                    videoPlayer.setAttribute('src', videoUrl);
+                    showPopup();
+                });
+            });
+
+            function showPopup() {
+                var videoPopup = document.getElementById('videoPopup');
+                videoPopup.style.display = 'flex';
+                var overlay = document.querySelector('.video-popup__overlay');
+                overlay.style.zIndex = 1;
+            }
+
+            document.getElementById('videoPopup').addEventListener('click', function (event) {
+                if (event.target.id === 'videoPopup' || event.target.id === 'closePopup') {
+                    var videoPlayer = document.getElementById('videoPlayer');
+                    videoPlayer.setAttribute('src', '');
+                    closePopup();
+                }
+            });
+
+            function closePopup() {
+                var videoPopup = document.getElementById('videoPopup');
+                var overlay = document.querySelector('.video-popup__overlay');
+                videoPopup.style.display = 'none';
+                overlay.style.zIndex = -1;
+            }
+        }
+
+        try {
+            videoPopup();
+        } catch (error) {
+            console.error(error);
+        }
+
+    }
+
     // Частичная анимация
     function animation() {
         gsap.registerPlugin(ScrollTrigger);
@@ -1035,15 +1081,17 @@ if (document.querySelector(".header-mobile") || document.querySelector(".header-
             }
         });
 
-        catalogBottom.addEventListener('click', function () {
-            isCatalogVisible = true;
+        if (catalogBottom) {
+            catalogBottom.addEventListener('click', function () {
+                isCatalogVisible = true;
 
-            topBtn.style.backgroundImage = 'url("/assets/icon/header_search_icon_close.svg")';
-            catalog.style.display = 'block';
-            menuOne.style.display = 'block';
-            mobMenu.style.display = 'none';
-            document.body.style.overflow = 'hidden';
-        });
+                topBtn.style.backgroundImage = 'url("/assets/icon/header_search_icon_close.svg")';
+                catalog.style.display = 'block';
+                menuOne.style.display = 'block';
+                mobMenu.style.display = 'none';
+                document.body.style.overflow = 'hidden';
+            });
+        }
 
         // Фильтрация меню в каталоге
         // const categoryHeaders = document.querySelectorAll('.header__category-item h4');
@@ -1091,3 +1139,28 @@ if (document.querySelector(".confidence")) {
         },
     });
 }
+
+
+const chips = document.querySelectorAll('.button-block__chip');
+const items = document.querySelectorAll('.event-card-filter');
+
+chips.forEach(chip => {
+    chip.addEventListener('click', function () {
+        const filterValue = chip.dataset.filter;
+
+        // Удаляем класс 'selected' у других чипов
+        chips.forEach(otherChip => {
+            otherChip.classList.remove('selected');
+        });
+        chip.classList.add('selected'); // Добавляем класс 'selected' к выбранному чипу
+
+        // Фильтрация элементов
+        items.forEach(item => {
+            if (filterValue === 'all' || item.dataset.filter === filterValue) {
+                item.style.display = 'inline-block'; // Показываем элементы, соответствующие фильтру
+            } else {
+                item.style.display = 'none'; // Скрываем элементы, которые не соответствуют фильтру
+            }
+        });
+    });
+});
