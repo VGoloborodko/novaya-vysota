@@ -1049,7 +1049,7 @@ if (document.querySelector(".popup-slider")) {
     }
 }
 
-// Описать
+//------- Описать
 if (document.querySelector(".header-mobile") || document.querySelector(".header-bottom")) {
 
     if (window.screen.width <= 1024) {
@@ -1127,7 +1127,7 @@ if (document.querySelector(".header-mobile") || document.querySelector(".header-
     }
 }
 
-// SVG анимация дестницы на главной
+//------- SVG анимация дестницы на главной
 if (document.querySelector(".confidence")) {
     gsap.to('.confidence path', {
         css: { animation: 'draw 8s forwards' }, // Добавляем свойство animation
@@ -1140,7 +1140,7 @@ if (document.querySelector(".confidence")) {
     });
 }
 
-// Фильтрация чипов
+//------- Фильтрация чипов
 if (document.querySelector(".event-card-filter")) {
     function chipsFilter() {
         const chips2 = document.querySelectorAll('.button-block__chip');
