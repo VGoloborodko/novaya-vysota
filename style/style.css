@@ -4293,6 +4293,45 @@ html {
   color: #fff;
 }
 
+.reviews-page__image img {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 52px;
+  background-size: contain;
+}
+.reviews-page .swiper {
+  padding-bottom: 80px;
+}
+@media (max-width: 767px) {
+  .reviews-page .swiper {
+    padding-bottom: 40px;
+  }
+}
+.reviews-page .swiper-slide {
+  width: 100%;
+  max-width: 580px;
+}
+@media (max-width: 767px) {
+  .reviews-page .swiper-slide {
+    max-width: unset;
+  }
+}
+.reviews-page .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+}
+.reviews-page .swiper-horizontal > .swiper-pagination-bullets, .reviews-page .swiper-pagination-bullets.swiper-pagination-horizontal, .reviews-page .swiper-pagination-custom, .reviews-page .swiper-pagination-fraction {
+  bottom: var(--swiper-pagination-bottom, 0px);
+}
+.reviews-page .swiper-pagination-bullet {
+  background-color: #fff;
+  border: 1px solid #000000;
+}
+.reviews-page .swiper-pagination-bullet-active {
+  background-color: #828282;
+  border: unset;
+}
+
 .footer__menu {
   width: 100%;
   max-width: 1260px;

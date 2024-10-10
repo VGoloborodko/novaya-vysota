@@ -1140,27 +1140,58 @@ if (document.querySelector(".confidence")) {
     });
 }
 
+// Фильтрация чипов
+if (document.querySelector(".event-card-filter")) {
+    function chipsFilter() {
+        const chips2 = document.querySelectorAll('.button-block__chip');
+        const items2 = document.querySelectorAll('.event-card-filter');
 
-const chips = document.querySelectorAll('.button-block__chip');
-const items = document.querySelectorAll('.event-card-filter');
+        chips2.forEach(chip => {
+            chip.addEventListener('click', function () {
+                const filterValue = chip.dataset.filter;
 
-chips.forEach(chip => {
-    chip.addEventListener('click', function () {
-        const filterValue = chip.dataset.filter;
+                chips2.forEach(otherChip => {
+                    otherChip.classList.remove('selected');
+                });
+                chip.classList.add('selected');
 
-        // Удаляем класс 'selected' у других чипов
-        chips.forEach(otherChip => {
-            otherChip.classList.remove('selected');
+                // Фильтрация элементов
+                items2.forEach(item => {
+                    if (filterValue === 'all' || item.dataset.filter === filterValue) {
+                        item.style.display = 'inline-block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
         });
-        chip.classList.add('selected'); // Добавляем класс 'selected' к выбранному чипу
+    }
 
-        // Фильтрация элементов
-        items.forEach(item => {
-            if (filterValue === 'all' || item.dataset.filter === filterValue) {
-                item.style.display = 'inline-block'; // Показываем элементы, соответствующие фильтру
-            } else {
-                item.style.display = 'none'; // Скрываем элементы, которые не соответствуют фильтру
-            }
+    try {
+        chipsFilter();
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+//---------------- Файл service-center.html
+//------- Слайдер
+if (document.querySelector(".mySwiper-reviews-page")) {
+
+    function swiperReviewsPage() {
+        var swiper = new Swiper(".mySwiper-reviews-page", {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+              },
         });
-    });
-});
+    }
+
+    try {
+        swiperReviewsPage()
+    } catch (error) {
+        console.error(error);
+
+    }
+}

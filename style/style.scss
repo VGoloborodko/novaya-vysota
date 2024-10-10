@@ -2836,6 +2836,54 @@
     }
 }
 
+.reviews-page {
+
+    &__image {
+
+        img {
+            width: fit-content;
+            height: 52px;
+            background-size: contain;
+        }
+    }
+
+    .swiper {
+        padding-bottom: 80px;
+
+        @include bp(sm) {
+            padding-bottom: 40px;
+        }
+    }
+
+    .swiper-slide {
+        width: 100%;
+        max-width: 580px;
+
+        @include bp(sm) {
+            max-width: unset;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: var(--swiper-pagination-bottom, 0px);
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #fff;
+        border: 1px solid #000000;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #828282;
+        border: unset;
+    }
+}
+
 .footer {
 
     &__menu {
