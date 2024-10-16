@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+        integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>Закупки</title>
+</head>
+
+<body>
+
+    <div class="page color-block--primary">
+
+        <div>
+            <header class="header">
+
+                <div class="header__desktop">
+                    <div class="header__desktop-cover"></div>
+                    <div class="header__desktop-cover-scroll"></div>
+                    <div class="header__wrapper sp-b-burgundy">
+                        <div class="container">
+                            <div class="col">
+
+                                <div class="header__top sp-v-dark-purple">
+
+                                    <div class="header__contact">
+                                        <p class="font-t1 f-w-medium color--primary">Отдел продаж <a
+                                                style="padding-left: 16px;" class="color--primary"
+                                                href="mailto:zapros@zavodnv.ru"
+                                                style="border-bottom: 1px solid #303030;">zapros@zavodnv.ru</a></p>
+                                        <div class="header__v-line"></div>
+                                        <a class="font-t1 f-w-medium color--primary" href="tel:+78003337989">8 800 333
+                                            7989</a>
+                                    </div>
+
+                                    <ul>
+                                        <li><a class="font-t1 f-w-medium color--primary" href="">О компании</a></li>
+                                        <li><a class="font-t1 f-w-medium color--primary" href="">Клиентам</a></li>
+                                        <li><a class="font-t1 f-w-medium color--primary" href="">Медиацентр</a></li>
+                                        <li><a class="font-t1 f-w-medium color--primary" href="">Закупки</a></li>
+                                        <li><a class="font-t1 f-w-medium color--primary" href="">Контакты</a></li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="header__main sp-t-light-blue">
+
+                                    <a href="/" class="header__logo-desk">
+                                        <!-- <div class="header__logo-desk"></div> -->
+                                    </a>
+
+                                    <div class="header__average">
+
+                                        <div class="button-block">
+                                            <a href="/">
+                                                <div class="button-block__transparent-small">
+                                                    <p class="font-t1">Специальные решения</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="header__ctoggleButton">
+                                            <div class="button-block">
+                                                <a href="/">
+                                                    <div class="button-block__small-list">
+                                                        <div class="button-block__icon"></div>
+
+                                                        <p class="font-t1 color--white">Продукция</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <input class="header__toggle" type="checkbox" />
+                                        </div>
+
+                                        <div class="header__search-container">
+                                            <input type="text" class="header__search-input font-t1"
+                                                placeholder="Поиск по сайту" oninput="toggleIcon(this)">
+                                            <div class="header__search-icon" onclick="clearInput()"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="header__right">
+
+                                        <div class="header__icons">
+                                            <div class="header__comparison"></div>
+                                            <div class="header__basket"></div>
+                                        </div>
+
+                                        <div class="button-block">
+                                            <a href="#form">
+                                                <div class="button-block__red-small">
+                                                    <p class="font-t1 color--white">Задать вопрос</p>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="header__catalog">
+
+                            <div style="padding-top: 128px;">
+                                <div class="line"></div>
+                            </div>
+
+                            <div class="container">
+                                <div class="col">
+                                    <div class="header__catalog-block sp-t-purple">
+                                        <div class="header__menu-bottom">
+
+                                            <div class="header__category-block">
+
+                                                <div class="header__category-item" data-id="1">
+                                                    <a href="/serial-production.html">
+                                                        <h4 class="font-h4">Серийная продукция</h4>
+                                                    </a>
+                                                    <!-- <h4 class="font-h4">Серийная продукция</h4> -->
+                                                    <!-- <ul class="header__subcategory-list">
+                                                        <li class="sp-t-yellow"></li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="1">Стремянки</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="2">Лестницы</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="4">Трансформеры</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="5">Вышки-туры</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="5">Помосты, малярные столы</li>
+                                                    </ul> -->
+                                                </div>
+
+                                                <div class="header__category-item" data-id="2">
+                                                    <a href="#">
+                                                        <h4 class="font-h4">Продукция по направлениям</h4>
+                                                    </a>
+                                                    <!-- <ul class="header__subcategory-list">
+                                                        <li class="sp-t-yellow"></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Ж/д транспорт</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Авиатранспорт</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Автотранспорт</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Нефтегазовая отрасль</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Строительное оборудование</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Склады</a></li>
+                                                    </ul> -->
+                                                </div>
+
+                                                <div class="header__category-item">
+                                                    <a href="#">
+                                                        <h4 class="font-h4">Специальные решения</h4>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="header__main-menu-block">
+
+                                                <div class="header__main-menu-item" data-id="1">
+                                                    <a class="font-s color--secondary" href="#">Стремянки</a>
+                                                    <a class="font-s color--secondary" href="/catalog.html">Лестницы</a>
+                                                    <a class="font-s color--secondary" href="#">Трансформеры</a>
+                                                    <a class="font-s color--secondary" href="#">Вышки-туры</a>
+                                                    <a class="font-s color--secondary" href="#">Помосты, малярные
+                                                        столы</a>
+                                                </div>
+
+                                                <div class="header__main-menu-item" data-id="2">
+                                                    <a class="font-s color--secondary" href="#">Ж/д транспорт</a>
+                                                    <a class="font-s color--secondary" href="#">Авиатранспорт</a>
+                                                    <a class="font-s color--secondary" href="#">Автотранспорт</a>
+                                                    <a class="font-s color--secondary" href="#">Нефтегазовая отрасль</a>
+                                                    <a class="font-s color--secondary" href="#">Строительное
+                                                        оборудование</a>
+                                                    <a class="font-s color--secondary" href="#">Склады</a>
+                                                </div>
+
+                                                <!-- <div class="header__main-menu-item" data-id="3">
+                                                    <a class="font-s color--secondary" href="">Бытовые</a>
+                                                    <a class="font-s color--secondary" href="">Профессиональные</a>
+                                                    <a class="font-s color--secondary" href="">Индустриальные</a>
+                                                </div>
+    
+                                                <div class="header__main-menu-item" data-id="4">
+                                                    <a class="font-s color--secondary" href="">Бытовые</a>
+                                                    <a class="font-s color--secondary" href="">Профессиональные</a>
+                                                    <a class="font-s color--secondary" href="">Индустриальные</a>
+                                                </div>
+    
+                                                <div class="header__main-menu-item" data-id="5">
+                                                    <a class="font-s color--secondary" href="">Бытовые</a>
+                                                    <a class="font-s color--secondary" href="">Профессиональные</a>
+                                                    <a class="font-s color--secondary" href="">Индустриальные</a>
+                                                </div>
+    
+                                                <div class="header__main-menu-item" data-id="6">
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                </div>
+    
+                                                <div class="header__main-menu-item" data-id="7">
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                </div>
+    
+                                                <div class="header__main-menu-item" data-id="8">
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                    <a class="font-s color--secondary" href="">Неизвестно</a>
+                                                </div> -->
+
+                                            </div>
+
+                                        </div>
+                                        <div class="header__catalog-promo">
+                                            <div class="header__image">
+                                                <img src="/assets/image/header_catalog_promo.jpg" alt="">
+                                            </div>
+                                            <div class="button-block">
+                                                <a href="/">
+                                                    <div class="button-block__white-large">
+                                                        <p class="font-t1">Подробнее</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="line"></div>
+                            </div>
+
+                            <div class="header__catalog-bottom">
+                                <div class="header__image">
+                                    <img src="/assets/image/header_catalog_bottom.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-mobile color-block--primary">
+                    <div class="header-mobile__wrapper">
+
+                        <div class="container">
+                            <div class="col">
+                                <div class="header-mobile__top sp-v-blue">
+                                    <div class="header-mobile__image">
+                                        <a href="/">
+                                            <img src="/assets/icon/header_logo_mobile.svg" width="145" height="40"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                    <div class="header-mobile__top-btn"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header-mobile__catalog">
+                            <div class="header-mobile__overflow">
+
+                                <div class="header-mobile__menu">
+                                    <div class="header-mobile__menu-ul">
+                                        <a href="#">
+                                            <p class="font-t1">О компании</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Клиентам</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Медиацентр</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Закупки</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Контакты</p>
+                                        </a>
+                                    </div>
+                                    <div class="header-mobile__contact">
+                                        <a class="font-t1" href="mailto:zapros@zavodnv.ru;">zapros@zavodnv.ru</a>
+                                        <a class="font-t1" href="tel:+78003337989;">8 800 333 7989</a>
+                                    </div>
+                                </div>
+
+                                <div class="header-mobile__menu-one">
+
+                                    <div class="header-mobile__link-icon sp-b-yellow" data-id="1">
+                                        <p class="font-h4">Специальные решения</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.54545 11.3333H16.1377L14.3416 9.13804C14.1286 8.87772 14.1286 8.45559 14.3416 8.19523C14.5546 7.93492 14.9 7.93492 15.113 8.19523L17.8402 11.5286C18.0533 11.7889 18.0533 12.211 17.8402 12.4714L15.113 15.8047C15.0064 15.9349 14.8669 16 14.7273 16C14.5877 16 14.4481 15.9349 14.3416 15.8047C14.1286 15.5444 14.1286 15.1223 14.3416 14.8619L16.1377 12.6667H6.54545C6.24422 12.6667 6 12.3682 6 12C6 11.6318 6.24422 11.3333 6.54545 11.3333Z"
+                                                fill="#303030" />
+                                        </svg>
+                                    </div>
+                                    <div class="line"></div>
+
+                                    <div class="header-mobile__link-icon sp-v-yellow" data-id="2">
+                                        <p class="font-h4">Продукция по направлениям</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.54545 11.3333H16.1377L14.3416 9.13804C14.1286 8.87772 14.1286 8.45559 14.3416 8.19523C14.5546 7.93492 14.9 7.93492 15.113 8.19523L17.8402 11.5286C18.0533 11.7889 18.0533 12.211 17.8402 12.4714L15.113 15.8047C15.0064 15.9349 14.8669 16 14.7273 16C14.5877 16 14.4481 15.9349 14.3416 15.8047C14.1286 15.5444 14.1286 15.1223 14.3416 14.8619L16.1377 12.6667H6.54545C6.24422 12.6667 6 12.3682 6 12C6 11.6318 6.24422 11.3333 6.54545 11.3333Z"
+                                                fill="#303030" />
+                                        </svg>
+                                    </div>
+                                    <div class="line"></div>
+
+                                    <a href="#" class="header-mobile__link-icon sp-v-yellow">
+                                        <p class="font-h4">Серийная продукция</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.54545 11.3333H16.1377L14.3416 9.13804C14.1286 8.87772 14.1286 8.45559 14.3416 8.19523C14.5546 7.93492 14.9 7.93492 15.113 8.19523L17.8402 11.5286C18.0533 11.7889 18.0533 12.211 17.8402 12.4714L15.113 15.8047C15.0064 15.9349 14.8669 16 14.7273 16C14.5877 16 14.4481 15.9349 14.3416 15.8047C14.1286 15.5444 14.1286 15.1223 14.3416 14.8619L16.1377 12.6667H6.54545C6.24422 12.6667 6 12.3682 6 12C6 11.6318 6.24422 11.3333 6.54545 11.3333Z"
+                                                fill="#303030" />
+                                        </svg>
+                                    </a>
+                                    <div class="line"></div>
+
+                                    <a href="#" class="header-mobile__image">
+                                        <img src="/assets/image/header_catalog_promo.jpg" alt="">
+                                    </a>
+
+                                    <div class="button-block">
+                                        <a href="#">
+                                            <div class="button-block__red-large">
+                                                <p class="font-t1 color--white">Задать вопрос</p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div class="header-mobile__menu-two">
+                                    <div class="header-mobile__menu-child" data-id="1">
+                                        <div class="sp-b-purple">
+                                            <svg class="header-mobile__menu-close" width="24" height="16"
+                                                viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M22.9091 9.33335L3.72461 9.33335L7.31683 13.7239C7.74286 14.2446 7.74286 15.0888 7.31683 15.6095C6.89086 16.1302 6.2001 16.1302 5.77406 15.6095L0.319528 8.94285C-0.106508 8.42223 -0.106507 7.57796 0.319528 7.05725L5.77407 0.390575C5.98716 0.13022 6.26628 -2.71907e-06 6.54548 -2.67025e-06C6.82468 -2.62143e-06 7.10388 0.13022 7.31683 0.390576C7.74286 0.911199 7.74286 1.75547 7.31683 2.27618L3.72461 6.66667L22.9091 6.66668C23.5116 6.66668 24 7.26366 24 8.00001C24 8.73637 23.5116 9.33335 22.9091 9.33335Z"
+                                                    fill="#303030" />
+                                            </svg>
+                                        </div>
+                                        <a class="font-s" href="#">Стремянки</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="/catalog.html">Лестницы</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Трансформеры</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Вышки-туры</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Помосты, малярные столы</a>
+                                    </div>
+                                    <div class="header-mobile__menu-child" data-id="2">
+                                        <div class="sp-b-purple">
+                                            <svg class="header-mobile__menu-close" width="24" height="16"
+                                                viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M22.9091 9.33335L3.72461 9.33335L7.31683 13.7239C7.74286 14.2446 7.74286 15.0888 7.31683 15.6095C6.89086 16.1302 6.2001 16.1302 5.77406 15.6095L0.319528 8.94285C-0.106508 8.42223 -0.106507 7.57796 0.319528 7.05725L5.77407 0.390575C5.98716 0.13022 6.26628 -2.71907e-06 6.54548 -2.67025e-06C6.82468 -2.62143e-06 7.10388 0.13022 7.31683 0.390576C7.74286 0.911199 7.74286 1.75547 7.31683 2.27618L3.72461 6.66667L22.9091 6.66668C23.5116 6.66668 24 7.26366 24 8.00001C24 8.73637 23.5116 9.33335 22.9091 9.33335Z"
+                                                    fill="#303030" />
+                                            </svg>
+                                        </div>
+                                        <a class="font-s" href="#">Ж/д транспорт</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Авиатранспорт</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Автотранспорт</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Нефтегазовая отрасль</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Строительное оборудование</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Склады</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <div class="header-padding"></div>
+        </div>
+
+        <div class="container">
+            <div class="col">
+                <h1 class="font-h1 sp-v-green text-align-center">Закупки</h1>
+            </div>
+        </div>
+
+        <div class="sp-t-mint">
+            <div class="line"></div>
+        </div>
+
+        <section class="purchase">
+            <div class="container">
+
+                <div class="purchase__search col sp-v-mint">
+                    <p class="font-h3 d-none-sm">Поиск</p>
+                    <div class="purchase__search-container">
+                        <input type="text" class="purchase__search-input font-t1" placeholder="Поиск">
+                        <div class="purchase__search-icon"></div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="purchase__title sp-t-blue sp-b-light-blue d-none-md">
+                        <p class="font-t1 color--secondary">Сырье, материалы и комплектующие</p>
+                        <p class="font-t1 color--secondary">Цена (в руб., с НДС)</p>
+                        <p class="font-t1 color--secondary">Предложение</p>
+                    </div>
+
+                    <div id="pagination" class="pagination">
+                        <div class="pagination-wrapper">
+    
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+    
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+    
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+    
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+
+                            <!-- item -->
+                            <div class="pagination-item">
+                                <div class="purchase__item-block sp-v-yellow">
+                                    <p class="font-t1 color--secondary sp-b-light-blue d-none">Сырье, материалы и комплектующие</p>
+                                    <div class="flex font-t1">518000 Маркировка кабеля KE2 (1,5...2,5мм2) "0", упак</div>
+                                    <p class="font-t1 color--secondary sp-t-burgundy sp-b-light-blue d-none">Цена (в руб., с НДС)</p>
+                                    <div class="flex font-t1">0,58</div>
+                                    <div class="flex button-block">
+                                        <a href="/">
+                                            <div class="button-block__small-list">
+                                                <p class="font-t1 color--white">Предложить цену</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line d-none-md"></div>
+                            </div>
+    
+                        </div>
+                        <div class="pagination-btn sp-t-purple" id="pagination-btn"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div id="videoPopup" class="video-popup" style="display: none;">
+            <div class="video-popup__overlay"></div>
+            <span id="closePopup" class="video-popup__close-button font-h4">x</span>
+            <div class="video-popup__content">
+                <iframe id="videoPlayer" width="" height="" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <footer class="footer sp-t-orange sp-b-purple">
+
+            <!-- Меню -->
+            <div class="container d-none-md">
+                <div class="col">
+                    <div class="footer__menu">
+                        <a class="font-t1" href="/about.html">О компании</a>
+                        <a class="font-t1" href="/catalog.html">Специальные решения</a>
+                        <a class="font-t1" href="/clients.html">Клиентам</a>
+                        <a class="font-t1" href="/media.html">Медиацентр</a>
+                        <a class="font-t1" href="/info.html">Инфоцентр</a>
+                        <a class="font-t1" href="/projects.html">Выполненные проекты</a>
+                        <a class="font-t1" href="/purhases.html">Закупки</a>
+                        <a class="font-t1" href="/contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Линия -->
+            <div class="sp-t-burgundy sp-b-mint d-none-md">
+                <div class="line"></div>
+            </div>
+
+            <!-- Основная информайция -->
+            <div class="container">
+                <div class="footer__main">
+
+                    <div class="col-4 col-md-6 col-sm-3">
+                        <div class="footer__ul">
+                            <a href="/catalog.html#directions">
+                                <h4 class="font-h4 sp-b-mint">Продукция по направлениям</h4>
+                            </a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Ж/д
+                                транспорт</a>
+                            <a class="font-s color--secondary sp-b-blue"
+                                href="/catalog.html#directions">Авиатранспорт</a>
+                            <a class="font-s color--secondary sp-b-blue"
+                                href="/catalog.html#directions">Автотранспорт</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Нефтегазовая
+                                отрасль</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Строительное
+                                оборудование</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#directions">Склады</a>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-md-6 col-sm-3">
+                        <div class="footer__ul">
+                            <a href="/catalog.html#serial">
+                                <h4 class="font-h4 sp-b-mint">Серийная продукция</h4>
+                            </a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Стремянки</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Лестницы</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Трансформеры</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Вышки-туры</a>
+                            <a class="font-s color--secondary sp-b-blue" href="/catalog.html#serial">Помосты, малярные
+                                столы</a>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-md-6 col-sm-3">
+                        <a class="font-h4" href="tel:+78003337989">8 (800) 333−79–89</a>
+                        <p class="font-s sp-v-burgundy">188301, Ленинградская область, Гатчинский район, промышленная
+                            зона Корпиково, дом 2, помещение 108.</p>
+                        <div class="button-block">
+                            <a href="#form">
+                                <div class="button-block__red-large">
+                                    <p class="font-t1 color--white">Заказать звонок</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="footer__social sp-t-burgundy">
+                            <a href="https://zen.yandex.ru/id/60b890f6164d471f382fbbb4" target="_blank">
+                                <div class="footer__icon">
+                                    <img src="/assets/icon/icon_yandex_dzen.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCQADYyEXOntL2FnQH9lt_3g/" target="_blank">
+                                <div class="footer__icon">
+                                    <img src="/assets/icon/icon_youtube.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="https://vk.com/zavodnv" target="_blank">
+                                <div class="footer__icon">
+                                    <img src="/assets/icon/icon_vk.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="#" target="_blank">
+                                <div class="footer__icon">
+                                    <img src="/assets/icon/icon_premiere_rush.svg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Линия -->
+            <div class="sp-t-green sp-b-burgundy">
+                <div class="line"></div>
+            </div>
+
+            <div class="container">
+                <div class="col">
+                    <div class="footer__bottom">
+                        <a class="font-t2 color--secondary" href="#">Политика конфиденциальности</a>
+                        <a class="font-t2 color--secondary" href="https://svsv.agency/" target="_blank">Разработка сайта
+                            Sivachёv & Sivachёv</a>
+                        <p class="font-t2 color--secondary">© 2024 Завод «Новая Высота»</p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script src="/script/script.js"></script>
+</body>
+
+</html>

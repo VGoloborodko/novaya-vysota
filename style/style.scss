@@ -2796,10 +2796,12 @@
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1; /* изменение значения z-index */
-        pointer-events: none; /* эта строка позволит событиям проникать сквозь оверлей */
+        z-index: 1;
+        /* изменение значения z-index */
+        pointer-events: none;
+        /* эта строка позволит событиям проникать сквозь оверлей */
     }
-    
+
 
     .video-popup__content {
         position: relative;
@@ -2863,7 +2865,10 @@
         height: 20px;
     }
 
-    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
         bottom: var(--swiper-pagination-bottom, 0px);
     }
 
@@ -2875,6 +2880,158 @@
     .swiper-pagination-bullet-active {
         background-color: #828282;
         border: unset;
+    }
+}
+
+.contact-block {
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__map {
+        height: 100%;
+    }
+
+    &__form {
+        padding: 64px;
+
+        @include bp(md) {
+            padding: 32px 16px;
+        }
+    }
+}
+
+.purchase {
+
+    &__search {
+        display: flex;
+        align-items: center;
+        gap: 42px;
+    }
+
+    &__title {
+        display: flex;
+    }
+
+    &__title p {
+        flex: 1;
+
+        @include bp(lg) {
+            &:nth-child(2) {
+                flex: 0.5;
+            }
+        }
+
+        &:last-child {
+            text-align: end;
+            flex: unset;
+            width: 200px;
+        }
+    }
+
+    &__item-block {
+        display: flex;
+        align-items: center;
+
+        @include bp(md) {
+            flex-direction: column;
+            align-items: unset;
+            padding: 16px;
+            background: rgb(150, 150, 150, .2);
+        }
+    }
+
+    &__item-block .flex {
+        flex: 1;
+
+        @include bp(lg) {
+            &:nth-child(4) {
+                flex: 0.5;
+            }
+        }
+
+        &:last-child {
+            flex: unset;
+            width: 200px;
+
+            @include bp(sm) {
+                width: 100%;
+            }
+        }
+    }
+
+    .button-block {
+        display: flex;
+        justify-content: flex-end;
+
+        @include bp(md) {
+            justify-content: unset;
+            padding-top: 32px;
+        }
+
+        @include bp(sm) {
+            width: 100%;
+        }
+    }
+
+    .button-block a {
+        display: block;
+        width: fit-content;
+
+        @include bp(sm) {
+            width: 100%;
+        }
+    }
+
+    .button-block__small-list {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .purchase__search-container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .purchase__search-input {
+        padding: 12px 24px;
+        outline: none;
+        width: 100%;
+        background: unset;
+        border-bottom: 1px solid #333333;
+    }
+
+    .purchase__search-icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background: url('/assets/icon/header_search_icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .pagination-wrapper {
+        
+        @include bp(md) {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    .d-none {
+        @include bp(md) {
+            display: block;
+        }
     }
 }
 
@@ -3034,4 +3191,35 @@
 .no-scroll {
     overflow: hidden;
     height: 100%;
+}
+
+.pagination {
+
+    .pagination-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .pagination-btn button {
+        // width: 32px;
+        // height: 32px;
+        color: #4F4F4F;
+        background-color: unset;
+        cursor: pointer;
+
+        font-family: TT Neoris Trial;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    .pagination-btn button.active {
+        padding: 4px 13px;
+        border-radius: 50%;
+        background-color: #4F4F4F;
+        color: #fff;
+    }
 }
