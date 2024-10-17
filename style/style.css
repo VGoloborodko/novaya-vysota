@@ -4471,6 +4471,23 @@ html {
   }
 }
 
+.policy table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.policy th, .policy td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+.policy th {
+  background-color: #f2f2f2;
+}
+.policy ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
 .footer__menu {
   width: 100%;
   max-width: 1260px;
