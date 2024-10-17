@@ -4541,6 +4541,17 @@ html {
   text-align: right;
   cursor: pointer;
 }
+.form-popup__img-btn {
+  padding: 16px;
+  background: rgba(150, 150, 150, 0.2);
+  cursor: pointer;
+}
+.form-popup__img-btn img {
+  width: -moz-fit-content;
+  width: fit-content;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .form-popup::-webkit-scrollbar {
   width: 10px;
   /* Ширина полосы прокрутки */
@@ -4553,6 +4564,11 @@ html {
   background: #888;
   border-radius: 8px;
   /* Цвет самой полосы прокрутки */
+}
+@media (max-width: 767px) {
+  .form-popup .button-block__black-large {
+    padding: 12px 0;
+  }
 }
 
 .chips .swiper-wrapper {

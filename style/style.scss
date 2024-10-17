@@ -3113,6 +3113,17 @@
         cursor: pointer;
     }
 
+    &__img-btn {
+        padding: 16px;
+        background: rgb(150, 150, 150, 0.2);
+        cursor: pointer;
+
+        img {
+            width: fit-content;
+            object-fit: contain;
+        }
+    }
+
     /* Цвет фона полосы прокрутки */
     &::-webkit-scrollbar {
         width: 10px;
@@ -3129,6 +3140,13 @@
         background: #888;
         border-radius: 8px;
         /* Цвет самой полосы прокрутки */
+    }
+
+    .button-block__black-large {
+
+        @include bp(sm) {
+            padding: 12px 0;
+        }
     }
 }
 

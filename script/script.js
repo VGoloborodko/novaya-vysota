@@ -969,25 +969,25 @@ if (document.querySelector(".form-popup")) {
 }
 
 //------- Загрузка документа в форме
-// if (document.querySelector(".write")) {
-//     document.querySelector('.form__file').addEventListener('mousedown', function () {
-//         let fileInput = document.createElement('input');
-//         fileInput.type = 'file';
-//         fileInput.style.display = 'none';
+if (document.querySelector(".form__file")) {
+    document.querySelector('.form__file').addEventListener('mousedown', function () {
+        let fileInput = document.createElement('input');
+        fileInput.type = 'file';
+        fileInput.style.display = 'none';
 
-//         fileInput.addEventListener('change', function () {
-//             let selectedFile = fileInput.files[0];
-//             if (selectedFile) {
-//                 // Можно добавить здесь дополнительные действия с загруженным файлом
-//                 console.log('Файл загружен:', selectedFile.name);
-//             }
-//             document.body.removeChild(fileInput);
-//         });
+        fileInput.addEventListener('change', function () {
+            let selectedFile = fileInput.files[0];
+            if (selectedFile) {
+                // Можно добавить здесь дополнительные действия с загруженным файлом
+                console.log('Файл загружен:', selectedFile.name);
+            }
+            document.body.removeChild(fileInput);
+        });
 
-//         document.body.appendChild(fileInput);
-//         fileInput.click();
-//     });
-// }
+        document.body.appendChild(fileInput);
+        fileInput.click();
+    });
+}
 
 // Плавный скрол на странице
 SmoothScroll({
@@ -1217,437 +1217,123 @@ if (document.querySelector(".mySwiper-reviews-page")) {
     }
 }
 
+//---------------- Файл purchase.html
+//------- Пагинация
+if (document.querySelector(".pagination")) {
+    function pagination() {
+        const itemsPerPage = 6;
+        const items = document.querySelectorAll('.pagination-wrapper .pagination-item');
+        const pagination = document.getElementById('pagination-btn');
+        const purchaseWrapper = document.querySelector('.pagination-wrapper');
+        let currentPage = 1;
 
+        function displayItems(items, page) {
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            items.forEach((item, index) => {
+                item.style.display = (index >= start && index < end) ? 'block' : 'none';
+            });
+        }
 
+        function setupPagination(items, container, itemsPerPage, wrapper) {
+            const totalItems = items.length;
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-// const itemsPerPage = 6;
-// const items = document.querySelectorAll('.pagination-wrapper .pagination-item');
-// const pagination = document.getElementById('pagination-btn');
-// const purchaseWrapper = document.querySelector('.pagination-wrapper');
-// let currentPage = 1;
+            function createPageButton(page) {
+                const btn = document.createElement('button');
+                btn.innerText = page;
+                btn.setAttribute('aria-label', `Перейти на страницу ${page}`);
+                btn.addEventListener('click', () => {
+                    currentPage = page;
+                    updatePagination();
+                    scrollToPage();
+                });
+                return btn;
+            }
 
-// function displayItems(items, page) {
-//     const start = (page - 1) * itemsPerPage;
-//     const end = start + itemsPerPage;
+            function createEllipsis() {
+                const ellipsis = document.createElement('span');
+                ellipsis.innerText = '...';
+                return ellipsis;
+            }
 
-//     items.forEach((item, index) => {
-//         if (index >= start && index < end) {
-//             item.style.display = 'block';
-//         } else {
-//             item.style.display = 'none';
-//         }
-//     });
-// }
+            function updatePagination() {
+                container.innerHTML = '';
 
-// function setupPagination(items, container, itemsPerPage, wrapper) {
-//     const pageCount = Math.ceil(items.length / itemsPerPage);
+                // const prevBtn = document.createElement('button');
+                // prevBtn.innerText = 'Назад 👈';
+                // prevBtn.addEventListener('click', () => {
+                //     if (currentPage > 1) {
+                //         currentPage--;
+                //         updatePagination();
+                //         scrollToPage();
+                //     }
+                // });
+                // container.appendChild(prevBtn);
 
-//     for (let i = 1; i <= pageCount; i++) {
-//         const btn = document.createElement('button');
-//         if (i <= 6 || i === pageCount) {
-//             btn.innerText = i;
-//         } else if (i === 7) {
-//             const ellipsisSpan = document.createElement('span');
-//             ellipsisSpan.innerText = '...';
-//             btn.appendChild(ellipsisSpan);
-//         } else {
-//             continue;
-//         }
+                const visiblePages = 5;
+                const startPage = Math.max(1, currentPage - Math.floor(visiblePages / 2));
+                const endPage = Math.min(totalPages, startPage + visiblePages - 1);
 
-//         btn.addEventListener('click', () => {
-//             currentPage = i;
-//             displayItems(items, i);
-//             updateActiveButton(i);
-//             const paginationWrapperPosition = purchaseWrapper.getBoundingClientRect().top;
-//             const windowHeight = window.innerHeight;
-//             window.scrollTo({
-//                 top: paginationWrapperPosition - (windowHeight * 0.1),
-//                 behavior: 'smooth'
-//             });
-//         });
-//         container.appendChild(btn);
-//     }
+                if (startPage > 1) {
+                    container.appendChild(createPageButton(1));
+                    if (startPage > 2) {
+                        container.appendChild(createEllipsis());
+                    }
+                }
 
-//     const nextBtn = document.createElement('button');
-//     nextBtn.innerText = 'Дальше 👉';
-//     nextBtn.addEventListener('click', () => {
-//         if (currentPage < pageCount) {
-//             currentPage++;
-//             displayItems(items, currentPage);
-//             updateActiveButton(currentPage);
-//             const paginationWrapperPosition = purchaseWrapper.getBoundingClientRect().top;
-//             const windowHeight = window.innerHeight;
-//             window.scrollTo({
-//                 top: paginationWrapperPosition - (windowHeight * 0.1),
-//                 behavior: 'smooth'
-//             });
-//         }
-//     });
-//     container.appendChild(nextBtn);
+                for (let i = startPage; i <= endPage; i++) {
+                    container.appendChild(createPageButton(i));
+                }
 
-//     function updateActiveButton(activePage) {
-//         document.querySelectorAll('.pagination-btn button').forEach(button => {
-//             button.classList.remove('active');
-//         });
-//         container.children[activePage - 1].classList.add('active');
-//     }
+                if (endPage < totalPages) {
+                    if (endPage < totalPages - 1) {
+                        container.appendChild(createEllipsis());
+                    }
+                    container.appendChild(createPageButton(totalPages));
+                }
 
-//     updateActiveButton(1);
-//     displayItems(items, currentPage);
-// }
+                const nextBtn = document.createElement('button');
+                nextBtn.innerText = 'Дальше';
+                nextBtn.addEventListener('click', () => {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        updatePagination();
+                        scrollToPage();
+                    }
+                });
+                container.appendChild(nextBtn);
 
-// setupPagination(items, pagination, itemsPerPage, purchaseWrapper);
+                updateActiveButton(currentPage);
+                displayItems(items, currentPage);
+            }
 
-// ========================================================================================================================
+            function updateActiveButton(activePage) {
+                container.querySelectorAll('button').forEach(button => {
+                    button.classList.toggle('active', parseInt(button.innerText) === activePage);
+                });
+            }
 
-// const itemsPerPage = 6;
-// const items = document.querySelectorAll('.pagination-wrapper .pagination-item');
-// const pagination = document.getElementById('pagination-btn');
-// const purchaseWrapper = document.querySelector('.pagination-wrapper');
-// let currentPage = 1;
+            function scrollToPage() {
+                if (wrapper) {
+                    const topOffset = wrapper.getBoundingClientRect().top + window.pageYOffset - 200;
+                    window.scrollTo({
+                        top: Math.max(0, topOffset),
+                        behavior: 'smooth'
+                    });
+                }
+            }
 
-// function displayItems(items, page) {
-//     const start = (page - 1) * itemsPerPage;
-//     const end = start + itemsPerPage;
-//     items.forEach((item, index) => {
-//         item.style.display = (index >= start && index < end) ? 'block' : 'none';
-//     });
-// }
-
-// function setupPagination(items, container, itemsPerPage, wrapper) {
-//     const totalItems = items.length;
-//     const totalPages = Math.ceil(totalItems / itemsPerPage);
-
-//     //Helper function to create page button, improved for accessibility
-//     function createPageButton(page) {
-//         const btn = document.createElement('button');
-//         btn.innerText = page;
-//         btn.setAttribute('aria-label', `Перейти на страницу ${page}`);
-//         btn.addEventListener('click', () => {
-//             currentPage = page;
-//             updatePagination();
-//             scrollToPage();
-//         });
-//         return btn;
-//     }
-
-//     function createEllipsis() {
-//         const ellipsis = document.createElement('span');
-//         ellipsis.innerText = '...';
-//         return ellipsis;
-//     }
-
-//     function updatePagination() {
-//         container.innerHTML = ''; // Clear existing pagination
-
-//         const prevBtn = document.createElement('button');
-//         prevBtn.innerText = 'Назад 👈';
-//         prevBtn.addEventListener('click', () => {
-//             if (currentPage > 1) {
-//                 currentPage--;
-//                 updatePagination();
-//                 scrollToPage();
-//             }
-//         });
-//         container.appendChild(prevBtn);
-
-//         const visiblePages = 5;
-//         const startPage = Math.max(1, currentPage - Math.floor(visiblePages / 2));
-//         const endPage = Math.min(totalPages, startPage + visiblePages - 1);
-
-//         if (startPage > 1) {
-//             container.appendChild(createPageButton(1));
-//             if (startPage > 2) {
-//                 container.appendChild(createEllipsis());
-//             }
-//         }
-
-//         for (let i = startPage; i <= endPage; i++) {
-//             container.appendChild(createPageButton(i));
-//         }
-
-//         if (endPage < totalPages) {
-//             if (endPage < totalPages - 1) {
-//                 container.appendChild(createEllipsis());
-//             }
-//             container.appendChild(createPageButton(totalPages));
-//         }
-
-//         const nextBtn = document.createElement('button');
-//         nextBtn.innerText = 'Дальше 👉';
-//         nextBtn.addEventListener('click', () => {
-//             if (currentPage < totalPages) {
-//                 currentPage++;
-//                 updatePagination();
-//                 scrollToPage();
-//             }
-//         });
-//         container.appendChild(nextBtn);
-
-//         updateActiveButton(currentPage);
-//         displayItems(items, currentPage);
-//     }
-
-//     function updateActiveButton(activePage) {
-//         container.querySelectorAll('button').forEach(button => {
-//             button.classList.toggle('active', parseInt(button.innerText) === activePage);
-//         });
-//     }
-
-//     function scrollToPage() {
-//         const paginationWrapperRect = wrapper.getBoundingClientRect();
-//         const windowHeight = window.innerHeight;
-//         const isOutOfView = paginationWrapperRect.bottom > windowHeight || paginationWrapperRect.top < 0;
-
-//         if (isOutOfView) {
-//             const scrollTop = paginationWrapperRect.top - (windowHeight * 0.1);
-//             window.scrollTo({
-//                 top: Math.max(0, scrollTop),
-//                 behavior: 'smooth'
-//             });
-//         }
-//     }
-
-//     updatePagination();
-//     window.addEventListener('scroll', scrollToPage);
-// }
-
-// setupPagination(items, pagination, itemsPerPage, purchaseWrapper);
-
-// ========================================================================================================================
-
-// const itemsPerPage = 6;
-// const items = document.querySelectorAll('.pagination-wrapper .pagination-item');
-// const pagination = document.getElementById('pagination-btn');
-// const purchaseWrapper = document.querySelector('.pagination-wrapper');
-// let currentPage = 1;
-
-// function displayItems(items, page) {
-//     const start = (page - 1) * itemsPerPage;
-//     const end = start + itemsPerPage;
-//     items.forEach((item, index) => {
-//         item.style.display = (index >= start && index < end) ? 'block' : 'none';
-//     });
-// }
-
-// function setupPagination(items, container, itemsPerPage, wrapper) {
-//     const totalItems = items.length;
-//     const totalPages = Math.ceil(totalItems / itemsPerPage);
-
-//     //Helper function to create page button, improved for accessibility
-//     function createPageButton(page) {
-//         const btn = document.createElement('button');
-//         btn.innerText = page;
-//         btn.setAttribute('aria-label', `Перейти на страницу ${page}`);
-//         btn.addEventListener('click', () => {
-//             currentPage = page;
-//             updatePagination();
-//             scrollToPage();
-//         });
-//         return btn;
-//     }
-
-//     function createEllipsis() {
-//         const ellipsis = document.createElement('span');
-//         ellipsis.innerText = '...';
-//         return ellipsis;
-//     }
-
-//     function updatePagination() {
-//         container.innerHTML = ''; // Clear existing pagination
-
-//         const prevBtn = document.createElement('button');
-//         prevBtn.innerText = 'Назад 👈';
-//         prevBtn.addEventListener('click', () => {
-//             if (currentPage > 1) {
-//                 currentPage--;
-//                 updatePagination();
-//                 scrollToPage();
-//             }
-//         });
-//         container.appendChild(prevBtn);
-
-//         const visiblePages = 5;
-//         const startPage = Math.max(1, currentPage - Math.floor(visiblePages / 2));
-//         const endPage = Math.min(totalPages, startPage + visiblePages - 1);
-
-//         if (startPage > 1) {
-//             container.appendChild(createPageButton(1));
-//             if (startPage > 2) {
-//                 container.appendChild(createEllipsis());
-//             }
-//         }
-
-//         for (let i = startPage; i <= endPage; i++) {
-//             container.appendChild(createPageButton(i));
-//         }
-
-//         if (endPage < totalPages) {
-//             if (endPage < totalPages - 1) {
-//                 container.appendChild(createEllipsis());
-//             }
-//             container.appendChild(createPageButton(totalPages));
-//         }
-
-//         const nextBtn = document.createElement('button');
-//         nextBtn.innerText = 'Дальше 👉';
-//         nextBtn.addEventListener('click', () => {
-//             if (currentPage < totalPages) {
-//                 currentPage++;
-//                 updatePagination();
-//                 scrollToPage();
-//             }
-//         });
-//         container.appendChild(nextBtn);
-
-//         updateActiveButton(currentPage);
-//         displayItems(items, currentPage);
-//     }
-
-//     function updateActiveButton(activePage) {
-//         container.querySelectorAll('button').forEach(button => {
-//             button.classList.toggle('active', parseInt(button.innerText) === activePage);
-//         });
-//     }
-
-//     function scrollToPage() {
-//         const paginationWrapperRect = wrapper.getBoundingClientRect();
-//         const windowHeight = window.innerHeight;
-//         const isOutOfView = paginationWrapperRect.bottom > windowHeight || paginationWrapperRect.top < 0;
-
-//         if (isOutOfView) {
-//             const scrollTop = paginationWrapperRect.top - (windowHeight / 5);
-//             window.scrollTo({
-//                 top: Math.max(0, scrollTop),
-//                 behavior: 'smooth'
-//             });
-//         }
-//     }
-
-//     updatePagination();
-//     window.addEventListener('scroll', scrollToPage); // This line remains for smooth scrolling on page load or resize
-// }
-
-// setupPagination(items, pagination, itemsPerPage, purchaseWrapper);
-
-// ========================================================================================================================
-
-const itemsPerPage = 6;
-const items = document.querySelectorAll('.pagination-wrapper .pagination-item');
-const pagination = document.getElementById('pagination-btn');
-const purchaseWrapper = document.querySelector('.pagination-wrapper');
-let currentPage = 1;
-
-function displayItems(items, page) {
-    const start = (page - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-    items.forEach((item, index) => {
-        item.style.display = (index >= start && index < end) ? 'block' : 'none';
-    });
-}
-
-function setupPagination(items, container, itemsPerPage, wrapper) {
-    // Helper function to create page button, improved for accessibility
-    function createPageButton(page) {
-        const btn = document.createElement('button');
-        btn.innerText = page;
-        btn.setAttribute('aria-label', `Перейти на страницу ${page}`);
-        btn.addEventListener('click', () => {
-            currentPage = page;
             updatePagination();
-            scrollToPage();
-        });
-        return btn;
+        }
+
+        setupPagination(items, pagination, itemsPerPage, purchaseWrapper);
     }
 
-    function createEllipsis() {
-        const ellipsis = document.createElement('span');
-        ellipsis.innerText = '...';
-        return ellipsis;
+    try {
+        pagination()
+    } catch (error) {
+        console.error(error);
+
     }
-
-    function updatePagination() {
-        window.requestAnimationFrame(() => {
-            container.innerHTML = ''; // Clear existing pagination
-
-            const prevBtn = document.createElement('button');
-            prevBtn.innerText = 'Назад 👈';
-            prevBtn.addEventListener('click', () => {
-                if (currentPage > 1) {
-                    currentPage--;
-                    updatePagination();
-                    scrollToPage();
-                }
-            });
-            container.appendChild(prevBtn);
-
-            const visiblePages = 5;
-            const startPage = Math.max(1, currentPage - Math.floor(visiblePages / 2));
-            const endPage = Math.min(Math.ceil(items.length / itemsPerPage), startPage + visiblePages - 1);
-
-            if (startPage > 1) {
-                container.appendChild(createPageButton(1));
-                if (startPage > 2) {
-                    container.appendChild(createEllipsis());
-                }
-            }
-
-            for (let i = startPage; i <= endPage; i++) {
-                container.appendChild(createPageButton(i));
-            }
-
-            if (endPage < Math.ceil(items.length / itemsPerPage)) {
-                if (endPage < Math.ceil(items.length / itemsPerPage) - 1) {
-                    container.appendChild(createEllipsis());
-                }
-                container.appendChild(createPageButton(Math.ceil(items.length / itemsPerPage)));
-            }
-
-            const nextBtn = document.createElement('button');
-            nextBtn.innerText = 'Дальше 👉';
-            nextBtn.addEventListener('click', () => {
-                if (currentPage < Math.ceil(items.length / itemsPerPage)) {
-                    currentPage++;
-                    updatePagination();
-                    scrollToPage();
-                }
-            });
-            container.appendChild(nextBtn);
-
-            updateActiveButton(currentPage);
-            displayItems(items, currentPage);
-        });
-    }
-
-    function updateActiveButton(activePage) {
-        container.querySelectorAll('button').forEach(button => {
-            button.classList.toggle('active', parseInt(button.innerText) === activePage);
-        });
-    }
-
-    // let scrolling = false;
-    // function scrollToPage() {
-    //     if (!scrolling) {
-    //         scrolling = true;
-    //         window.requestAnimationFrame(() => {
-    //             const paginationWrapperRect = wrapper.getBoundingClientRect();
-    //             const windowHeight = window.innerHeight;
-    //             const isOutOfView = paginationWrapperRect.bottom > windowHeight || paginationWrapperRect.top < 0;
-
-    //             if (isOutOfView) {
-    //                 const scrollTop = paginationWrapperRect.top - (windowHeight / 5);
-    //                 window.scrollTo({
-    //                     top: Math.max(0, scrollTop),
-    //                     behavior: 'smooth'
-    //                 });
-    //             }
-    //             scrolling = false;
-    //         });
-    //     }
-    // }
-
-    updatePagination();
-    // window.addEventListener('scroll', scrollToPage);
 }
-
-setupPagination(items, pagination, itemsPerPage, purchaseWrapper);
