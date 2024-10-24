@@ -4353,6 +4353,14 @@ html {
   position: relative;
   height: 100%;
 }
+.contact-block__add-info {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-block__mail {
+  display: flex;
+  align-items: center;
+}
 .contact-block .map {
   height: 100%;
 }
@@ -4394,6 +4402,12 @@ html {
 }
 .contact-block .form {
   padding: 0;
+}
+.contact-block .form ::-moz-placeholder {
+  color: #fff; /* Цвет подсказки */
+}
+.contact-block .form ::placeholder {
+  color: #fff; /* Цвет подсказки */
 }
 .contact-block .form__group input {
   border-bottom: 1px solid #fff;
@@ -4445,7 +4459,8 @@ html {
   gap: 8px;
 }
 .travel__circle {
-  width: 16px;
+  width: 100%;
+  max-width: 16px;
   height: 16px;
   border-radius: 50%;
   background: rgba(150, 150, 150, 0.2);

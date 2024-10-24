@@ -2907,6 +2907,16 @@
         height: 100%;
     }
 
+    &__add-info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__mail {
+        display: flex;
+        align-items: center;
+    }
+
     .map {
         height: 100%;
 
@@ -2955,6 +2965,10 @@
 
     .form {
         padding: 0;
+
+        ::placeholder {
+            color: #fff; /* Цвет подсказки */
+          }
     }
 
     .form__group input {
@@ -3017,7 +3031,8 @@
     }
 
     &__circle {
-        width: 16px;
+        width: 100%;
+        max-width: 16px;
         height: 16px;
         border-radius: 50%;
         background: #96969633;

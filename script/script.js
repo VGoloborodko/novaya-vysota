@@ -1386,7 +1386,7 @@ if (document.getElementById('map')) {
             // Стандартный набор кнопок
             .add('mapTools', { left: 5, top: 5 });
 
-        const marker = new ymaps.Placemark([59.562470, 30.055447], null, {
+        const marker = new ymaps.Placemark([lat, lng], null, {
             iconLayout: 'default#image',
             iconImageHref: "/assets/icon/map.svg",
             iconImageSize: [40, 40],
