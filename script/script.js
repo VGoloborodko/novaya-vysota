@@ -1337,3 +1337,61 @@ if (document.querySelector(".pagination")) {
 
     }
 }
+
+if (document.getElementById('map')) {
+    const map = document.getElementById('map').dataset.id;
+    let lat;
+    let lng;
+
+    switch (map) {
+        case 'default':
+            lat = 59.562470;
+            lng = 30.055447;
+            break;
+        case 'spb':
+            lat = 59.932680;
+            lng = 30.225066;
+            break;
+        case 'samara':
+            lat = 53.258760;
+            lng = 50.368969;
+            break;
+        case 'rostov':
+            lat = 47.272996;
+            lng = 39.681155;
+            break;
+        case 'ekat':
+            lat = 56.902634;
+            lng = 60.773966;
+            break;
+        default:
+            console.log('...');
+    }
+
+    ymaps.ready(initMap);
+    function initMap() {
+
+        var myMap = new ymaps.Map("map", {
+            center: [lat, lng],
+            zoom: 16,
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+
+        myMap.controls
+            // Кнопка изменения масштаба.
+            .add('zoomControl', { left: 5, top: 200 })
+            // Список типов карты
+            .add('typeSelector')
+            // Стандартный набор кнопок
+            .add('mapTools', { left: 5, top: 5 });
+
+        const marker = new ymaps.Placemark([59.562470, 30.055447], null, {
+            iconLayout: 'default#image',
+            iconImageHref: "/assets/icon/map.svg",
+            iconImageSize: [40, 40],
+            // iconImageOffset: [-15, -44]
+        })
+        myMap.geoObjects.add(marker);
+    }
+}

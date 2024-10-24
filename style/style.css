@@ -4337,12 +4337,52 @@ html {
   border: unset;
 }
 
+.contact-block .container {
+  padding: 0;
+}
+.contact-block .col-6,
+.contact-block .col-md-6,
+.contact-block .col-sm-3 {
+  padding: 0;
+}
 .contact-block__wrapper {
   display: flex;
   flex-wrap: wrap;
 }
 .contact-block__map {
+  position: relative;
   height: 100%;
+}
+.contact-block .map {
+  height: 100%;
+}
+@media (max-width: 1024px) {
+  .contact-block .map {
+    height: 450px !important;
+  }
+}
+.contact-block .ymaps-b-form-button {
+  display: none;
+}
+.contact-block .swiper-wrapper {
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+@media (max-width: 1024px) {
+  .contact-block .swiper-wrapper {
+    flex-wrap: unset;
+  }
+}
+.contact-block .chips {
+  position: absolute;
+  top: 40px;
+  left: 50px;
+}
+@media (max-width: 1024px) {
+  .contact-block .chips {
+    position: unset;
+    padding-bottom: 16px;
+  }
 }
 .contact-block__form {
   padding: 64px;
@@ -4350,6 +4390,72 @@ html {
 @media (max-width: 1024px) {
   .contact-block__form {
     padding: 32px 16px;
+  }
+}
+.contact-block .form {
+  padding: 0;
+}
+.contact-block .form__group input {
+  border-bottom: 1px solid #fff;
+}
+.contact-block .form__group textarea {
+  border-bottom: 1px solid #fff;
+}
+
+.contact-sales__block {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.contact-sales__item {
+  display: flex;
+  gap: 24px;
+  padding: 32px 24px;
+}
+.contact-sales__item img {
+  width: unset;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 767px) {
+  .contact-sales__item img {
+    width: 48px;
+    height: 48px;
+  }
+}
+.contact-sales__mail {
+  display: flex;
+}
+
+.travel__block {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  row-gap: 24px;
+}
+.travel__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 450px;
+}
+.travel__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.travel__circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(150, 150, 150, 0.2);
+}
+.travel .map-two {
+  height: 600px;
+}
+@media (max-width: 1024px) {
+  .travel .map-two {
+    height: 560px;
   }
 }
 
@@ -4475,7 +4581,8 @@ html {
   border-collapse: collapse;
   width: 100%;
 }
-.policy th, .policy td {
+.policy th,
+.policy td {
   border: 1px solid black;
   padding: 8px;
   text-align: left;

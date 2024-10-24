@@ -2885,13 +2885,64 @@
 
 .contact-block {
 
+    .container {
+        padding: 0;
+    }
+
+    .col-6,
+    .col-md-6,
+    .col-sm-3 {
+        padding: 0;
+    }
+
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
+        // column-gap: 10px;
     }
 
     &__map {
+        // overflow: hidden;
+        position: relative;
         height: 100%;
+    }
+
+    .map {
+        height: 100%;
+
+        @include bp(md) {
+            height: 450px !important;
+        }
+    }
+
+    // #map {
+    //     @include bp(md) {
+    //         height: 300px !important;
+    //     }
+    // }
+
+    .ymaps-b-form-button {
+        display: none;
+    }
+
+    .swiper-wrapper {
+        flex-wrap: wrap;
+        row-gap: 10px;
+
+        @include bp(md) {
+            flex-wrap: unset;
+        }
+    }
+
+    .chips {
+        position: absolute;
+        top: 40px;
+        left: 50px;
+
+        @include bp(md) {
+            position: unset;
+            padding-bottom: 16px;
+        }
     }
 
     &__form {
@@ -2899,6 +2950,84 @@
 
         @include bp(md) {
             padding: 32px 16px;
+        }
+    }
+
+    .form {
+        padding: 0;
+    }
+
+    .form__group input {
+        border-bottom: 1px solid #fff;
+    }
+
+    .form__group textarea {
+        border-bottom: 1px solid #fff;
+    }
+}
+
+.contact-sales {
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    &__item {
+        display: flex;
+        gap: 24px;
+        padding: 32px 24px;
+    }
+
+    &__item img {
+        width: unset;
+        object-fit: contain;
+
+        @include bp(sm) {
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    &__mail {
+        display: flex;
+    }
+}
+
+.travel {
+    &__block {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        row-gap: 24px;
+    }
+
+    &__ul {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+        max-width: 450px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__circle {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #96969633;
+    }
+
+    .map-two {
+        height: 600px;
+
+        @include bp(md) {
+            height: 560px;
         }
     }
 }
@@ -3020,7 +3149,7 @@
     }
 
     .pagination-wrapper {
-        
+
         @include bp(md) {
             display: flex;
             flex-direction: column;
@@ -3040,14 +3169,18 @@
         border-collapse: collapse;
         width: 100%;
     }
-    th, td {
+
+    th,
+    td {
         border: 1px solid black;
         padding: 8px;
         text-align: left;
     }
+
     th {
         background-color: #f2f2f2;
     }
+
     ul {
         margin: 0;
         padding: 0 0 0 20px;

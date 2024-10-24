@@ -11,6 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"
+        type="text/javascript"></script>
     <title>Контакты</title>
 </head>
 
@@ -398,15 +400,116 @@
         <section class="contact-block">
             <div class="container">
                 <div class="contact-block__wrapper">
-                    
+
                     <div class="col-6 col-md-6 col-sm-3">
-                        <div class="contact-block__map color-block--gray-opasity20"></div>
+                        <div class="contact-block__map">
+                            <div class="chips">
+                                <div class="swiper mySwiper-chips">
+                                    <div class="swiper-wrapper">
+
+                                        <div class="swiper-slide">
+                                            <div class="button-block">
+                                                <a href="/contacts.html">
+                                                    <div class="button-block__chip selected">
+                                                        <!-- <div class="button-block__icon"></div> -->
+
+                                                        <p class="font-s color--primary">Производство</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="button-block">
+                                                <a href="/contacts/spb.html">
+                                                    <div class="button-block__chip">
+                                                        <!-- <div class="button-block__icon"></div> -->
+
+                                                        <p class="font-s color--primary">Офис СПБ</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="button-block">
+                                                <a href="/contacts/samara.html">
+                                                    <div class="button-block__chip">
+                                                        <!-- <div class="button-block__icon"></div> -->
+
+                                                        <p class="font-s color--primary">Офис Самара</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="button-block">
+                                                <a href="/contacts/rostov.html">
+                                                    <div class="button-block__chip">
+                                                        <!-- <div class="button-block__icon"></div> -->
+
+                                                        <p class="font-s color--primary">Офис Ростов-на-Дону</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="button-block">
+                                                <a href="/contacts/ekat.html">
+                                                    <div class="button-block__chip">
+                                                        <!-- <div class="button-block__icon"></div> -->
+
+                                                        <p class="font-s color--primary">Офис Екатеринбург</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="map">
+                                <div id="map" data-id="default" style="width: 100%; height: 100%;"></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-6 col-md-6 col-sm-3">
                         <div class="contact-block__form color-block--brend2">
-                            <h2 class="font-h3 color--white">Офис СПБ</h2>
-                            <p class="font-t1 color--white sp-t-burgundy">188301, Ленинградская область, Гатчинский район, промышленная зона Корпиково, дом 2, помещение 108.</p>
+                            <h2 class="font-h3 color--white">ООО «Завод высотных конструкций»</h2>
+                            <p class="font-t1 color--secondary sp-t-light-blue">188301, Ленинградская область,
+                                Гатчинский район, промышленная зона Корпиково, дом 2, помещение 108.</p>
+                            <p class="font-t2 color--secondary sp-t-light-blue">Время работы</p>
+                            <p class="font-t1 color--white">Пн—пт, с 8:00—17:00</p>
+
+                            <p class="font-h4 color--white sp-t-mint">Свяжитесь с нами</p>
+                            <form class="form">
+                                <div class="form__top">
+                                    <div class="form__group">
+                                        <input class="font-t1 color--white" type="text" id="name" name="name"
+                                            placeholder="Ваше имя" required>
+                                    </div>
+                                    <div class="form__group">
+                                        <input class="font-t1 color--white" type="tel" id="phone" name="phone"
+                                            placeholder="Ваш номер телефона" required>
+                                    </div>
+                                    <div class="form__group">
+                                        <textarea class="font-t1 color--white" id="message" name="message"
+                                            placeholder="Комментарий" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="form__group-btn sp-t-mint">
+                                    <div class="button-block">
+                                        <a href="/">
+                                            <div class="button-block__white-large">
+                                                <p class="font-t1">Оставить заявку</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
 
@@ -414,69 +517,223 @@
             </div>
         </section>
 
-        <section class="write" id="form">
+        <section class="contact-sales sp-v-green">
+
             <div class="container">
-                <div class="write__wrapper sp-v-fuchsia">
-                    <div class="col-5 col-lg-6 col-md-6 col-sm-3">
-                        <div style="overflow: hidden;">
-                            <h2 class="animation-text font-h2 color--white sp-b-mint">Напишите нам</h2>
-                        </div>
-                        <p class="font-t1 color--white sp-b-light-blue">Мы открыты для общения и новых идей.</p>
-                        <p class="font-t1 color--white sp-b-light-blue">Если у вас возник вопрос или замечание, оставьте
-                            сообщение в форме обратной связи. Наш менеджер свяжется с вами в течение рабочего дня.</p>
-                        <p class="font-t1 color--white">Благодарим вас за доверие к нашей продукции.</p>
-                    </div>
-                    <div class="col-1 d-none-lg"></div>
+                <div class="col">
+                    <h2 class="font-h2">Отдел корпоративных продаж</h2>
+                </div>
+            </div>
+
+            <div class="sp-v-dark-blue">
+                <div class="line"></div>
+            </div>
+
+            <div class="container">
+                <div class="contact-sales__block">
+
                     <div class="col-4 col-lg-6 col-md-6 col-sm-3">
-                        <form class="form color-block--primary">
-                            <div class="form__top">
-                                <div class="form__group">
-                                    <input class="font-t1 color--secondary" type="text" id="name" name="name"
-                                        placeholder="Ваше имя" required>
+                        <div class="color-block--gray-opasity20" style="height: 100%;">
+                            <div class="contact-sales__item">
+                                <div class="contact-sales__img">
+                                    <img src="/assets/icon/contact_sales_img.svg" width="128" height="140" alt="">
                                 </div>
-                                <div class="form__group">
-                                    <input class="font-t1 color--secondary" type="email" id="email" name="email"
-                                        placeholder="E-mail" required>
-                                </div>
-                                <div class="form__group">
-                                    <input class="font-t1 color--secondary" type="tel" id="phone" name="phone"
-                                        placeholder="Ваш номер телефона" required>
-                                </div>
-                                <div class="form__group">
-                                    <textarea class="font-t1 color--secondary" id="message" name="message"
-                                        placeholder="Комментарий" required></textarea>
-                                </div>
-                            </div>
-                            <div class="form__group-btn sp-t-mint">
-                                <div class="button-block">
-                                    <a href="/">
-                                        <div class="button-block__black-large">
-                                            <p class="font-t1 color--white">Отправить</p>
-                                        </div>
+                                <div class="contact-sales__info">
+                                    <p class="font-t1 color--secondary">Руководитель отдела</p>
+                                    <p class="font-h4">Анатолий Зотов</p>
+                                    <p class="font-t1 color--secondary sp-t-light-blue">8 800 333-79-89, доб. 2250</p>
+                                    <a class="contact-sales__mail sp-t-light-blue" href="mailto:">
+                                        <p class="font-t1">Написать на email</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="4" y="6" width="16" height="12" rx="2" stroke="#303030"
+                                                stroke-width="2" />
+                                            <path
+                                                d="M4 9L11.1056 12.5528C11.6686 12.8343 12.3314 12.8343 12.8944 12.5528L20 9"
+                                                stroke="#303030" stroke-width="2" />
+                                        </svg>
                                     </a>
                                 </div>
-                                <svg class="form__file" width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="48" height="48" rx="24" fill="#4F4F4F" />
-                                    <g clip-path="url(#clip0_702_4856)">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M16.4248 10.6667C14.7217 10.6667 13.333 12.0703 13.333 13.7917V34.2084C13.333 35.9298 14.7217 37.3334 16.4248 37.3334H31.5746C33.2777 37.3334 34.6663 35.9298 34.6663 34.2084V18.8957C34.6663 17.9271 34.2854 16.9976 33.6078 16.3127L29.0804 11.7367C28.4028 11.0518 27.4832 10.6667 26.5249 10.6667H16.4248ZM20.2116 18.323H27.787C28.7905 18.323 29.6161 19.1575 29.6161 20.1718V27.8285C29.6161 28.8428 28.7905 29.6772 27.787 29.6772H20.2116C19.2081 29.6772 18.3826 28.8428 18.3826 27.8285V20.1718C18.3826 19.1575 19.2081 18.323 20.2116 18.323Z"
-                                            fill="white" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M23.999 20.8748C23.8487 20.8748 23.7045 20.9351 23.5982 21.0426C23.4919 21.15 23.4322 21.2957 23.4322 21.4477V23.427H21.4741C21.3237 23.427 21.1795 23.4874 21.0732 23.5948C20.9669 23.7023 20.9072 23.848 20.9072 24C20.9072 24.1519 20.9669 24.2976 21.0732 24.4051C21.1795 24.5125 21.3237 24.5729 21.4741 24.5729H23.4322V26.5518C23.4322 26.7038 23.4919 26.8495 23.5982 26.957C23.7045 27.0644 23.8487 27.1248 23.999 27.1248C24.1493 27.1248 24.2935 27.0644 24.3998 26.957C24.5061 26.8495 24.5658 26.7038 24.5658 26.5518V24.5728H26.524C26.6743 24.5727 26.8184 24.5124 26.9247 24.4049C27.031 24.2975 27.0907 24.1518 27.0907 23.9999C27.0907 23.8479 27.031 23.7022 26.9247 23.5947C26.8184 23.4873 26.6742 23.4269 26.5239 23.4269H24.5658V21.4477C24.5658 21.2957 24.5061 21.15 24.3998 21.0426C24.2935 20.9351 24.1493 20.8748 23.999 20.8748Z"
-                                            fill="white" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_702_4856">
-                                            <rect width="32" height="32" fill="white" transform="translate(8 8)" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
                             </div>
-                            <p class="font-t2 color--hover sp-t-mint">Нажимая кнопку отправить я даю солгасие на
-                                обработку персноальных данных, в соответствии с условиями политики конфиденциальности и
-                                пользовательского соглашения</p>
-                        </form>
+
+                            <div style="padding: 0 24px;">
+                                <div class="line" style="margin: unset;"></div>
+                            </div>
+
+                            <div class="contact-sales__item">
+                                <div class="contact-sales__img">
+                                    <img src="/assets/icon/contact_sales_img.svg" width="128" height="140" alt="">
+                                </div>
+                                <div class="contact-sales__info">
+                                    <p class="font-t1 color--secondary">Менеджер продаж серийной продукции</p>
+                                    <p class="font-h4">Наталья Беликова</p>
+                                    <p class="font-t1 color--secondary sp-t-light-blue">8 800 333-79-89, доб. 2253</p>
+                                    <a class="contact-sales__mail sp-t-light-blue" href="mailto:">
+                                        <p class="font-t1">Написать на email</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="4" y="6" width="16" height="12" rx="2" stroke="#303030"
+                                                stroke-width="2" />
+                                            <path
+                                                d="M4 9L11.1056 12.5528C11.6686 12.8343 12.3314 12.8343 12.8944 12.5528L20 9"
+                                                stroke="#303030" stroke-width="2" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-lg-6 col-md-6 col-sm-3">
+                        <div class="color-block--gray-opasity20" style="height: 100%;">
+                            <div class="contact-sales__item">
+                                <div class="contact-sales__img">
+                                    <img src="/assets/icon/contact_sales_img.svg" width="128" height="140" alt="">
+                                </div>
+                                <div class="contact-sales__info">
+                                    <p class="font-t1 color--secondary">Специалист по спецконструкциям</p>
+                                    <p class="font-h4">Юлия Васильева</p>
+                                    <p class="font-t1 color--secondary sp-t-light-blue">8 800 333-79-89, доб. 2252</p>
+                                    <a class="contact-sales__mail sp-t-light-blue" href="mailto:">
+                                        <p class="font-t1">Написать на email</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="4" y="6" width="16" height="12" rx="2" stroke="#303030"
+                                                stroke-width="2" />
+                                            <path
+                                                d="M4 9L11.1056 12.5528C11.6686 12.8343 12.3314 12.8343 12.8944 12.5528L20 9"
+                                                stroke="#303030" stroke-width="2" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div style="padding: 0 24px;">
+                                <div class="line" style="margin: unset;"></div>
+                            </div>
+
+                            <div class="contact-sales__item">
+                                <div class="contact-sales__img">
+                                    <img src="/assets/icon/contact_sales_img.svg" width="128" height="140" alt="">
+                                </div>
+                                <div class="contact-sales__info">
+                                    <p class="font-t1 color--secondary">Ассистент специалиста по спецконструкциям</p>
+                                    <p class="font-h4">Анна Трощенко</p>
+                                    <p class="font-t1 color--secondary sp-t-light-blue">8 800 333-79-89, доб. 1253</p>
+                                    <a class="contact-sales__mail sp-t-light-blue" href="mailto:">
+                                        <p class="font-t1">Написать на email</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="4" y="6" width="16" height="12" rx="2" stroke="#303030"
+                                                stroke-width="2" />
+                                            <path
+                                                d="M4 9L11.1056 12.5528C11.6686 12.8343 12.3314 12.8343 12.8944 12.5528L20 9"
+                                                stroke="#303030" stroke-width="2" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-lg-12 col-md-6 col-sm-3">
+                        <div class="color-block--gray-opasity20" style="height: 100%;">
+                            <div class="contact-sales__item">
+                                <div class="contact-sales__img">
+                                    <img src="/assets/icon/contact_sales_img.svg" width="128" height="140" alt="">
+                                </div>
+                                <div class="contact-sales__info">
+                                    <p class="font-t1 color--secondary">Специалист по спецконструкциям</p>
+                                    <p class="font-h4">Полина Фролова</p>
+                                    <p class="font-t1 color--secondary sp-t-light-blue">8 800 333-79-89, доб. 1250</p>
+                                    <a class="contact-sales__mail sp-t-light-blue" href="mailto:">
+                                        <p class="font-t1">Написать на email</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="4" y="6" width="16" height="12" rx="2" stroke="#303030"
+                                                stroke-width="2" />
+                                            <path
+                                                d="M4 9L11.1056 12.5528C11.6686 12.8343 12.3314 12.8343 12.8944 12.5528L20 9"
+                                                stroke="#303030" stroke-width="2" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div style="padding: 0 24px;">
+                                <div class="line" style="margin: unset;"></div>
+                            </div>
+
+                            <div class="contact-sales__item">
+                                <div class="contact-sales__img">
+                                    <img src="/assets/icon/contact_sales_img.svg" width="128" height="140" alt="">
+                                </div>
+                                <div class="contact-sales__info">
+                                    <p class="font-t1 color--secondary">Ассистент специалиста по спецконструкциям</p>
+                                    <p class="font-h4">Наталья Гультяева</p>
+                                    <p class="font-t1 color--secondary sp-t-light-blue">8 800 333-79-89, доб. 1251</p>
+                                    <a class="contact-sales__mail sp-t-light-blue" href="mailto:">
+                                        <p class="font-t1">Написать на email</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="4" y="6" width="16" height="12" rx="2" stroke="#303030"
+                                                stroke-width="2" />
+                                            <path
+                                                d="M4 9L11.1056 12.5528C11.6686 12.8343 12.3314 12.8343 12.8944 12.5528L20 9"
+                                                stroke="#303030" stroke-width="2" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="travel">
+            <div class="travel__wrapper sp-v-green color-block--gray-generik">
+                <div class="line"></div>
+
+                <div class="container">
+                    <div class="travel__block sp-t-mint">
+                        <div class="col-6 col-md-6 col-sm-3">
+                            <!-- <div class="travel__image">
+                                <img src="/assets/image/travel_image.jpg" height="615px" alt="">
+                            </div> -->
+                            <div class="map-two">
+                                <iframe
+                                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a5fab4a3379ba640551e35ef39c3169c8d9326eed52c73760b8cc09f91ba0e2&amp;source=constructor"
+                                    width="100%" height="100%" frameborder="0">
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="col-1 d-none-lg"></div>
+                        <div class="col-5 col-lg-6 col-md-6 col-sm-3">
+                            <h3 class="font-h3 color--white sp-b-mint">Схема проезда</h3>
+                            <div class="travel__ul">
+                                <div class="travel__item">
+                                    <div class="travel__circle"></div>
+                                    <p class="font-s color--white">С улицы 120 Гатчинской дивизии повернуть в сторону
+                                        Промзоны у частного дома №11</p>
+                                </div>
+                                <div class="travel__item">
+                                    <div class="travel__circle"></div>
+                                    <p class="font-s color--white">Через 750 м повернуть налево</p>
+                                </div>
+                                <div class="travel__item">
+                                    <div class="travel__circle"></div>
+                                    <p class="font-s color--white">Через 200 м проехать до шлагбаума на территорию
+                                        Промзоны</p>
+                                </div>
+                                <div class="travel__item">
+                                    <div class="travel__circle"></div>
+                                    <p class="font-s color--white">Через 50 м после шлагбаума справа здание склада
+                                        Завода высотных конструкций</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
