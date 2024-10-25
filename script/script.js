@@ -1338,6 +1338,49 @@ if (document.querySelector(".pagination")) {
     }
 }
 
+//---------------- Файл contacts.html
+//------- Выравнивание элементов по высоте .certificates__ul c блоком .certificates__info
+if (document.querySelector(".contact-sales")) {
+
+    window.addEventListener('load', function () {
+        // Выравнивание по высоте заголовка карточек
+        someFunc();
+    });
+
+    window.addEventListener("resize", function () {
+        someFunc();
+    });
+
+    function someFunc() {
+        if (window.innerWidth > 767) {
+
+            // Element
+            const infoHeight = document.querySelectorAll('.contact-sales__job');
+            const arr = [];
+
+            for (i = 0; i < infoHeight.length; i++) {
+                arr.push(infoHeight[i].offsetHeight);
+            }
+
+            infoHeight.forEach(elem => {
+                elem.style.minHeight = `${Math.max(...arr)}px`;
+            })
+
+            // Element
+            const infoHeight2 = document.querySelectorAll('.contact-sales__name');
+            const arr2 = [];
+
+            for (i = 0; i < infoHeight2.length; i++) {
+                arr2.push(infoHeight2[i].offsetHeight);
+            }
+
+            infoHeight2.forEach(elem => {
+                elem.style.minHeight = `${Math.max(...arr2)}px`;
+            })
+        }
+    }
+}
+
 if (document.getElementById('map')) {
     const map = document.getElementById('map').dataset.id;
     let lat;
