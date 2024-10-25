@@ -4404,10 +4404,10 @@ html {
   padding: 0;
 }
 .contact-block .form ::-moz-placeholder {
-  color: #fff; /* Цвет подсказки */
+  color: #F2F2F2; /* Цвет подсказки */
 }
 .contact-block .form ::placeholder {
-  color: #fff; /* Цвет подсказки */
+  color: #F2F2F2; /* Цвет подсказки */
 }
 .contact-block .form__group input {
   border-bottom: 1px solid #fff;
