@@ -158,34 +158,10 @@ window.addEventListener('load', (event) => {
         }
     }
 
-    //---------------- Файл index.html
+    //---------------- Файл index.html about.html
     //------- Секция projects - плавное сворачивание
     if (document.querySelector(".projects")) {
 
-        // function projectsCheckBtn() {
-        //     const dropdownItem = document.querySelectorAll('.projects__item');
-        //     dropdownItem.forEach(elem => {
-        //         const btn = elem.querySelector('.projects__ctoggleButton');
-        //         const toggle = elem.querySelector('.projects__toggle');
-        //         const content = elem.querySelector('.projects__content');
-        //         const image = elem.querySelector('.projects__image');
-
-        //         btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg)';
-
-        //         btn.addEventListener('click', () => {
-        //             if (toggle.checked) {
-        //                 content.style.height = content.scrollHeight + 'px';
-        //                 image.style.height = image.scrollHeight + 'px';
-        //                 btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg)';
-
-        //             } else {
-        //                 content.style.height = '0px';
-        //                 image.style.height = '0px';
-        //                 btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg)';
-        //             }
-        //         })
-        //     })
-        // }
         function projectsCheckBtn() {
             const dropdownItems = document.querySelectorAll('.projects__item');
             dropdownItems.forEach((item, index) => {
@@ -564,6 +540,152 @@ window.addEventListener('load', (event) => {
 
     }
 
+    //---------------- Файл about.html
+    //------- Фильтрация по чипам
+    if (document.querySelector(".supporting")) {
+
+        function comparisonFilter() {
+            const chips = document.querySelectorAll('.button-block__chip');
+    
+            chips.forEach(chip => {
+                chip.addEventListener('click', function () {
+                    chips.forEach(c => c.classList.remove('selected'));
+                    chip.classList.add('selected');
+    
+                    const targetId = chip.parentElement.dataset.id;
+                    const comparisonItems = document.querySelectorAll('.supporting__filter');
+    
+                    // Обновляем видимость элементов
+                    comparisonItems.forEach(item => {
+                        if (item.dataset.id === targetId) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+    
+                    // Открываем только первый элемент с заданным data-id
+                    openFirstElement(comparisonItems);
+                });
+            });
+    
+            const selectedButton = document.querySelector('.button-block__chip.selected');
+            if (selectedButton) {
+                const targetId = selectedButton.parentElement.dataset.id;
+                const comparisonItems = document.querySelectorAll('.supporting__filter');
+    
+                // Обновляем видимость элементов
+                comparisonItems.forEach(item => {
+                    if (item.dataset.id === targetId) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+    
+                // Открываем только первый элемент с заданным data-id
+                openFirstElement(comparisonItems);
+            }
+    
+            const links = document.querySelectorAll('.chips a');
+    
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+    
+                    const targetId = link.dataset.id;
+                    const comparisonItems = document.querySelectorAll('.supporting__filter');
+    
+                    // Обновляем видимость элементов
+                    comparisonItems.forEach(item => {
+                        if (item.dataset.id === targetId) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+    
+                    // Открываем только первый элемент с заданным data-id
+                    openFirstElement(comparisonItems);
+                });
+            });
+        }
+    
+        function openFirstElement(comparisonItems) {
+            const openedIds = new Set(); // Множество для хранения уникальных data-id
+    
+            comparisonItems.forEach(item => {
+                const id = item.dataset.id; // Получаем data-id
+    
+                // Если этот элемент виден
+                if (item.style.display === 'block') {
+                    // Если этот id еще не был обработан
+                    if (!openedIds.has(id)) {
+                        const toggle = item.querySelector('.supporting__toggle'); // Чекбокс или другой элемент для раскрытия
+                        const image = item.querySelector('.supporting__image'); // Элемент контента
+                        const btn = item.querySelector('.supporting__ctoggleButton');
+    
+                        if (toggle) {
+                            toggle.checked = true; // Устанавливаем чекбокс в checked
+                        }
+                        if (image) {
+                            image.style.height = image.scrollHeight + 'px'; // Устанавливаем высоту изображения
+                        }
+                        if (btn) {
+                            btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg)';
+                        }
+    
+                        openedIds.add(id); // Добавляем id в множество для предотвращения повторных раскрытий
+                    }
+                }
+            });
+        }
+    
+        function supportingCheckBtn() {
+            const dropdownItems = document.querySelectorAll('.supporting__item');
+            dropdownItems.forEach((item, index) => {
+                const btn = item.querySelector('.supporting__ctoggleButton');
+                const toggle = item.querySelector('.supporting__toggle');
+                const image = item.querySelector('.supporting__image');
+    
+                if (index === 0) {
+                    // Раскрыть первый элемент
+                    toggle.checked = true;
+                    image.style.height = image.scrollHeight + 'px';
+                    btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg)';
+                }
+    
+                btn.addEventListener('click', () => {
+                    if (toggle.checked) {
+                        image.style.height = image.scrollHeight + 'px';
+                        btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg)';
+                    } else {
+                        image.style.height = '0px';
+                        btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg)';
+                    }
+                });
+    
+                // Дополнительная проверка для восстановления иконки
+                if (!toggle.checked) {
+                    btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg)';
+                }
+            });
+        }
+    
+        try {
+            comparisonFilter();
+        } catch (error) {
+            console.error(error);
+        }
+    
+        try {
+            supportingCheckBtn();
+        } catch (error) {
+            console.error(error);
+        }
+
+    }
+    
     // Слайдер для чипов
     if (document.querySelector(".mySwiper-chips")) {
 
@@ -1381,6 +1503,8 @@ if (document.querySelector(".contact-sales")) {
     }
 }
 
+//---------------- Файл contacts.html
+//------- Карта
 if (document.getElementById('map')) {
     const map = document.getElementById('map').dataset.id;
     let lat;
@@ -1438,3 +1562,79 @@ if (document.getElementById('map')) {
         myMap.geoObjects.add(marker);
     }
 }
+
+//---------------- Файл catalog.html
+//------- Фильтр
+if (document.querySelector(".catalog")) {
+
+    const catalogSign = document.querySelector('.catalog__sign svg')
+    const catalogSignInfo = document.querySelector('.catalog__sign-info')
+
+    catalogSign.addEventListener('mouseover', () => {
+        catalogSignInfo.style.display = 'block'
+    })
+
+    catalogSign.addEventListener('mouseleave', () => {
+        catalogSignInfo.style.display = 'none'
+    })
+
+
+    // Фильтр в моб версии
+    const catalogOpen = document.querySelector('.catalog__btn-open')
+    const catalogClose = document.querySelector('.catalog__btn-close')
+    const catalogFilter = document.querySelector('.catalog__desk-mob')
+
+    catalogOpen.addEventListener('click', () => {
+        catalogFilter.style.display = 'block'
+    })
+
+    catalogClose.addEventListener('click', () => {
+        catalogFilter.style.display = 'none'
+    })
+}
+
+//---------------- Файл product-card.html
+//------- Фильтр в отзывах и карусель
+if (document.querySelector(".reviews-card")) {
+    let customSelect = document.querySelector('.custom-select');
+
+    // Обработчик события клика на стрелку
+    customSelect.addEventListener('click', function (e) {
+        let select = this.querySelector('select');
+
+        // Проверяем, было ли нажатие на стрелку
+        if (e.target.closest("::after")) {
+            select.classList.toggle('show');
+        }
+    });
+
+    // Закрыть выпадающий список при клике за его пределами
+    window.addEventListener('click', function (event) {
+        if (!event.target.matches('.custom-select')) {
+            let selects = document.querySelectorAll('.custom-select select');
+            selects.forEach(function (select) {
+                select.classList.remove('show');
+            });
+        }
+    });
+
+    //------- Карусель
+    var swiper = new Swiper(".mySwiper-reviews-item", {
+        breakpoints: {
+            768: {
+                slidesPerView: 'auto',
+                spaceBetween: 65,
+            },
+        },
+        slidesPerView: 1,
+        spaceBetween: 0,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+}
+
+const swiperСontainer = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    slidesPerView: 4, // количество слайдов, отображаемых одновременно
+});

@@ -1733,16 +1733,16 @@ html {
 }
 
 .sp-b-fuchsia {
-  padding-bottom: 80px;
+  padding-bottom: 80px !important;
 }
 @media (max-width: 1024px) {
   .sp-b-fuchsia {
-    padding-bottom: 64px;
+    padding-bottom: 64px !important;
   }
 }
 @media (max-width: 767px) {
   .sp-b-fuchsia {
-    padding-bottom: 40px;
+    padding-bottom: 40px !important;
   }
 }
 
@@ -2993,6 +2993,91 @@ html {
   stroke-dashoffset: 2000;
 }
 
+.supporting__image {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease;
+}
+@media (max-width: 767px) {
+  .supporting__image {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+.supporting__image img {
+  width: 170px;
+}
+@media (max-width: 767px) {
+  .supporting__image img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+.supporting__desk-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-left: 30px;
+}
+@media (max-width: 1024px) {
+  .supporting__desk-block {
+    padding-left: 0;
+  }
+}
+.supporting__deskcription {
+  padding-right: 50px;
+}
+@media (max-width: 1024px) {
+  .supporting__deskcription {
+    padding-right: 32px;
+  }
+}
+.supporting__content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+.supporting__ctoggleButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+}
+.supporting__toggle {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+.supporting__bottom-block {
+  display: flex;
+}
+.supporting__bottom-block div {
+  flex: 1;
+}
+.supporting__tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.supporting__tag img {
+  width: 16px;
+  height: 16px;
+}
+
+.history .swiper-container {
+  overflow: hidden;
+  height: 480px;
+}
+.history .swiper-slide {
+  cursor: pointer;
+}
+
 @media (max-width: 1024px) {
   .projects__item .row {
     gap: 24px;
@@ -3366,6 +3451,9 @@ html {
     gap: 20px;
   }
 }
+.principle__item p {
+  width: 100%;
+}
 .principle .font-h3 {
   width: 100%;
   max-width: -moz-fit-content;
@@ -3487,6 +3575,11 @@ html {
 .catalog__block {
   display: flex;
 }
+@media (max-width: 1024px) {
+  .catalog__block {
+    position: relative;
+  }
+}
 .catalog__ctoggleButton {
   width: 100%;
   max-width: 26px;
@@ -3499,7 +3592,56 @@ html {
   cursor: pointer;
   opacity: 0;
 }
+@media (max-width: 1024px) {
+  .catalog__desk-mob {
+    display: none;
+    position: absolute;
+    top: 130px;
+    z-index: 100;
+  }
+}
+@media (max-width: 767px) {
+  .catalog__desk-mob {
+    top: 100px;
+  }
+}
+.catalog__btn-open {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .catalog__btn-open {
+    display: flex;
+    cursor: pointer;
+  }
+}
+.catalog__btn-close {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .catalog__btn-close {
+    display: flex;
+    cursor: pointer;
+  }
+}
+.catalog__sign {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.catalog__sign-info {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  z-index: 100;
+  padding: 12px;
+  border-radius: 20px;
+  background: #fff;
+  cursor: auto;
+}
 .catalog__filters-name {
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
@@ -3960,6 +4102,93 @@ html {
   max-width: 446px;
 }
 
+.reviews-card {
+  /* Скрыть стандартное отображение выпадающего списка */
+  /* Стили для выбранных опций (фильтров) */
+}
+.reviews-card__filter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reviews-card .reviews-filter {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px 10px;
+  background: var(--bg-primary);
+}
+.reviews-card .reviews-filter option:checked {
+  background: var(--text-hover);
+  color: white;
+}
+.reviews-card .custom-select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px 30px 5px 10px;
+  position: relative;
+  z-index: 1;
+  background: var(--bg-primary);
+  cursor: pointer;
+  /* Добавление cursor pointer к выпадающему списку */
+}
+.reviews-card .custom-select::after {
+  content: "▼";
+  pointer-events: none;
+  /* Делаем стрелку некликабельной */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #333;
+  font-size: 12px;
+  z-index: 2;
+}
+.reviews-card .custom-select {
+  position: relative;
+  display: inline-block;
+}
+.reviews-card .custom-select select.show {
+  display: block;
+}
+.reviews-card__item {
+  width: 100%;
+  max-width: 850px;
+}
+.reviews-card__top {
+  display: flex;
+  justify-content: space-between;
+}
+.reviews-card__grade {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #D7192D;
+}
+.reviews-card .swiper-slide {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.reviews-card .swiper-slide img {
+  width: 144px;
+  height: 144px;
+}
+.reviews-card .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+}
+.reviews-card .swiper-pagination-bullet-active {
+  background: #828282;
+}
+.reviews-card .swiper-horizontal > .swiper-pagination-bullets, .reviews-card .swiper-pagination-bullets.swiper-pagination-horizontal, .reviews-card .swiper-pagination-custom, .reviews-card .swiper-pagination-fraction {
+  bottom: 0;
+}
+
 .similar-card__block {
   display: flex;
 }
@@ -4404,10 +4633,12 @@ html {
   padding: 0;
 }
 .contact-block .form ::-moz-placeholder {
-  color: #F2F2F2; /* Цвет подсказки */
+  color: #F2F2F2;
+  /* Цвет подсказки */
 }
 .contact-block .form ::placeholder {
-  color: #F2F2F2; /* Цвет подсказки */
+  color: #F2F2F2;
+  /* Цвет подсказки */
 }
 .contact-block .form__group input {
   border-bottom: 1px solid #fff;

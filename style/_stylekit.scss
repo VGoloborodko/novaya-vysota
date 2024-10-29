@@ -1650,14 +1650,14 @@ html {
 }
 
 .sp-b-fuchsia {
-    padding-bottom: 80px;
+    padding-bottom: 80px !important;
 
     @include bp(md) {
-        padding-bottom: 64px;
+        padding-bottom: 64px !important;
     }
 
     @include bp(sm) {
-        padding-bottom: 40px;
+        padding-bottom: 40px !important;
     }
 }
 

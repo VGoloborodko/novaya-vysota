@@ -22,25 +22,26 @@
 
         <div>
             <header class="header">
-    
+
                 <div class="header__desktop">
                     <div class="header__desktop-cover"></div>
                     <div class="header__desktop-cover-scroll"></div>
                     <div class="header__wrapper sp-b-burgundy">
                         <div class="container">
                             <div class="col">
-    
+
                                 <div class="header__top sp-v-dark-purple">
-    
+
                                     <div class="header__contact">
-                                        <p class="font-t1 f-w-medium color--primary">Отдел продаж: <a class="color--primary"
-                                                href="mailto: zapros@zavodnv.ru"
+                                        <p class="font-t1 f-w-medium color--primary">Отдел продаж <a
+                                                style="padding-left: 16px;" class="color--primary"
+                                                href="mailto:zapros@zavodnv.ru"
                                                 style="border-bottom: 1px solid #303030;">zapros@zavodnv.ru</a></p>
                                         <div class="header__v-line"></div>
-                                        <a class="font-t1 f-w-medium color--primary" href="tel: +78003337989">8 800 333
+                                        <a class="font-t1 f-w-medium color--primary" href="tel:+78003337989">8 800 333
                                             7989</a>
                                     </div>
-    
+
                                     <ul>
                                         <li><a class="font-t1 f-w-medium color--primary" href="">О компании</a></li>
                                         <li><a class="font-t1 f-w-medium color--primary" href="">Клиентам</a></li>
@@ -48,15 +49,17 @@
                                         <li><a class="font-t1 f-w-medium color--primary" href="">Закупки</a></li>
                                         <li><a class="font-t1 f-w-medium color--primary" href="">Контакты</a></li>
                                     </ul>
-    
+
                                 </div>
-    
+
                                 <div class="header__main sp-t-light-blue">
-    
-                                    <div class="header__logo-desk"></div>
-    
+
+                                    <a href="/" class="header__logo-desk">
+                                        <!-- <div class="header__logo-desk"></div> -->
+                                    </a>
+
                                     <div class="header__average">
-    
+
                                         <div class="button-block">
                                             <a href="/">
                                                 <div class="button-block__transparent-small">
@@ -64,34 +67,34 @@
                                                 </div>
                                             </a>
                                         </div>
-    
+
                                         <div class="header__ctoggleButton">
                                             <div class="button-block">
                                                 <a href="/">
                                                     <div class="button-block__small-list">
                                                         <div class="button-block__icon"></div>
-    
+
                                                         <p class="font-t1 color--white">Продукция</p>
                                                     </div>
                                                 </a>
                                             </div>
                                             <input class="header__toggle" type="checkbox" />
                                         </div>
-    
+
                                         <div class="header__search-container">
                                             <input type="text" class="header__search-input font-t1"
                                                 placeholder="Поиск по сайту" oninput="toggleIcon(this)">
                                             <div class="header__search-icon" onclick="clearInput()"></div>
                                         </div>
                                     </div>
-    
+
                                     <div class="header__right">
-    
+
                                         <div class="header__icons">
                                             <div class="header__comparison"></div>
                                             <div class="header__basket"></div>
                                         </div>
-    
+
                                         <div class="button-block">
                                             <a href="#form">
                                                 <div class="button-block__red-small">
@@ -99,91 +102,86 @@
                                                 </div>
                                             </a>
                                         </div>
-    
+
                                     </div>
-    
+
                                 </div>
-    
+
                             </div>
                         </div>
                         <div class="header__catalog">
-    
+
                             <div style="padding-top: 128px;">
                                 <div class="line"></div>
                             </div>
-    
+
                             <div class="container">
                                 <div class="col">
                                     <div class="header__catalog-block sp-t-purple">
                                         <div class="header__menu-bottom">
-    
+
                                             <div class="header__category-block">
-    
-                                                <div class="header__category-item">
-                                                    <h4 class="font-h4">Серийная продукция</h4>
-                                                    <ul class="header__subcategory-list">
+
+                                                <div class="header__category-item" data-id="1">
+                                                    <a href="/serial-production.html">
+                                                        <h4 class="font-h4">Серийная продукция</h4>
+                                                    </a>
+                                                    <!-- <h4 class="font-h4">Серийная продукция</h4> -->
+                                                    <!-- <ul class="header__subcategory-list">
                                                         <li class="sp-t-yellow"></li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="1">Стремянки
-                                                        </li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="2">Лестницы
-                                                            приставные</li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="3">
-                                                            Лестницы-трансформеры</li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="4">Площадки,
-                                                            платформы, помосты</li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="5">Вышки-туры
-                                                        </li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="6">Лестницы
-                                                            специальные</li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="7">Лестницы с
-                                                            площадкой</li>
-                                                        <li class="font-s color--secondary sp-t-blue" data-id="8">Трапы и
-                                                            переходы</li>
-                                                    </ul>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="1">Стремянки</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="2">Лестницы</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="4">Трансформеры</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="5">Вышки-туры</li>
+                                                        <li class="font-s color--secondary sp-t-blue" data-id="5">Помосты, малярные столы</li>
+                                                    </ul> -->
                                                 </div>
-    
-                                                <div class="header__category-item">
-                                                    <h4 class="font-h4">Продукция по направлениям</h4>
-                                                    <ul class="header__subcategory-list">
+
+                                                <div class="header__category-item" data-id="2">
+                                                    <a href="#">
+                                                        <h4 class="font-h4">Продукция по направлениям</h4>
+                                                    </a>
+                                                    <!-- <ul class="header__subcategory-list">
                                                         <li class="sp-t-yellow"></li>
-                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Ж/д
-                                                                транспорт</a></li>
-                                                        <li class="sp-t-blue"><a class="font-s color--secondary"
-                                                                href="">Авиатранспорт</a></li>
-                                                        <li class="sp-t-blue"><a class="font-s color--secondary"
-                                                                href="">Нефтегазовая отрасль</a></li>
-                                                        <li class="sp-t-blue"><a class="font-s color--secondary"
-                                                                href="">Строительное оборудование</a></li>
-                                                        <li class="sp-t-blue"><a class="font-s color--secondary"
-                                                                href="">Склады</a></li>
-                                                    </ul>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Ж/д транспорт</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Авиатранспорт</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Автотранспорт</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Нефтегазовая отрасль</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Строительное оборудование</a></li>
+                                                        <li class="sp-t-blue"><a class="font-s color--secondary" href="">Склады</a></li>
+                                                    </ul> -->
                                                 </div>
-    
+
                                                 <div class="header__category-item">
-                                                    <h4><a class="font-h4" href="">Специальные решения</a></h4>
+                                                    <a href="#">
+                                                        <h4 class="font-h4">Специальные решения</h4>
+                                                    </a>
                                                 </div>
-    
+
                                             </div>
-    
+
                                             <div class="header__main-menu-block">
-    
+
                                                 <div class="header__main-menu-item" data-id="1">
-                                                    <a class="font-s color--secondary" href="">Бытовые односторонние</a>
-                                                    <a class="font-s color--secondary" href="">Бытовые двухсторонние</a>
-                                                    <a class="font-s color--secondary" href="">Профессиональные
-                                                        односторонние</a>
-                                                    <a class="font-s color--secondary" href="">Профессиональные
-                                                        двухсторонние</a>
-                                                    <a class="font-s color--secondary" href="">Индустриальные</a>
+                                                    <a class="font-s color--secondary" href="#">Стремянки</a>
+                                                    <a class="font-s color--secondary" href="/catalog.html">Лестницы</a>
+                                                    <a class="font-s color--secondary" href="#">Трансформеры</a>
+                                                    <a class="font-s color--secondary" href="#">Вышки-туры</a>
+                                                    <a class="font-s color--secondary" href="#">Помосты, малярные
+                                                        столы</a>
                                                 </div>
-    
+
                                                 <div class="header__main-menu-item" data-id="2">
-                                                    <a class="font-s color--secondary" href="">Бытовые</a>
-                                                    <a class="font-s color--secondary" href="">Профессиональные</a>
-                                                    <a class="font-s color--secondary" href="">Индустриальные</a>
+                                                    <a class="font-s color--secondary" href="#">Ж/д транспорт</a>
+                                                    <a class="font-s color--secondary" href="#">Авиатранспорт</a>
+                                                    <a class="font-s color--secondary" href="#">Автотранспорт</a>
+                                                    <a class="font-s color--secondary" href="#">Нефтегазовая отрасль</a>
+                                                    <a class="font-s color--secondary" href="#">Строительное
+                                                        оборудование</a>
+                                                    <a class="font-s color--secondary" href="#">Склады</a>
                                                 </div>
-    
-                                                <div class="header__main-menu-item" data-id="3">
+
+                                                <!-- <div class="header__main-menu-item" data-id="3">
                                                     <a class="font-s color--secondary" href="">Бытовые</a>
                                                     <a class="font-s color--secondary" href="">Профессиональные</a>
                                                     <a class="font-s color--secondary" href="">Индустриальные</a>
@@ -217,10 +215,10 @@
                                                     <a class="font-s color--secondary" href="">Неизвестно</a>
                                                     <a class="font-s color--secondary" href="">Неизвестно</a>
                                                     <a class="font-s color--secondary" href="">Неизвестно</a>
-                                                </div>
-    
+                                                </div> -->
+
                                             </div>
-    
+
                                         </div>
                                         <div class="header__catalog-promo">
                                             <div class="header__image">
@@ -237,23 +235,165 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div>
                                 <div class="line"></div>
                             </div>
-    
+
                             <div class="header__catalog-bottom">
                                 <div class="header__image">
                                     <img src="/assets/image/header_catalog_bottom.png" alt="">
                                 </div>
                             </div>
-    
+
                         </div>
                     </div>
                 </div>
-    
+
+                <div class="header-mobile color-block--primary">
+                    <div class="header-mobile__wrapper">
+
+                        <div class="container">
+                            <div class="col">
+                                <div class="header-mobile__top sp-v-blue">
+                                    <div class="header-mobile__image">
+                                        <a href="/">
+                                            <img src="/assets/icon/header_logo_mobile.svg" width="145" height="40"
+                                                alt="">
+                                        </a>
+                                    </div>
+                                    <div class="header-mobile__top-btn"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header-mobile__catalog">
+                            <div class="header-mobile__overflow">
+
+                                <div class="header-mobile__menu">
+                                    <div class="header-mobile__menu-ul">
+                                        <a href="#">
+                                            <p class="font-t1">О компании</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Клиентам</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Медиацентр</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Закупки</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="font-t1">Контакты</p>
+                                        </a>
+                                    </div>
+                                    <div class="header-mobile__contact">
+                                        <a class="font-t1" href="mailto:zapros@zavodnv.ru;">zapros@zavodnv.ru</a>
+                                        <a class="font-t1" href="tel:+78003337989;">8 800 333 7989</a>
+                                    </div>
+                                </div>
+
+                                <div class="header-mobile__menu-one">
+
+                                    <div class="header-mobile__link-icon sp-b-yellow" data-id="1">
+                                        <p class="font-h4">Специальные решения</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.54545 11.3333H16.1377L14.3416 9.13804C14.1286 8.87772 14.1286 8.45559 14.3416 8.19523C14.5546 7.93492 14.9 7.93492 15.113 8.19523L17.8402 11.5286C18.0533 11.7889 18.0533 12.211 17.8402 12.4714L15.113 15.8047C15.0064 15.9349 14.8669 16 14.7273 16C14.5877 16 14.4481 15.9349 14.3416 15.8047C14.1286 15.5444 14.1286 15.1223 14.3416 14.8619L16.1377 12.6667H6.54545C6.24422 12.6667 6 12.3682 6 12C6 11.6318 6.24422 11.3333 6.54545 11.3333Z"
+                                                fill="#303030" />
+                                        </svg>
+                                    </div>
+                                    <div class="line"></div>
+
+                                    <div class="header-mobile__link-icon sp-v-yellow" data-id="2">
+                                        <p class="font-h4">Продукция по направлениям</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.54545 11.3333H16.1377L14.3416 9.13804C14.1286 8.87772 14.1286 8.45559 14.3416 8.19523C14.5546 7.93492 14.9 7.93492 15.113 8.19523L17.8402 11.5286C18.0533 11.7889 18.0533 12.211 17.8402 12.4714L15.113 15.8047C15.0064 15.9349 14.8669 16 14.7273 16C14.5877 16 14.4481 15.9349 14.3416 15.8047C14.1286 15.5444 14.1286 15.1223 14.3416 14.8619L16.1377 12.6667H6.54545C6.24422 12.6667 6 12.3682 6 12C6 11.6318 6.24422 11.3333 6.54545 11.3333Z"
+                                                fill="#303030" />
+                                        </svg>
+                                    </div>
+                                    <div class="line"></div>
+
+                                    <a href="#" class="header-mobile__link-icon sp-v-yellow">
+                                        <p class="font-h4">Серийная продукция</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.54545 11.3333H16.1377L14.3416 9.13804C14.1286 8.87772 14.1286 8.45559 14.3416 8.19523C14.5546 7.93492 14.9 7.93492 15.113 8.19523L17.8402 11.5286C18.0533 11.7889 18.0533 12.211 17.8402 12.4714L15.113 15.8047C15.0064 15.9349 14.8669 16 14.7273 16C14.5877 16 14.4481 15.9349 14.3416 15.8047C14.1286 15.5444 14.1286 15.1223 14.3416 14.8619L16.1377 12.6667H6.54545C6.24422 12.6667 6 12.3682 6 12C6 11.6318 6.24422 11.3333 6.54545 11.3333Z"
+                                                fill="#303030" />
+                                        </svg>
+                                    </a>
+                                    <div class="line"></div>
+
+                                    <a href="#" class="header-mobile__image">
+                                        <img src="/assets/image/header_catalog_promo.jpg" alt="">
+                                    </a>
+
+                                    <div class="button-block">
+                                        <a href="#">
+                                            <div class="button-block__red-large">
+                                                <p class="font-t1 color--white">Задать вопрос</p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div class="header-mobile__menu-two">
+                                    <div class="header-mobile__menu-child" data-id="1">
+                                        <div class="sp-b-purple">
+                                            <svg class="header-mobile__menu-close" width="24" height="16"
+                                                viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M22.9091 9.33335L3.72461 9.33335L7.31683 13.7239C7.74286 14.2446 7.74286 15.0888 7.31683 15.6095C6.89086 16.1302 6.2001 16.1302 5.77406 15.6095L0.319528 8.94285C-0.106508 8.42223 -0.106507 7.57796 0.319528 7.05725L5.77407 0.390575C5.98716 0.13022 6.26628 -2.71907e-06 6.54548 -2.67025e-06C6.82468 -2.62143e-06 7.10388 0.13022 7.31683 0.390576C7.74286 0.911199 7.74286 1.75547 7.31683 2.27618L3.72461 6.66667L22.9091 6.66668C23.5116 6.66668 24 7.26366 24 8.00001C24 8.73637 23.5116 9.33335 22.9091 9.33335Z"
+                                                    fill="#303030" />
+                                            </svg>
+                                        </div>
+                                        <a class="font-s" href="#">Стремянки</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="/catalog.html">Лестницы</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Трансформеры</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Вышки-туры</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Помосты, малярные столы</a>
+                                    </div>
+                                    <div class="header-mobile__menu-child" data-id="2">
+                                        <div class="sp-b-purple">
+                                            <svg class="header-mobile__menu-close" width="24" height="16"
+                                                viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M22.9091 9.33335L3.72461 9.33335L7.31683 13.7239C7.74286 14.2446 7.74286 15.0888 7.31683 15.6095C6.89086 16.1302 6.2001 16.1302 5.77406 15.6095L0.319528 8.94285C-0.106508 8.42223 -0.106507 7.57796 0.319528 7.05725L5.77407 0.390575C5.98716 0.13022 6.26628 -2.71907e-06 6.54548 -2.67025e-06C6.82468 -2.62143e-06 7.10388 0.13022 7.31683 0.390576C7.74286 0.911199 7.74286 1.75547 7.31683 2.27618L3.72461 6.66667L22.9091 6.66668C23.5116 6.66668 24 7.26366 24 8.00001C24 8.73637 23.5116 9.33335 22.9091 9.33335Z"
+                                                    fill="#303030" />
+                                            </svg>
+                                        </div>
+                                        <a class="font-s" href="#">Ж/д транспорт</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Авиатранспорт</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Автотранспорт</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Нефтегазовая отрасль</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Строительное оборудование</a>
+                                        <div class="line"></div>
+                                        <a class="font-s" href="#">Склады</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
             </header>
-    
+
             <div class="header-padding"></div>
         </div>
 
@@ -268,8 +408,18 @@
             <div class="container">
                 <div class="catalog__block">
 
-                    <div class="col-3 d-none-md">
+                    <div class="catalog__desk-mob col-3 col-md-6 col-sm-3 color-block--primary">
                         <div class="catalog__filters">
+
+                            <div class="catalog__btn-close">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.4545 12.6667L7.86231 12.6667L9.65841 14.862C9.87143 15.1223 9.87143 15.5444 9.65841 15.8048C9.44543 16.0651 9.10005 16.0651 8.88703 15.8048L6.15976 12.4714C5.94675 12.2111 5.94675 11.789 6.15976 11.5286L8.88703 8.19529C8.99358 8.06511 9.13314 8 9.27274 8C9.41234 8 9.55194 8.06511 9.65841 8.19529C9.87143 8.4556 9.87143 8.87773 9.65841 9.13809L7.86231 11.3333L17.4545 11.3333C17.7558 11.3333 18 11.6318 18 12C18 12.3682 17.7558 12.6667 17.4545 12.6667Z"
+                                        fill="#4F4F4F" />
+                                </svg>
+                                <p class="font-t1 sp-b-burgundy">Назад</p>
+                            </div>
 
                             <div class="catalog__filters-item">
                                 <div class="catalog__filters-name">
@@ -396,7 +546,25 @@
 
                             <div class="catalog__filters-item sp-t-mint">
                                 <div class="catalog__filters-name">
-                                    <p class="font-s">Рабочая высота</p>
+                                    <div class="catalog__sign">
+                                        <p class="font-s">Рабочая высота</p>
+                                        <svg width="24px" height="24px" viewBox="0 0 512 512" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <title>question</title>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                fill-rule="evenodd">
+                                                <g id="add" fill="#4F4F4F" transform="translate(42.666667, 42.666667)">
+                                                    <path
+                                                        d="M291.76704,163.504 C291.76704,177.01952 288.33216,188.82176 281.479253,198.90112 C275.828267,207.371093 266.358187,216.549547 253.042987,226.434987 C245.378987,231.682347 240.331947,236.618667 237.916587,241.257813 C234.87744,246.90624 233.376213,255.371093 233.376213,266.666667 L190.710827,266.666667 C190.710827,249.530027 192.53504,237.027413 196.165333,229.162667 C200.394453,219.679573 209.571627,210.098773 223.686187,200.42048 C230.350293,195.374933 235.188693,190.2368 238.214827,184.994773 C241.839787,179.143253 243.664,172.49216 243.664,165.028693 C243.664,153.13024 240.125013,144.26304 233.070293,138.404907 C227.4336,134.177067 220.56768,132.059947 212.501333,132.059947 C199.39328,132.059947 189.911467,136.398507 184.065067,145.069013 C179.829333,151.518293 177.7056,159.787733 177.7056,169.868587 L177.7056,170.173227 L132.34368,170.173227 C132.34368,143.751253 140.703147,123.790507 157.43488,110.274773 C171.554773,98.9922133 189.007787,93.3346133 209.77344,93.3346133 C227.933653,93.3346133 243.865813,96.86848 257.571627,103.9232 C280.37504,115.62624 291.76704,135.494827 291.76704,163.504 Z M426.666667,213.333333 C426.666667,331.153707 331.153707,426.666667 213.333333,426.666667 C95.51296,426.666667 3.55271368e-14,331.153707 3.55271368e-14,213.333333 C3.55271368e-14,95.51168 95.51296,3.55271368e-14 213.333333,3.55271368e-14 C331.153707,3.55271368e-14 426.666667,95.51168 426.666667,213.333333 Z M384,213.333333 C384,119.226667 307.43872,42.6666667 213.333333,42.6666667 C119.227947,42.6666667 42.6666667,119.226667 42.6666667,213.333333 C42.6666667,307.43872 119.227947,384 213.333333,384 C307.43872,384 384,307.43872 384,213.333333 Z M213.332053,282.666667 C198.60416,282.666667 186.665387,294.60544 186.665387,309.333333 C186.665387,324.061227 198.60416,336 213.332053,336 C228.059947,336 239.99872,324.061227 239.99872,309.333333 C239.99872,294.60544 228.059947,282.666667 213.332053,282.666667 Z"
+                                                        id="Shape">
+
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <p class="catalog__sign-info font-t2">Максимальная высота комфортной работы человека среднестатистического роста 170 см. Если рост человека значительно выше или ниже 170 см, рабочая высота будет другой.</p>
+                                    </div>
                                     <div class="catalog__ctoggleButton">
                                         <input class="catalog__toggle" type="checkbox" checked=false />
                                     </div>
@@ -488,8 +656,24 @@
                             <div class="line"></div>
                         </div>
 
+                        <div class="catalog__btn-open">
+                            <p class="font-t1 sp-b-burgundy">Фильтр</p>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.49999 7.49996H19.5001C19.7761 7.49996 20.0001 7.16394 20.0001 6.74998C20.0001 6.33596 19.776 6 19.5001 6H4.49999C4.22398 6 4 6.33603 4 6.74998C4 7.16394 4.22402 7.49996 4.49999 7.49996Z"
+                                    fill="#333333" />
+                                <path
+                                    d="M19.5001 11.25H4.49999C4.22398 11.25 4 11.586 4 12C4 12.4139 4.22402 12.75 4.49999 12.75H19.5001C19.7761 12.75 20.0001 12.4139 20.0001 12C20.0001 11.586 19.7761 11.25 19.5001 11.25Z"
+                                    fill="#333333" />
+                                <path
+                                    d="M19.5 16.5H9.49999C9.22398 16.5 9 16.836 9 17.25C9 17.664 9.22402 18 9.49999 18H19.5C19.7761 18 20 17.6639 20 17.25C20.0001 16.836 19.7761 16.5 19.5 16.5Z"
+                                    fill="#333333" />
+                            </svg>
+                        </div>
+
                         <div class="catalog__block-card">
-                            
+
                             <a href="/product-card.html" class="catalog__card-item">
                                 <div class="catalog__image-item">
                                     <img src="/assets/image/catalog_image_item.jpg" alt="">
@@ -784,7 +968,7 @@
             </div>
 
         </footer>
-        
+
     </div>
 
     <script src="/script/script.js"></script>
