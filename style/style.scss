@@ -1337,13 +1337,49 @@
 
 .history {
 
-    .swiper-container {
-        overflow: hidden;
-        height: 480px;
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @include bp(md) {
+            flex-direction: column;
+            align-items: unset;
+        }
     }
 
-    .swiper-slide {
+    &__image {
+        width: 100%;
+        img {
+            width: 100%;
+
+            @include bp(md) {
+                height: 350px;
+            }
+        }
+    }
+
+    &__desk {
+        width: 100%;
+        max-width: 500px;
+
+        @include bp(md) {
+            max-width: unset;
+        }
+    }
+
+    .mySwiper .swiper-slide {
+        width: fit-content;
         cursor: pointer;
+    }
+
+    .mySwiper .swiper-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .mySwiper .swiper-slide-thumb-active p {
+        color: #fff;
     }
 }
 

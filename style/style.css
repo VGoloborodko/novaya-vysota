@@ -3070,12 +3070,48 @@ html {
   height: 16px;
 }
 
-.history .swiper-container {
-  overflow: hidden;
-  height: 480px;
+.history__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.history .swiper-slide {
+@media (max-width: 1024px) {
+  .history__item {
+    flex-direction: column;
+    align-items: unset;
+  }
+}
+.history__image {
+  width: 100%;
+}
+.history__image img {
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .history__image img {
+    height: 350px;
+  }
+}
+.history__desk {
+  width: 100%;
+  max-width: 500px;
+}
+@media (max-width: 1024px) {
+  .history__desk {
+    max-width: unset;
+  }
+}
+.history .mySwiper .swiper-slide {
+  width: -moz-fit-content;
+  width: fit-content;
   cursor: pointer;
+}
+.history .mySwiper .swiper-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.history .mySwiper .swiper-slide-thumb-active p {
+  color: #fff;
 }
 
 @media (max-width: 1024px) {

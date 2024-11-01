@@ -546,15 +546,15 @@ window.addEventListener('load', (event) => {
 
         function comparisonFilter() {
             const chips = document.querySelectorAll('.button-block__chip');
-    
+
             chips.forEach(chip => {
                 chip.addEventListener('click', function () {
                     chips.forEach(c => c.classList.remove('selected'));
                     chip.classList.add('selected');
-    
+
                     const targetId = chip.parentElement.dataset.id;
                     const comparisonItems = document.querySelectorAll('.supporting__filter');
-    
+
                     // Обновляем видимость элементов
                     comparisonItems.forEach(item => {
                         if (item.dataset.id === targetId) {
@@ -563,17 +563,17 @@ window.addEventListener('load', (event) => {
                             item.style.display = 'none';
                         }
                     });
-    
+
                     // Открываем только первый элемент с заданным data-id
                     openFirstElement(comparisonItems);
                 });
             });
-    
+
             const selectedButton = document.querySelector('.button-block__chip.selected');
             if (selectedButton) {
                 const targetId = selectedButton.parentElement.dataset.id;
                 const comparisonItems = document.querySelectorAll('.supporting__filter');
-    
+
                 // Обновляем видимость элементов
                 comparisonItems.forEach(item => {
                     if (item.dataset.id === targetId) {
@@ -582,20 +582,20 @@ window.addEventListener('load', (event) => {
                         item.style.display = 'none';
                     }
                 });
-    
+
                 // Открываем только первый элемент с заданным data-id
                 openFirstElement(comparisonItems);
             }
-    
+
             const links = document.querySelectorAll('.chips a');
-    
+
             links.forEach(link => {
                 link.addEventListener('click', function (e) {
                     e.preventDefault();
-    
+
                     const targetId = link.dataset.id;
                     const comparisonItems = document.querySelectorAll('.supporting__filter');
-    
+
                     // Обновляем видимость элементов
                     comparisonItems.forEach(item => {
                         if (item.dataset.id === targetId) {
@@ -604,19 +604,19 @@ window.addEventListener('load', (event) => {
                             item.style.display = 'none';
                         }
                     });
-    
+
                     // Открываем только первый элемент с заданным data-id
                     openFirstElement(comparisonItems);
                 });
             });
         }
-    
+
         function openFirstElement(comparisonItems) {
             const openedIds = new Set(); // Множество для хранения уникальных data-id
-    
+
             comparisonItems.forEach(item => {
                 const id = item.dataset.id; // Получаем data-id
-    
+
                 // Если этот элемент виден
                 if (item.style.display === 'block') {
                     // Если этот id еще не был обработан
@@ -624,7 +624,7 @@ window.addEventListener('load', (event) => {
                         const toggle = item.querySelector('.supporting__toggle'); // Чекбокс или другой элемент для раскрытия
                         const image = item.querySelector('.supporting__image'); // Элемент контента
                         const btn = item.querySelector('.supporting__ctoggleButton');
-    
+
                         if (toggle) {
                             toggle.checked = true; // Устанавливаем чекбокс в checked
                         }
@@ -634,27 +634,27 @@ window.addEventListener('load', (event) => {
                         if (btn) {
                             btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg)';
                         }
-    
+
                         openedIds.add(id); // Добавляем id в множество для предотвращения повторных раскрытий
                     }
                 }
             });
         }
-    
+
         function supportingCheckBtn() {
             const dropdownItems = document.querySelectorAll('.supporting__item');
             dropdownItems.forEach((item, index) => {
                 const btn = item.querySelector('.supporting__ctoggleButton');
                 const toggle = item.querySelector('.supporting__toggle');
                 const image = item.querySelector('.supporting__image');
-    
+
                 if (index === 0) {
                     // Раскрыть первый элемент
                     toggle.checked = true;
                     image.style.height = image.scrollHeight + 'px';
                     btn.style.background = 'url(/assets/icon/projects_ctoggleButton_close.svg)';
                 }
-    
+
                 btn.addEventListener('click', () => {
                     if (toggle.checked) {
                         image.style.height = image.scrollHeight + 'px';
@@ -664,20 +664,20 @@ window.addEventListener('load', (event) => {
                         btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg)';
                     }
                 });
-    
+
                 // Дополнительная проверка для восстановления иконки
                 if (!toggle.checked) {
                     btn.style.background = 'url(/assets/icon/projects_ctoggleButton_open.svg)';
                 }
             });
         }
-    
+
         try {
             comparisonFilter();
         } catch (error) {
             console.error(error);
         }
-    
+
         try {
             supportingCheckBtn();
         } catch (error) {
@@ -685,7 +685,7 @@ window.addEventListener('load', (event) => {
         }
 
     }
-    
+
     // Слайдер для чипов
     if (document.querySelector(".mySwiper-chips")) {
 
@@ -1634,7 +1634,28 @@ if (document.querySelector(".reviews-card")) {
     });
 }
 
-const swiperСontainer = new Swiper('.swiper-container', {
-    direction: 'vertical',
-    slidesPerView: 4, // количество слайдов, отображаемых одновременно
+var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 64,
+    slidesPerView: 'auto',
+    // slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".mySwiper2", {
+    breakpoints: {
+        1025: {
+            slidesPerView: 1.2,
+        },
+    },
+    loop: true,
+    spaceBetween: 60,
+    slidesPerView: 1,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiper,
+    },
 });
