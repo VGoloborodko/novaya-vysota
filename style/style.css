@@ -3073,7 +3073,7 @@ html {
 .history__item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
 }
 @media (max-width: 1024px) {
   .history__item {
@@ -3112,6 +3112,48 @@ html {
 }
 .history .mySwiper .swiper-slide-thumb-active p {
   color: #fff;
+}
+
+.about-work__wrapper {
+  display: flex;
+}
+@media (max-width: 1024px) {
+  .about-work__wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+.about-work__image {
+  text-align: right;
+}
+.about-work__image img {
+  width: 350px;
+  height: 445px;
+}
+.about-work__info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  padding-bottom: 66px;
+}
+@media (max-width: 1024px) {
+  .about-work__info {
+    padding-bottom: unset;
+  }
+}
+.about-work__icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .about-work__icon {
+    top: -200%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -4221,7 +4263,10 @@ html {
 .reviews-card .swiper-pagination-bullet-active {
   background: #828282;
 }
-.reviews-card .swiper-horizontal > .swiper-pagination-bullets, .reviews-card .swiper-pagination-bullets.swiper-pagination-horizontal, .reviews-card .swiper-pagination-custom, .reviews-card .swiper-pagination-fraction {
+.reviews-card .swiper-horizontal > .swiper-pagination-bullets,
+.reviews-card .swiper-pagination-bullets.swiper-pagination-horizontal,
+.reviews-card .swiper-pagination-custom,
+.reviews-card .swiper-pagination-fraction {
   bottom: 0;
 }
 

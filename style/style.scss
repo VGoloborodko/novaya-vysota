@@ -1340,7 +1340,7 @@
     &__item {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 30px;
 
         @include bp(md) {
             flex-direction: column;
@@ -1350,6 +1350,7 @@
 
     &__image {
         width: 100%;
+
         img {
             width: 100%;
 
@@ -1380,6 +1381,52 @@
 
     .mySwiper .swiper-slide-thumb-active p {
         color: #fff;
+    }
+}
+
+.about-work {
+
+    &__wrapper {
+        display: flex;
+
+        @include bp(md) {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    &__image {
+        text-align: right;
+
+        img {
+            width: 350px;
+            height: 445px;
+        }
+    }
+
+    &__info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        padding-bottom: 66px;
+
+        @include bp(md) {
+            padding-bottom: unset;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        @include bp(md) {
+            top: -200%;
+        }
     }
 }
 
@@ -2717,7 +2764,10 @@
         background: #828282;
     }
 
-    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
         bottom: 0;
     }
 
