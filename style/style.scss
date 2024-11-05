@@ -3765,3 +3765,82 @@
         color: #fff;
     }
 }
+
+.days90 {
+    height: 100vh;
+    background: url('/assets/image/days90_cover.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.header-days90 {
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__image {
+
+        img {
+            width: 328px;
+            height: 53px;
+            margin-left: -50px;
+        }
+    }
+
+    .button-block__transparent-small {
+        outline: 1px solid #fff;
+        background: #4F4F4F;
+        transition: all 0.5s;
+
+        p {
+            color: #fff;
+        }
+
+        &:hover {
+            background: #FFFFFF;
+
+            p {
+                color: #303030;
+                transition: all 0.5s;
+            }
+        }
+    }
+}
+
+.cover-days90 {
+    @include bp(sm) {
+        height: 86%;
+        display: flex;
+        align-items: flex-end;
+        padding-top: 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        width: 100%;
+        max-width: 730px;
+    }
+
+    &__image {
+
+        img {
+            height: 48vh;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}

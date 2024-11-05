@@ -5086,4 +5086,64 @@ html {
   border-radius: 50%;
   background-color: #4F4F4F;
   color: #fff;
+}
+
+.days90 {
+  height: 100vh;
+  background: url("/assets/image/days90_cover.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.header-days90__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.header-days90__buttons {
+  display: flex;
+  gap: 20px;
+}
+.header-days90__image img {
+  width: 328px;
+  height: 53px;
+  margin-left: -50px;
+}
+.header-days90 .button-block__transparent-small {
+  outline: 1px solid #fff;
+  background: #4F4F4F;
+  transition: all 0.5s;
+}
+.header-days90 .button-block__transparent-small p {
+  color: #fff;
+}
+.header-days90 .button-block__transparent-small:hover {
+  background: #FFFFFF;
+}
+.header-days90 .button-block__transparent-small:hover p {
+  color: #303030;
+  transition: all 0.5s;
+}
+
+@media (max-width: 767px) {
+  .cover-days90 {
+    height: 86%;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 0;
+  }
+}
+.cover-days90__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.cover-days90__info {
+  width: 100%;
+  max-width: 730px;
+}
+.cover-days90__image img {
+  height: 48vh;
+}
+.cover-days90__btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }/*# sourceMappingURL=style.css.map */
