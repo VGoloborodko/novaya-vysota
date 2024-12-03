@@ -493,6 +493,7 @@ html {
   --text-white: #ffffff;
   --text-white-opasity50: #ffffff80;
   --text-hover: #B6B6B6;
+  --text-red: #D7192D;
   --bg-primary: #FFFCF5;
   --bg-abrand1: #D7192D;
   --bg-brand1-heavy: #D62923;
@@ -551,6 +552,9 @@ html {
 }
 .color--hover {
   color: var(--text-hover);
+}
+.color--red {
+  color: var(--text-red) !important;
 }
 
 .color-block--primary {
@@ -3307,6 +3311,7 @@ html {
   overflow: hidden;
 }
 .news-articles__image img {
+  height: 520px;
   transition: all 1s;
 }
 @media (max-width: 1024px) {
@@ -3335,6 +3340,7 @@ html {
   overflow: hidden;
 }
 .event-card__image img {
+  height: 520px;
   transition: all 1s;
 }
 @media (max-width: 1024px) {
@@ -3953,7 +3959,6 @@ html {
 .main-card__star {
   font-size: 24px;
   color: #ccc;
-  cursor: pointer;
 }
 .main-card__star.fill {
   color: #D7192D;

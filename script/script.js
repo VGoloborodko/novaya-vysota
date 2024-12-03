@@ -749,52 +749,52 @@ window.addEventListener('load', (event) => {
 
     //---------------- Файл product-card.html
     //------- Рейтинг товара
-    if (document.querySelector(".main-card__star-rating")) {
+    // if (document.querySelector(".main-card__star-rating")) {
 
-        function starRating() {
-            const stars = document.querySelectorAll('.main-card__star');
-            const starRating = document.querySelector('.main-card__star-rating');
+    //     function starRating() {
+    //         const stars = document.querySelectorAll('.main-card__star');
+    //         const starRating = document.querySelector('.main-card__star-rating');
 
-            let currentRating = 0;
+    //         let currentRating = 0;
 
-            stars.forEach((star, index) => {
-                star.addEventListener('mouseenter', function () {
-                    if (currentRating === 0) {
-                        star.classList.add('fill');
-                        for (let i = 0; i < index; i++) {
-                            stars[i].classList.add('fill');
-                        }
-                    }
-                });
+    //         stars.forEach((star, index) => {
+    //             star.addEventListener('mouseenter', function () {
+    //                 if (currentRating === 0) {
+    //                     star.classList.add('fill');
+    //                     for (let i = 0; i < index; i++) {
+    //                         stars[i].classList.add('fill');
+    //                     }
+    //                 }
+    //             });
 
-                star.addEventListener('mouseleave', function () {
-                    if (currentRating === 0) {
-                        starRating.querySelectorAll('.main-card__star').forEach(s => s.classList.remove('fill'));
-                    }
-                });
+    //             star.addEventListener('mouseleave', function () {
+    //                 if (currentRating === 0) {
+    //                     starRating.querySelectorAll('.main-card__star').forEach(s => s.classList.remove('fill'));
+    //                 }
+    //             });
 
-                star.addEventListener('click', function () {
-                    const rating = parseInt(star.dataset.rating);
-                    currentRating = rating;
-                    starRating.querySelectorAll('.main-card__star').forEach((s, i) => {
-                        s.classList.toggle('fill', i < rating);
-                    });
-                    stars.forEach(s => {
-                        s.removeEventListener('mouseenter', null);
-                        s.removeEventListener('mouseleave', null);
-                        s.style.cursor = 'default';
-                    });
-                });
-            });
-        }
+    //             star.addEventListener('click', function () {
+    //                 const rating = parseInt(star.dataset.rating);
+    //                 currentRating = rating;
+    //                 starRating.querySelectorAll('.main-card__star').forEach((s, i) => {
+    //                     s.classList.toggle('fill', i < rating);
+    //                 });
+    //                 stars.forEach(s => {
+    //                     s.removeEventListener('mouseenter', null);
+    //                     s.removeEventListener('mouseleave', null);
+    //                     s.style.cursor = 'default';
+    //                 });
+    //             });
+    //         });
+    //     }
 
-        try {
-            starRating()
-        } catch (error) {
-            console.error(error);
+    //     try {
+    //         starRating()
+    //     } catch (error) {
+    //         console.error(error);
 
-        }
-    }
+    //     }
+    // }
 
     //---------------- Файл product-card.html
     //------- Слайдер
@@ -1630,6 +1630,7 @@ if (document.querySelector(".reviews-card")) {
         spaceBetween: 0,
         pagination: {
             el: ".swiper-pagination",
+            clickable: true,
         },
     });
 }
@@ -1642,6 +1643,7 @@ var swiper = new Swiper(".mySwiper", {
     freeMode: true,
     watchSlidesProgress: true,
 });
+
 var swiper2 = new Swiper(".mySwiper2", {
     breakpoints: {
         1025: {

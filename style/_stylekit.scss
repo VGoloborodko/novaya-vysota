@@ -156,6 +156,7 @@ html {
     --text-white: #ffffff;
     --text-white-opasity50: #ffffff80;
     --text-hover: #B6B6B6;
+    --text-red: #D7192D;
 
     --bg-primary: #FFFCF5;
     --bg-abrand1: #D7192D;
@@ -233,6 +234,10 @@ html {
 
     &--hover {
         color: var(--text-hover);
+    }
+
+    &--red {
+        color: var(--text-red) !important;
     }
 }
 
