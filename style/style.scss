@@ -216,19 +216,24 @@
         }
 
         .header__comparison {
+            position: relative;
             width: 48px;
             height: 48px;
             background: url('/assets/icon/header_comparison_icon_primary.svg') no-repeat center;
+            // outline: 2px solid #4F4F4F;
+            // border-radius: 50%;
             transition: all 0.5s;
             cursor: pointer;
 
             &:hover {
                 background: url('/assets/icon/header_comparison_icon_primary_hover.svg') no-repeat center;
-                transition: all 0.5s;
+                outline: unset;
+                // transition: all 0.5s;
             }
         }
 
         .header__basket {
+            position: relative;
             width: 48px;
             height: 48px;
             background: url('/assets/icon/header_basket_icon_primary.svg') no-repeat center;
@@ -662,6 +667,23 @@
         }
     }
 
+}
+
+// Колличество товаров в иконке
+.item-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #D7192D;
+
+    font-size: 10px;
+    color: #fff;
 }
 
 .header-bottom {
