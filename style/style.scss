@@ -261,7 +261,12 @@
         }
 
         .open-catalog {
-            animation: scale-up-ver-top .6s cubic-bezier(0.645, 0.045, 0.355, 1.000) alternate both;
+            // animation: scale-up-ver-top .6s cubic-bezier(0.645, 0.045, 0.355, 1.000) alternate both;
+            will-change: transform, opacity;
+            display: flex;
+            // height: auto;
+            // opacity: 1;
+            // transition: opacity .6s;
         }
 
         @keyframes scale-up-ver-top {
@@ -277,7 +282,12 @@
         }
 
         .close-catalog {
-            animation: scale-down-ver-top .6s cubic-bezier(0.645, 0.045, 0.355, 1.000) alternate both;
+            // animation: scale-down-ver-top .6s cubic-bezier(0.645, 0.045, 0.355, 1.000) alternate both;
+            will-change: transform, opacity;
+            display: none;
+            // height: 0;
+            // opacity: 0;
+            // transition: opacity .6s;
         }
 
         @keyframes scale-down-ver-top {

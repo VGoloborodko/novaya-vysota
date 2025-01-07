@@ -404,6 +404,7 @@ window.addEventListener('load', (event) => {
                 headerCover.classList.remove('header-scroll-two');
                 headerCoverScroll.classList.remove('header-scroll-four');
                 headerMain.classList.add('close-catalog');
+                // setTimeout(() => headerMain.style.display = none, 600);
                 headerCover.classList.add('header-scroll');
                 headerCoverScroll.classList.add('header-scroll-three');
                 // headerDesktop.style.height = '40px';
@@ -419,6 +420,7 @@ window.addEventListener('load', (event) => {
                     headerCover.classList.remove('header-scroll-two');
                     headerCoverScroll.classList.remove('header-scroll-four');
                     headerMain.classList.add('close-catalog');
+                    // setTimeout(() => headerMain.style.display = 'none', 600);
                     headerCover.classList.add('header-scroll');
                     headerCoverScroll.classList.add('header-scroll-three');
                     // headerDesktop.style.height = '40px';
@@ -431,6 +433,7 @@ window.addEventListener('load', (event) => {
                         headerCoverScroll.classList.add('header-scroll-four');
                         headerCover.classList.add('header-scroll-two');
                         headerMain.classList.add('open-catalog');
+                        // headerMain.style.display = 'flex'
                     }
                 }
 

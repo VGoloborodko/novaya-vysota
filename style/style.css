@@ -2179,7 +2179,8 @@ html {
   cursor: pointer;
 }
 .header__desktop .open-catalog {
-  animation: scale-up-ver-top 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) alternate both;
+  will-change: transform, opacity;
+  display: flex;
 }
 @keyframes scale-up-ver-top {
   0% {
@@ -2192,7 +2193,8 @@ html {
   }
 }
 .header__desktop .close-catalog {
-  animation: scale-down-ver-top 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) alternate both;
+  will-change: transform, opacity;
+  display: none;
 }
 @keyframes scale-down-ver-top {
   0% {
