@@ -3947,7 +3947,15 @@ html {
   cursor: pointer;
 }
 .main-card .mySwiper-main-card2 img {
-  height: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 1279px) {
+  .main-card .mySwiper-main-card2 img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 .main-card .swiper-pagination {
   display: none;
@@ -4139,6 +4147,14 @@ html {
 .specification-card__table-item {
   flex: 1;
   min-width: 100px;
+}
+.specification-card__table-item-2 {
+  flex: 2;
+  min-width: unset;
+}
+.specification-card .button-block__mini-small {
+  justify-content: center;
+  width: 138px;
 }
 
 .description-card__block {
