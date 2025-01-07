@@ -4148,14 +4148,41 @@ html {
 .specification-card__table-item {
   flex: 1;
   min-width: 100px;
+  text-align: center;
+  align-self: center;
 }
 .specification-card__table-item-2 {
   flex: 2;
   min-width: unset;
+  text-align: center;
+  align-self: center;
 }
 .specification-card .button-block__mini-small {
   justify-content: center;
   width: 138px;
+}
+.specification-card .table-item-colors {
+  position: relative;
+}
+.specification-card .table-item-color, .specification-card .table-item-color-inner {
+  cursor: pointer;
+}
+.specification-card .table-item-color-box {
+  display: none;
+}
+.specification-card .table-item-color-inner {
+  padding: 5px 10px;
+}
+.specification-card .table-item-color span, .specification-card .table-item-color-inner span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+.specification-card .specification-card__table-row.color--bold {
+  background: #f2f2f2;
+}
+.specification-card .specification-card__table-row.color--bold .specification-card__table-item:not(.not--bold) {
+  font-weight: 700;
 }
 
 .description-card__block {

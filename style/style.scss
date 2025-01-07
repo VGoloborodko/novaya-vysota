@@ -2611,16 +2611,50 @@
     &__table-item {
         flex: 1;
         min-width: 100px;
+        text-align: center;
+        align-self: center;
     }
 
     &__table-item-2 {
         flex: 2;
         min-width: unset;
+        text-align: center;
+        align-self: center;
     }
 
     .button-block__mini-small {
         justify-content: center;
         width: 138px;
+    }
+
+    .table-item-colors {
+        position: relative;
+    }
+
+    .table-item-color, .table-item-color-inner {
+        cursor: pointer;
+    }
+
+    .table-item-color-box {
+        display: none;
+    }
+
+    .table-item-color-inner {
+        padding: 5px 10px;
+    }
+
+    .table-item-color span, .table-item-color-inner span {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+    }
+
+    .specification-card__table-row.color--bold {
+        background: #f2f2f2;
+    }
+
+    .specification-card__table-row.color--bold .specification-card__table-item:not(.not--bold) {
+        font-weight: 700;
     }
 }
 
