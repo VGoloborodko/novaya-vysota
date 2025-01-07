@@ -4138,6 +4138,7 @@ html {
 }
 .specification-card__table-row {
   display: flex;
+  width: 1750px;
   padding: 16px 0;
   border-bottom: 1px solid #DBDBDB;
 }
