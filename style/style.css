@@ -3949,9 +3949,7 @@ html {
   cursor: pointer;
 }
 .main-card .mySwiper-main-card2 img {
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 100%;
 }
 @media (max-width: 1279px) {
   .main-card .mySwiper-main-card2 img {

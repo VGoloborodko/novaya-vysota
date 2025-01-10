@@ -2368,8 +2368,9 @@
         cursor: pointer;
 
         img {
-            height: auto;
-            object-fit: contain;
+            height: 100%;
+            // height: auto;
+            // object-fit: contain;
 
             @include bp(lg) {
                 object-fit: cover;
