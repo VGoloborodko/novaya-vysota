@@ -400,10 +400,12 @@ window.addEventListener('load', (event) => {
 
             // Скрываем часть хедера
             if (document.documentElement.scrollTop !== 0) {
-                headerMain.classList.remove('open-catalog');
+                // headerMain.classList.remove('open-catalog');
+                headerMain.style.display = 'flex';
                 headerCover.classList.remove('header-scroll-two');
                 headerCoverScroll.classList.remove('header-scroll-four');
-                headerMain.classList.add('close-catalog');
+                // headerMain.classList.add('close-catalog');
+                headerMain.style.display = 'none';
                 // setTimeout(() => headerMain.style.display = none, 600);
                 headerCover.classList.add('header-scroll');
                 headerCoverScroll.classList.add('header-scroll-three');
@@ -416,10 +418,12 @@ window.addEventListener('load', (event) => {
 
                 if (scrollTop > lastScrollTop) {
                     // Скроллим вниз и скрываем
-                    headerMain.classList.remove('open-catalog');
+                    // headerMain.classList.remove('open-catalog');
+                    headerMain.style.display = 'flex';
                     headerCover.classList.remove('header-scroll-two');
                     headerCoverScroll.classList.remove('header-scroll-four');
-                    headerMain.classList.add('close-catalog');
+                    // headerMain.classList.add('close-catalog');
+                    headerMain.style.display = 'none';
                     // setTimeout(() => headerMain.style.display = 'none', 600);
                     headerCover.classList.add('header-scroll');
                     headerCoverScroll.classList.add('header-scroll-three');
@@ -428,12 +432,13 @@ window.addEventListener('load', (event) => {
                     // Скроллим вверх
                     if (scrollTop === 0) {
                         headerCover.classList.remove('header-scroll');
-                        headerMain.classList.remove('close-catalog');
+                        // headerMain.classList.remove('close-catalog');
+                        headerMain.style.display = 'none';
                         headerCoverScroll.classList.remove('header-scroll-three');
                         headerCoverScroll.classList.add('header-scroll-four');
                         headerCover.classList.add('header-scroll-two');
                         headerMain.classList.add('open-catalog');
-                        // headerMain.style.display = 'flex'
+                        headerMain.style.display = 'flex';
                     }
                 }
 

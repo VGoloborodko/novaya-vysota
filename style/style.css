@@ -2179,8 +2179,8 @@ html {
   cursor: pointer;
 }
 .header__desktop .open-catalog {
+  animation: scale-up-ver-top 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) alternate both;
   will-change: transform, opacity;
-  display: flex;
 }
 @keyframes scale-up-ver-top {
   0% {
@@ -2193,8 +2193,8 @@ html {
   }
 }
 .header__desktop .close-catalog {
+  animation: scale-down-ver-top 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) alternate both;
   will-change: transform, opacity;
-  display: none;
 }
 @keyframes scale-down-ver-top {
   0% {
@@ -3355,6 +3355,11 @@ html {
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 1024px) {
+  .event-card__wrapper {
+    gap: 20px;
+  }
+}
 .event-card__image {
   overflow: hidden;
 }
@@ -4347,6 +4352,9 @@ html {
   max-width: 446px;
 }
 
+.event__image img {
+  max-height: 520px;
+}
 .event__content {
   display: flex;
 }
@@ -4473,10 +4481,27 @@ html {
   padding: 12px 0;
 }
 
+.comparison {
+  /* Цвет фона полосы прокрутки */
+  /* Цвет самой полосы прокрутки */
+}
 .comparison__filter {
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+.comparison .specification-card__table::-webkit-scrollbar {
+  height: 10px;
+  /* Ширина полосы прокрутки */
+}
+.comparison .specification-card__table::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Цвет фона полосы прокрутки */
+}
+.comparison .specification-card__table::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+  /* Цвет самой полосы прокрутки */
 }
 
 .training-form__block {
@@ -5091,6 +5116,11 @@ html {
 .chips .swiper-wrapper {
   display: flex;
   padding: 1px;
+}
+@media (max-width: 767px) {
+  .chips .swiper-wrapper {
+    justify-content: flex-start;
+  }
 }
 .chips .swiper-slide {
   width: auto;

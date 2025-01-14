@@ -261,9 +261,9 @@
         }
 
         .open-catalog {
-            // animation: scale-up-ver-top .6s cubic-bezier(0.645, 0.045, 0.355, 1.000) alternate both;
+            animation: scale-up-ver-top .6s cubic-bezier(0.645, 0.045, 0.355, 1.000) alternate both;
             will-change: transform, opacity;
-            display: flex;
+            // display: block;
             // height: auto;
             // opacity: 1;
             // transition: opacity .6s;
@@ -282,9 +282,9 @@
         }
 
         .close-catalog {
-            // animation: scale-down-ver-top .6s cubic-bezier(0.645, 0.045, 0.355, 1.000) alternate both;
+            animation: scale-down-ver-top .6s cubic-bezier(0.645, 0.045, 0.355, 1.000) alternate both;
             will-change: transform, opacity;
-            display: none;
+            // display: none;
             // height: 0;
             // opacity: 0;
             // transition: opacity .6s;
@@ -1684,6 +1684,10 @@
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
+
+        @include bp(md) {
+            gap: 20px;
+        }
     }
 
     &__image {
@@ -2877,6 +2881,13 @@
 
 .event {
 
+    &__image {
+
+        img {
+            max-height: 520px;
+        }
+    }
+
     &__content {
         display: flex;
     }
@@ -3044,6 +3055,25 @@
         display: flex;
         flex-direction: column;
         gap: 32px;
+    }
+
+    /* Цвет фона полосы прокрутки */
+    .specification-card__table::-webkit-scrollbar {
+        // width: 10px;
+        height: 10px;
+        /* Ширина полосы прокрутки */
+    }
+
+    .specification-card__table::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        /* Цвет фона полосы прокрутки */
+    }
+
+    /* Цвет самой полосы прокрутки */
+    .specification-card__table::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 8px;
+        /* Цвет самой полосы прокрутки */
     }
 }
 
@@ -3768,6 +3798,10 @@
         padding: 1px;
         // padding-top: 1px;
         // padding-bottom: 1px;
+
+        @include bp(sm) {
+            justify-content: flex-start;
+        }
     }
 
     .swiper-slide {
